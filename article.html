@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Meat & Potatoes</title>
+  <meta name="description" id="page-description" content="">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV: injected by components.js -->
+  <div id="mp-nav-container"></div>
+
+  <!-- ARTICLE CONTENT: loaded from articles/ folder -->
+  <div id="article-container">
+    <div class="mp-article-wrap">
+      <div style="font-family:Arial,sans-serif;font-size:14px;color:#8B7355;padding:4rem 0;text-align:center">
+        Loading article...
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER: injected by components.js -->
+  <div id="mp-footer-container"></div>
+
+  <script src="articles.js"></script>
+  <script src="components.js"></script>
+  <script>
+    // Read which article to show from the URL
+    // e.g. article.html?slug=what-is-ai
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get('slug');
+
+    if (!slug) {
+      window.location.href = 'index.html';
+    }
+
+    // Find the article metadata from the master list
+    const meta = ARTICLES.find(a => a.slug === slug);
+
+    if (!meta) {
+      document.getElementById('article-container').innerHTML = `
+        <div class="mp-article-wrap">
+          <p style="font-family:Arial,sans-serif;color:#8B7355;padding:4rem 0">
+            Article not found. <a href="index.html">Go back home →</a>
+          </p>
+        </div>
+      `;
+    } else {
+      // Update page title and meta
+      document.getElementById('page-title').textContent = meta.title + ' — Meat & Potatoes';
+      document.getElementById('page-description').setAttribute('content', meta.subtitle);
+
+      // Format date
+      const d = new Date(meta.date + 'T00:00:00');
+      const dateStr = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+      // Load the article content from the articles/ folder
+      fetch(`articles/${slug}.html`)
+        .then(res => {
+          if (!res.ok) throw new Error('Article content file not found');
+          return res.text();
+        })
+        .then(content => {
+          document.getElementById('article-container').innerHTML = `
+            <div class="mp-article-wrap">
+              <div class="mp-article-header">
+                <span class="mp-tag mp-tag-${meta.tagColor}">${meta.tag}</span>
+                <h1 class="mp-article-title">${meta.title}</h1>
+                <div class="mp-article-subtitle">${meta.subtitle}</div>
+                <div class="mp-article-meta">${dateStr}</div>
+              </div>
+              <div class="mp-article-body">
+                ${content}
+              </div>
+            </div>
+          `;
+        })
+        .catch(() => {
+          document.getElementById('article-container').innerHTML = `
+            <div class="mp-article-wrap">
+              <div class="mp-article-header">
+                <span class="mp-tag mp-tag-${meta.tagColor}">${meta.tag}</span>
+                <h1 class="mp-article-title">${meta.title}</h1>
+                <div class="mp-article-subtitle">${meta.subtitle}</div>
+                <div class="mp-article-meta">${dateStr}</div>
+              </div>
+              <div class="mp-article-body">
+                <p>Article content coming soon.</p>
+              </div>
+            </div>
+          `;
+        });
+    }
+  </script>
+
+</body>
+</html>
