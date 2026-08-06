@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Cookbook — Meat &amp; Potatoes</title>
+<meta name="description" content="Plain-spoken writing about AI and blockchain.">
+<meta property="og:title" content="The Cookbook — Meat &amp; Potatoes">
+<meta property="og:description" content="Plain-spoken writing about AI and blockchain.">
+<meta property="og:type" content="article">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+  
+    @media (max-width: 980px) {
+      .gbody { grid-template-columns: minmax(0,1fr) !important; gap: 44px !important; }
+      .rail { position: static !important; max-height: none !important; overflow-y: visible !important; }
+      .g4 { grid-template-columns: repeat(2,1fr) !important; }
+      .g3, .g2 { grid-template-columns: 1fr !important; }
+      header nav, header nav > div { flex-wrap: wrap !important; }
+    }
+    @media (max-width: 620px) {
+      .g4 { grid-template-columns: 1fr !important; }
+      .g4 > div { padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 20px !important; }
+    }
+  </style>
+</helmet>
+
+<div style="background:#ece4d4; color:#1c1813; font-family:'Hanken Grotesk', system-ui, sans-serif; min-height:100vh; -webkit-font-smoothing:antialiased;">
+
+  <!-- NAV -->
+  <header style="position:sticky; top:0; z-index:60; background:#ece4d4; border-bottom:3px solid #1c1813;">
+    <nav style="max-width:1180px; margin:0 auto; padding:18px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <a href="index.html" style="display:flex; flex-direction:column; line-height:0.96;">
+        <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:19px; letter-spacing:-0.01em;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
+        <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <a href="what.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">What</a>
+        <a href="why.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Why</a>
+        <a href="how.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">How</a>
+        <a href="where.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Where</a>
+        <a href="who.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Who</a>
+        <a href="cookbook.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid #1c1813; border-radius:5px; color:#ece4d4; background:#b0463a;">Cookbook</a>
+        <a href="index.html#consult" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; color:#ece4d4; background:#b0463a; padding:9px 17px; border:2.5px solid #1c1813; border-radius:5px; box-shadow:3px 3px 0 rgba(28,20,15,0.22); margin-left:6px;" style-hover="background:#9a3b30;">Work with us</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HEADER -->
+  <section style="max-width:1180px; margin:0 auto; padding:88px 32px 40px;">
+    <div style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.2em; text-transform:uppercase; color:#b0463a; margin-bottom:22px;">The writing</div>
+    <h1 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(42px,6vw,80px); line-height:1.04; letter-spacing:-0.025em; margin:0 0 24px; max-width:860px;">Everything we&rsquo;ve written, in one place.</h1>
+    <p style="font-size:21px; line-height:1.55; color:#4a4034; max-width:620px; margin:0; text-wrap:pretty;">Plain-spoken pieces on what AI is, where it helps, and where it bites. Filter by what you&rsquo;re here for.</p>
+  </section>
+
+  <!-- TAG FILTER -->
+  <section style="max-width:1180px; margin:0 auto; padding:0 32px 36px;">
+    <div style="display:flex; gap:10px; flex-wrap:wrap; border-bottom:1px solid rgba(28,20,15,0.12); padding-bottom:36px;">
+      <sc-for list="{{ tagDefs }}" as="tag" hint-placeholder-count="6">
+        <button onClick="{{ tag.onClick }}" style="{{ tag.style }}" style-hover="border-color:#b0463a;">{{ tag.label }}</button>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ARTICLE GRID -->
+  <section style="max-width:1180px; margin:0 auto; padding:0 32px 96px;">
+    <div style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.1em; color:#8a7d68; margin-bottom:28px;">{{ countLabel }}</div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:28px;" class="g3">
+      <sc-for list="{{ articles }}" as="a" hint-placeholder-count="9">
+        <a href="{{ a.href }}" style="display:flex; flex-direction:column; min-height:300px; padding:30px 28px; background:#ece4d4; border:1px solid rgba(28,20,15,0.12); border-radius:4px;" style-hover="border-color:#b0463a; background:#ffffff;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:18px;">
+            <span style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:#b0463a;">{{ a.category }}</span>
+          </div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px; line-height:1.2; margin:0 0 12px; text-wrap:pretty;">{{ a.title }}</h3>
+          <p style="font-size:15px; line-height:1.55; color:#6d6051; margin:0;">{{ a.excerpt }}</p>
+          <div style="margin-top:auto; padding-top:24px; font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.06em; color:#8a7d68;">{{ a.meta }}</div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- IN THE WORKS -->
+  <section style="background:#e2d8c4; border-top:1px solid rgba(28,20,15,0.12);">
+    <div style="max-width:1180px; margin:0 auto; padding:64px 32px 72px;">
+      <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; margin-bottom:8px; flex-wrap:wrap;">
+        <h2 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(26px,3.2vw,36px); letter-spacing:-0.02em; margin:0;">In the works</h2>
+        <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.16em; color:#8a7d68;">NOT WRITTEN YET</span>
+      </div>
+      <p style="font-size:17px; line-height:1.6; color:#6d6051; max-width:560px; margin:0 0 32px;">Drafted, outlined, or on the list. These aren&rsquo;t links yet &mdash; they&rsquo;ll appear above as they&rsquo;re published.</p>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;" class="g3">
+        <sc-for list="{{ upcoming }}" as="u" hint-placeholder-count="6">
+          <div style="display:flex; flex-direction:column; gap:12px; padding:24px 24px 26px; border:1px dashed rgba(28,20,15,0.3); border-radius:4px;">
+            <span style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:#8a7d68;">{{ u.meta }}</span>
+            <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:20px; line-height:1.22; margin:0; color:#4a4034; text-wrap:pretty;">{{ u.title }}</h3>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#1c1813; color:#c4b9a4;">
+    <div style="max-width:1180px; margin:0 auto; padding:56px 32px; display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+      <div>
+        <div style="display:flex; flex-direction:column; line-height:0.96; margin-bottom:14px;">
+          <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:18px; color:#f4ecdc;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
+          <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+        </div>
+        <p style="font-size:14px; line-height:1.5; max-width:300px; margin:0;">The essential stuff about AI. A free blog by an AI consulting practice.</p>
+      </div>
+      <div style="display:flex; gap:64px; flex-wrap:wrap;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">COURSES</span>
+          <a href="what.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">What is AI</a>
+          <a href="why.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Why it matters</a>
+          <a href="how.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">How to use it</a>
+          <a href="cookbook.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">The cookbook</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">PRACTICE</span>
+          <a href="index.html#consult" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Consulting</a>
+          <a href="how.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Free tools</a>
+          <a href="who.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Who does what</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(236,228,212,0.1);">
+      <div style="max-width:1180px; margin:0 auto; padding:22px 32px; font-family:'Hanken Grotesk', sans-serif; font-size:12px; color:#8a7d68;">© 2026 Meatandpotatoes.ai — all signal, no filler.</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { activeTag: 'All' };
+
+  upcoming() {
+    return [
+      { title: 'Provenance: proving where your training data actually came from', category: 'Blockchain', meta: 'IN DEPTH' },
+      { title: 'Agent economics: how autonomous agents will pay each other', category: 'Blockchain', meta: 'IN DEPTH' },
+      { title: 'The ARIA framework: from reaction to assessment', category: 'AI', meta: 'FRAMEWORK' },
+    ];
+  }
+
+  articles() {
+    return [
+      { title: "AI broke the internet\u2019s honor system. Blockchain is one of the repair crews.", category: "Blockchain", excerpt: "I heard \u201cAI needs blockchain\u201d so often that I believed it \u2014 and it\u2019s wrong. What\u2019s true is stranger: AI quietly broke four assumptions the internet ran on, and blockchain is one of the crews showing up to fix them.", meta: "AUG 2026 \u00b7 12 MIN", href: "Honor System.dc.html", at: 1786000000000 },
+      { title: "The AI job-displacement timeline: why everyone has it wrong", category: "AI", excerpt: "A data-driven look at which jobs are actually at risk \u2014 and when. The fire is real; it just isn\u2019t burning where the headlines say.", meta: "JUN 2026 \u00b7 14 MIN", href: "AI Job Displacement.dc.html", at: 1772483952497 },
+      { title: "Understanding AI: What It Is, How It Works, and Why It Matters (Part 3)", category: "AI", excerpt: "Part three of three. The trends already visible from here, the questions nobody can honestly answer yet, and why this is a snapshot rather than a forecast.", meta: "FEB 2026 · 22 MIN", href: "understanding-ai-what-it-is-how-it-works-and-why-it-matters-part-3.dc.html", at: 1770067682785 },
+      { title: "Understanding AI: What It Is, How It Works, and Why It Matters (Part 2)", category: "AI", excerpt: "Part two of three. Modern AI is not one intelligence but a toolbox — language, image, speech, retrieval, orchestration and the hardware underneath.", meta: "FEB 2026 · 17 MIN", href: "understanding-ai-what-it-is-how-it-works-and-why-it-matters-1.dc.html", at: 1770067054524 },
+      { title: "Understanding AI vs. Traditional Software: A Comprehensive Guide", category: "AI", excerpt: "The table above compares AI systems and traditional software across 14 critical dimensions.", meta: "FEB 2026 · 12 MIN", href: "understanding-ai-vs-traditional-software-a-comprehensive-guide.dc.html", at: 1770066339415 },
+      { title: "Understanding the AI Ecosystem Components Table", category: "AI", excerpt: "The table above provides a comprehensive overview of the major components that make up today's AI ecosystem.", meta: "FEB 2026 · 6 MIN", href: "understanding-the-ai-ecosystem-components-table.dc.html", at: 1770065497360 },
+      { title: "Understanding AI: What It Is, How It Works, and Why It Matters (Part 1)", category: "AI", excerpt: "Part one of three. What AI actually is, how it learns without understanding a word of it, and why it behaves so unlike the software you already know.", meta: "FEB 2026 · 14 MIN", href: "understanding-ai-what-it-is-how-it-works-and-why-it-matters.dc.html", at: 1770065036088 },
+      { title: "The Blockchain You Didn’t Ask For, But Are Definitely Getting", category: "Blockchain", excerpt: "For years, blockchain has been a buzzword wrapped in hype.", meta: "APR 2025 · 7 MIN", href: "the-blockchain-you-didn-t-ask-for-but-are-definitely-getting.dc.html", at: 1745529819000 },
+      { title: "You May Not Care About Crypto...But If You Use Venmo, You Should Care About Stablecoins", category: "Blockchain", excerpt: "What if I told you the money in your Venmo account isn’t really yours?That might sound strange—maybe even a little alarming.", meta: "APR 2025 · 8 MIN", href: "you-may-not-care-about-crypto-but-if-you-use-venmo-you-should-care-about-stablecoins.dc.html", at: 1745529545000 },
+      { title: "DePIN 101: A Crash Course on Decentralized Physical Infrastructure Networks Shaking Up Web3", category: "Web3", excerpt: "Many of the most exciting aspects of Web3 are geared toward businesses and enterprises, promising a future where groundbreaking innovations benefit many or even all of…", meta: "FEB 2025 · 6 MIN", href: "depin-101-a-crash-course-on-decentralized-physical-infrastructure-networks-shaking-up-web3.dc.html", at: 1739815243000 },
+      { title: "DePIN 102: How It’s Reshaping Industries and What’s Next", category: "Web3", excerpt: "One of the most exciting aspects of DePIN (Decentralized Physical Infrastructure Networks) is its inclusivity—it’s designed for anyone to participate.", meta: "FEB 2025 · 5 MIN", href: "depin-102-how-it-s-reshaping-industries-and-what-s-next.dc.html", at: 1739815139000 },
+      { title: "What is Web3, and Why Should You Care About It?", category: "Web3", excerpt: "For starters, we should make a distinction for those of you with a technical background, Web3, should not be confused with the near-identical term “Web 3.0”, a term coined by…", meta: "AUG 2024 · 7 MIN", href: "what-is-web3-and-why-should-you-care-about-it.dc.html", at: 1724084061000 },
+      { title: "What is a blockchain and what it isn't", category: "Blockchain", excerpt: "Blockchains are another aspect of web3 which the vast majority of the internetting public don’t really understand.", meta: "APR 2024 · 9 MIN", href: "what-is-a-blockchain-and-what-it-isn-t.dc.html", at: 1712069380000 },
+      { title: "The Blockchain in Action: Usecase & Value Prop", category: "Blockchain", excerpt: "Hopefully, part one gave you a clearer sense of what a blockchain is at a conceptual level.", meta: "APR 2024 · 4 MIN", href: "the-blockchain-in-action-usecase-value-prop.dc.html", at: 1712069324000 },
+      { title: "Thumbs Up or Thumbs DAO-n on Decentralized Autonomous Organizations?", category: "Web3", excerpt: "Note to readers: This article is more analysis and explanation rather than a ‘you’re-itching-to-read-about- this-topic-and-I’m-itching-to-write-it’ article.", meta: "MAR 2024 · 13 MIN", href: "thumbs-up-or-thumbs-dao-n-on-decentralized-autonomous-organizations.dc.html", at: 1709668440000 },
+      { title: "From Delphi to Decentralization: The Evolution of Oracles in Web3", category: "Web3", excerpt: "For thousands of years, oracles were understood to be the mouthpieces of the Gods, communicating their intentions, instructions, and desires for us in the mortal world.", meta: "JAN 2024 · 8 MIN", href: "from-delphi-to-decentralization-the-evolution-of-oracles-in-web3.dc.html", at: 1706199868000 },
+      { title: "NFTs: Funge Around & Find Out (Part II - Finding Out)", category: "NFTs", excerpt: "(This article is part two of our breakdown of NFTs.", meta: "DEC 2023 · 13 MIN", href: "nfts-funge-around-find-out-part-ii-finding-out.dc.html", at: 1701879437000 },
+      { title: "NFTs: Funge Around & Find Out (Part I - Funging Around)", category: "NFTs", excerpt: "NFTs were promised to be, the future of art or digital media, ownership, and creator compensation.", meta: "DEC 2023 · 11 MIN", href: "nfts-funge-around-find-out-part-i-funging-around.dc.html", at: 1701878666000 },
+      { title: "Real World Asset Tokenization: A Deeper Dive", category: "Blockchain", excerpt: "Tokenization, in the cryptocurrency realm has been gaining steady traction.", meta: "OCT 2023 · 10 MIN", href: "real-world-asset-tokenization-a-deeper-dive.dc.html", at: 1696872495000 },
+      { title: "Tokenization: Web3’s Transformation of Ownership", category: "Web3", excerpt: "What is tokenization?Of all the Web3 developments and concepts I’ve written about here, tokenization is one of the most exciting and potentially transformative.", meta: "SEP 2023 · 8 MIN", href: "tokenization-web3-s-transformation-of-ownership.dc.html", at: 1694181168000 },
+      { title: "Tokenization Reality Check: Where It’s At And What Holds It Back", category: "Blockchain", excerpt: "This may sound far-fetched, but we are actually making progress toward this becoming a reality in numerous forms, including tokenization of real-world assets, creator…", meta: "SEP 2023 · 4 MIN", href: "tokenization-reality-check-where-it-s-at-and-what-holds-it-back.dc.html", at: 1694181086000 },
+      { title: "Smart Contracts 101", category: "Blockchain", excerpt: "Please note that a lawyer did not write this piece, and it is not intended to be legal advice.", meta: "AUG 2023 · 14 MIN", href: "smart-contracts-101.dc.html", at: 1691434473000 },
+      { title: "Smart Contract Enforcement & Legality", category: "Blockchain", excerpt: "Please note a lawyer did not write this, nor did a coder, and it is not meant to be legal advice but a simple overview of the legality and enforceability of a smart contract.", meta: "AUG 2023 · 2 MIN", href: "smart-contract-enforcement-legality.dc.html", at: 1691431703000 },
+      { title: "The True Cost of a Sh!tcoin", category: "Blockchain", excerpt: "If you are into crypto as an investor, buyer, trader, or engineer, I’m going to go out on a limb and assume you won’t blush if I refer to meme coins or a rather specific set…", meta: "JUN 2023 · 8 MIN", href: "the-true-cost-of-a-sh-tcoin.dc.html", at: 1687241806000 },
+      { title: "Crypto: Trade in the NFT sweatshirt for a button down", category: "NFTs", excerpt: "It’s time for the crypto bro degen genius to grow up and be a responsible gatekeeper if we ever want to see adoption at scale.Please note that there are people and companies…", meta: "MAY 2023 · 15 MIN", href: "crypto-trade-in-the-nft-sweatshirt-for-a-button-down.dc.html", at: 1684259365000 },
+      { title: "Why \"Crypto\" Can’t Have a One Size Fits All Value Proposition", category: "Blockchain", excerpt: "One of the main problems related to crypto (digital assets or virtual currency) is that many people (in the ‘1st World’) who operate in the crypto sphere think of it as a…", meta: "APR 2023 · 9 MIN", href: "why-crypto-can-t-have-a-one-size-fits-all-value-proposition.dc.html", at: 1680679470000 },
+      { title: "Participate to Earn: Pay no attention to the man behind the curtain...", category: "Blockchain", excerpt: "If you’re like me, you remember when Facebook went from something dismissible to something enormous, especially regarding its value.", meta: "DEC 2022 · 8 MIN", href: "participate-to-earn-pay-no-attention-to-the-man-behind-the-curtain.dc.html", at: 1671086214000 },
+      { title: "Marketing in the metaverse: unlocking the power of 3D", category: "Metaverse", excerpt: "In my last article, we looked at the game-changing potential of the metaverse.", meta: "NOV 2022 · 11 MIN", href: "marketing-in-the-metaverse-unlocking-the-power-of-3d.dc.html", at: 1667841296000 },
+      { title: "Reframing the metaverse: what the word actually means for web3", category: "Metaverse", excerpt: "In 2016, Nick Haslam, a professor of psychology at the University of Melbourne, wrote a research paper exploring the idea of \"Concept Creep.\" The Atlantic offers a great…", meta: "NOV 2022 · 7 MIN", href: "reframing-the-metaverse-what-the-word-actually-means-for-web3.dc.html", at: 1667592677000 },
+      { title: "Exploring the utility of the metaverse", category: "Metaverse", excerpt: "Of the various up-and-coming technological developments in the zeitgeist, few are as hyped - and simultaneously unclear - as the metaverse.", meta: "SEP 2022 · 10 MIN", href: "exploring-the-utility-of-the-metaverse.dc.html", at: 1662699254000 },
+      { title: "The metaverse has a content problem...", category: "Metaverse", excerpt: "If the internet is a reservoir, the biggest source of incoming water is user-generated content (UGC).", meta: "AUG 2022 · 5 MIN", href: "the-metaverse-has-a-content-problem.dc.html", at: 1659685417000 },
+      { title: "The intersection of the metaverse and blockchain. Why these are more than buzzwords.", category: "Metaverse", excerpt: "Over the past few years, the words ‘blockchain,’ ‘cryptocurrency,’ ‘NFTs,’ and ‘metaverse’ have become as present as spring pollen, and for many people, as mysterious and…", meta: "JUL 2022 · 4 MIN", href: "the-intersection-of-the-metaverse-and-blockchain-why-these-are-more-than-buzzwords.dc.html", at: 1657561226000 },
+    ].sort((a, b) => b.at - a.at);
+  }
+
+  renderVals() {
+    const tags = ['All', 'AI', 'Blockchain', 'Web3', 'NFTs', 'Metaverse'];
+    const active = this.state.activeTag;
+    const all = this.articles();
+    const list = active === 'All' ? all : all.filter(a => a.category === active);
+
+    const tagDefs = tags.map(t => {
+      const on = t === active;
+      const style = [
+        "font-size:14px",
+        "letter-spacing:0.02em",
+        "padding:9px 16px",
+        "border-radius:2px",
+        "transition:all 0.15s ease",
+        on ? "background:#1c1813" : "background:transparent",
+        on ? "color:#ece4d4" : "color:#4a4034",
+        on ? "border:1px solid #1c1813" : "border:1px solid rgba(28,20,15,0.22)"
+      ].join("; ");
+      return { label: t, style, onClick: () => this.setState({ activeTag: t }) };
+    });
+
+    const countLabel = active === 'All'
+      ? `${all.length} pieces`
+      : `${list.length} ${list.length === 1 ? 'piece' : 'pieces'} in ${active}`;
+
+    return { tagDefs, articles: list, countLabel, upcoming: this.upcoming() };
+  }
+}
+</script>
+</body>
+</html>

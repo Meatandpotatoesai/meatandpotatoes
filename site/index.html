@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meat &amp; Potatoes — plain-spoken AI</title>
+<meta name="description" content="Plain-spoken writing about AI and blockchain.">
+<meta property="og:title" content="Meat &amp; Potatoes — plain-spoken AI">
+<meta property="og:description" content="Plain-spoken writing about AI and blockchain.">
+<meta property="og:type" content="article">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    a { text-decoration: none; color: inherit; }
+    @keyframes bob { 0%,100% { transform: translate(-50%,0); } 50% { transform: translate(-50%,6px); } }
+  
+    @media (max-width: 980px) {
+      .gbody { grid-template-columns: minmax(0,1fr) !important; gap: 44px !important; }
+      .rail { position: static !important; max-height: none !important; overflow-y: visible !important; }
+      .g4 { grid-template-columns: repeat(2,1fr) !important; }
+      .g3, .g2 { grid-template-columns: 1fr !important; }
+      .g5 { grid-template-columns: repeat(2,1fr) !important; }
+      header nav, header nav > div { flex-wrap: wrap !important; }
+    }
+    @media (max-width: 620px) {
+      .g4 { grid-template-columns: 1fr !important; }
+      .g4 > div { padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 20px !important; }
+    }
+  </style>
+</helmet>
+
+<div style="background:#ece4d4; color:#1c1813; font-family:'Hanken Grotesk', system-ui, sans-serif; min-height:100vh; -webkit-font-smoothing:antialiased;">
+
+  <!-- NAV -->
+  <header style="position:sticky; top:0; z-index:60; background:#ece4d4; border-bottom:3px solid #1c1813;">
+    <nav style="max-width:1200px; margin:0 auto; padding:14px 28px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <a href="index.html" style="display:flex; flex-direction:column; line-height:0.96;">
+        <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:19px; letter-spacing:-0.01em;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
+        <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <a href="what.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px;" style-hover="background:#1c1813; color:#ece4d4;">What</a>
+        <a href="why.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px;" style-hover="background:#1c1813; color:#ece4d4;">Why</a>
+        <a href="how.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px;" style-hover="background:#1c1813; color:#ece4d4;">How</a>
+        <a href="where.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px;" style-hover="background:#1c1813; color:#ece4d4;">Where</a>
+        <a href="who.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Who</a>
+        <a href="cookbook.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px;" style-hover="background:#1c1813; color:#ece4d4;">Cookbook</a>
+        <a href="#consult" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; color:#ece4d4; background:#b0463a; padding:9px 17px; border:2.5px solid #1c1813; border-radius:5px; box-shadow:3px 3px 0 rgba(28,20,15,0.22); margin-left:6px;" style-hover="background:#9a3b30;">Work with us</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section style="position:relative; min-height:88vh; display:flex; align-items:flex-end; overflow:hidden; border-bottom:3px solid #1c1813;">
+    <img src="assets/kitchen-hero-web.jpg" alt="A rustic kitchen — a black pot of stew on a cutting board, a bowl of potatoes, an old clock, a worn recipe board and cookbooks" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 38%;">
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(20,15,10,0.62) 0%, rgba(20,15,10,0.18) 34%, rgba(20,15,10,0.30) 60%, rgba(20,15,10,0.86) 100%);"></div>
+
+    <!-- cookbook hotspot over the books -->
+    <a href="cookbook.html" aria-label="Browse the cookbook — all articles" style="position:absolute; z-index:3; right:6%; bottom:24%; width:17%; height:16%; border:3px dashed transparent; border-radius:8px; display:flex; align-items:flex-start; justify-content:center;" style-hover="border-color:#ece4d4;">
+      <span style="transform:translateY(-128%); background:#1c1813; color:#ece4d4; font-family:'Fraunces', serif; font-weight:600; font-size:13px; padding:6px 11px; border-radius:5px; white-space:nowrap; box-shadow:3px 3px 0 rgba(0,0,0,0.4);">Browse the cookbook &rarr;</span>
+    </a>
+
+    <div style="position:relative; z-index:2; max-width:1200px; width:100%; margin:0 auto; padding:0 28px 72px;">
+      <div style="max-width:760px;">
+        <div style="font-weight:700; font-size:12px; letter-spacing:0.26em; text-transform:uppercase; color:#f0c8a0; margin-bottom:20px;">AI, served plain</div>
+        <h1 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:clamp(46px, 7vw, 96px); line-height:0.98; letter-spacing:-0.02em; color:#f4ecdc; margin:0 0 22px; text-shadow:0 2px 30px rgba(0,0,0,0.4);">The meat and potatoes of&nbsp;AI.</h1>
+        <p style="font-family:'Newsreader', Georgia, serif; font-size:clamp(19px,2.3vw,24px); line-height:1.5; color:#e8dec9; max-width:560px; margin:0 0 32px; text-shadow:0 1px 16px rgba(0,0,0,0.5);">No hype, no doom. Just clear writing on what AI is, why it matters for your business, and how to use it without getting burned. Free to read &mdash; the front door to our consulting kitchen.</p>
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="what.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:16px; color:#ece4d4; background:#b0463a; padding:14px 28px; border:2.5px solid #1c1813; border-radius:6px; box-shadow:5px 5px 0 rgba(0,0,0,0.35);" style-hover="transform:translate(-2px,-2px); box-shadow:7px 7px 0 rgba(0,0,0,0.35);">Start reading</a>
+          <a href="#consult" style="font-family:'Fraunces', serif; font-weight:600; font-size:16px; color:#1c1813; background:#ece4d4; padding:14px 28px; border:2.5px solid #1c1813; border-radius:6px; box-shadow:5px 5px 0 rgba(0,0,0,0.35);" style-hover="transform:translate(-2px,-2px); box-shadow:7px 7px 0 rgba(0,0,0,0.35);">Work with us</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="position:absolute; left:50%; bottom:18px; z-index:3; transform:translateX(-50%); animation:bob 2.4s ease-in-out infinite; display:flex; flex-direction:column; align-items:center; gap:3px; color:#1c1813; background:rgba(236,228,212,0.9); border:2px solid #1c1813; border-radius:20px; padding:6px 14px; font-family:'Fraunces', serif; font-weight:600; font-size:12px;">Scroll &#9662;</div>
+  </section>
+
+  <!-- MISSION STRIP -->
+  <section style="background:#1c1813; color:#ece4d4; border-bottom:3px solid #1c1813;">
+    <div style="max-width:960px; margin:0 auto; padding:clamp(56px,7vw,92px) 28px;">
+      <div style="font-weight:700; font-size:12px; letter-spacing:0.26em; text-transform:uppercase; color:#cdb24a; margin-bottom:18px;">Why we cook this up</div>
+      <p style="font-family:'Newsreader', Georgia, serif; font-size:clamp(22px,3vw,34px); line-height:1.42; letter-spacing:-0.01em; margin:0; max-width:840px;">Most writing about AI is breathless hype or doom. Neither helps a leader who has to make a real decision on Tuesday. We&rsquo;re the boring, trustworthy middle &mdash; plain language, honest trade-offs, no agenda beyond getting it right.</p>
+      <a href="why.html" style="display:inline-flex; align-items:center; gap:9px; margin-top:26px; font-family:'Fraunces', serif; font-weight:600; font-size:16px; color:#f0c8a0;" style-hover="gap:14px;">Read why it matters &rarr;</a>
+    </div>
+  </section>
+
+  <!-- THREE COURSES -->
+  <section style="max-width:1200px; margin:0 auto; padding:clamp(56px,7vw,90px) 28px;">
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:40px; flex-wrap:wrap;">
+      <div>
+        <div style="font-weight:700; font-size:12px; letter-spacing:0.26em; text-transform:uppercase; color:#b0463a; margin-bottom:12px;">The three courses</div>
+        <h2 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:clamp(32px,4.4vw,52px); line-height:1; letter-spacing:-0.02em; margin:0;">Start with the basics</h2>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;" class="g3">
+
+      <a href="what.html" style="display:flex; flex-direction:column; justify-content:space-between; min-height:290px; padding:30px 28px; background:#ece4d4; border:3px solid #1c1813; border-radius:8px; box-shadow:6px 6px 0 rgba(28,20,15,0.22);" style-hover="transform:translate(-3px,-3px); box-shadow:9px 9px 0 rgba(28,20,15,0.22);">
+        <div>
+          <div style="font-family:'Fraunces', serif; font-weight:700; font-size:13px; letter-spacing:0.14em; color:#b0463a; margin-bottom:16px;">01 &mdash; WHAT</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:29px; line-height:1; margin:0 0 12px;">What is AI?</h3>
+          <p style="font-size:15.5px; line-height:1.55; color:#4a4034; margin:0;">The plain-English version &mdash; and why nine different institutions each define it to suit themselves.</p>
+        </div>
+        <span style="font-family:'Fraunces', serif; font-weight:600; font-size:15px; color:#b0463a; margin-top:24px;">Read the course &rarr;</span>
+      </a>
+
+      <a href="why.html" style="display:flex; flex-direction:column; justify-content:space-between; min-height:290px; padding:30px 28px; background:#1c1813; color:#ece4d4; border:3px solid #1c1813; border-radius:8px; box-shadow:6px 6px 0 rgba(28,20,15,0.22);" style-hover="transform:translate(-3px,-3px); box-shadow:9px 9px 0 rgba(28,20,15,0.22);">
+        <div>
+          <div style="font-family:'Fraunces', serif; font-weight:700; font-size:13px; letter-spacing:0.14em; color:#cdb24a; margin-bottom:16px;">02 &mdash; WHY</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:29px; line-height:1; margin:0 0 12px;">Why it matters</h3>
+          <p style="font-size:15.5px; line-height:1.55; color:#c4b9a4; margin:0;">The concerns are real and so is the upside. We level with you on both &mdash; and why you can&rsquo;t tune it out.</p>
+        </div>
+        <span style="font-family:'Fraunces', serif; font-weight:600; font-size:15px; color:#f0c8a0; margin-top:24px;">Read the course &rarr;</span>
+      </a>
+
+      <a href="how.html" style="display:flex; flex-direction:column; justify-content:space-between; min-height:290px; padding:30px 28px; background:#6f7245; color:#f2efe2; border:3px solid #1c1813; border-radius:8px; box-shadow:6px 6px 0 rgba(28,20,15,0.22);" style-hover="transform:translate(-3px,-3px); box-shadow:9px 9px 0 rgba(28,20,15,0.22);">
+        <div>
+          <div style="font-family:'Fraunces', serif; font-weight:700; font-size:13px; letter-spacing:0.14em; color:#1c1813; margin-bottom:16px;">03 &mdash; HOW</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:29px; line-height:1; margin:0 0 12px;">How to use it</h3>
+          <p style="font-size:15.5px; line-height:1.55; color:#e7e4d3; margin:0;">Free tools we built &mdash; starting with a 10-minute AI audit &mdash; to size up where AI fits in your shop.</p>
+        </div>
+        <span style="font-family:'Fraunces', serif; font-weight:600; font-size:15px; color:#1c1813; margin-top:24px;">Read the course &rarr;</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- WHAT WE BELIEVE -->
+  <section style="background:#1c1813; color:#ece4d4; border-top:3px solid #1c1813; border-bottom:3px solid #1c1813;">
+    <div style="max-width:1200px; margin:0 auto; padding:clamp(56px,7vw,92px) 28px;">
+      <div style="font-weight:700; font-size:12px; letter-spacing:0.26em; text-transform:uppercase; color:#cdb24a; margin-bottom:18px;">Where we stick our neck out</div>
+      <h2 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:clamp(30px,4.4vw,52px); line-height:1.04; letter-spacing:-0.02em; margin:0 0 20px; max-width:900px;">We think AI is going to need blockchain.</h2>
+      <p style="font-family:'Newsreader', Georgia, serif; font-size:clamp(19px,2.2vw,23px); line-height:1.5; color:#d8cdb6; max-width:780px; margin:0 0 44px;">It&rsquo;s not the take that gets you invited to parties, and we&rsquo;ve written a lot about it. The short version: the smarter and more autonomous AI gets, the more it needs something models can&rsquo;t provide on their own &mdash; a way to prove what&rsquo;s true, who did what, and how the money moved. That&rsquo;s a ledger problem. So when you see a run of blockchain pieces in the cookbook, that&rsquo;s why.</p>
+
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:30px; border-top:1px solid rgba(236,228,212,0.16); padding-top:40px;" class="g3">
+        <div>
+          <div style="font-family:'Fraunces', serif; font-weight:700; font-size:13px; letter-spacing:0.14em; color:#cdb24a; margin-bottom:12px;">01 &mdash; DATA INTEGRITY</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:23px; line-height:1.1; margin:0 0 10px; color:#f4ecdc;">A model is only as trustworthy as its data.</h3>
+          <p style="font-size:15.5px; line-height:1.6; color:#c4b9a4; margin:0;">A tamper-evident ledger gives every training set, model, and output a chain of custody you can actually check &mdash; not just take on faith.</p>
+        </div>
+        <div>
+          <div style="font-family:'Fraunces', serif; font-weight:700; font-size:13px; letter-spacing:0.14em; color:#cdb24a; margin-bottom:12px;">02 &mdash; TRUST</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:23px; line-height:1.1; margin:0 0 10px; color:#f4ecdc;">You can&rsquo;t see inside the model, so verify around it.</h3>
+          <p style="font-size:15.5px; line-height:1.6; color:#c4b9a4; margin:0;">Cryptographic proof beats &ldquo;trust us&rdquo; &mdash; for audit trails, consent, and settling who did what when it matters.</p>
+        </div>
+        <div>
+          <div style="font-family:'Fraunces', serif; font-weight:700; font-size:13px; letter-spacing:0.14em; color:#cdb24a; margin-bottom:12px;">03 &mdash; AGENT ECONOMICS</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:23px; line-height:1.1; margin:0 0 10px; color:#f4ecdc;">Agents will transact with each other.</h3>
+          <p style="font-size:15.5px; line-height:1.6; color:#c4b9a4; margin:0;">To pay, permission, and settle without a human in the loop, autonomous agents need identity and money that live on a shared ledger.</p>
+        </div>
+      </div>
+      <a href="cookbook.html" style="display:inline-flex; align-items:center; gap:9px; margin-top:38px; font-family:'Fraunces', serif; font-weight:600; font-size:16px; color:#f0c8a0;" style-hover="gap:14px;">Read the blockchain pieces &rarr;</a>
+    </div>
+  </section>
+
+  <!-- FROM THE COOKBOOK -->
+  <section style="background:#e2d8c4; border-top:3px solid #1c1813; border-bottom:3px solid #1c1813;">
+    <div style="max-width:1200px; margin:0 auto; padding:clamp(52px,6vw,82px) 28px;">
+      <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:36px; flex-wrap:wrap;">
+        <h2 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:clamp(30px,4vw,48px); line-height:1; letter-spacing:-0.02em; margin:0;">Fresh from the cookbook</h2>
+        <a href="cookbook.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:15px; color:#b0463a;" style-hover="gap:14px;">The whole cookbook &rarr;</a>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;" class="g3">
+
+        <a href="what.html" style="display:flex; flex-direction:column; gap:10px; min-height:200px; padding:22px; background:#ece4d4; border:3px solid #1c1813; border-radius:8px; box-shadow:5px 5px 0 rgba(28,20,15,0.22);" style-hover="transform:translate(-3px,-3px); box-shadow:8px 8px 0 rgba(28,20,15,0.22);">
+          <span style="align-self:flex-start; font-family:'Hanken Grotesk', sans-serif; font-size:10.5px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; background:#1c1813; color:#ece4d4; padding:4px 9px; border-radius:3px;">The Basics</span>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:21px; line-height:1.08; margin:6px 0 0;">No, it&rsquo;s not magic: a CEO&rsquo;s guide to what AI really does</h3>
+          <p style="margin:auto 0 0; font-size:12.5px; font-weight:600; color:#8a7d68; letter-spacing:0.04em;">PRIMER &middot; 6 MIN</p>
+        </a>
+
+        <a href="why.html" style="display:flex; flex-direction:column; gap:10px; min-height:200px; padding:22px; background:#ece4d4; border:3px solid #1c1813; border-radius:8px; box-shadow:5px 5px 0 rgba(28,20,15,0.22);" style-hover="transform:translate(-3px,-3px); box-shadow:8px 8px 0 rgba(28,20,15,0.22);">
+          <span style="align-self:flex-start; font-family:'Hanken Grotesk', sans-serif; font-size:10.5px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; background:#b0463a; color:#ece4d4; padding:4px 9px; border-radius:3px;">Opinion</span>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:21px; line-height:1.08; margin:6px 0 0;">The four AI risks worth losing sleep over (and four that aren&rsquo;t)</h3>
+          <p style="margin:auto 0 0; font-size:12.5px; font-weight:600; color:#8a7d68; letter-spacing:0.04em;">OPINION &middot; 4 MIN</p>
+        </a>
+
+        <a href="how.html" style="display:flex; flex-direction:column; gap:10px; min-height:200px; padding:22px; background:#ece4d4; border:3px solid #1c1813; border-radius:8px; box-shadow:5px 5px 0 rgba(28,20,15,0.22);" style-hover="transform:translate(-3px,-3px); box-shadow:8px 8px 0 rgba(28,20,15,0.22);">
+          <span style="align-self:flex-start; font-family:'Hanken Grotesk', sans-serif; font-size:10.5px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; background:#6f7245; color:#ece4d4; padding:4px 9px; border-radius:3px;">Toolkit</span>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:21px; line-height:1.08; margin:6px 0 0;">Run a 10-minute AI audit on your own company</h3>
+          <p style="margin:auto 0 0; font-size:12.5px; font-weight:600; color:#8a7d68; letter-spacing:0.04em;">TOOLKIT &middot; 3 MIN</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSULT BAND -->
+  <section id="consult" style="background:#b0463a; color:#f4ecdc; border-bottom:3px solid #1c1813;">
+    <div style="max-width:1200px; margin:0 auto; padding:clamp(56px,7vw,88px) 28px; display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;">
+      <div style="max-width:660px;">
+        <div style="font-weight:700; font-size:12px; letter-spacing:0.24em; text-transform:uppercase; color:rgba(244,236,220,0.78); margin-bottom:16px;">Beyond the blog</div>
+        <h2 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:clamp(30px,4.2vw,50px); line-height:1.02; letter-spacing:-0.02em; margin:0 0 16px;">When you&rsquo;re ready to do more than read.</h2>
+        <p style="font-family:'Newsreader', Georgia, serif; font-size:19px; line-height:1.5; color:rgba(244,236,220,0.92); margin:0;">We help leadership teams turn AI from a buzzword into a plan &mdash; strategy, audits, and hands-on rollout, grounded in the same plain talk you get here.</p>
+      </div>
+      <div style="flex:none; display:flex; flex-direction:column; gap:6px; font-family:'Fraunces', serif; font-weight:600; font-size:16px; color:#f4ecdc; padding:15px 30px; border:2px dashed rgba(244,236,220,0.5); border-radius:6px;"><span style="font-family:'Hanken Grotesk', sans-serif; font-weight:600; font-size:11px; letter-spacing:0.18em; color:rgba(244,236,220,0.7);">COMING SOON</span><span>Booking opens shortly</span></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#1c1813; color:#c4b9a4;">
+    <div style="max-width:1200px; margin:0 auto; padding:56px 28px; display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+      <div>
+        <div style="display:flex; flex-direction:column; line-height:0.96; margin-bottom:14px;">
+          <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:18px; color:#f4ecdc;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
+          <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+        </div>
+        <p style="font-size:14px; line-height:1.5; max-width:300px; margin:0;">The essential stuff about AI. A free blog by an AI consulting practice.</p>
+      </div>
+      <div style="display:flex; gap:64px; flex-wrap:wrap;">
+        <div style="display:flex; flex-direction:column; gap:11px;">
+          <span style="font-family:'Fraunces', serif; font-weight:700; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">COURSES</span>
+          <a href="what.html" style="font-size:15px;" style-hover="color:#f4ecdc;">What is AI</a>
+          <a href="why.html" style="font-size:15px;" style-hover="color:#f4ecdc;">Why it matters</a>
+          <a href="how.html" style="font-size:15px;" style-hover="color:#f4ecdc;">How to use it</a>
+          <a href="cookbook.html" style="font-size:15px;" style-hover="color:#f4ecdc;">The cookbook</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:11px;">
+          <span style="font-family:'Fraunces', serif; font-weight:700; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">PRACTICE</span>
+          <a href="#consult" style="font-size:15px;" style-hover="color:#f4ecdc;">Consulting</a>
+          <a href="how.html" style="font-size:15px;" style-hover="color:#f4ecdc;">Free tools</a>
+          <a href="who.html" style="font-size:15px;" style-hover="color:#f4ecdc;">Who does what</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(244,236,220,0.12);">
+      <div style="max-width:1200px; margin:0 auto; padding:20px 28px; font-family:'Fraunces', serif; font-weight:500; font-size:12px; color:#8a7d68;">© 2026 Meatandpotatoes.ai — all signal, no filler.</div>
+    </div>
+  </footer>
+
+</div>
+
+<template id="__bundler_thumbnail" data-bg-color="#1c1813">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#1c1813"/>
+    <rect x="470" y="300" width="260" height="200" rx="14" fill="#2a2018" stroke="#b0463a" stroke-width="10"/>
+    <ellipse cx="600" cy="300" rx="130" ry="30" fill="#3a2d22"/>
+    <circle cx="600" cy="150" r="34" fill="#b0463a"/>
+    <text x="600" y="610" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="78" fill="#f4ecdc">MEAT <tspan fill="#b0463a">&amp;</tspan> POTATOES</text>
+    <text x="600" y="668" text-anchor="middle" font-family="Georgia, serif" font-size="26" letter-spacing="10" fill="#cdb24a">PLAIN-SPOKEN AI</text>
+  </svg>
+</template></x-dc>
+</body>
+</html>

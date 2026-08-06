@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    a { text-decoration: none; color: inherit; }
+    a:hover { color: #b0463a; }
+    html { scroll-behavior: smooth; }
+    .art-section { scroll-margin-top: 100px; }
+    .rail { max-height: calc(100vh - 124px); overflow-y: auto; overscroll-behavior: contain; }
+    @media (max-width: 980px) {
+      .gbody { grid-template-columns: minmax(0,1fr) !important; gap: 44px !important; }
+      .rail { position: static !important; max-height: none !important; overflow-y: visible !important; }
+      .g3, .g2 { grid-template-columns: 1fr !important; }
+      header nav, header nav > div { flex-wrap: wrap !important; }
+    }
+  </style>
+</helmet>
+
+<div style="background:#ece4d4; color:#1c1813; font-family:'Hanken Grotesk', system-ui, sans-serif; min-height:100vh; -webkit-font-smoothing:antialiased;">
+
+  <header style="position:sticky; top:0; z-index:60; background:#ece4d4; border-bottom:3px solid #1c1813;">
+    <nav style="max-width:1180px; margin:0 auto; padding:18px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <a href="Home.dc.html" style="display:flex; flex-direction:column; line-height:0.96;">
+        <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:19px; letter-spacing:-0.01em;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
+        <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <a href="What.dc.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">What</a>
+        <a href="Why.dc.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Why</a>
+        <a href="How.dc.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">How</a>
+        <a href="Where.dc.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Where</a>
+        <a href="Who.dc.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Who</a>
+        <a href="Blog.dc.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid #1c1813; border-radius:5px; color:#ece4d4; background:#b0463a;">Cookbook</a>
+        <a href="Home.dc.html#consult" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; color:#ece4d4; background:#b0463a; padding:9px 17px; border:2.5px solid #1c1813; border-radius:5px; box-shadow:3px 3px 0 rgba(28,20,15,0.22); margin-left:6px;" style-hover="background:#9a3b30;">Work with us</a>
+      </div>
+    </nav>
+  </header>
+
+  <div style="max-width:1180px; margin:0 auto; padding:28px 32px 0;">
+    <a href="Blog.dc.html" style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.08em; color:#8a7d68;" style-hover="color:#b0463a;">&larr; BACK TO THE COOKBOOK</a>
+  </div>
+
+  <header style="max-width:1180px; margin:0 auto; padding:36px 32px 40px;">
+    <div style="max-width:800px;">
+      <div style="display:flex; gap:10px; margin-bottom:24px; flex-wrap:wrap;">
+        <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#ece4d4; background:#b0463a; padding:5px 11px; border-radius:2px;">Blockchain</span>
+        <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#4a4034; background:#e2d8c4; padding:5px 11px; border-radius:2px;">JUN 2023</span>
+      </div>
+      <h1 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(36px,5vw,60px); line-height:1.05; letter-spacing:-0.025em; margin:0 0 22px; text-wrap:pretty;">The True Cost of a Sh!tcoin</h1>
+      <p style="font-size:21px; line-height:1.55; color:#4a4034; margin:0 0 28px; text-wrap:pretty;">If you are into crypto as an investor, buyer, trader, or engineer, I’m going to go out on a limb and assume you won’t blush if I refer to meme coins or a rather specific set…</p>
+      <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap; font-family:'Hanken Grotesk', sans-serif; font-size:13px; color:#8a7d68;">
+        <span style="color:#4a4034;">By the Meatandpotatoes.ai team</span>
+        <span>&middot;</span>
+        <span>JUN 2023</span>
+        <span>&middot;</span>
+        <span>8 MIN READ</span>
+      </div>
+    </div>
+  </header>
+
+  <div style="max-width:1180px; margin:0 auto; padding:0 32px;"><div style="border-top:3px solid #1c1813;"></div></div>
+
+  <div class="gbody" style="max-width:1180px; margin:0 auto; padding:48px 32px 64px; display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:64px; align-items:start;">
+
+    <article style="max-width:720px;">
+      <div style="background:#e2d8c4; border:1px dashed rgba(28,20,15,0.3); border-radius:4px; padding:20px 24px; margin:0 0 34px;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#b0463a; margin-bottom:8px;">FROM THE ARCHIVE</div>
+        <p style="font-size:15px; line-height:1.6; color:#4a4034; margin:0;">Written in June 2023 and kept here as published. The ground has moved since — read it as a snapshot of the thinking at the time, not as current advice.</p>
+      </div>
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">If you are into crypto as an investor, buyer, trader, or engineer, I’m going to go out on a limb and assume you won’t blush if I refer to meme coins or a rather specific set of <a target="_blank" rel="noopener" href="https://www.investopedia.com/terms/a/altcoin.asp" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">altcoins </a>as what they are commonly referred to as: ‘sh!tcoins.’ While this label might seem harsh or dismissive, this class of cryptocurrency token offers what any other crypto (or traditional asset class) offers: possible risk and possible reward - but the particular levels of risk versus reward, inherent value, volatility, and (last but certainly not least) legitimacy are wildly different. Plenty of investors have made money on these coins, but plenty more have lost. And while growing one’s wealth by making smart trades, acquisitions, and sales is the name of the game, it’s false to say that one approach is the same as another, particularly in the crypto space where the cement has yet to dry fully. Yes, you can make money with shi!t coins (minting, buying, or selling them), but there are costs, too - some literal, some figurative, and some that have yet to present themselves. My hope is that a better understanding of what they are, what might motivate someone to mint them, what might motivate someone else to buy them, and an examination of the tangible and long-term consequences of these coins might prompt you to reconsider engaging in the first place.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">So, what is a sh!t coin, and how is it different from a more traditional/commonplace cryptocurrency? These are specific altcoins with zero (or close to zero) value, and no stated utility, and is not broadly adopted by crypto investors. While the argument held in general society about the inherent value and utility of crypto is ongoing, these coins fall into their own category. Many sh!t coin creators are upfront about there being no utility or value in the coin, and warn of them as potentially bad investments. They are invented as either a joke (like the Eric Cartman coin), an outright scam, or as a means of quick profit for their creators. According to <a target="_blank" rel="noopener" href="https://coinmarketcap.com/alexandria/glossary/shitcoin" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">coinmarketcap.com</a>, “A [sh!tcoin] is generally launched in a bull market when the investor sentiment is at its highest. At the peak of a bull market, investors care less about utility and fundamental value and more about short-term gains and leveraging their capital. That is the perfect time for a sh!tcoin to hit the market and generate as much traction as possible.” There are also fake versions of these coins: coins designed to be mistaken for more mainstream sh!tcoins, but don’t have the community or momentum of the actual coin. To illustrate my point, check out the screenshot below, (to learn more about the different types of crypto tokens, check out my earlier piece <a target="_blank" rel="noopener" href="https://mirror.xyz/nmohapatra.eth/a8G9rSPuXWwkjj7IvZk-XUE4bjbhSBA4JKOIm4N0cvA" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">here</a>.)</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">When a new coin’s emergence is imminent, the coin’s creators spread the word and work to create a buzz around the offering. Online chatter builds excitement about the possibility of the coin’s purported value or popularity. With sh!t coins, this is the beginning of a ‘pump and dump.’ Investors who buy into the coin (or influencers who are given an allotment) shill it, sending its speculative value soaring and prompting less savvy investors to race on board. As the coins are tied to no utility, or ability to use as payment (as no vendor will actually take these coins), their value is based purely on speculation. Once the value skyrockets, early investors dump their holdings and extract the money, leaving the rest holding worthless coins and empty wallets.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">There are many reasons why people invest in legitimate cryptocurrencies. Some actually use it as a medium of exchange, believing in the project tied to the token, or maybe they are diversifying their portfolio. But when we talk about these coins, it should be understood that the majority of folks are buying them to make a quick buck, treating each investment in these types of tokens as a lottery ticket. For instance, <a target="_blank" rel="noopener" href="https://www.coindesk.com/markets/2023/05/05/pepecoins-bewildering-rise-turned-a-pittance-into-an-almost-5000000-meme-coin-profit/" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">one trader supposedly turned $263 into $3.8M</a>.But this moves us into the realm of pyramid schemes where “someone did well enough to buy a Ferrari.” The only clear-eyed way to look at sinking your money into something as wildly speculative as these coins is to view it as gambling. And when it comes to gambling, there are amateurs, and there are pros - and the pros usually win, and the amateurs go home emptyhanded. It’s also important to understand that not everyone who holds a token bought it; a portion is reserved for the developers, some are given to influencers who push the token, and some are given to people that sign up early or buy in at a discount. Then you have the individuals who actually do buy the token: their under-informed and overly excited purchase boosts the price rapidly. The last to buy - typically, the newest/greenest investors - end up losing their money and holding a worthless asset.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">It’s clear how you can make money with these coins, either as a minter or as an investor, but the short and long-term drawbacks of doing so ought to give you pause. I’ll break these down into straightforward categories: the reasons you might expect (but which are worse with sh!tcoins than with legitimate tokens), and the reasons you probably haven’t thought of yet (but truly should).</p><h2 id="s1" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">Reasons You Might Expect</h2><h3 id="s2" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px; line-height:1.25; margin:36px 0 14px;">Sustainability</h3><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Scoring a big win with these coins is literally no different than success with a lottery ticket, and you don’t need to be a financial expert to know that winning the lottery is not a sustainable source of income. (If you are one of those people that honestly believe you can identify good projects vs bad, or are one of those technical analysis folks: Godspeed, this wasn’t written for you)</p><h3 id="s3" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px; line-height:1.25; margin:36px 0 14px;">Taxes</h3><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">As of this year, you need to pay taxes on crypto earnings. This process is slightly more complicated than trading stocks, as not every exchange provides the necessary tax documents. This is particularly true with sh!tcoins, which are often not sold on centralized exchanges that offer tax documents. You actually have to track this stuff or do nothing and risk getting audited.</p><h2 id="s4" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">Reasons You Probably Haven’t Thought Of</h2><h3 id="s5" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px; line-height:1.25; margin:36px 0 14px;">Precedent</h3><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">When people are okay with losing an entire investment, and you create an environment where that becomes the norm, it establishes the expectation for investing in the space. The assumption becomes that the crypto space is filled with <a target="_blank" rel="noopener" href="https://corporatefinanceinstitute.com/resources/economics/moral-hazard/" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">moral hazard</a> situations: that the actors are not working in good faith. If or when they are acting in good faith, it is a happy surprise. Crypto already has to work against this assumption, and sh!tcoins amplify the negativity by pouring gas on the fire.</p><h3 id="s6" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px; line-height:1.25; margin:36px 0 14px;">Gas &amp; Congestion</h3><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Sh!tcoins do not inherently cause harm to a blockchain network like Ethereum, but they can indirectly contribute to issues if they significantly increase the number of transactions. Blockchains can only process a certain number of transactions within each block. When there are more transactions than can be processed immediately, users must compete for their transactions to be included in the next block. They do this by increasing the "gas fee" they're willing to pay. Therefore, if a meme token suddenly becomes popular and thousands of users start buying and selling it, everyone using the blockchain would see higher congestion meaning <a target="_blank" rel="noopener" href="https://www.coindesk.com/tech/2023/05/08/pepe-meme-coin-craze-spreads-wealth-to-ethereum-validators-running-blockchain/" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">higher gas fees and longer confirmation times</a>, regardless of what you are using that blockchain for.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Moreover, every transaction is recorded on the blockchain and contributes to its size. While this doesn't "use up space" in the way a hard drive is used, it does make the blockchain continually larger. As this data accumulates more and more space and bandwidth, it increases the storage and computational requirements (and costs) for running a complete node, which can indirectly impact the level of decentralization of the network. If fewer users are able to run full nodes because the requirements (costs) are too high, this can lead to a greater concentration of network control, with a smaller number of people running more nodes (centralization). One of the selling points of crypto evangelists from the very beginning was the virtue of decentralization. Sh!tcoins clogging the system (no pun intended) works against this. The impact of these coins is multiplied by the fact that copycat coins pop up quickly and in great quantities.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">We don’t know what issues an ever-expanding volume of data on the blockchain will morph into, but it is likely that this will become an issue in the future if not tended to. While the severity of this issue is not known, that is not an excuse not to address it. (That approach rings of the mindset of using fossil fuels in the 19th century - something with unforeseeable but utterly enormous consequences down the road of history.) While this may not fall on the individual, as these are broad issues related to blockchain scalability and not specifically the fault of a specific token or user, it is worth considering.</p><h3 id="s7" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px; line-height:1.25; margin:36px 0 14px;">The Ecosystem</h3><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">When money is invested in companies that fail, particularly when that money is invested in these coins, it hurts the entire industry, specifically innovative companies. Money that goes into a sh!tcoin doesn’t go towards the creation of a new thing: a product, a service, something new. The money you lose also likely won’t go into anything new. If you are willing to invest in something that could possibly go to zero, why not invest (via purchasing tokens linked to the project) in an innovative and new thing? Now, one must accept this involves holding coins for a while, and having a different investment approach, but realize that many on-chain projects would appeal to the average person (not all projects are tied to finance). There are many projects funded by token sales that work on improving data storage, reducing the cost of hosting and computation, gaming, generative AI, and many other spaces. These groundbreaking innovations that help bring people onto the blockchain may never happen if money only flows to shi!tcoins.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">To top it all off, the entire point of crypto is to fix a broken system, and in this new world, everyone is a stakeholder. Only investing in speculative plays while hoping that someone else (like a VC) invests in innovative tech that helps the space scale is literally inviting the fox into the henhouse. Investing in sh!tcoins will never lead to anything new. The only thing it can accomplish is swishing money back and forth while we leave “someone else” to bring to market things we actually want, and make it harder for them in the process.</p><hr style="border:none; border-top:1px solid rgba(28,20,15,0.16); margin:40px 0;"><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">TL/DR - it's possible to gamble your way into some money with sh!tcoins, but the odds are rarely in your favor, and the net cost of shitcoins to the space as a whole represents more of a loss than a gain. While we don’t know what the best way to get to adoption at scale with exciting on-chain projects is, we do know that sh!tcoins won’t get us there.</p>
+      <div style="border-top:1px solid rgba(28,20,15,0.16); margin-top:44px; padding-top:32px;">
+        <a href="Blog.dc.html" style="display:flex; align-items:center; justify-content:space-between; gap:24px; padding:28px 32px; background:#e2d8c4; border:1px solid rgba(28,20,15,0.12); border-radius:4px;" style-hover="background:#e6ddc9;">
+          <div>
+            <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.16em; color:#8a7d68; margin-bottom:8px;">KEEP READING</div>
+            <span style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px;">The whole cookbook</span>
+          </div>
+          <span style="font-size:26px; color:#b0463a;">&rarr;</span>
+        </a>
+      </div>
+    </article>
+
+    <aside class="rail" style="position:sticky; top:100px; display:flex; flex-direction:column; gap:28px;">
+      <div style="border:1px solid rgba(28,20,15,0.14); border-radius:4px; padding:22px 22px 24px; background:#ece4d4;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#8a7d68; margin-bottom:14px;">IN THIS PIECE</div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <a href="#s1" style="font-size:14px; line-height:1.35; color:#1c1813; font-weight:600;" style-hover="color:#b0463a;">Reasons You Might Expect</a>
+          <a href="#s2" style="font-size:13.5px; line-height:1.35; color:#4a4034; padding-left:14px; border-left:1px solid rgba(28,20,15,0.18);" style-hover="color:#b0463a;">Sustainability</a>
+          <a href="#s3" style="font-size:13.5px; line-height:1.35; color:#4a4034; padding-left:14px; border-left:1px solid rgba(28,20,15,0.18);" style-hover="color:#b0463a;">Taxes</a>
+          <a href="#s4" style="font-size:14px; line-height:1.35; color:#1c1813; font-weight:600;" style-hover="color:#b0463a;">Reasons You Probably Haven’t Thought Of</a>
+          <a href="#s5" style="font-size:13.5px; line-height:1.35; color:#4a4034; padding-left:14px; border-left:1px solid rgba(28,20,15,0.18);" style-hover="color:#b0463a;">Precedent</a>
+          <a href="#s6" style="font-size:13.5px; line-height:1.35; color:#4a4034; padding-left:14px; border-left:1px solid rgba(28,20,15,0.18);" style-hover="color:#b0463a;">Gas &amp; Congestion</a>
+          <a href="#s7" style="font-size:13.5px; line-height:1.35; color:#4a4034; padding-left:14px; border-left:1px solid rgba(28,20,15,0.18);" style-hover="color:#b0463a;">The Ecosystem</a>
+        </div>
+      </div>
+      <div style="border:1px solid rgba(28,20,15,0.14); border-radius:4px; padding:22px 22px 24px;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#b0463a; margin-bottom:16px;">THIS PIECE</div>
+        <div style="display:flex; flex-direction:column; gap:12px; font-size:14px; color:#4a4034;">
+          <div style="display:flex; justify-content:space-between; gap:12px;"><span style="color:#8a7d68;">Published</span><span style="font-weight:600;">June 2023</span></div>
+          <div style="display:flex; justify-content:space-between; gap:12px;"><span style="color:#8a7d68;">Category</span><span style="font-weight:600;">Blockchain</span></div>
+          <div style="display:flex; justify-content:space-between; gap:12px;"><span style="color:#8a7d68;">Read time</span><span style="font-weight:600;">8 min</span></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <section style="background:#e2d8c4;">
+    <div style="max-width:1180px; margin:0 auto; padding:64px 32px;">
+      <div style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.14em; color:#8a7d68; margin-bottom:28px;">READ NEXT</div>
+      <div class="g2" style="display:grid; grid-template-columns:repeat(2,1fr); gap:28px;">
+        <a href="crypto-trade-in-the-nft-sweatshirt-for-a-button-down.dc.html" style="display:block;" style-hover="opacity:0.9;">
+          <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.1em; color:#b0463a; margin-bottom:10px;">EARLIER &middot; 15 MIN</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:21px; line-height:1.2; margin:0; text-wrap:pretty;">Crypto: Trade in the NFT sweatshirt for a button down</h3>
+        </a>
+        <a href="smart-contract-enforcement-legality.dc.html" style="display:block;" style-hover="opacity:0.9;">
+          <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.1em; color:#b0463a; margin-bottom:10px;">LATER &middot; 2 MIN</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:21px; line-height:1.2; margin:0; text-wrap:pretty;">Smart Contract Enforcement &amp; Legality</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#1c1813; color:#c4b9a4;">
+    <div style="max-width:1180px; margin:0 auto; padding:56px 32px; display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+      <div>
+        <div style="display:flex; flex-direction:column; line-height:0.96; margin-bottom:14px;">
+          <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:18px; color:#f4ecdc;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
+          <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+        </div>
+        <p style="font-size:14px; line-height:1.5; max-width:300px; margin:0;">The essential stuff about AI. A free blog by an AI consulting practice.</p>
+      </div>
+      <div style="display:flex; gap:64px; flex-wrap:wrap;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">COURSES</span>
+          <a href="What.dc.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">What is AI</a>
+          <a href="Why.dc.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Why it matters</a>
+          <a href="How.dc.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">How to use it</a>
+          <a href="Blog.dc.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">The cookbook</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">PRACTICE</span>
+          <a href="Home.dc.html#consult" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Consulting</a>
+          <a href="Who.dc.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Who does what</a>
+          <a href="Where.dc.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Where the rules are</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(236,228,212,0.1);">
+      <div style="max-width:1180px; margin:0 auto; padding:22px 32px; font-family:'Hanken Grotesk', sans-serif; font-size:12px; color:#8a7d68;">&copy; 2026 Meatandpotatoes.ai &mdash; all signal, no filler.</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>

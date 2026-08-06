@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    a { text-decoration: none; color: inherit; }
+    a:hover { color: #b0463a; }
+    html { scroll-behavior: smooth; }
+    .art-section { scroll-margin-top: 100px; }
+    .rail { max-height: calc(100vh - 124px); overflow-y: auto; overscroll-behavior: contain; }
+    @media (max-width: 980px) {
+      .gbody { grid-template-columns: minmax(0,1fr) !important; gap: 44px !important; }
+      .rail { position: static !important; max-height: none !important; overflow-y: visible !important; }
+      .g3, .g2 { grid-template-columns: 1fr !important; }
+      header nav, header nav > div { flex-wrap: wrap !important; }
+    }
+  </style>
+</helmet>
+
+<div style="background:#ece4d4; color:#1c1813; font-family:'Hanken Grotesk', system-ui, sans-serif; min-height:100vh; -webkit-font-smoothing:antialiased;">
+
+  <header style="position:sticky; top:0; z-index:60; background:#ece4d4; border-bottom:3px solid #1c1813;">
+    <nav style="max-width:1180px; margin:0 auto; padding:18px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <a href="Home.dc.html" style="display:flex; flex-direction:column; line-height:0.96;">
+        <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:19px; letter-spacing:-0.01em;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
+        <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <a href="What.dc.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">What</a>
+        <a href="Why.dc.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Why</a>
+        <a href="How.dc.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">How</a>
+        <a href="Where.dc.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Where</a>
+        <a href="Who.dc.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Who</a>
+        <a href="Blog.dc.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid #1c1813; border-radius:5px; color:#ece4d4; background:#b0463a;">Cookbook</a>
+        <a href="Home.dc.html#consult" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; color:#ece4d4; background:#b0463a; padding:9px 17px; border:2.5px solid #1c1813; border-radius:5px; box-shadow:3px 3px 0 rgba(28,20,15,0.22); margin-left:6px;" style-hover="background:#9a3b30;">Work with us</a>
+      </div>
+    </nav>
+  </header>
+
+  <div style="max-width:1180px; margin:0 auto; padding:28px 32px 0;">
+    <a href="Blog.dc.html" style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.08em; color:#8a7d68;" style-hover="color:#b0463a;">&larr; BACK TO THE COOKBOOK</a>
+  </div>
+
+  <header style="max-width:1180px; margin:0 auto; padding:36px 32px 40px;">
+    <div style="max-width:800px;">
+      <div style="display:flex; gap:10px; margin-bottom:24px; flex-wrap:wrap;">
+        <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#ece4d4; background:#b0463a; padding:5px 11px; border-radius:2px;">Blockchain</span>
+        <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#4a4034; background:#e2d8c4; padding:5px 11px; border-radius:2px;">APR 2024</span>
+      </div>
+      <h1 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(36px,5vw,60px); line-height:1.05; letter-spacing:-0.025em; margin:0 0 22px; text-wrap:pretty;">What is a blockchain and what it isn't</h1>
+      <p style="font-size:21px; line-height:1.55; color:#4a4034; margin:0 0 28px; text-wrap:pretty;">Blockchains are another aspect of web3 which the vast majority of the internetting public don’t really understand.</p>
+      <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap; font-family:'Hanken Grotesk', sans-serif; font-size:13px; color:#8a7d68;">
+        <span style="color:#4a4034;">By the Meatandpotatoes.ai team</span>
+        <span>&middot;</span>
+        <span>APR 2024</span>
+        <span>&middot;</span>
+        <span>9 MIN READ</span>
+      </div>
+    </div>
+  </header>
+
+  <div style="max-width:1180px; margin:0 auto; padding:0 32px;"><div style="border-top:3px solid #1c1813;"></div></div>
+
+  <div class="gbody" style="max-width:1180px; margin:0 auto; padding:48px 32px 64px; display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:64px; align-items:start;">
+
+    <article style="max-width:720px;">
+      <div style="background:#e2d8c4; border:1px dashed rgba(28,20,15,0.3); border-radius:4px; padding:20px 24px; margin:0 0 34px;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#b0463a; margin-bottom:8px;">FROM THE ARCHIVE</div>
+        <p style="font-size:15px; line-height:1.6; color:#4a4034; margin:0;">Written in April 2024 and kept here as published. The ground has moved since — read it as a snapshot of the thinking at the time, not as current advice.</p>
+      </div>
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Blockchains are another aspect of web3 which the vast majority of the internetting public don’t really understand. Which makes sense. After all, many of us may have taken an ‘introduction to computer coding’ class at some point in the past, but as technological evolutions come at us faster and faster, it becomes harder and harder to keep up with it all.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Common ideas (and misconceptions) around what a blockchain is run a wide gamit: some think of it as a new internet (what does that even mean?), others imagine it’s a new fangled type of computer coding, and many think it’s not worth knowing what it actually is.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Let me start off by saying that blockchains aren’t sexy. They’re a type of database. When was the last time a database got your blood pumping? Given that they sound boring, and there’s already enough of a hurdle to understand a million new concepts in the world of web3, quantum computing, AI, and whatever ‘rizz’ is, why spend time learning about a technology that seems boring?</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">There are a couple of reasons I find compelling to assemble a baseline level of understanding of blockchains. For one, blockchains are essentially the road that web3 will drive on. So if you get a grasp on blockchain, you can start to build a better, clearer picture of the other aspects of web3. This will hopefully help ensure you take more confident, accurate steps into web3 spaces, while increasing your immunity to manipulation, misrepresentation, and sinister salesmanship in the space. Furthermore, to a meaningful degree, blockchains are already a part of our day-to-day world and are becoming moreso by the day. It’s useful to occasionally check in on how far into the web3 revolution we are, and the utilization of blockchain in our lives is a good benchmark to reference.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">I want to race through enough of the basics for you to get a useful understanding that connects what we already have and do and use today with what blockchain will do and enable and change tomorrow. So, let’s dive in!</p><hr style="border:none; border-top:1px solid rgba(28,20,15,0.16); margin:40px 0;"><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">So, first off, it’s a database. So, what’s a database?</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">A database is a collection of data stored on a computer system. The data can be anything - streaming videos or video games, email systems, financial trading platforms and recordkeeping systems, you name it - and the computer system can consist of servers you own or lease from companies like AWS, Microsoft, and Google. (If you watched the HBO series Silicon Valley and remember a shot like this, you have an idea of what we’re talking about.)</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Databases and systems like these are how the modern world works. Most companies use servers like these, to do all the things we do online, on our phones, our televisions, all of it. This is no small business, this <a target="_blank" rel="noopener" href="https://www.us.jll.com/en/views/data-centers-expensive-to-build-but-worth-every-penny" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">JLL article</a> outlines the cost of building your own data center, and this <a target="_blank" rel="noopener" href="https://www.forbes.com/sites/forbesbooksauthors/2023/12/11/where-is-your-data-and-what-is-it-costing-you/?sh=67b535bc47e8" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">Forbes article</a> notes that 60% of all corporate data was stored in the cloud, with the cloud computing computing industry worth $480B.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Current database systems have a set of traits in common that, as we will see, relate to the ways in which blockchains are different. Those include:</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Centralization, mutability, and low transparency.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">You no doubt heard the term ‘database’ before reading this article, but if you weren’t familiar with what they did or if they were a part of your day to day life already, consider this breakdown of services, systems, and products which databases are involved with.</p><ul style="margin:0 0 24px; padding-left:26px;"><li style="font-size:18px; line-height:1.7; color:#2f2820; margin:0 0 10px;"><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Social Media Platforms: Every time users scroll through their feeds, like a post, or leave a comment, they're interacting with a database. These actions query and update databases in real time to display and record new content.</p></li><li style="font-size:18px; line-height:1.7; color:#2f2820; margin:0 0 10px;"><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">E-commerce Websites: Each search, item added to a cart, or transaction completed on sites like Amazon involves multiple database interactions to retrieve product information, update inventory, and process payments.</p></li><li style="font-size:18px; line-height:1.7; color:#2f2820; margin:0 0 10px;"><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Banking and Financial Services: When users check their balances, transfer money, or pay bills online, they query financial databases</p></li><li style="font-size:18px; line-height:1.7; color:#2f2820; margin:0 0 10px;"><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Email Services: Each time users send or receive an email, databases are at work storing, retrieving, and organizing these messages</p></li><li style="font-size:18px; line-height:1.7; color:#2f2820; margin:0 0 10px;"><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Online Reservations and Bookings: Whether booking a hotel, a flight, or a restaurant, each action interacts with a database to check availability and confirm reservations</p></li><li style="font-size:18px; line-height:1.7; color:#2f2820; margin:0 0 10px;"><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Content Management Systems (CMS): When users visit a blog or a news website, the articles and comments they read and interact with are retrieved from a database.</p></li></ul><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">For our purposes, that primer is enough preparation regarding traditional databases to begin exploring blockchains: what they are, what they do, and what a future including them will mean.</p><hr style="border:none; border-top:1px solid rgba(28,20,15,0.16); margin:40px 0;"><h2 id="s1" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">So… what is a blockchain?</h2><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">There are a number of different use cases for blockchains; each requires the blockchain to be specialized in different functions and is used by different groups. For this piece, a blockchain will be defined in its simplest form, without tokens, smart contracts, and the many other things often conflated with the technology itself. (We also will not discuss the difference between Layer 1 and Layer 2 chains in this piece, as that makes sense only once there is a general understanding of a blockchain.)</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Definition:</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">From <a target="_blank" rel="noopener" href="https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-blockchain" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">Mckinsey</a>:</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><em>Blockchain is a secure database shared across a network of participants, where up-to-date information is available to all participants at the same time.</em></p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Let’s start with an official definition from <a target="_blank" rel="noopener" href="https://www.ibm.com/topics/blockchain" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">IBM</a> as it pertains to businesses:</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><em>Blockchain is a shared, immutable ledger that facilitates the process of recording transactions and tracking assets in a business network. An asset can be tangible (a house, car, cash, land) or intangible (intellectual property, patents, copyrights, branding). Virtually anything of value can be tracked and traded on a blockchain network, reducing risk and cutting costs for all involved.</em></p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">I included both definitions for one reason: defining a blockchain depends on the audience you are defining it for. For the purposes of this piece, the goal is to define a blockchain in general. The fact that we see different definitions may not be just marketing, but rather because it is somewhat hard to define and contextualize.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">A blockchain is basically a database (ledger) hosted on nodes (basically a computer or server that receives and sends data as well as updates the database) that tracks information in a secure, easily traceable (transparent), and unchangeable way (immutable). Let's break this apart to understand how a blockchain achieves this.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">A blockchain is composed of blocks, which are basically data. Each time a piece of data is stored, it creates what is called a hash. Think of a hash as the fingerprint of the data: a singular, specific, one-of-a-kind identifier. Any time data is added to or augmented, the block gets a new, updated hash. The hash of the previous block is what links the blocks into a chain. The immutable part comes in here as if you were to try to change a block, all preceding blocks would then be invalid because the block you changed would have a different hash and the later ones would not link to it.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">This leads us to the two central components of what make blockchains unique in how they operate and how they ensure the trustworthiness of the data they record: recording the history of the blockchain data and the impact of decentralization.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">As the data on a block is modified/expanded upon/developed, a new hash is created to accompany that data. So think of this like a banana growing on a banana tree: each day, it grows a little more of itself. And you can look back at the record of its growth over the time it’s been growing - the history of the banana growing confirms that, yes, this is a banana. If tomorrow, you sliced off the end of the banana and grafted a kiwi (let’s say) onto the end, the miraculous power of life to find a way will allow you to go a… banawi or a kinana (or whatever you’d call that). Now, the metaphor might be a bit silly, but it illuminates something about how blockchains operate. If you were to look at a block of data that has been a banana since it was created and one day, it was suddenly a Kiwi; you would recognize that something was tampered with. The history of banana growth tells you that the whole plant is supposed to be a banana - so when it turns into a kiwi, it’s clear that something has gone wrong.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">With a traditional database, data can be wholesale replaced without setting off any alarm bells because the database is the singular verification source of the data. A database is not iterative: it’s in a constant state of ‘what is the data right now.’ So if the database says this is a Kiwi today, there’s nothing to contradict that. Blockchain, on the other hand, creates a history of the block - a history written in a stream of hashes - which would make it clear if, at any point, a banana turns into a kiwi. (A perhaps less amusing example of this might be illegal option <a target="_blank" rel="noopener" href="https://www.investopedia.com/terms/o/optionsbackdating.asp" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">backdating</a>: falsely listing a date before the issue date of a stock option so that an employee gets the profits from stock price appreciation that occurred before their ownership. This is actually a big deal…sometimes people (<a target="_blank" rel="noopener" href="https://www.forbes.com/sites/timworstall/2011/10/06/steve-jobs-obituary-the-backdated-options-scandal/?sh=675213217632" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">Steve Jobs</a>) profit millions from this.)</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">To say it more briefly, the blockchain records the data’s history, making it impossible to tamper with, as opposed to traditional databases, which don’t track history.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Got all that?</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Now, let’s roll up our sleeves and tackle the impact of decentralization.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">This may be hard to visualize, so let’s focus on another analogy. Think of the last time you were in school and had to work with classmates on a group project.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">In an individual project, you are responsible for collecting data, verifying that it is correct and pertinent, then storing it in some format to answer a question. If you go wrong at any point, it’s all on you; if your computer dies, all on you; if you crush it, again, all on you. But if we look at a group project, each student has a part to play. Each student is responsible for collecting, storing, and verifying their piece of information. Then, they share their findings with the group, and together, they compile a comprehensive view of the topic. If one student makes a mistake, the others can identify and correct it, and the project can still proceed successfully because it doesn't rely on a single point of truth. The individual project represents a centralized system vs the group project where each student is essentially a node in a decentralized system.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong>So, TL:DR, the history of a block’s data (created through an index of hashes) makes the data verifiable and immutable, and the blockchain’s decentralization means that no individual server or version of the data stands alone as the official or correct record of the data. And as new data is added (or current data is modified), the required consensus from the blockchain’s nodes ensures both of these principles are unerringly implemented.</strong></p><hr style="border:none; border-top:1px solid rgba(28,20,15,0.16); margin:40px 0;"><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Hopefully, this primer is enough of an introduction or clarification on blockchain that you have gained a footing in the concept. Over time, blockchains will occupy a larger and larger share of the internet landscape. That shouldn’t translate to a need to ‘relearn how to use the internet,’ but will mean augmentation to how the internet itself operates, and increase new functionalities and new possibilities.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">To get a more concrete understanding of the principles of blockchain technology, including a detailed comparison between blockchains and traditional databases, a use-case scenario demonstratring how a blockchain functions, as well as other resources, check out <a target="_blank" rel="noopener" href="https://mirror.xyz/nmohapatra.eth/R7NHGj1jj3dCDhQOaMXPh671crCX0e-k62w4JrfwN4U" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">part two</a> here.</p>
+      <div style="border-top:1px solid rgba(28,20,15,0.16); margin-top:44px; padding-top:32px;">
+        <a href="Blog.dc.html" style="display:flex; align-items:center; justify-content:space-between; gap:24px; padding:28px 32px; background:#e2d8c4; border:1px solid rgba(28,20,15,0.12); border-radius:4px;" style-hover="background:#e6ddc9;">
+          <div>
+            <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.16em; color:#8a7d68; margin-bottom:8px;">KEEP READING</div>
+            <span style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px;">The whole cookbook</span>
+          </div>
+          <span style="font-size:26px; color:#b0463a;">&rarr;</span>
+        </a>
+      </div>
+    </article>
+
+    <aside class="rail" style="position:sticky; top:100px; display:flex; flex-direction:column; gap:28px;">
+      <div style="border:1px solid rgba(28,20,15,0.14); border-radius:4px; padding:22px 22px 24px;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#b0463a; margin-bottom:16px;">THIS PIECE</div>
+        <div style="display:flex; flex-direction:column; gap:12px; font-size:14px; color:#4a4034;">
+          <div style="display:flex; justify-content:space-between; gap:12px;"><span style="color:#8a7d68;">Published</span><span style="font-weight:600;">April 2024</span></div>
+          <div style="display:flex; justify-content:space-between; gap:12px;"><span style="color:#8a7d68;">Category</span><span style="font-weight:600;">Blockchain</span></div>
+          <div style="display:flex; justify-content:space-between; gap:12px;"><span style="color:#8a7d68;">Read time</span><span style="font-weight:600;">9 min</span></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <section style="background:#e2d8c4;">
+    <div style="max-width:1180px; margin:0 auto; padding:64px 32px;">
+      <div style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.14em; color:#8a7d68; margin-bottom:28px;">READ NEXT</div>
+      <div class="g2" style="display:grid; grid-template-columns:repeat(2,1fr); gap:28px;">
+        <a href="the-blockchain-in-action-usecase-value-prop.dc.html" style="display:block;" style-hover="opacity:0.9;">
+          <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.1em; color:#b0463a; margin-bottom:10px;">EARLIER &middot; 4 MIN</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:21px; line-height:1.2; margin:0; text-wrap:pretty;">The Blockchain in Action: Usecase &amp; Value Prop</h3>
+        </a>
+        <a href="what-is-web3-and-why-should-you-care-about-it.dc.html" style="display:block;" style-hover="opacity:0.9;">
+          <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.1em; color:#b0463a; margin-bottom:10px;">LATER &middot; 7 MIN</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:21px; line-height:1.2; margin:0; text-wrap:pretty;">What is Web3, and Why Should You Care About It?</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#1c1813; color:#c4b9a4;">
+    <div style="max-width:1180px; margin:0 auto; padding:56px 32px; display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+      <div>
+        <div style="display:flex; flex-direction:column; line-height:0.96; margin-bottom:14px;">
+          <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:18px; color:#f4ecdc;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
+          <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+        </div>
+        <p style="font-size:14px; line-height:1.5; max-width:300px; margin:0;">The essential stuff about AI. A free blog by an AI consulting practice.</p>
+      </div>
+      <div style="display:flex; gap:64px; flex-wrap:wrap;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">COURSES</span>
+          <a href="What.dc.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">What is AI</a>
+          <a href="Why.dc.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Why it matters</a>
+          <a href="How.dc.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">How to use it</a>
+          <a href="Blog.dc.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">The cookbook</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">PRACTICE</span>
+          <a href="Home.dc.html#consult" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Consulting</a>
+          <a href="Who.dc.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Who does what</a>
+          <a href="Where.dc.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Where the rules are</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(236,228,212,0.1);">
+      <div style="max-width:1180px; margin:0 auto; padding:22px 32px; font-family:'Hanken Grotesk', sans-serif; font-size:12px; color:#8a7d68;">&copy; 2026 Meatandpotatoes.ai &mdash; all signal, no filler.</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>

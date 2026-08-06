@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tokenization Reality Check: Where It’s At And What Holds It Back — Meat &amp; Potatoes</title>
+<meta name="description" content="This may sound far-fetched, but we are actually making progress toward this becoming a reality in numerous forms, including tokenization of real-world assets, creator…">
+<meta property="og:title" content="Tokenization Reality Check: Where It’s At And What Holds It Back — Meat &amp; Potatoes">
+<meta property="og:description" content="This may sound far-fetched, but we are actually making progress toward this becoming a reality in numerous forms, including tokenization of real-world assets, creator…">
+<meta property="og:type" content="article">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    a { text-decoration: none; color: inherit; }
+    a:hover { color: #b0463a; }
+    html { scroll-behavior: smooth; }
+    .art-section { scroll-margin-top: 100px; }
+    .rail { max-height: calc(100vh - 124px); overflow-y: auto; overscroll-behavior: contain; }
+    @media (max-width: 980px) {
+      .gbody { grid-template-columns: minmax(0,1fr) !important; gap: 44px !important; }
+      .rail { position: static !important; max-height: none !important; overflow-y: visible !important; }
+      .g3, .g2 { grid-template-columns: 1fr !important; }
+      header nav, header nav > div { flex-wrap: wrap !important; }
+    }
+  </style>
+</helmet>
+
+<div style="background:#ece4d4; color:#1c1813; font-family:'Hanken Grotesk', system-ui, sans-serif; min-height:100vh; -webkit-font-smoothing:antialiased;">
+
+  <header style="position:sticky; top:0; z-index:60; background:#ece4d4; border-bottom:3px solid #1c1813;">
+    <nav style="max-width:1180px; margin:0 auto; padding:18px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <a href="index.html" style="display:flex; flex-direction:column; line-height:0.96;">
+        <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:19px; letter-spacing:-0.01em;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
+        <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <a href="what.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">What</a>
+        <a href="why.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Why</a>
+        <a href="how.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">How</a>
+        <a href="where.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Where</a>
+        <a href="who.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Who</a>
+        <a href="cookbook.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid #1c1813; border-radius:5px; color:#ece4d4; background:#b0463a;">Cookbook</a>
+        <a href="index.html#consult" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; color:#ece4d4; background:#b0463a; padding:9px 17px; border:2.5px solid #1c1813; border-radius:5px; box-shadow:3px 3px 0 rgba(28,20,15,0.22); margin-left:6px;" style-hover="background:#9a3b30;">Work with us</a>
+      </div>
+    </nav>
+  </header>
+
+  <div style="max-width:1180px; margin:0 auto; padding:28px 32px 0;">
+    <a href="cookbook.html" style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.08em; color:#8a7d68;" style-hover="color:#b0463a;">&larr; BACK TO THE COOKBOOK</a>
+  </div>
+
+  <header style="max-width:1180px; margin:0 auto; padding:36px 32px 40px;">
+    <div style="max-width:800px;">
+      <div style="display:flex; gap:10px; margin-bottom:24px; flex-wrap:wrap;">
+        <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#ece4d4; background:#b0463a; padding:5px 11px; border-radius:2px;">Blockchain</span>
+        <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#4a4034; background:#e2d8c4; padding:5px 11px; border-radius:2px;">SEP 2023</span>
+      </div>
+      <h1 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(36px,5vw,60px); line-height:1.05; letter-spacing:-0.025em; margin:0 0 22px; text-wrap:pretty;">Tokenization Reality Check: Where It’s At And What Holds It Back</h1>
+      <p style="font-size:21px; line-height:1.55; color:#4a4034; margin:0 0 28px; text-wrap:pretty;">This may sound far-fetched, but we are actually making progress toward this becoming a reality in numerous forms, including tokenization of real-world assets, creator…</p>
+      <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap; font-family:'Hanken Grotesk', sans-serif; font-size:13px; color:#8a7d68;">
+        <span style="color:#4a4034;">By the Meatandpotatoes.ai team</span>
+        <span>&middot;</span>
+        <span>SEP 2023</span>
+        <span>&middot;</span>
+        <span>4 MIN READ</span>
+      </div>
+    </div>
+  </header>
+
+  <div style="max-width:1180px; margin:0 auto; padding:0 32px;"><div style="border-top:3px solid #1c1813;"></div></div>
+
+  <div class="gbody" style="max-width:1180px; margin:0 auto; padding:48px 32px 64px; display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:64px; align-items:start;">
+
+    <article style="max-width:720px;">
+      <div style="background:#e2d8c4; border:1px dashed rgba(28,20,15,0.3); border-radius:4px; padding:20px 24px; margin:0 0 34px;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#b0463a; margin-bottom:8px;">FROM THE ARCHIVE</div>
+        <p style="font-size:15px; line-height:1.6; color:#4a4034; margin:0;">Written in September 2023 and kept here as published. The ground has moved since — read it as a snapshot of the thinking at the time, not as current advice.</p>
+      </div>
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">This may sound far-fetched, but we are actually making progress toward this becoming a reality in numerous forms, including tokenization of real-world assets, creator monetization and ownership, and fractionalization of ownership. Let’s do a flyover of each form.</p><h3 id="s1" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px; line-height:1.25; margin:36px 0 14px;">Tokenization of Real-World Assets</h3><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Protocols like <a target="_blank" rel="noopener" href="https://4k.com/" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">4K</a> and platforms like <a target="_blank" rel="noopener" href="https://www.arcade.xyz/" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">Arcade</a> allow users to tokenize real world assets and use them as collateral for a loan. It does take a leap of faith to use some of these services, but one could also say that it takes a leap of faith to use some of the lenders that also deal in specialized assets like Luxury Asset Capital. They will lend you 50% to 70% of an item’s sales value on the secondary market. In the world of blockchain, where you are dealing with peer-to-peer loans, you can negotiate with an individual to unlock more liquidity as they may not be planning to sell an asset if you default but rather own it and use it. In that case, you can assume that a lender would be willing to offer more than 70% of the sale value as they don’t have to worry about reselling the item.</p><h3 id="s2" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px; line-height:1.25; margin:36px 0 14px;">Creator Monetization and Ownership</h3><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">There have been NFTs launched by major recording artists that allow holders to share in profits, like<a target="_blank" rel="noopener" href="https://musically.com/2022/01/07/nas-selling-share-of-royalties-as-nfts/" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;"> this one by Nas</a>. There are also platforms like <a target="_blank" rel="noopener" href="https://medium.com/@Mramor/timbaland-brings-innovative-ideas-to-the-nft-industry-dfaa89745a7e" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">Timbaland’s music releases</a> that allow parts of his songs to be sampled and remixed, with immediate royalties being paid to the creator via smart contract. So imagine an Indigogo or Kickstarter-like situation that allows multiple individuals to invest in a project or company - only now (with tokenization) can investors participate in profit sharing if the project is successful.</p><h3 id="s3" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px; line-height:1.25; margin:36px 0 14px;">Fractionalized Ownership</h3><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Several companies and platforms are already leveraging blockchain technology to offer fractional ownership solutions. For real estate, platforms like RealT and Propy tokenize real estate properties, enabling investors to own fractions of properties and receive proportional rental income. In the art and collectables space, Maecenas and CurioInvest tokenize valuable art pieces and collectables, allowing art enthusiasts to invest in high-value pieces by owning a part of the piece. Most interestingly, for traditional assets like stocks, equities, and commodities, platforms like tZERO aim to create a marketplace for trading tokenized equities, providing investors with access to traditional financial assets in a tokenized format. In addition, Paxos offers tokenized commodities, allowing investors to own fractions of commodities like gold and silver. As this allows the average person to step into equities and commodities investment at a scale that makes sense for their financial realities, it stands to invite a new wave of investors into a traditionally small group.</p><hr style="border:none; border-top:1px solid rgba(28,20,15,0.16); margin:40px 0;"><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Presently, tokenization is gaining a toehold, and no doubt will continue to become an increasingly common part of our lives, but there are obstacles on its path towards its widest adoption. Three challenges leap immediately to mind:</p><h3 id="s4" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px; line-height:1.25; margin:36px 0 14px;">Public Trust and Engagement with Cryptocurrencies</h3><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">The public is constantly hearing of crypto scams and people losing their savings. Recent news focused on the NFT market cratering. The amazing possibilities of tokenization rely on blockchains and companies no one has ever heard of. While you can do your own research on a firm, that will not build enough trust for the average person. In the way people didn’t trust online retailers in the early 2000s, people do not have a reason to trust the crypto space, especially when claiming to do something groundbreaking.</p><h3 id="s5" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px; line-height:1.25; margin:36px 0 14px;">User Experience</h3><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Purchasing Web3 assets is a complicated, murky process that feels similar to using your parent’s credit card online in the 90s. Even if you trust the space and trust a firm, you need to actually use the software they offer to take part in this ecosystem. To date, these software systems are convoluted and confusing, even for those who are knowledgeable in this space, let alone those who are new to it. Clarity around how the space functions and what you’re buying, spending, and what you can do with it is hard to come by and serves as a significant barrier for the people who could already make use of this tech but don’t because they’re (reasonably) scared or confused.</p><h3 id="s6" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px; line-height:1.25; margin:36px 0 14px;">Mindset Shift</h3><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Realizing that what you already own can be utilized as collateral for a loan is a way of thinking that most people have not had reason to ever consider, let alone actually engage with. In our current mindset, we assume we can only get a loan against major purchases like our home, our business, our portfolio, or the assets owned by our small business. This is historically true because those are the only things banks and institutions would offer you a loan against, but with tokenization, much of what you own is likely capable of being used as collateral; you just need to find the right person to see that. With tokenization, loans are peer-to-peer, not institutional. This allows new flexibility to the system of exchange. So, for example, a beanie baby collector may be willing to loan you money with your beanie babys as collateral.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">We are not saying banks should do this, as they have business practices and fiduciary responsibility, but what we are saying is that the world of liquid is now much more open than before, but only if we decide to start thinking of our assets in this way. As Morpheus explains to Neo, “Free your mind,”... or you’ll never fully take advantage of the wonders of Web3.</p>
+      <div style="border-top:1px solid rgba(28,20,15,0.16); margin-top:44px; padding-top:32px;">
+        <a href="cookbook.html" style="display:flex; align-items:center; justify-content:space-between; gap:24px; padding:28px 32px; background:#e2d8c4; border:1px solid rgba(28,20,15,0.12); border-radius:4px;" style-hover="background:#e6ddc9;">
+          <div>
+            <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.16em; color:#8a7d68; margin-bottom:8px;">KEEP READING</div>
+            <span style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px;">The whole cookbook</span>
+          </div>
+          <span style="font-size:26px; color:#b0463a;">&rarr;</span>
+        </a>
+      </div>
+    </article>
+
+    <aside class="rail" style="position:sticky; top:100px; display:flex; flex-direction:column; gap:28px;">
+      <div style="border:1px solid rgba(28,20,15,0.14); border-radius:4px; padding:22px 22px 24px; background:#ece4d4;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#8a7d68; margin-bottom:14px;">IN THIS PIECE</div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <a href="#s1" style="font-size:13.5px; line-height:1.35; color:#4a4034; padding-left:14px; border-left:1px solid rgba(28,20,15,0.18);" style-hover="color:#b0463a;">Tokenization of Real-World Assets</a>
+          <a href="#s2" style="font-size:13.5px; line-height:1.35; color:#4a4034; padding-left:14px; border-left:1px solid rgba(28,20,15,0.18);" style-hover="color:#b0463a;">Creator Monetization and Ownership</a>
+          <a href="#s3" style="font-size:13.5px; line-height:1.35; color:#4a4034; padding-left:14px; border-left:1px solid rgba(28,20,15,0.18);" style-hover="color:#b0463a;">Fractionalized Ownership</a>
+          <a href="#s4" style="font-size:13.5px; line-height:1.35; color:#4a4034; padding-left:14px; border-left:1px solid rgba(28,20,15,0.18);" style-hover="color:#b0463a;">Public Trust and Engagement with…</a>
+          <a href="#s5" style="font-size:13.5px; line-height:1.35; color:#4a4034; padding-left:14px; border-left:1px solid rgba(28,20,15,0.18);" style-hover="color:#b0463a;">User Experience</a>
+          <a href="#s6" style="font-size:13.5px; line-height:1.35; color:#4a4034; padding-left:14px; border-left:1px solid rgba(28,20,15,0.18);" style-hover="color:#b0463a;">Mindset Shift</a>
+        </div>
+      </div>
+      <div style="border:1px solid rgba(28,20,15,0.14); border-radius:4px; padding:22px 22px 24px;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#b0463a; margin-bottom:16px;">THIS PIECE</div>
+        <div style="display:flex; flex-direction:column; gap:12px; font-size:14px; color:#4a4034;">
+          <div style="display:flex; justify-content:space-between; gap:12px;"><span style="color:#8a7d68;">Published</span><span style="font-weight:600;">September 2023</span></div>
+          <div style="display:flex; justify-content:space-between; gap:12px;"><span style="color:#8a7d68;">Category</span><span style="font-weight:600;">Blockchain</span></div>
+          <div style="display:flex; justify-content:space-between; gap:12px;"><span style="color:#8a7d68;">Read time</span><span style="font-weight:600;">4 min</span></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <section style="background:#e2d8c4;">
+    <div style="max-width:1180px; margin:0 auto; padding:64px 32px;">
+      <div style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.14em; color:#8a7d68; margin-bottom:28px;">READ NEXT</div>
+      <div class="g2" style="display:grid; grid-template-columns:repeat(2,1fr); gap:28px;">
+        <a href="smart-contracts-101.html" style="display:block;" style-hover="opacity:0.9;">
+          <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.1em; color:#b0463a; margin-bottom:10px;">EARLIER &middot; 14 MIN</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:21px; line-height:1.2; margin:0; text-wrap:pretty;">Smart Contracts 101</h3>
+        </a>
+        <a href="tokenization-web3-s-transformation-of-ownership.html" style="display:block;" style-hover="opacity:0.9;">
+          <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.1em; color:#b0463a; margin-bottom:10px;">LATER &middot; 8 MIN</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:21px; line-height:1.2; margin:0; text-wrap:pretty;">Tokenization: Web3’s Transformation of Ownership</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#1c1813; color:#c4b9a4;">
+    <div style="max-width:1180px; margin:0 auto; padding:56px 32px; display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+      <div>
+        <div style="display:flex; flex-direction:column; line-height:0.96; margin-bottom:14px;">
+          <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:18px; color:#f4ecdc;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
+          <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+        </div>
+        <p style="font-size:14px; line-height:1.5; max-width:300px; margin:0;">The essential stuff about AI. A free blog by an AI consulting practice.</p>
+      </div>
+      <div style="display:flex; gap:64px; flex-wrap:wrap;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">COURSES</span>
+          <a href="what.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">What is AI</a>
+          <a href="why.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Why it matters</a>
+          <a href="how.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">How to use it</a>
+          <a href="cookbook.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">The cookbook</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">PRACTICE</span>
+          <a href="index.html#consult" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Consulting</a>
+          <a href="who.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Who does what</a>
+          <a href="where.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Where the rules are</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(236,228,212,0.1);">
+      <div style="max-width:1180px; margin:0 auto; padding:22px 32px; font-family:'Hanken Grotesk', sans-serif; font-size:12px; color:#8a7d68;">&copy; 2026 Meatandpotatoes.ai &mdash; all signal, no filler.</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>
