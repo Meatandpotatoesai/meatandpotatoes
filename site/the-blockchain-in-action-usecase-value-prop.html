@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Blockchain in Action: Usecase &amp; Value Prop — Meat &amp; Potatoes</title>
+<meta name="description" content="Hopefully, part one gave you a clearer sense of what a blockchain is at a conceptual level.">
+<meta property="og:title" content="The Blockchain in Action: Usecase &amp; Value Prop — Meat &amp; Potatoes">
+<meta property="og:description" content="Hopefully, part one gave you a clearer sense of what a blockchain is at a conceptual level.">
+<meta property="og:type" content="article">
+<script src="./support.js"></script>
+<meta property="og:url" content="https://meatandpotatoes.ai/the-blockchain-in-action-usecase-value-prop">
+<meta property="og:image" content="https://meatandpotatoes.ai/assets/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Meat &amp; Potatoes">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://meatandpotatoes.ai/the-blockchain-in-action-usecase-value-prop">
+<link rel="stylesheet" href="./mp.css">
+<script src="./mp.js" defer></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    a { text-decoration: none; color: inherit; }
+    a:hover { color: #b0463a; }
+    html { scroll-behavior: smooth; }
+    .art-section { scroll-margin-top: 100px; }
+    .rail { max-height: calc(100vh - 124px); overflow-y: auto; overscroll-behavior: contain; }
+    @media (max-width: 980px) {
+      .gbody { grid-template-columns: minmax(0,1fr) !important; gap: 44px !important; }
+      .rail { position: static !important; max-height: none !important; overflow-y: visible !important; }
+      .g3, .g2 { grid-template-columns: 1fr !important; }
+      header nav, header nav > div { flex-wrap: wrap !important; }
+    }
+  </style>
+</helmet>
+
+<div style="background:#ece4d4; color:#1c1813; font-family:'Hanken Grotesk', system-ui, sans-serif; min-height:100vh; -webkit-font-smoothing:antialiased;">
+
+  <header style="position:sticky; top:0; z-index:60; background:#ece4d4; border-bottom:3px solid #1c1813;">
+    <nav style="max-width:1180px; margin:0 auto; padding:18px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <a href="index.html" style="display:flex; flex-direction:column; line-height:0.96;">
+        <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:19px; letter-spacing:-0.01em;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
+        <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <a href="what.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">What</a>
+        <a href="why.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Why</a>
+        <a href="how.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">How</a>
+        <a href="where.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Where</a>
+        <a href="who.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Who</a>
+        <a href="cookbook.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid #1c1813; border-radius:5px; color:#ece4d4; background:#b0463a;">Cookbook</a>
+        <a href="index.html#consult" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; color:#ece4d4; background:#b0463a; padding:9px 17px; border:2.5px solid #1c1813; border-radius:5px; box-shadow:3px 3px 0 rgba(28,20,15,0.22); margin-left:6px;" style-hover="background:#9a3b30;">Work with us</a>
+      </div>
+    </nav>
+  </header>
+
+  <div style="max-width:1180px; margin:0 auto; padding:28px 32px 0;">
+    <a href="cookbook.html" style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.08em; color:#8a7d68;" style-hover="color:#b0463a;">&larr; BACK TO THE COOKBOOK</a>
+  </div>
+
+  <header style="max-width:1180px; margin:0 auto; padding:36px 32px 40px;">
+    <div style="max-width:800px;">
+      <div style="display:flex; gap:10px; margin-bottom:24px; flex-wrap:wrap;">
+        <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#ece4d4; background:#b0463a; padding:5px 11px; border-radius:2px;">Blockchain</span>
+        <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#4a4034; background:#e2d8c4; padding:5px 11px; border-radius:2px;">APR 2024</span>
+      </div>
+      <h1 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(36px,5vw,60px); line-height:1.05; letter-spacing:-0.025em; margin:0 0 22px; text-wrap:pretty;">The Blockchain in Action: Usecase &amp; Value Prop</h1>
+      <p style="font-size:21px; line-height:1.55; color:#4a4034; margin:0 0 28px; text-wrap:pretty;">Hopefully, part one gave you a clearer sense of what a blockchain is at a conceptual level.</p>
+      <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap; font-family:'Hanken Grotesk', sans-serif; font-size:13px; color:#8a7d68;">
+        <span style="color:#4a4034;">By the Meatandpotatoes.ai team</span>
+        <span>&middot;</span>
+        <span>APR 2024</span>
+        <span>&middot;</span>
+        <span>4 MIN READ</span>
+      </div>
+    </div>
+  </header>
+
+  <div style="max-width:1180px; margin:0 auto; padding:0 32px;"><div style="border-top:3px solid #1c1813;"></div></div>
+
+  <div class="gbody" style="max-width:1180px; margin:0 auto; padding:48px 32px 64px; display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:64px; align-items:start;">
+
+    <article style="max-width:720px;">
+      <div style="background:#e2d8c4; border:1px dashed rgba(28,20,15,0.3); border-radius:4px; padding:20px 24px; margin:0 0 34px;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#b0463a; margin-bottom:8px;">FROM THE ARCHIVE</div>
+        <p style="font-size:15px; line-height:1.6; color:#4a4034; margin:0;">Written in April 2024 and kept here as published. The ground has moved since — read it as a snapshot of the thinking at the time, not as current advice.</p>
+      </div>
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Hopefully, part one gave you a clearer sense of what a blockchain is at a conceptual level. Still, it’s dry and a bit dense, so to expand on that understanding and why you would actually use a blockchain over a traditional database, let’s explore a hypothetical scenario in which a blockchain could be used, followed by a comparison between traditional databases and blockchains.</p><hr style="border:none; border-top:1px solid rgba(28,20,15,0.16); margin:40px 0;"><h3 id="s1" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px; line-height:1.25; margin:36px 0 14px;">Use-Case Scenario: Building an iPhone</h3><h3 id="s2" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px; line-height:1.25; margin:36px 0 14px;"><strong>Stage 1: Sourcing of Raw Materials</strong></h3><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Process: The iPhone's journey starts with the extraction of raw materials like lithium (for batteries), aluminum (for the casing), and gold (for circuitry).</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Blockchain Entry: Each batch of raw materials is tagged with a unique digital identifier (like a QR code or RFID tag) as it's mined. Information such as the extraction date, location, quantity, and the miner's details are recorded on the blockchain.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Purpose: This ensures the materials are ethically sourced and allows Apple to audit its suppliers for compliance with environmental and labor standards.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong>Stage 2: Component Manufacturing</strong></p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Process: These raw materials are then shipped to different factories for processing into components – for example, lithium into batteries, aluminum into casings, etc.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Blockchain Entry: When a component is made, its creation is logged on the blockchain along with details like the manufacturing date, factory location, quality control results, and the transportation method to the assembly plant.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Purpose: This helps in quality assurance and tracking any issues back to the respective component and batch.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong>Stage 3: Assembly of the iPhone</strong></p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Process: Components are shipped to assembly plants where iPhones are assembled.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Blockchain Entry: The assembly of each iPhone, along with its serial number, is recorded.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Data includes the assembly date, workers involved, and quality check results.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Purpose: Ensures transparency in manufacturing and allows tracking of each device through its manufacturing process.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong>Stage 4: Distribution and Retail</strong></p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Process: The finished iPhones are then packed and shipped to various countries for sale.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Blockchain Entry: Shipping details, including the carrier, route, and arrival times at warehouses and retail outlets, are recorded.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Purpose: Monitors the distribution process for efficiency and security, ensuring products aren't lost or tampered with during transit.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong>Stage 5: Consumer Purchase</strong></p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Process: A customer buys the iPhone from a retail store or online.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Blockchain Entry: The sale is recorded, linking the specific iPhone to its buyer (while respecting privacy laws).</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Purpose: Helps in customer service and warranty claims, ensuring the product's authenticity.</p><hr style="border:none; border-top:1px solid rgba(28,20,15,0.16); margin:40px 0;"><h3 id="s3" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px; line-height:1.25; margin:36px 0 14px;">Comparison of Blockchain vs Database</h3><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong>Transparency and Trust</strong></p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Blockchain: Offers a high level of transparency. Every transaction or record is visible to all participants in the network, which is particularly beneficial in supply chains involving multiple stakeholders who might not have inherent trust in each other.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Database: Traditional databases are typically controlled by a single entity. Transparency depends on the willingness of this entity to share information, which might not be ideal in a multi-stakeholder environment.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong>Immutability and Security</strong></p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Blockchain: Provides immutability. Once data is recorded on a blockchain, it cannot be altered without consensus, which significantly reduces the risk of fraud and data manipulation.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Database: In traditional databases, data can be altered or deleted by the database administrators, which might pose a risk in terms of data integrity and trustworthiness.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong>Decentralization</strong></p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Blockchain: Operates on a decentralized network. There is no single point of failure, and the data is not under the control of any single entity. This can enhance security and resilience against attacks or failures.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Database: Centralized nature means there is a single point of failure. If the database goes down or is compromised, it can affect the entire system.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong>Efficiency and Speed</strong></p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Blockchain: Generally slower due to the consensus mechanisms required to validate transactions. This can be less efficient for supply chain operations that require high-speed transactions.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Database: More efficient in terms of transaction speed. Databases can handle a large number of transactions quickly, which is advantageous for supply chains with high throughput needs.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong>Cost and Complexity</strong></p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Blockchain: Implementation can be complex and costly, especially for public blockchains which require significant computational resources for validation processes like Proof of Work. (though depending on your application, you can use cheaper and more efficient means like Prook of stake blockchains or Zero Knowledge Proofs)</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Database: Typically less expensive and complex to set up and maintain than a blockchain system.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong>Use-Case Suitability</strong></p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Blockchain: Ideal for supply chains where transparency, security, and trust are paramount, especially in cases involving multiple organizations or when counterfeiting, fraud, and compliance are major concerns.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Database: Better suited for supply chains that are managed by a single entity or where trust is not a significant issue, and where speed and cost-efficiency are critical.</p><hr style="border:none; border-top:1px solid rgba(28,20,15,0.16); margin:40px 0;"><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">This certainly won’t be my last word on blockchain. A topic so vast can’t be fully contained in one explainer, and for all its virtues and promises, there are liabilities and impacts to consider (its energy and environmental costs are worthy of consideration - or the fact that, ironically, many blockchain nodes are hosted on centralized servers, which undermines decentralization as an feature), but for now, understanding the basics is a jumping off point from which to grow a healthy understanding of web3 in general. In fact, knowing what you know now, consider reviewing my articles on tokenization, cryptocurrencies, metaverses, and NFTs to see if they make more sense now.</p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">If you’re eager for an even deeper dive, check out these sources:</p><div data-type="youtube" videoid="SSo_EIwHSd4">
+      <div data-id="SSo_EIwHSd4">
+        <a href="https://www.youtube.com/watch?v=SSo_EIwHSd4" target="_blank" rel="noopener" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">
+          
+        </a>
+      </div></div><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><a target="_blank" rel="noopener" href="https://www.coindesk.com/learn/how-blocks-are-added-to-a-blockchain-explained-simply/" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">https://www.coindesk.com/learn/how-blocks-are-added-to-a-blockchain-explained-simply/</a></p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><a target="_blank" rel="noopener" href="https://aws.amazon.com/what-is/blockchain/?aws-products-all.sort-by=item.additionalFields.productNameLowercase&amp;aws-products-all.sort-order=asc" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">https://aws.amazon.com/what-is/blockchain/?aws-products-all.sort-by=item.additionalFields.productNameLowercase&amp;aws-products-all.sort-order=asc</a></p><p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><a target="_blank" rel="noopener" href="https://www.coinbase.com/learn/crypto-basics/what-is-a-blockchain" style="color:#b0463a; text-decoration:underline; text-underline-offset:2px;">https://www.coinbase.com/learn/crypto-basics/what-is-a-blockchain</a></p>
+      <div style="border-top:1px solid rgba(28,20,15,0.16); margin-top:44px; padding-top:32px;">
+        <a href="cookbook.html" style="display:flex; align-items:center; justify-content:space-between; gap:24px; padding:28px 32px; background:#e2d8c4; border:1px solid rgba(28,20,15,0.12); border-radius:4px;" style-hover="background:#e6ddc9;">
+          <div>
+            <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.16em; color:#8a7d68; margin-bottom:8px;">KEEP READING</div>
+            <span style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px;">The whole cookbook</span>
+          </div>
+          <span style="font-size:26px; color:#b0463a;">&rarr;</span>
+        </a>
+      </div>
+    </article>
+
+    <aside class="rail" style="position:sticky; top:100px; display:flex; flex-direction:column; gap:28px;">
+      <div style="border:1px solid rgba(28,20,15,0.14); border-radius:4px; padding:22px 22px 24px; background:#ece4d4;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#8a7d68; margin-bottom:14px;">IN THIS PIECE</div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <a href="#s1" style="font-size:13.5px; line-height:1.35; color:#4a4034; padding-left:14px; border-left:1px solid rgba(28,20,15,0.18);" style-hover="color:#b0463a;">Use-Case Scenario: Building an iPhone</a>
+          <a href="#s2" style="font-size:13.5px; line-height:1.35; color:#4a4034; padding-left:14px; border-left:1px solid rgba(28,20,15,0.18);" style-hover="color:#b0463a;">Stage 1: Sourcing of Raw Materials</a>
+          <a href="#s3" style="font-size:13.5px; line-height:1.35; color:#4a4034; padding-left:14px; border-left:1px solid rgba(28,20,15,0.18);" style-hover="color:#b0463a;">Comparison of Blockchain vs Database</a>
+        </div>
+      </div>
+      <div style="border:1px solid rgba(28,20,15,0.14); border-radius:4px; padding:22px 22px 24px;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#b0463a; margin-bottom:16px;">THIS PIECE</div>
+        <div style="display:flex; flex-direction:column; gap:12px; font-size:14px; color:#4a4034;">
+          <div style="display:flex; justify-content:space-between; gap:12px;"><span style="color:#8a7d68;">Published</span><span style="font-weight:600;">April 2024</span></div>
+          <div style="display:flex; justify-content:space-between; gap:12px;"><span style="color:#8a7d68;">Category</span><span style="font-weight:600;">Blockchain</span></div>
+          <div style="display:flex; justify-content:space-between; gap:12px;"><span style="color:#8a7d68;">Read time</span><span style="font-weight:600;">4 min</span></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <section style="background:#e2d8c4;">
+    <div style="max-width:1180px; margin:0 auto; padding:64px 32px;">
+      <div style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.14em; color:#8a7d68; margin-bottom:28px;">READ NEXT</div>
+      <div class="g2" style="display:grid; grid-template-columns:repeat(2,1fr); gap:28px;">
+        <a href="thumbs-up-or-thumbs-dao-n-on-decentralized-autonomous-organizations.html" style="display:block;" style-hover="opacity:0.9;">
+          <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.1em; color:#b0463a; margin-bottom:10px;">EARLIER &middot; 13 MIN</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:21px; line-height:1.2; margin:0; text-wrap:pretty;">Thumbs Up or Thumbs DAO-n on Decentralized Autonomous Organizations?</h3>
+        </a>
+        <a href="what-is-a-blockchain-and-what-it-isn-t.html" style="display:block;" style-hover="opacity:0.9;">
+          <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.1em; color:#b0463a; margin-bottom:10px;">LATER &middot; 9 MIN</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:21px; line-height:1.2; margin:0; text-wrap:pretty;">What is a blockchain and what it isn't</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#1c1813; color:#c4b9a4;">
+    <div style="max-width:1180px; margin:0 auto; padding:56px 32px; display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+      <div>
+        <div style="display:flex; flex-direction:column; line-height:0.96; margin-bottom:14px;">
+          <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:18px; color:#f4ecdc;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
+          <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+        </div>
+        <p style="font-size:14px; line-height:1.5; max-width:300px; margin:0;">The essential stuff about AI. A free blog by an AI consulting practice.</p>
+      </div>
+      <div style="display:flex; gap:64px; flex-wrap:wrap;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">COURSES</span>
+          <a href="what.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">What is AI</a>
+          <a href="why.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Why it matters</a>
+          <a href="how.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">How to use it</a>
+          <a href="cookbook.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">The cookbook</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">PRACTICE</span>
+          <a href="index.html#consult" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Consulting</a>
+          <a href="who.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Who does what</a>
+          <a href="where.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Where the rules are</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(236,228,212,0.1);">
+      <div style="max-width:1180px; margin:0 auto; padding:22px 32px; font-family:'Hanken Grotesk', sans-serif; font-size:12px; color:#8a7d68;">&copy; 2026 Meatandpotatoes.ai &mdash; all signal, no filler.</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>

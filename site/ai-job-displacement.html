@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The AI job-displacement timeline — Meat &amp; Potatoes</title>
+<meta name="description" content="A data-driven look at which jobs are actually at risk &mdash; and when. There is smoke, and there is fire. But the blaze isn&rsquo;t burning where the headlines say it is.">
+<meta property="og:title" content="The AI job-displacement timeline — Meat &amp; Potatoes">
+<meta property="og:description" content="A data-driven look at which jobs are actually at risk &mdash; and when. There is smoke, and there is fire. But the blaze isn&rsquo;t burning where the headlines say it is.">
+<meta property="og:type" content="article">
+<script src="./support.js"></script>
+<meta property="og:url" content="https://meatandpotatoes.ai/ai-job-displacement">
+<meta property="og:image" content="https://meatandpotatoes.ai/assets/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Meat &amp; Potatoes">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://meatandpotatoes.ai/ai-job-displacement">
+<link rel="stylesheet" href="./mp.css">
+<script src="./mp.js" defer></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    a { text-decoration: none; color: inherit; }
+    html { scroll-behavior: smooth; }
+    .art-section { scroll-margin-top: 100px; }
+    .rail { max-height: calc(100vh - 124px); overflow-y: auto; overscroll-behavior: contain; }
+    image-slot { display: block; width: 100%; height: 100%; }
+  
+    @media (max-width: 980px) {
+      .gbody { grid-template-columns: minmax(0,1fr) !important; gap: 44px !important; }
+      .rail { position: static !important; max-height: none !important; overflow-y: visible !important; }
+      .g4 { grid-template-columns: repeat(2,1fr) !important; }
+      .g3, .g2 { grid-template-columns: 1fr !important; }
+      header nav, header nav > div { flex-wrap: wrap !important; }
+    }
+    @media (max-width: 620px) {
+      .g4 { grid-template-columns: 1fr !important; }
+      .g4 > div { padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 20px !important; }
+    }
+  </style>
+</helmet>
+
+<div style="background:#ece4d4; color:#1c1813; font-family:'Hanken Grotesk', system-ui, sans-serif; min-height:100vh; -webkit-font-smoothing:antialiased;">
+
+  <!-- ============ NAV (shared site chrome) ============ -->
+  <header style="position:sticky; top:0; z-index:60; background:#ece4d4; border-bottom:3px solid #1c1813;">
+    <nav style="max-width:1180px; margin:0 auto; padding:18px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <a href="index.html" style="display:flex; flex-direction:column; line-height:0.96;">
+        <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:19px; letter-spacing:-0.01em;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
+        <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <a href="what.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">What</a>
+        <a href="why.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Why</a>
+        <a href="how.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">How</a>
+        <a href="where.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Where</a>
+        <a href="who.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Who</a>
+        <a href="cookbook.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid #1c1813; border-radius:5px; color:#ece4d4; background:#b0463a;">Cookbook</a>
+        <a href="index.html#consult" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; color:#ece4d4; background:#b0463a; padding:9px 17px; border:2.5px solid #1c1813; border-radius:5px; box-shadow:3px 3px 0 rgba(28,20,15,0.22); margin-left:6px;" style-hover="background:#9a3b30;">Work with us</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ BREADCRUMB ============ -->
+  <div style="max-width:1180px; margin:0 auto; padding:28px 32px 0;">
+    <a href="cookbook.html" style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.08em; color:#8a7d68;" style-hover="color:#b0463a;">&larr; BACK TO THE COOKBOOK</a>
+  </div>
+
+  <!-- ============ ARTICLE HEADER ============ -->
+  <header style="max-width:1180px; margin:0 auto; padding:36px 32px 40px;">
+    <div style="max-width:800px;">
+      <div style="display:flex; gap:10px; margin-bottom:24px; flex-wrap:wrap;">
+        <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#ece4d4; background:#b0463a; padding:5px 11px; border-radius:2px;">In Depth</span>
+        <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#4a4034; background:#e2d8c4; padding:5px 11px; border-radius:2px;">Data-Driven</span>
+      </div>
+      <h1 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(38px,5.4vw,66px); line-height:1.04; letter-spacing:-0.025em; margin:0 0 22px;">The AI job-displacement timeline: why everyone has it wrong</h1>
+      <p style="font-size:21px; line-height:1.55; color:#4a4034; margin:0 0 28px; text-wrap:pretty;">A data-driven look at which jobs are actually at risk &mdash; and when. There is smoke, and there is fire. But the blaze isn&rsquo;t burning where the headlines say it is.</p>
+      <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap; font-family:'Hanken Grotesk', sans-serif; font-size:13px; color:#8a7d68;">
+        <span style="color:#4a4034;">By the Meatandpotatoes.ai team</span>
+        <span>&middot;</span>
+        <span>JUN 2026</span>
+        <span>&middot;</span>
+        <span>14 MIN READ</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ LEAD IMAGE (drop your own) ============ -->
+  <div style="max-width:1180px; margin:0 auto; padding:0 32px 56px;">
+    <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="hero-jobs" shape="rounded" radius="6" placeholder="Drop a lead image — or leave as-is" style="width:100%; height:420px; display:block; border:1px solid rgba(28,20,15,0.12);" hint-size="100%,420px"></x-import>
+  </div>
+
+  <!-- ============ BODY + STICKY RAIL ============ -->
+  <div style="max-width:1180px; margin:0 auto; padding:0 32px 64px; display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:64px; align-items:start;" class="gbody">
+
+    <!-- ARTICLE BODY -->
+    <article style="max-width:720px;">
+
+      <!-- INTRO -->
+      <p style="font-size:20px; line-height:1.7; color:#1c1813; margin:0 0 24px;">The panic is palpable. If you attended any professional conference in 2025, or scrolled LinkedIn with any regularity, you met the same apocalyptic narrative: AI is coming for everyone&rsquo;s jobs, and it&rsquo;s happening right now. Headlines screamed about millions of displaced workers. Think pieces warned that no profession is safe.</p>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">But here&rsquo;s what the fear-mongers either don&rsquo;t know or aren&rsquo;t telling you: they&rsquo;re getting the timeline wrong, the targets wrong, and practically the entire story wrong. To be clear &mdash; there <em>is</em> smoke, and there <em>is</em> fire. AI is genuinely disrupting the job market. But the blaze isn&rsquo;t burning where everyone thinks it is, and the loudest alarms are often pointing in the wrong direction entirely.</p>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">After analyzing data from over 180 million job postings, reviewing employment statistics from 2022 through 2025, and examining which positions are actually disappearing versus which are being transformed, a surprising picture emerges: the jobs most vulnerable to AI replacement aren&rsquo;t the ones you&rsquo;d expect.</p>
+      <p style="font-size:15px; line-height:1.6; color:#8a7d68; font-style:italic; margin:0 0 28px; padding-left:18px; border-left:2px solid rgba(28,20,15,0.16);">A note on irony: analyzing 180 million postings at scale would have been nearly impossible without AI-powered tools. This research itself shows how AI creates new capabilities while transforming the landscape of work &mdash; unlocking doors while closing others.</p>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">So let&rsquo;s slow down and actually look at what the data says. We&rsquo;ll start with how AI works &mdash; not as a prerequisite, but because it genuinely changes how you read the numbers &mdash; then walk through the jobs already being hit, the ones safer than the headlines suggest, and the ones where the real risk hides. And we&rsquo;ll talk honestly about timing, because that&rsquo;s where both the optimists and the pessimists go most wrong.</p>
+
+      <!-- PRIMER BLOCK -->
+      <div style="background:#e2d8c4; border:1px solid rgba(28,20,15,0.14); border-radius:6px; padding:30px 32px; margin:34px 0;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#b0463a; margin-bottom:18px;">Start here &mdash; the one idea that changes the numbers</div>
+        <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:22px; line-height:1.2; margin:0 0 10px;">How to think about &ldquo;automatable&rdquo; work</h3>
+        <p style="font-size:17px; line-height:1.7; color:#2f2820; margin:0 0 14px;">Think of AI like an exceptionally diligent student who memorizes and follows instructions perfectly &mdash; brilliant at math, memorization, and test-taking, but stuck the moment a problem demands breaking the rules creatively.</p>
+        <p style="font-size:17px; line-height:1.7; color:#2f2820; margin:0 0 14px;">If your job means following a manual, template, or established process &mdash; even a complex one &mdash; AI can learn it from thousands of examples. If your job means saying &ldquo;forget the manual, here&rsquo;s a better way,&rdquo; AI struggles. A simple test: imagine training a new hire. If step-by-step instructions would cover 80% of situations, AI can probably learn it. If most of your day is &ldquo;well, it depends,&rdquo; it can&rsquo;t.</p>
+        <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:22px; line-height:1.2; margin:22px 0 10px;">Digital work vs. physical work</h3>
+        <p style="font-size:17px; line-height:1.7; color:#2f2820; margin:0 0 6px;">AI excels in digital environments &mdash; processing text, analyzing data, generating images on a screen. Physical automation is a different beast: sensors, motors, real-time decisions in three dimensions, and unpredictable humans and objects. Digital mistakes can be undone instantly; you can&rsquo;t un-burn a burger or un-drop a plate. That&rsquo;s why your desk job is more immediately vulnerable than the job of the person making your lunch.</p>
+      </div>
+
+      <!-- ===== SECTION 1: PARADOX ===== -->
+      <h2 id="paradox" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:52px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">The diligent-worker paradox</h2>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Here&rsquo;s the uncomfortable truth no one wants to say out loud: AI isn&rsquo;t replacing the jobs everyone assumes are vulnerable &mdash; not creative workers, not fast-food employees, not truck drivers. The first targets are diligent, process-oriented corporate workers.</p>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">There&rsquo;s a crucial distinction before the numbers: within every field, AI targets <strong>execution work over strategy work</strong>. <strong>Creative execution</strong> &mdash; following instructions to produce specific deliverables, generating variations on a template &mdash; is highly vulnerable. <strong>Creative strategy</strong> &mdash; interpreting ambiguous feedback, judging brand direction, deciding what will resonate emotionally &mdash; remains far more protected, for now.</p>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 26px;">According to that analysis of 180 million postings, the hardest-hit roles in 2024&ndash;2025 weren&rsquo;t blue-collar or service jobs at all. They were execution-focused corporate roles:</p>
+
+      <!-- STAT CALLOUTS (signature component) -->
+      <div style="display:flex; flex-direction:column; gap:0; border-top:2px solid #1c1813; margin:0 0 30px;">
+        <div style="display:flex; gap:22px; align-items:baseline; padding:18px 0; border-bottom:1px solid rgba(28,20,15,0.16);">
+          <span style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:38px; line-height:1; color:#b0463a; flex:none; width:108px;">&minus;33%</span>
+          <div><div style="font-weight:700; font-size:16px; margin-bottom:3px;">Computer graphic artists</div><p style="font-size:15px; line-height:1.5; color:#6d6051; margin:0;">Template work &mdash; social graphics, deck formatting, banner-ad variations. Not brand identity or creative direction.</p></div>
+        </div>
+        <div style="display:flex; gap:22px; align-items:baseline; padding:18px 0; border-bottom:1px solid rgba(28,20,15,0.16);">
+          <span style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:38px; line-height:1; color:#b0463a; flex:none; width:108px;">&minus;28%</span>
+          <div><div style="font-weight:700; font-size:16px; margin-bottom:3px;">Commodity photographers</div><p style="font-size:15px; line-height:1.5; color:#6d6051; margin:0;">E-commerce product shots, real-estate listings, stock, headshots. The wedding photographer reading a room is not at risk.</p></div>
+        </div>
+        <div style="display:flex; gap:22px; align-items:baseline; padding:18px 0; border-bottom:1px solid rgba(28,20,15,0.16);">
+          <span style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:38px; line-height:1; color:#b0463a; flex:none; width:108px;">&minus;28%</span>
+          <div><div style="font-weight:700; font-size:16px; margin-bottom:3px;">Content writers</div><p style="font-size:15px; line-height:1.5; color:#6d6051; margin:0;">Formulaic SEO posts, product descriptions, press releases, captions. Not investigative journalism or brand-voice work.</p></div>
+        </div>
+        <div style="display:flex; gap:22px; align-items:baseline; padding:18px 0; border-bottom:1px solid rgba(28,20,15,0.16);">
+          <span style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:38px; line-height:1; color:#b0463a; flex:none; width:108px;">53%</span>
+          <div><div style="font-weight:700; font-size:16px; margin-bottom:3px;">Data analysts &mdash; of tasks now automatable</div><p style="font-size:15px; line-height:1.5; color:#6d6051; margin:0;">Routine reporting, dashboard updates, standard queries, monthly KPIs. Not strategic analysis or turning data into decisions.</p></div>
+        </div>
+        <div style="display:flex; gap:22px; align-items:baseline; padding:18px 0; border-bottom:1px solid rgba(28,20,15,0.16);">
+          <span style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:38px; line-height:1; color:#b0463a; flex:none; width:108px;">67%</span>
+          <div><div style="font-weight:700; font-size:16px; margin-bottom:3px;">Sales reps &mdash; of tasks automatable</div><p style="font-size:15px; line-height:1.5; color:#6d6051; margin:0;">Lead qualification, outbound email, quote generation, CRM entry. Not enterprise relationships or complex negotiation.</p></div>
+        </div>
+      </div>
+
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Why these jobs? Because they involve predictable, repeatable, process-oriented work &mdash; exactly what AI does best. These are the roles filled by people who show up on time, follow the playbook, and produce consistent outputs: the &ldquo;good soldiers&rdquo; of corporate life. The irony is brutal &mdash; the very qualities that made someone a reliable employee are the ones that make their role legible to an AI system.</p>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">IBM&rsquo;s AskHR system now handles 11.5 million interactions a year with minimal human oversight. These aren&rsquo;t creative decisions &mdash; they&rsquo;re routine HR queries answered by following established protocols. The people who used to do that work were excellent: reliable, accurate, efficient. And that&rsquo;s precisely why they were replaceable.</p>
+
+      <!-- ===== SECTION 2: CREATIVE ===== -->
+      <h2 id="creative" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:52px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">Why creative jobs are safer than everyone thinks</h2>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">It seems counterintuitive given the panic around AI art and ChatGPT, but the data reveals something fascinating: creative <em>execution</em> jobs are being hit hard, while creative <em>strategy and direction</em> roles are holding steady or even growing. The same analysis that showed graphic artists down 33% also found:</p>
+      <ul style="list-style:none; padding:0; margin:0 0 24px; display:flex; flex-direction:column; gap:12px;">
+        <li style="display:flex; gap:12px; font-size:17px; line-height:1.6; color:#2f2820;"><span style="color:#6f7245; font-weight:700; flex:none;">&uarr;</span><span><strong>Creative directors:</strong> minimal decline, beating the market baseline.</span></li>
+        <li style="display:flex; gap:12px; font-size:17px; line-height:1.6; color:#2f2820;"><span style="color:#6f7245; font-weight:700; flex:none;">&uarr;</span><span><strong>Product designers:</strong> holding steady &mdash; their work is user research and strategic decisions.</span></li>
+        <li style="display:flex; gap:12px; font-size:17px; line-height:1.6; color:#2f2820;"><span style="color:#6f7245; font-weight:700; flex:none;">&uarr;</span><span><strong>Graphic designers</strong> (vs. graphic artists): far more resilient &mdash; they interpret feedback and iterate on subjective input.</span></li>
+      </ul>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">A graphic artist often executes bounded tasks: &ldquo;model this product,&rdquo; &ldquo;produce 50 variations of this template.&rdquo; A creative director deals with ambiguity, conflicting stakeholders, evolving requirements, and the messy reality of making something that serves different audiences at once. That human-to-human, judgment-heavy work stays hard for AI to replicate.</p>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">As a UN Trade and Development report noted, art and music appreciation is grounded in human emotion &mdash; for AI to predict how people will respond to a style, it would first need to genuinely understand how people feel. The technology isn&rsquo;t there yet. But that word &ldquo;yet&rdquo; deserves careful consideration.</p>
+
+      <!-- COUNTER-ARGUMENT (signature component) -->
+      <div style="background:#1c1813; color:#d8cdb6; border-radius:6px; padding:28px 30px; margin:30px 0;">
+        <div style="display:flex; align-items:center; gap:9px; margin-bottom:14px;">
+          <span style="font-family:'Fraunces', serif; font-weight:700; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#cdb24a;">The counter-argument</span>
+          <span style="flex:1; height:1px; background:rgba(205,178,74,0.3);"></span>
+        </div>
+        <p style="font-size:17px; line-height:1.7; margin:0 0 14px;">The line between &ldquo;execution&rdquo; and &ldquo;strategy&rdquo; may be eroding faster than we think. Current models already analyze sentiment, learn a brand voice, and make aesthetic calls that track human preference &mdash; not just matching patterns, but developing something that looks like taste.</p>
+        <p style="font-size:17px; line-height:1.7; margin:0;">And the &ldquo;creative director&rdquo; role may be more pattern-matching than we&rsquo;d like to admit. &ldquo;Modern but not trendy, sophisticated but accessible&rdquo; feels subjective, but it&rsquo;s built on decades of design patterns a model can learn. If an AI implements feedback correctly 90% of the time at $20/month instead of $80,000/year, how long does the human role survive?</p>
+      </div>
+
+      <!-- ===== SECTION 3: FAST FOOD ===== -->
+      <h2 id="fastfood" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:52px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">The fast-food fallacy</h2>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Nothing better illustrates how misunderstood AI displacement is than fast food. For over a decade we&rsquo;ve heard that self-service kiosks would wipe out cashier jobs. In 2018, predictions circulated that 80,000 fast-food jobs would vanish by 2024. What actually happened? The opposite.</p>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">CNN&rsquo;s investigation of McDonald&rsquo;s and other chains found kiosks <em>added</em> work for kitchen staff rather than eliminating front-of-house jobs. The Bureau of Labor Statistics projects fast-food and counter roles will grow by over 233,000 positions in the next decade. Why? Because the physical world is hard. Someone still prepares food, cleans, runs orders to cars, fixes broken equipment, and handles the customer insisting their order was wrong.</p>
+
+      <!-- PULL QUOTE (signature component) -->
+      <div style="border-left:2px solid #b0463a; padding:6px 0 6px 22px; margin:34px 0;">
+        <p style="font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:24px; line-height:1.4; color:#1c1813; margin:0;">Kiosks didn&rsquo;t delete the workers. They moved them from the register to the dining room, the kitchen, and the curb.</p>
+      </div>
+
+      <!-- COUNTER-ARGUMENT -->
+      <div style="background:#1c1813; color:#d8cdb6; border-radius:6px; padding:28px 30px; margin:30px 0;">
+        <div style="display:flex; align-items:center; gap:9px; margin-bottom:14px;">
+          <span style="font-family:'Fraunces', serif; font-weight:700; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#cdb24a;">The counter-argument</span>
+          <span style="flex:1; height:1px; background:rgba(205,178,74,0.3);"></span>
+        </div>
+        <p style="font-size:17px; line-height:1.7; margin:0 0 14px;">&ldquo;Harder&rdquo; isn&rsquo;t &ldquo;impossible,&rdquo; and the economics create enormous pressure. California&rsquo;s fast-food minimum wage hit $20/hour in 2024 &mdash; roughly $55,000/year fully loaded. A $100,000 robot lasting seven years runs about $14,285/year plus maintenance. That 70% gap is a powerful incentive to solve the technical problems.</p>
+        <p style="font-size:17px; line-height:1.7; margin:0;">It doesn&rsquo;t take full automation to matter. A restaurant running 8&ndash;12 workers a shift could drop to 3&ndash;4 with partial automation &mdash; still 60&ndash;70% job loss. We went from robots barely able to walk to Atlas doing parkour in 15 years. Physical jobs aren&rsquo;t safe; they&rsquo;re safe <em>for now</em>.</p>
+      </div>
+
+      <!-- ===== SECTION 4: TECH LAYOFFS ===== -->
+      <h2 id="tech" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:52px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">The tech industry&rsquo;s dirty secret</h2>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">One of the most misleading threads in the displacement story is the wave of tech layoffs &mdash; tens of thousands of cuts in 2022, over 200,000 in 2023, tens of thousands more in 2024. Headlines blamed AI. What they omitted: the vast majority were corrections for pandemic-era over-hiring, not AI-driven displacement.</p>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Between 2019 and 2022, some firms nearly doubled headcount; Amazon&rsquo;s workforce grew sevenfold from 2015 to 2021. The layoffs were corrections, not casualties. As one analyst put it, firms are &ldquo;correcting for the overhiring of 2021 to 2022 while protecting margins through productivity gains, some of which are enabled by automation.&rdquo; That &ldquo;some of which&rdquo; does a lot of work.</p>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">The biggest companies are running a &ldquo;low-fire, low-hire&rdquo; strategy &mdash; cutting in some areas while hiring in others. Intuit laid off 1,000 people while hiring 1,000 for AI roles, keeping headcount flat. And there&rsquo;s a marketing angle: &ldquo;AI made these workers obsolete&rdquo; sounds visionary; &ldquo;we made terrible hiring decisions&rdquo; sounds incompetent. Guess which story gets told.</p>
+
+      <!-- COUNTER-ARGUMENT -->
+      <div style="background:#1c1813; color:#d8cdb6; border-radius:6px; padding:28px 30px; margin:30px 0;">
+        <div style="display:flex; align-items:center; gap:9px; margin-bottom:14px;">
+          <span style="font-family:'Fraunces', serif; font-weight:700; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#cdb24a;">The counter-argument</span>
+          <span style="flex:1; height:1px; background:rgba(205,178,74,0.3);"></span>
+        </div>
+        <p style="font-size:17px; line-height:1.7; margin:0;">Yes, the trigger was over-hiring &mdash; but why can companies now run permanently leaner? Because AI tools turned a temporary correction permanent. Before the pandemic, 10 people did the work; firms over-hired to 15; now they&rsquo;ve found 6 people plus AI do what 10 used to. The layoffs bring them to 6, not back to 10 &mdash; so 4 jobs genuinely disappeared, even if over-hiring was the proximate cause.</p>
+      </div>
+
+      <!-- ===== SECTION 5: TIMELINE ===== -->
+      <h2 id="timeline" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:52px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">The timeline everyone gets wrong</h2>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Here&rsquo;s where the fear-mongering gets most irresponsible. Anthropic&rsquo;s CEO predicted AI could eliminate half of all entry-level white-collar jobs within five years. The World Economic Forum projects roughly 92 million jobs globally could be displaced by 2030. The headlines scream immediate catastrophe. The data says otherwise:</p>
+      <ul style="list-style:none; padding:0; margin:0 0 24px; display:flex; flex-direction:column; gap:14px;">
+        <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; color:#2f2820;"><span style="font-family:'Fraunces', serif; font-weight:600; color:#b0463a; flex:none; width:84px;">76,440</span><span>jobs eliminated globally by AI and automation in H1 2025 &mdash; a tiny fraction of the 160-million-person U.S. workforce. Real for those affected, far below apocalyptic forecasts.</span></li>
+        <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; color:#2f2820;"><span style="font-family:'Fraunces', serif; font-weight:600; color:#b0463a; flex:none; width:84px;">11.7%</span><span>of U.S. jobs &mdash; about 1 in 9 &mdash; could be automated with today&rsquo;s tech if fully deployed at competitive prices, per MIT. Whether it reaches that level &ldquo;remains uncertain.&rdquo;</span></li>
+        <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; color:#2f2820;"><span style="font-family:'Fraunces', serif; font-weight:600; color:#b0463a; flex:none; width:84px;">8,900</span><span>permanent AI-development roles created in the U.S. in 2024 &mdash; out of ~119,900 AI-related jobs, most of which were temporary data-center construction.</span></li>
+        <li style="display:flex; gap:14px; font-size:17px; line-height:1.6; color:#2f2820;"><span style="font-family:'Fraunces', serif; font-weight:600; color:#b0463a; flex:none; width:84px;">5.4%</span><span>of firms had formally adopted generative AI by early 2024. Most use remains informal or experimental; Yale&rsquo;s Budget Lab finds no clear upward trend in AI exposure among the unemployed.</span></li>
+      </ul>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Why so slow when the tech clearly exists? Because enterprise deployment means recognizing the opportunity, building or buying the solution, integrating it, retraining staff, managing resistance, and surviving failures. That takes years, not months. The ATM was supposed to end bank tellers &mdash; tellers shifted to relationship work. Self-checkout was supposed to end cashiers &mdash; many stores are now <em>removing</em> it over theft and frustration.</p>
+
+      <!-- COUNTER-ARGUMENT -->
+      <div style="background:#1c1813; color:#d8cdb6; border-radius:6px; padding:28px 30px; margin:30px 0;">
+        <div style="display:flex; align-items:center; gap:9px; margin-bottom:14px;">
+          <span style="font-family:'Fraunces', serif; font-weight:700; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#cdb24a;">The counter-argument</span>
+          <span style="flex:1; height:1px; background:rgba(205,178,74,0.3);"></span>
+        </div>
+        <p style="font-size:17px; line-height:1.7; margin:0 0 14px;">The unprecedented rate of improvement makes &ldquo;slow timeline&rdquo; a dangerous thing to bank on. AI-eliminated jobs went from ~3,900 in May 2023 to 76,440 in H1 2025 &mdash; roughly an 1,800% jump in two years. If that&rsquo;s exponential rather than linear, we&rsquo;re looking at a hockey-stick curve where impact lands suddenly.</p>
+        <p style="font-size:17px; line-height:1.7; margin:0;">And 40% of employers globally intend to cut workforce within five years due to AI. Unlike legacy software with long procurement cycles, a manager can subscribe to an AI tool today and replace an output tomorrow. The nuance: individual tools adopt instantly, but restructuring whole workflows still takes years.</p>
+      </div>
+
+      <!-- ===== SECTION 6: REALLOCATION ===== -->
+      <h2 id="reallocation" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:52px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">What both sides miss: the reallocation question</h2>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Optimists point to history: ATMs redeployed tellers, computers created new kinds of jobs, every shift caused temporary disruption then adaptation. Pessimists counter that those technologies automated narrow tasks &mdash; AI is general-purpose, so there&rsquo;s nowhere to redeploy because AI can learn the adjacent roles too.</p>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Both miss the real question. It isn&rsquo;t <em>whether</em> reallocation happens &mdash; it&rsquo;s whether it happens <em>fast enough</em>, and whether the people who need to transition actually can. A 1990 bank teller could move into relationship management: same customers, same bank, same skill of helping people with money. A graphic artist told to become a prompt engineer isn&rsquo;t making an adjacent move &mdash; it&rsquo;s a career change needing new skills, maybe relocation, maybe years of school. At 50 with a mortgage and kids, &ldquo;theoretically possible&rdquo; may not be practical.</p>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">The WEF forecasts 92 million jobs displaced by 2030 and 170 million new ones &mdash; a net win on paper. But these aren&rsquo;t one-to-one swaps. The new jobs aren&rsquo;t in the same places, don&rsquo;t need the same skills, and won&rsquo;t go to the same people. 77% of new AI-related jobs require a master&rsquo;s degree; 18% require a doctorate.</p>
+
+      <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:24px; line-height:1.2; margin:34px 0 14px;">The generational career-ladder problem</h3>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Past transitions assumed you could start at the bottom and climb. Junior roles were training grounds: you learned the basics, made low-stakes mistakes, and built expertise. But if AI eliminates the bottom rungs, how do young workers climb? It&rsquo;s why 49% of Gen Z job seekers believe AI has reduced the value of their college education &mdash; they&rsquo;re watching entry-level roles vanish before they can start.</p>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">A senior designer may be fine &mdash; relationships, judgment, years of experience. But how does anyone <em>become</em> a senior designer in 2030 if the junior and mid-level jobs that build those skills have been automated? The ladder doesn&rsquo;t disappear. It loses its lower rungs. And that&rsquo;s a different kind of crisis.</p>
+
+      <!-- ===== SECTION 7: REALISTIC ===== -->
+      <h2 id="realistic" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:52px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">Slow at first, then very, very fast</h2>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 26px;">The likeliest scenario blends both views: slower than pessimists fear, faster and more disruptive than optimists expect. No job apocalypse through 2027 &mdash; but no gentle, everyone-shifts-smoothly transition either. It appears to unfold in three phases.</p>
+
+      <!-- PHASE TIMELINE (signature component) -->
+      <div style="display:flex; flex-direction:column; gap:0; margin:0 0 30px; border-left:2px solid rgba(28,20,15,0.2); padding-left:0;">
+        <div style="position:relative; padding:0 0 26px 28px;">
+          <span style="position:absolute; left:-9px; top:2px; width:16px; height:16px; border-radius:50%; background:#6f7245; border:3px solid #ece4d4;"></span>
+          <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:8px; flex-wrap:wrap;">
+            <span style="font-family:'Fraunces', serif; font-weight:600; font-size:20px;">Phase 1</span>
+            <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:600; letter-spacing:0.06em; color:#ece4d4; background:#6f7245; padding:3px 10px; border-radius:3px;">2024&ndash;2026</span>
+          </div>
+          <p style="font-size:16.5px; line-height:1.6; color:#2f2820; margin:0;">Narrow displacement of specific execution roles &mdash; graphic artists, data entry, basic content, entry-level analysis. Hundreds of thousands of jobs globally, not millions. Visible pain in specific industries; no reshaping of the broader labor market.</p>
+        </div>
+        <div style="position:relative; padding:0 0 26px 28px;">
+          <span style="position:absolute; left:-9px; top:2px; width:16px; height:16px; border-radius:50%; background:#c08a3e; border:3px solid #ece4d4;"></span>
+          <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:8px; flex-wrap:wrap;">
+            <span style="font-family:'Fraunces', serif; font-weight:600; font-size:20px;">Phase 2</span>
+            <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:600; letter-spacing:0.06em; color:#ece4d4; background:#c08a3e; padding:3px 10px; border-radius:3px;">2026&ndash;2029</span>
+          </div>
+          <p style="font-size:16.5px; line-height:1.6; color:#2f2820; margin:0;">Accelerating displacement as capability improves and implementation cycles complete. The line between &ldquo;execution&rdquo; and &ldquo;strategy&rdquo; blurs. Entry-level professional jobs get much harder to find. Impact reaches millions of jobs globally.</p>
+        </div>
+        <div style="position:relative; padding:0 0 2px 28px;">
+          <span style="position:absolute; left:-9px; top:2px; width:16px; height:16px; border-radius:50%; background:#b0463a; border:3px solid #ece4d4;"></span>
+          <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:8px; flex-wrap:wrap;">
+            <span style="font-family:'Fraunces', serif; font-weight:600; font-size:20px;">Phase 3</span>
+            <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:600; letter-spacing:0.06em; color:#ece4d4; background:#b0463a; padding:3px 10px; border-radius:3px;">2029&ndash;2033</span>
+          </div>
+          <p style="font-size:16.5px; line-height:1.6; color:#2f2820; margin:0;">Physical-world automation begins hitting service and manual labor as robotics catches up to digital AI. The reallocation assumption is tested at full scale &mdash; this is when we learn whether historical patterns hold, or whether this time is genuinely different.</p>
+        </div>
+      </div>
+
+      <!-- ===== SECTION 8: RISK ===== -->
+      <h2 id="risk" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:52px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">Assessing your own risk</h2>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 26px;">Firefighters train for smoke-filled rooms; responders rehearse scenarios they hope never come. The first rule in any emergency is the same: don&rsquo;t panic. Keep your eyes open &mdash; not fixated on imagined horrors, not hiding from reality. Awareness without paralysis is the goal. Here&rsquo;s the honest map.</p>
+
+      <!-- RISK TIERS (signature component) -->
+      <div style="display:flex; flex-direction:column; gap:16px; margin:0 0 30px;">
+        <div style="border:1px solid rgba(28,20,15,0.14); border-left:5px solid #b0463a; border-radius:6px; padding:22px 24px; background:#ece4d4;">
+          <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:10px; flex-wrap:wrap;">
+            <span style="font-family:'Fraunces', serif; font-weight:600; font-size:20px; color:#b0463a;">High risk</span>
+            <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#8a7d68;">2&ndash;5 year horizon</span>
+          </div>
+          <p style="font-size:16px; line-height:1.6; color:#2f2820; margin:0 0 8px;">Your work follows established templates most of the time. Success is measured by consistency and accuracy, not innovation. The job could be captured in a detailed manual.</p>
+          <p style="font-size:14.5px; line-height:1.5; color:#6d6051; margin:0;"><strong style="color:#4a4034;">Examples:</strong> data entry, basic content writing, routine graphic design, junior analysis, template-based coding, formulaic reporting.</p>
+        </div>
+        <div style="border:1px solid rgba(28,20,15,0.14); border-left:5px solid #c08a3e; border-radius:6px; padding:22px 24px; background:#ece4d4;">
+          <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:10px; flex-wrap:wrap;">
+            <span style="font-family:'Fraunces', serif; font-weight:600; font-size:20px; color:#c08a3e;">Medium risk</span>
+            <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#8a7d68;">5&ndash;10 year horizon</span>
+          </div>
+          <p style="font-size:16px; line-height:1.6; color:#2f2820; margin:0 0 8px;">Routine elements mixed with judgment calls. You handle exceptions within bounded scenarios; physical or relational complexity adds friction current AI can&rsquo;t fully handle.</p>
+          <p style="font-size:14.5px; line-height:1.5; color:#6d6051; margin:0;"><strong style="color:#4a4034;">Examples:</strong> middle management, specialized trades, customer service, technical support, paralegal work.</p>
+        </div>
+        <div style="border:1px solid rgba(28,20,15,0.14); border-left:5px solid #6f7245; border-radius:6px; padding:22px 24px; background:#ece4d4;">
+          <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:10px; flex-wrap:wrap;">
+            <span style="font-family:'Fraunces', serif; font-weight:600; font-size:20px; color:#6f7245;">Lower risk</span>
+            <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#8a7d68;">10+ years, maybe never</span>
+          </div>
+          <p style="font-size:16px; line-height:1.6; color:#2f2820; margin:0 0 8px;">Primarily about relationships and trust. Success needs reading emotional subtext and adapting to individual humans. You face genuinely novel problems with no playbook; physical complexity plus high variability is central.</p>
+          <p style="font-size:14.5px; line-height:1.5; color:#6d6051; margin:0;"><strong style="color:#4a4034;">Examples:</strong> executive leadership, therapists, skilled craftspeople, emergency responders, K&ndash;12 teachers, doctors and nurses (patient-care work).</p>
+        </div>
+      </div>
+
+      <!-- CAVEAT BOX -->
+      <div style="background:#e2d8c4; border:1px dashed rgba(28,20,15,0.3); border-radius:6px; padding:20px 24px; margin:0 0 22px;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#b0463a; margin-bottom:8px;">One caveat on every timeline</div>
+        <p style="font-size:15.5px; line-height:1.6; color:#4a4034; margin:0;">These horizons assume AI progress continues at current rates. If it stalls &mdash; technical limits, regulation, economics &mdash; the timelines stretch. If it accelerates, they compress. Treat them as planning horizons, not guarantees.</p>
+      </div>
+
+      <!-- ===== SECTION 9: BOTTOM LINE ===== -->
+      <h2 id="bottom" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:52px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">The bottom line</h2>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">The critical insight: we have time &mdash; but not unlimited time. The workers most at risk right now are in corporate execution roles: analysts running standard reports, junior designers executing templates, writers producing formulaic articles, entry-level coders doing straightforward implementation. The somewhat-protected (for now) are doing physical work in variable settings, strategic and creative direction, relationship- and emotion-centered work, and genuinely novel problem-solving.</p>
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 26px;">That &ldquo;for now&rdquo; matters. The pessimists are right that the timeline may compress faster than precedent suggests. The optimists are right that it&rsquo;s not an immediate catastrophe and there&rsquo;s time to adapt. The truth is in between: slower than the fear-mongers claim, faster than the optimists hope. So here&rsquo;s what adapting actually looks like &mdash; while you still have breathing room.</p>
+
+      <!-- ACTION BULLETS -->
+      <div style="display:flex; flex-direction:column; gap:16px; margin:0 0 28px;">
+        <div style="display:flex; gap:16px;"><span style="font-family:'Fraunces', serif; font-weight:600; font-size:20px; color:#b0463a; flex:none; line-height:1.3;">01</span><p style="font-size:17px; line-height:1.6; color:#2f2820; margin:0;"><strong>Audit your role honestly.</strong> Which daily tasks are execution-based, and which need real judgment, relationships, or novel problem-solving? The former is your vulnerability; the latter, your protection.</p></div>
+        <div style="display:flex; gap:16px;"><span style="font-family:'Fraunces', serif; font-weight:600; font-size:20px; color:#b0463a; flex:none; line-height:1.3;">02</span><p style="font-size:17px; line-height:1.6; color:#2f2820; margin:0;"><strong>Move toward the strategic version of your work.</strong> A writer develops brand-voice strategy; an analyst translates data into decisions; a salesperson invests in relationship depth over volume.</p></div>
+        <div style="display:flex; gap:16px;"><span style="font-family:'Fraunces', serif; font-weight:600; font-size:20px; color:#b0463a; flex:none; line-height:1.3;">03</span><p style="font-size:17px; line-height:1.6; color:#2f2820; margin:0;"><strong>Build adjacent AI skills.</strong> Not to become an AI engineer &mdash; to become the person who knows how to direct and quality-check AI output in your field. The Phase 2 winners learned to work alongside it, not fight it.</p></div>
+        <div style="display:flex; gap:16px;"><span style="font-family:'Fraunces', serif; font-weight:600; font-size:20px; color:#b0463a; flex:none; line-height:1.3;">04</span><p style="font-size:17px; line-height:1.6; color:#2f2820; margin:0;"><strong>Take the career-ladder problem seriously.</strong> If you advise young people, steer them toward what AI can&rsquo;t easily copy: physical craft, emotional intelligence, cross-disciplinary judgment, human relationships.</p></div>
+      </div>
+
+      <p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">The real question isn&rsquo;t whether AI will transform the job market &mdash; it will. It&rsquo;s whether we&rsquo;ll build the retraining programs and safety nets to help millions make transitions that are theoretically possible but practically hard, and whether we&rsquo;ll do it before the need becomes urgent. If institutions fail to build those structures &mdash; which history suggests they might &mdash; this becomes the ultimate do-your-own-research scenario. The time to start thinking about it is while the window is still open.</p>
+      <p style="font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:22px; line-height:1.4; color:#1c1813; margin:0 0 8px;">Which, for now, it still is.</p>
+
+      <!-- SOURCES & METHODOLOGY -->
+      <div style="margin-top:40px; padding:24px 26px; background:#1c1813; color:#a99e89; border-radius:6px;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#cdb24a; margin-bottom:12px;">Sources &amp; methodology</div>
+        <p style="font-size:14px; line-height:1.6; margin:0;">Synthesizes analysis of 180 million global job postings (LinkedIn, Indeed, Glassdoor, 2024&ndash;2025), U.S. Bureau of Labor Statistics Employment Projections, MIT CSAIL research, Yale Budget Lab, WEF Future of Jobs reports, Challenger Gray &amp; Christmas job-cut reports, McKinsey Global Institute, Bloomberg Intelligence, Gartner, ITIF, and Salesforce AI Snapshot research. Statistics reflect data available as of February 2026. Employment figures and AI capabilities continue to evolve &mdash; verify current data before making career decisions.</p>
+      </div>
+
+      <!-- ARTICLE FOOTER / CTA -->
+      <div style="border-top:1px solid rgba(28,20,15,0.16); margin-top:36px; padding-top:32px;">
+        <a href="how.html" style="display:flex; align-items:center; justify-content:space-between; gap:24px; padding:30px 32px; background:#b0463a; color:#ece4d4; border:2.5px solid #1c1813; border-radius:6px; box-shadow:5px 5px 0 rgba(28,20,15,0.28);" style-hover="transform:translate(-2px,-2px); box-shadow:7px 7px 0 rgba(28,20,15,0.28);">
+          <div>
+            <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.16em; color:#f0c9c2; margin-bottom:8px;">PUT IT TO WORK</div>
+            <span style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px;">Audit your own role&rsquo;s exposure</span>
+          </div>
+          <span style="font-size:26px;">&rarr;</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- ============ STICKY RAIL ============ -->
+    <aside style="position:sticky; top:100px; display:flex; flex-direction:column; gap:28px;" class="rail">
+
+      <!-- CONTENTS -->
+      <div style="border:1px solid rgba(28,20,15,0.14); border-radius:4px; padding:22px 22px 24px; background:#ece4d4;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#8a7d68; margin-bottom:14px;">IN THIS PIECE</div>
+        <div style="display:flex; flex-direction:column; gap:11px;">
+          <a href="#paradox" style="font-size:14px; line-height:1.35; color:#4a4034;" style-hover="color:#b0463a;">01 &nbsp; The diligent-worker paradox</a>
+          <a href="#creative" style="font-size:14px; line-height:1.35; color:#4a4034;" style-hover="color:#b0463a;">02 &nbsp; Why creative jobs are safer</a>
+          <a href="#fastfood" style="font-size:14px; line-height:1.35; color:#4a4034;" style-hover="color:#b0463a;">03 &nbsp; The fast-food fallacy</a>
+          <a href="#tech" style="font-size:14px; line-height:1.35; color:#4a4034;" style-hover="color:#b0463a;">04 &nbsp; The tech-layoffs myth</a>
+          <a href="#timeline" style="font-size:14px; line-height:1.35; color:#4a4034;" style-hover="color:#b0463a;">05 &nbsp; The timeline everyone gets wrong</a>
+          <a href="#reallocation" style="font-size:14px; line-height:1.35; color:#4a4034;" style-hover="color:#b0463a;">06 &nbsp; The reallocation question</a>
+          <a href="#realistic" style="font-size:14px; line-height:1.35; color:#4a4034;" style-hover="color:#b0463a;">07 &nbsp; Slow, then very fast</a>
+          <a href="#risk" style="font-size:14px; line-height:1.35; color:#4a4034;" style-hover="color:#b0463a;">08 &nbsp; Assess your own risk</a>
+          <a href="#bottom" style="font-size:14px; line-height:1.35; color:#4a4034;" style-hover="color:#b0463a;">09 &nbsp; The bottom line</a>
+        </div>
+      </div>
+
+      <!-- KEY POINTS -->
+      <div style="border:1px solid rgba(28,20,15,0.14); border-radius:4px; padding:22px 22px 24px;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#b0463a; margin-bottom:16px;">KEY POINTS</div>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <div style="display:flex; gap:12px;"><span style="font-family:'Fraunces', Georgia, serif; font-size:18px; color:#b0463a; line-height:1.3; flex:none;">1</span><p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0;"><strong style="color:#1c1813;">&ldquo;Execution&rdquo; work</strong>, here, means following an established template, process, or playbook &mdash; work judged on consistency and accuracy. This is what AI takes first.</p></div>
+          <div style="display:flex; gap:12px;"><span style="font-family:'Fraunces', Georgia, serif; font-size:18px; color:#b0463a; line-height:1.3; flex:none;">2</span><p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0;"><strong style="color:#1c1813;">&ldquo;Creative&rdquo; (strategy) work</strong>, here, means ambiguity, judgment calls, emotional resonance, and relationships &mdash; not just making things. This holds, for now.</p></div>
+          <div style="display:flex; gap:12px;"><span style="font-family:'Fraunces', Georgia, serif; font-size:18px; color:#b0463a; line-height:1.3; flex:none;">3</span><p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0;">So the split runs <em>inside</em> every field &mdash; execution vs. strategy &mdash; not &ldquo;creative jobs vs. the rest.&rdquo;</p></div>
+          <div style="display:flex; gap:12px;"><span style="font-family:'Fraunces', Georgia, serif; font-size:18px; color:#b0463a; line-height:1.3; flex:none;">4</span><p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0;">Slow-motion now, likely a hockey-stick later &mdash; plan, don&rsquo;t panic.</p></div>
+          <div style="display:flex; gap:12px;"><span style="font-family:'Fraunces', Georgia, serif; font-size:18px; color:#b0463a; line-height:1.3; flex:none;">5</span><p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0;">The real danger is reallocation <em>speed</em> &mdash; and the missing bottom rungs of the ladder.</p></div>
+        </div>
+      </div>
+
+      <!-- BY THE NUMBERS -->
+      <div style="border:1px solid rgba(28,20,15,0.14); border-radius:4px; padding:22px 22px 24px; background:#1c1813; color:#c4b9a4;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#cdb24a; margin-bottom:18px;">BY THE NUMBERS</div>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <div><div style="font-family:'Fraunces', serif; font-weight:600; font-size:26px; color:#ece4d4; line-height:1;">76,440</div><p style="font-size:13px; line-height:1.45; margin:5px 0 0;">jobs cut by AI globally in H1 2025.</p></div>
+          <div><div style="font-family:'Fraunces', serif; font-weight:600; font-size:26px; color:#ece4d4; line-height:1;">11.7%</div><p style="font-size:13px; line-height:1.45; margin:5px 0 0;">of U.S. jobs automatable with today&rsquo;s tech (MIT).</p></div>
+          <div><div style="font-family:'Fraunces', serif; font-weight:600; font-size:26px; color:#ece4d4; line-height:1;">5.4%</div><p style="font-size:13px; line-height:1.45; margin:5px 0 0;">of firms had formally adopted generative AI by early 2024.</p></div>
+          <div><div style="font-family:'Fraunces', serif; font-weight:600; font-size:26px; color:#ece4d4; line-height:1;">92M / 170M</div><p style="font-size:13px; line-height:1.45; margin:5px 0 0;">jobs the WEF expects displaced vs. created by 2030.</p></div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ============ READ NEXT ============ -->
+  <section style="background:#e2d8c4;">
+    <div style="max-width:1180px; margin:0 auto; padding:64px 32px;">
+      <div style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.14em; color:#8a7d68; margin-bottom:28px;">READ NEXT</div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:28px;" class="g3">
+        <a href="ai-broke-the-honor-system.html" style="display:block;" style-hover="opacity:0.9;">
+          <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.1em; color:#b0463a; margin-bottom:10px;">IN DEPTH &middot; 12 MIN</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:21px; line-height:1.2; margin:0;">AI broke the internet&rsquo;s honor system. Blockchain is one of the repair crews.</h3>
+        </a>
+        <a href="why.html" style="display:block;" style-hover="opacity:0.9;">
+          <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.1em; color:#b0463a; margin-bottom:10px;">OPINION</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:21px; line-height:1.2; margin:0;">The AI risks worth losing sleep over &mdash; and the ones that aren&rsquo;t</h3>
+        </a>
+        <a href="who.html" style="display:block;" style-hover="opacity:0.9;">
+          <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.1em; color:#b0463a; margin-bottom:10px;">THE LANDSCAPE</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:21px; line-height:1.2; margin:0;">Who does what: the whole AI cast on one page</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#1c1813; color:#c4b9a4;">
+    <div style="max-width:1180px; margin:0 auto; padding:56px 32px; display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+      <div>
+        <div style="display:flex; flex-direction:column; line-height:0.96; margin-bottom:14px;">
+          <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:18px; color:#f4ecdc;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
+          <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+        </div>
+        <p style="font-size:14px; line-height:1.5; max-width:300px; margin:0;">The essential stuff about AI. A free blog by an AI consulting practice.</p>
+      </div>
+      <div style="display:flex; gap:64px; flex-wrap:wrap;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">COURSES</span>
+          <a href="what.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">What is AI</a>
+          <a href="why.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Why it matters</a>
+          <a href="how.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">How to use it</a>
+          <a href="where.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Where in the world</a>
+          <a href="cookbook.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">The cookbook</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">PRACTICE</span>
+          <a href="index.html#consult" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Consulting</a>
+          <a href="how.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Free tools</a>
+          <a href="who.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Who does what</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(236,228,212,0.1);">
+      <div style="max-width:1180px; margin:0 auto; padding:22px 32px; font-family:'Hanken Grotesk', sans-serif; font-size:12px; color:#8a7d68;">© 2026 Meatandpotatoes.ai — all signal, no filler.</div>
+    </div>
+  </footer>
+
+</div>
+
+<template id="__bundler_thumbnail" data-bg-color="#1c1813">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#1c1813"/>
+    <g stroke="#cdb24a" stroke-width="5" fill="none">
+      <path d="M260 560 L420 560 L520 360 L620 460 L760 200 L940 320"/>
+    </g>
+    <circle cx="940" cy="320" r="14" fill="#b0463a"/>
+    <text x="600" y="700" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="52" fill="#f4ecdc">JOB DISPLACEMENT</text>
+  </svg>
+</template>
+</x-dc>
+</body>
+</html>
