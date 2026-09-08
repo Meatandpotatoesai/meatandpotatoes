@@ -1,0 +1,161 @@
+/* ============================================================
+   Meat & Potatoes — shared stylesheet
+   Loaded by every page as <link rel="stylesheet" href="./mp.css">
+
+   Page-level styling still lives inline in each HTML file
+   (that's how the pages were generated). This file holds the
+   things that must look the same everywhere, so they are
+   defined ONCE and changed ONCE.
+   ============================================================ */
+
+/* ---- Brand palette. Change a colour here, it changes site-wide ---- */
+:root {
+  --mp-cream:      #ece4d4;  /* page background        */
+  --mp-cream-warm: #e2d8c4;  /* panels, cards          */
+  --mp-cream-pale: #f6f0e4;  /* input fields           */
+  --mp-ink:        #1c1813;  /* near-black text        */
+  --mp-ink-soft:   #2f2820;  /* body copy              */
+  --mp-ink-muted:  #4a4034;  /* secondary copy         */
+  --mp-tobacco:    #8a7d68;  /* labels, captions       */
+  --mp-brick:      #b0463a;  /* accent                 */
+  --mp-brick-dark: #9a3b30;  /* accent, hover          */
+  --mp-serif:      'Fraunces', Georgia, serif;
+  --mp-sans:       'Hanken Grotesk', system-ui, sans-serif;
+}
+
+/* ============================================================
+   SUBSCRIBE BLOCK
+   Injected by mp.js at the end of every <article>.
+   Do not copy this into individual pages.
+   ============================================================ */
+
+.mp-subscribe {
+  background: var(--mp-cream-warm);
+  border: 1px solid rgba(28, 20, 15, 0.12);
+  border-radius: 4px;
+  padding: 30px 32px;
+  margin: 44px 0 0;
+}
+.mp-subscribe__label {
+  font-family: var(--mp-sans);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--mp-brick);
+  margin-bottom: 10px;
+}
+.mp-subscribe__head {
+  font-family: var(--mp-serif);
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--mp-ink);
+  margin: 0 0 12px;
+}
+.mp-subscribe__blurb {
+  font-family: var(--mp-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--mp-ink-muted);
+  margin: 0 0 22px;
+  max-width: 56ch;
+}
+
+/* ---- Kit form, restyled. Class names are Kit's; don't rename ---- */
+.mp-subscribe .formkit-form *          { box-sizing: border-box; }
+.mp-subscribe .formkit-form            { max-width: 100%; margin: 0; }
+.mp-subscribe .formkit-form [data-style="clean"] { width: 100%; padding: 0; }
+.mp-subscribe .formkit-fields          { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; }
+.mp-subscribe .formkit-field           { flex: 1 1 240px; margin: 0; }
+
+.mp-subscribe .formkit-input {
+  width: 100%;
+  font-family: var(--mp-sans);
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 13px 15px;
+  border: 2px solid var(--mp-ink);
+  border-radius: 5px;
+  background: var(--mp-cream-pale);
+  color: var(--mp-ink);
+  -webkit-appearance: none;
+}
+.mp-subscribe .formkit-input:focus        { outline: none; border-color: var(--mp-brick); }
+.mp-subscribe .formkit-input::placeholder { color: var(--mp-tobacco); opacity: 1; }
+
+.mp-subscribe .formkit-submit {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  font-family: var(--mp-serif);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--mp-cream);
+  background: var(--mp-brick);
+  border: 2.5px solid var(--mp-ink);
+  border-radius: 5px;
+  box-shadow: 3px 3px 0 rgba(28, 20, 15, 0.22);
+  transition: background-color 150ms ease;
+}
+.mp-subscribe .formkit-submit > span   { display: block; padding: 12px 26px; }
+.mp-subscribe .formkit-submit:hover    { background: var(--mp-brick-dark); }
+.mp-subscribe .formkit-submit[data-active] { opacity: 0.6; }
+.mp-subscribe .formkit-spinner         { display: none; }
+
+.mp-subscribe .formkit-alert {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 11px 14px;
+  border-radius: 4px;
+  font-family: var(--mp-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  border: 1px solid var(--mp-brick);
+  background: #f6e6e0;
+  color: #8f3428;
+}
+.mp-subscribe .formkit-alert:empty     { display: none; }
+.mp-subscribe .formkit-alert-success {
+  border-color: #4a6b46;
+  background: #e6efe2;
+  color: #3d5a39;
+}
+
+/* ---- "Built with Kit" attribution, rendered as quiet text ---- */
+.mp-subscribe .formkit-powered-by-convertkit-container {
+  display: block;
+  margin: 14px 0 0;
+  width: auto;
+}
+.mp-subscribe .formkit-powered-by-convertkit {
+  display: inline-block;
+  font-family: var(--mp-sans);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mp-tobacco);
+  text-decoration: none;
+  background: none;
+  background-image: none;
+  width: auto;
+  height: auto;
+  text-indent: 0;
+  border-radius: 0;
+  opacity: 1;
+  padding: 0;
+}
+.mp-subscribe .formkit-powered-by-convertkit:hover {
+  color: var(--mp-brick);
+  background: none;
+  transform: none;
+}
+
+@media (max-width: 560px) {
+  .mp-subscribe            { padding: 24px 20px; }
+  .mp-subscribe__head      { font-size: 23px; }
+  .mp-subscribe .formkit-submit,
+  .mp-subscribe .formkit-field { flex: 1 1 100%; }
+}
