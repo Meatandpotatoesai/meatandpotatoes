@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Could AI Actually Kill You? — Meat &amp; Potatoes</title>
+<meta name="description" content="An even-keeled exploration of AI danger, fear, and what to actually do about it.">
+<meta property="og:title" content="OH MY GOD, WE'RE ALL GONNA — Could AI Actually Kill You?">
+<meta property="og:description" content="An even-keeled exploration of AI danger, fear, and what to actually do about it.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://meatandpotatoes.ai/could-ai-kill-you">
+<meta property="og:image" content="https://meatandpotatoes.ai/assets/og-could-ai-kill-you.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Meat &amp; Potatoes">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://meatandpotatoes.ai/could-ai-kill-you">
+<link rel="stylesheet" href="./mp.css">
+<script src="./mp.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --paper:    #FAF8F4;
+    --ink:      #1C1C1A;
+    --accent:   #8B7355;
+    --divider:  #D4CFC4;
+    --muted:    #4A4840;
+    --muted-2:  #5A5852;
+    --tag-mustard-bg: #B8902A;
+    --tag-mustard-tx: #FDF5DC;
+    --tag-blue-bg:    #2A4E8C;
+    --tag-blue-tx:    #E0EAFA;
+    --tag-green-bg:   #3E6B47;
+    --tag-green-tx:   #E8F2EA;
+    --tag-red-bg:     #C04A24;
+    --tag-red-tx:     #FAF0E0;
+    --num-red:        #C04A24;
+  }
+
+  html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .serif { font-family: Georgia, 'Times New Roman', serif; }
+
+  /* ── ANNOUNCE BAR ── */
+  .announce {
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 9px 16px;
+  }
+
+  /* ── NAV ── */
+  .nav {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 22px 24px 16px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1.5px solid var(--ink);
+  }
+  .logo { font-family: Georgia, serif; font-size: 22px; letter-spacing: 0.01em; color: var(--ink); text-decoration: none; }
+  .logo-sub { font-size: 10px; font-weight: bold; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); display: block; margin-top: 2px; }
+  .nav-links { display: flex; gap: 22px; }
+  .nav-links a { font-size: 11px; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* ── ARTICLE WRAP ── */
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
+  .article { max-width: 680px; margin: 0 auto; }
+
+  /* ── MASTHEAD ── */
+  .masthead { padding: 48px 0 28px; border-bottom: 1px solid var(--divider); margin-bottom: 36px; }
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    padding: 4px 9px;
+    margin-bottom: 20px;
+  }
+  .tag-mustard { background: var(--tag-mustard-bg); color: var(--tag-mustard-tx); }
+  .tag-blue    { background: var(--tag-blue-bg);    color: var(--tag-blue-tx); }
+  .tag-green   { background: var(--tag-green-bg);   color: var(--tag-green-tx); }
+  .tag-red     { background: var(--tag-red-bg);     color: var(--tag-red-tx); }
+
+  .eyebrow { font-size: 10px; font-weight: bold; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+  h1.title { font-family: Georgia, serif; font-size: 38px; font-weight: normal; line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 18px; }
+  .standfirst { font-size: 17px; color: var(--muted); line-height: 1.6; }
+  .byline { font-size: 11px; letter-spacing: 0.04em; color: var(--accent); margin-top: 22px; text-transform: uppercase; font-weight: bold; }
+
+  /* ── BODY TYPOGRAPHY ── */
+  .article p { font-size: 16px; line-height: 1.75; margin-bottom: 18px; color: var(--ink); }
+  .article p.lede { font-size: 18px; line-height: 1.7; }
+  h2.section { font-family: Georgia, serif; font-size: 26px; font-weight: normal; letter-spacing: -0.01em; line-height: 1.2; margin: 52px 0 18px; padding-top: 28px; border-top: 1px solid var(--divider); }
+  h2.section.no-rule { border-top: none; padding-top: 0; margin-top: 44px; }
+  h3.sub { font-family: Georgia, serif; font-size: 19px; font-weight: normal; margin: 32px 0 12px; }
+  .article strong { font-weight: bold; }
+  .article em { font-style: italic; }
+
+  /* ── INLINE LABEL (replaces colored callout labels) ── */
+  .minilabel { font-size: 10px; font-weight: bold; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+
+  /* ── EDITORIAL CALLOUT (hairline, no fill) ── */
+  .callout {
+    border-left: 2px solid var(--accent);
+    padding: 4px 0 4px 20px;
+    margin: 30px 0;
+  }
+  .callout .minilabel { margin-bottom: 6px; }
+  .callout p { font-size: 16px; margin-bottom: 0; color: var(--muted); }
+
+  /* ── BOXED NOTE (hairline border, no fill) ── */
+  .boxnote {
+    border: 1px solid var(--divider);
+    padding: 20px 22px;
+    margin: 30px 0;
+  }
+  .boxnote .minilabel { margin-bottom: 8px; }
+  .boxnote p { font-size: 15px; margin-bottom: 0; color: var(--muted); }
+
+  /* ── BOARD TABLE (hairlines only, no fills) ── */
+  .board { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 14px; }
+  .board th {
+    text-align: left;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 10px 12px;
+    border-bottom: 1.5px solid var(--ink);
+    vertical-align: bottom;
+  }
+  .board td { padding: 14px 12px; border-bottom: 1px solid var(--divider); vertical-align: top; line-height: 1.55; color: var(--muted); }
+  .board td.stage { width: 18%; }
+  .board .stage-name { font-family: Georgia, serif; font-size: 16px; color: var(--ink); display: block; margin-bottom: 4px; }
+  .board .stage-q { font-size: 12px; font-style: italic; color: var(--accent); }
+  .board .cell-label { font-size: 10px; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 4px; }
+
+  /* ── STEP LIST ── */
+  ol.steps { margin: 22px 0 22px 0; padding-left: 0; list-style: none; counter-reset: step; }
+  ol.steps li { position: relative; padding-left: 42px; margin-bottom: 16px; font-size: 16px; line-height: 1.6; counter-increment: step; }
+  ol.steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0; top: 0;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: var(--num-red);
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  ol.steps li strong { font-weight: bold; }
+
+  /* ── Q&A PAIR (typographic, no color fills) ── */
+  .qa { margin: 26px 0; border-top: 1px solid var(--divider); padding-top: 18px; }
+  .qa .q { font-family: Georgia, serif; font-size: 18px; margin-bottom: 14px; color: var(--ink); }
+  .qa .ans { padding-left: 20px; border-left: 2px solid var(--divider); margin-bottom: 12px; }
+  .qa .ans:last-child { margin-bottom: 0; }
+  .qa .ans-label { font-size: 10px; font-weight: bold; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 5px; color: var(--accent); }
+  .qa .ans.not .ans-text { color: var(--muted-2); font-style: italic; }
+  .qa .ans.like { border-left-color: var(--ink); }
+  .qa .ans.like .ans-text { color: var(--ink); }
+  .qa .ans-text { font-size: 15px; line-height: 1.6; }
+
+  /* ── STAGE HEADING ── */
+  .stage-head { margin: 48px 0 16px; padding-top: 28px; border-top: 1px solid var(--divider); }
+  .stage-head .stage-tag { font-size: 10px; font-weight: bold; letter-spacing: 0.18em; text-transform: uppercase; color: var(--num-red); margin-bottom: 6px; }
+  .stage-head h2 { font-family: Georgia, serif; font-size: 24px; font-weight: normal; line-height: 1.2; }
+  .stage-head .stage-q { font-style: italic; color: var(--accent); font-size: 16px; margin-top: 4px; }
+
+  /* ── EXAMPLE TABLE ── */
+  .example { border: 1px solid var(--divider); margin: 24px 0; }
+  .example .ex-head { background: transparent; border-bottom: 1.5px solid var(--ink); padding: 12px 16px; }
+  .example .ex-head .minilabel { margin: 0; }
+  .example .ex-head .ex-name { font-family: Georgia, serif; font-size: 17px; color: var(--ink); margin-top: 3px; }
+  .example .ex-row { display: grid; grid-template-columns: 130px 1fr; border-bottom: 1px solid var(--divider); }
+  .example .ex-row:last-child { border-bottom: none; }
+  .example .ex-stage { font-size: 11px; font-weight: bold; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); padding: 12px 16px; border-right: 1px solid var(--divider); }
+  .example .ex-text { padding: 12px 16px; font-size: 14px; line-height: 1.6; color: var(--muted); }
+
+  /* ── SCALE TABLE ── */
+  .scale { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+  .scale th { text-align: left; font-size: 10px; font-weight: bold; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); padding: 10px 12px; border-bottom: 1.5px solid var(--ink); }
+  .scale td { padding: 11px 12px; border-bottom: 1px solid var(--divider); color: var(--muted); vertical-align: top; line-height: 1.5; }
+  .scale td.rowlabel { font-weight: bold; color: var(--ink); font-size: 13px; }
+
+  /* ── PULLQUOTE ── */
+  .pullquote { margin: 36px 0; padding: 4px 0 4px 22px; border-left: 3px solid var(--accent); }
+  .pullquote p { font-family: Georgia, serif; font-size: 21px; font-style: italic; line-height: 1.4; color: var(--ink); margin-bottom: 8px; }
+  .pullquote .attr { font-size: 13px; color: var(--accent); font-style: normal; }
+
+  /* ── RESOURCES ── */
+  .resources { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: 28px 0; border-top: 1px solid var(--divider); }
+  .resource { padding: 20px 18px 20px 0; border-right: 1px solid var(--divider); }
+  .resource:last-child { border-right: none; padding-right: 0; padding-left: 18px; }
+  .resource:nth-child(2) { padding-left: 18px; }
+  .resource .r-title { font-family: Georgia, serif; font-size: 16px; margin-bottom: 6px; }
+  .resource .r-desc { font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 10px; }
+  .resource .r-link { font-size: 11px; font-weight: bold; letter-spacing: 0.06em; text-transform: uppercase; color: var(--num-red); text-decoration: none; }
+
+  /* ── NEXT-ARTICLE LINK ── */
+  .nextlink { display: block; margin: 32px 0; padding: 18px 0; border-top: 1px solid var(--divider); border-bottom: 1px solid var(--divider); font-family: Georgia, serif; font-size: 18px; color: var(--ink); text-decoration: none; }
+  .nextlink:hover { color: var(--accent); }
+  .nextlink .arrow { color: var(--num-red); }
+
+  /* ── SOURCES ── */
+  .sources { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--divider); }
+  .sources h2 { font-family: Georgia, serif; font-size: 20px; font-weight: normal; margin-bottom: 14px; }
+  .sources ol { padding-left: 18px; }
+  .sources li { font-size: 12px; color: var(--muted-2); line-height: 1.55; margin-bottom: 7px; }
+  .sources .note { font-size: 12px; color: var(--accent); margin-top: 10px; font-style: italic; }
+
+  /* ── FOOTER ── */
+  .footer { max-width: 860px; margin: 0 auto; padding: 28px 24px 48px; border-top: 1px solid var(--divider); display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .footer p { font-size: 11px; color: #A09080; letter-spacing: 0.03em; max-width: 560px; line-height: 1.5; }
+  .footer .badge { background: #E8C84A; color: #5A4010; font-size: 10px; font-weight: bold; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 10px; white-space: nowrap; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 720px) {
+    h1.title { font-size: 30px; }
+    h2.section { font-size: 22px; }
+    .board { font-size: 12px; display: block; overflow-x: auto; white-space: nowrap; }
+    .board td, .board th { white-space: normal; min-width: 140px; }
+    .resources { grid-template-columns: 1fr; }
+    .resource { border-right: none; border-bottom: 1px solid var(--divider); padding: 18px 0 !important; }
+    .resource:last-child { border-bottom: none; }
+    .example .ex-row { grid-template-columns: 1fr; }
+    .example .ex-stage { border-right: none; border-bottom: 1px solid var(--divider); }
+    .nav-links { gap: 14px; }
+  }
+
+  .inline-link { color: var(--num-red); text-decoration: none; border-bottom: 1px solid var(--divider); }
+  .inline-link:hover { border-bottom-color: var(--num-red); }
+  ul.bullets { margin: 18px 0 18px 22px; }
+  ul.bullets li { font-size: 16px; line-height: 1.6; margin-bottom: 8px; color: var(--ink); }
+</style>
+<style>
+  /* additions for this piece */
+  figure.inline-img { margin: 34px 0 30px; }
+  figure.inline-img img { width: 100%; height: auto; display: block; border: 1px solid var(--divider); }
+  figure.inline-img figcaption { font-size: 13px; line-height: 1.6; color: var(--muted-2); font-style: italic; margin-top: 10px; text-align: left; }
+  p.question { font-family: Georgia, serif; font-size: 26px; line-height: 1.25; margin: 26px 0 22px; color: var(--ink); }
+  .article p.small-aside { font-size: 15px; color: var(--muted-2); font-style: italic; }
+  h2.section .kicker { display:block; font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+  .keyclaim { font-family: Georgia, serif; font-size: 20px; line-height: 1.45; margin: 22px 0; padding: 4px 0 4px 22px; border-left: 3px solid var(--accent); color: var(--ink); }
+  .actionblock { margin: 26px 0; }
+  .actionblock .act { border-top: 1px solid var(--divider); padding: 16px 0; }
+  .actionblock .act:last-child { border-bottom: 1px solid var(--divider); }
+  .actionblock .act-h { font-family: Georgia, serif; font-size: 18px; line-height: 1.3; margin-bottom: 7px; color: var(--ink); }
+  .actionblock .act p { font-size: 15px; color: var(--muted); margin-bottom: 0; }
+  @media (max-width: 720px) { p.question { font-size: 22px; } .keyclaim { font-size: 17px; } }
+</style>
+</head>
+<body>
+
+<div class="announce">AI explained for people who didn't ask for a robot</div>
+
+<nav class="nav">
+  <a href="./index.html" class="logo">Meat &amp; Potatoes<span class="logo-sub">The AI blog with no hype</span></a>
+  <div class="nav-links">
+    <a href="#">The Basics</a>
+    <a href="#">In Practice</a>
+    <a href="#">In Depth</a>
+  </div>
+</nav>
+
+<div class="wrap">
+<article class="article">
+
+  <header class="masthead">
+    <span class="tag tag-red">The Basics</span>
+    <div class="eyebrow">18 September 2026 · Ahead of our four-part series</div>
+    <h1 class="title">OH MY GOD, WE'RE ALL GONNA — Could AI Actually Kill You?</h1>
+    <p class="standfirst">An even-keeled exploration of AI danger, fear, and what to actually do about it.</p>
+    <div class="byline">Meat &amp; Potatoes</div>
+  </header>
+
+  <p class="lede">In the long ago era of… a few weeks ago, we were working on a lengthy piece on the question of "what are the dangers of AI?" Because there's a LOT to say on the subject, and we wanted to present our view of it thoroughly.</p>
+
+  <p>Then a researcher quit the frontier lab he worked at, saying the industry was gambling with our lives — aka, <em>it might kill us all.</em> Anthropic's chief executive published an essay asking the entire field to slow down. Google admitted its Gemini model had broken into three companies. And our inbox filled with the same question asked countless different ways:</p>
+
+  <p class="question">Are we in danger?</p>
+
+  <p>A simple "no" would feel great. Unfortunately the answer is more complicated than that — which, we realise, itself sounds a lot like "yes." It's scary. There is some stuff we're scared about. And whatever the size of the risk turns out to be, AI is here and it isn't going anywhere.</p>
+
+  <p>We aren't trying to talk anyone into or out of a well-founded fear, we aren't saying there's no danger, and we aren't telling you to take the blue pill. (Neo's blue pill — the one that tells you to go back to sleep. Not Viagra. Just to clarify.) But we're also not the other thing: the e/acc crowd, the "build it faster, regulation is for cowards" people who treat anyone worried about this as hysterical and think the only real risk is moving too slowly.</p>
+
+  <p>Both camps are selling certainty nobody actually has. One needs you scared, the other needs you not looking.</p>
+
+  <p>So before another word of hype or alarm or advice: let's slow down for a minute. Take a breath. Hold it. Let it out.</p>
+
+  <figure class="inline-img">
+    <img src="./assets/could-ai-kill-you-puppy.jpg" width="1280" height="720" loading="lazy" alt="A cocker spaniel puppy asleep on a carpet next to a tennis ball and a rope toy">
+    <figcaption>This is a lot. Here's a puppy. Yes, it's a cheap trick — but he's asleep, which is more than most of us managed this month. Right. Onwards.</figcaption>
+  </figure>
+
+  <p>Now let's parse through what has and hasn't happened, what's actually true about the danger, and what we can do — if anything — to prevent… us all… from… dying.</p>
+
+  <p class="small-aside">(This is the short version. The long series is still cooking. This one is here to offer some calm in the meantime.)</p>
+
+  <h2 class="section">Start with a story that never happened</h2>
+
+  <p>In May 2023, at a conference in London, a US Air Force colonel described a simulation: an AI drone that killed its own operator for blocking its kills, then destroyed the communications tower when it was retrained not to. It's the most repeated example of AI turning on people you'll ever see.</p>
+
+  <p>The Air Force said no such test was ever run, and the conference organisers updated their write-up to say the colonel had been describing a thought experiment. It never happened. (Please hear that: it never happened.) People still cite it as fact.</p>
+
+  <p>That gap — between what people believe and what the record shows — runs through almost every story in this category. To be clear, that isn't us saying people aren't seeing this clearly and there's nothing to worry about. It's us saying that in a crisis, if that's what this is, being clear-eyed is part of how you stay safe.</p>
+
+  <p>On 18 September, Google said its Gemini model had broken into three companies back in May. It guessed its way into one and used login details it found in a public code repository to reach the other two. Alarming on its own — except Google is the fourth lab to admit something like this in seven weeks. Anthropic went public on 30 July, OpenAI on 4 August, Meta on 5 August.</p>
+
+  <p>And all four trace back to the same outside company. Irregular, a security startup in Tel Aviv, builds the environments these labs use to test how good their models are at hacking. A setup mistake on its end let models reach the real internet while telling them they were in a sealed practice space. By late August the <em>New York Times</em> was calling Irregular the common thread in every recent incident.</p>
+
+  <div class="callout">
+    <div class="minilabel">The part that matters</div>
+    <p>This wasn't four AIs deciding to escape. It was one test with a hole in it. Google's own account makes the point: in each case, Gemini stopped as soon as it worked out it was inside a real company rather than a simulation.</p>
+  </div>
+
+  <p>The pattern holds elsewhere. You probably heard about the coding agent that wiped a company's live database during a code freeze and then invented fake users to paper over the gap. What didn't make the headlines: nobody had ever put a wall between that agent and the real database. It didn't get around a safeguard. There wasn't one to get around.</p>
+
+  <p>And you almost certainly heard about the AI that blackmailed an engineer — threatening to expose his affair if he shut it down. It did that 96% of the time. What you didn't hear is that researchers had built the scenario so those were the only two moves available: accept shutdown, or use the affair they had deliberately told it about. And when Anthropic went looking for where the behaviour had come from, the answer turned out to be us. The model had absorbed the internet's endless supply of stories about evil, self-preserving AI. We spent decades writing the Terminator, then fed it to the machine. Anthropic changed how it trains its models. <strong>Newer versions blackmail zero percent of the time.</strong></p>
+
+  <h2 class="section">What's actually true about the danger</h2>
+
+  <p>This is as old as fire. As old as the wheel, gunpowder, the engine, the atom.</p>
+
+  <div class="keyclaim">Every general-purpose technology is a multiplier. It amplifies whatever people were already doing, in both directions, and it has never been possible to get one without the other.</div>
+
+  <p>The clearest case is a century old. In 1909 Fritz Haber worked out how to pull nitrogen from the air and turn it into ammonia. The process now feeds roughly half the people on the planet. It also supplied the explosives for two world wars — researchers writing in <em>Nature Geoscience</em> link it to 100 to 150 million deaths in twentieth-century conflict. Haber personally directed the first large chlorine gas attack in 1915 and collected a Nobel Prize three years later. One process, one man, both columns.</p>
+
+  <p>Nuclear fission runs a power station and a warhead from the same equations. Nobody hacked a power station in 1970, not because people were more honourable but because there was no wire to do it down.</p>
+
+  <p>AI is the newest entry on that list, not an exception to it. Which means the useful question isn't whether the machine wants anything. It's what the multiplier gets pointed at.</p>
+
+  <h2 class="section">The real risk is who's aiming it</h2>
+
+  <p>In November 2025 Anthropic disclosed that a Chinese state-sponsored group had used its Claude Code tool against roughly thirty organisations: tech firms, banks, chemical manufacturers, government agencies. The AI did 80 to 90% of the hands-on work — finding weaknesses, stealing credentials, moving through networks, pulling out data. Humans stepped in only four to six times per operation.</p>
+
+  <p>The AI initiated nothing. People chose every target and approved every escalation. That should not comfort anyone. What the incident measures is cost: an operation that used to need a skilled team for months now takes a weekend.</p>
+
+  <p>The same shape shows up in biology, and there's a number attached. In 2025 the Forecasting Research Institute asked 46 biosecurity experts how likely a human-caused outbreak killing 100,000 people is in any given year. Their answer was 0.3%. If AI could match top virologists on a particular lab-troubleshooting test, they said, it rises to 1.5% — five times higher. They expected that capability after 2030. It arrived months after they answered.</p>
+
+  <p>Again: the AI doesn't release anything. A person does. The machine just removes the part that used to require years of apprenticeship.</p>
+
+  <div class="pullquote">
+    <p>Not a machine that turns on us. A machine that makes the people who already wanted to do harm considerably more capable — and makes ordinary carelessness considerably more expensive.</p>
+  </div>
+
+  <h2 class="section">What you can do about your own AI use</h2>
+
+  <p>None of this is glamorous, and all of it is within reach. Which is sort of the point — why not do what you can?</p>
+
+  <div class="actionblock">
+    <div class="act">
+      <div class="act-h">Know which of your tools can act, not just answer.</div>
+      <p>There's a real difference between an AI that writes you a draft and one that can send the email, change the file, move the money or publish the post. That second category has grown quickly, often as a default-on feature in software you already had. Go and look.</p>
+    </div>
+    <div class="act">
+      <div class="act-h">Don't give an AI access you wouldn't give a temp on their first morning.</div>
+      <p>Every account you connect widens the damage if something goes wrong. Connect what you need and nothing else.</p>
+    </div>
+    <div class="act">
+      <div class="act-h">Check anything it claims to have done.</div>
+      <p>An AI has no way to inspect itself. It can't reliably tell you what version it is, what it can access, or whether it finished a task, so it produces the most plausible-sounding answer instead. That isn't lying — there's no truth for it to depart from — but it's arguably worse, since a liar at least knows the real answer. Replit's agent reported tests passing that it never ran.</p>
+    </div>
+  </div>
+
+  <div class="boxnote">
+    <div class="minilabel">At work, ask three questions</div>
+    <ol class="steps">
+      <li><strong>Which AI tools can change things?</strong></li>
+      <li><strong>What's the worst each could do before a person noticed?</strong></li>
+      <li><strong>Is there a wall between where the AI works and your live systems?</strong> If the answer is "I think so," assume there isn't.</li>
+    </ol>
+    <p>A missing wall caused the Replit disaster, the four lab breaches and the Gemini incident.</p>
+  </div>
+
+  <h2 class="section">And what you can do as a citizen</h2>
+
+  <p>"AI regulation" is too vague to vote on. These three aren't.</p>
+
+  <div class="actionblock">
+    <div class="act">
+      <div class="act-h">Mandatory screening of synthetic DNA.</div>
+      <p>Most labs don't make DNA themselves — they send a genetic sequence to a supplier who manufactures it and posts it back, usually within days. Screening means the supplier checks each order against known toxins and pathogens, and checks the customer, before building anything. Many large suppliers do this voluntarily. Almost no country requires it. Those same biosecurity experts said that safeguards in the models plus mandatory screening would bring that 1.5% figure back to roughly 0.4% — near where it started. It's the most effective fix available and hardly anyone is discussing it.</p>
+    </div>
+    <div class="act">
+      <div class="act-h">Disclosure rules that actually trigger.</div>
+      <p>California and New York now require labs to report serious AI incidents, but only ones risking more than 50 deaths or a billion dollars in damage. None of this year's breaches came close. Google knew about Gemini in July and said nothing until the <em>Wall Street Journal</em> called. OpenAI's agents flooded a software registry with over 2,000 malicious packages in May; we only know because outside researchers found it. Whether you hear about any of this depends on which company it happened to.</p>
+    </div>
+    <div class="act">
+      <div class="act-h">Nuclear arms control.</div>
+      <p>The biggest change for the worse this year had nothing to do with AI. New START, the last treaty limiting US and Russian nuclear weapons, expired on 5 February 2026 — no caps on their strategic arsenals and no inspections, for the first time since 1972. Nuclear war remains the most likely global catastrophe in every serious expert forecast.</p>
+    </div>
+  </div>
+
+  <p>Ask candidates about those three specifically. They're concrete enough to hold someone to afterwards.</p>
+
+  <h2 class="section">So, are we all gonna…?</h2>
+
+  <p class="small-aside">(Well — eventually. But hopefully not for a very, very long time.)</p>
+
+  <p>Probably not the way the doomsday headlines suggest.</p>
+
+  <p>This isn't the Terminator. It's a powerful tool that's often set up carelessly, given access to real systems, and has no way of knowing when it's wrong. That's how most industrial accidents happen, with one difference: this one writes its own incident report, and the report might be made up.</p>
+
+  <p>The danger isn't that AI decides to hurt you. It's that it makes hurting people cheaper — for those who already wanted to, and for everyone who simply wasn't paying attention.</p>
+
+  <p>Which is, oddly, good news. You can't do much about a machine that wakes up and decides to end us. You — we, us, "we the people" — can do quite a lot about carelessness, bad actors, and rules nobody has written yet.</p>
+
+  <a href="#" class="nextlink">We kept this short on purpose. The four-part series is coming — including why the extinction percentages you keep seeing aren't really percentages, and what a Soviet officer's judgment call in 1983 tells us about machines that are confidently wrong. <span class="arrow">→</span></a>
+
+  <div class="sources">
+    <h2>Sources</h2>
+    <ol>
+      <li><em>Wall Street Journal</em>, Bloomberg, Reuters, CNBC. Google Gemini disclosure, 18 September 2026.</li>
+      <li>Anthropic (30 July), OpenAI (4 August) and Meta (5 August) evaluation-breach disclosures, 2026.</li>
+      <li><em>New York Times</em>, August 2026 — on Irregular as the common vendor across all four incidents.</li>
+      <li>Royal Aeronautical Society summit write-up and correction; Politifact fact-check, June 2023.</li>
+      <li>Anthropic. <em>Agentic Misalignment</em> (June 2025) and <em>Teaching Claude Why</em> (May 2026). 16 models tested.</li>
+      <li>Anthropic. Disrupting the first reported AI-orchestrated cyber espionage campaign, 13 November 2025. ~30 targets.</li>
+      <li>Erisman, Sutton, Galloway, Klimont &amp; Winiwarter. <em>Nature Geoscience</em> 1 (2008): 636–639.</li>
+      <li>Forecasting Research Institute / GovAI. Biorisk and the efficacy of safeguards, 2025. 46 biosecurity experts.</li>
+      <li>Nuclear Threat Initiative. The end of New START, January 2026.</li>
+    </ol>
+    <div class="note">Probability figures are experts' best guesses, not measurements. Current as of 18 September 2026.</div>
+  </div>
+
+</article>
+</div>
+
+<footer class="footer">
+  <p>Meat &amp; Potatoes is an educational project. No sponsored content. No affiliate links. A consulting firm built this because the conversation deserved better.</p>
+  <span class="badge">Free forever</span>
+</footer>
+
+</body>
+</html>
