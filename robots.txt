@@ -1,5 +1,0 @@
-# meatandpotatoes.ai
-User-agent: *
-Allow: /
-
-Sitemap: https://meatandpotatoes.ai/sitemap.xml
