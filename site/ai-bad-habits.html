@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Same Thing That Makes AI Smart Gives It Bad Habits — Meat &amp; Potatoes</title>
+<meta name="description" content="Why you can't keep AI's intuition and throw away its bad habits, and what that means for how you use it.">
+<meta property="og:title" content="The Same Thing That Makes AI Smart Gives It Bad Habits — Meat &amp; Potatoes">
+<meta property="og:description" content="Why you can't keep AI's intuition and throw away its bad habits, and what that means for how you use it.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://meatandpotatoes.ai/ai-bad-habits">
+<meta property="og:image" content="https://meatandpotatoes.ai/assets/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Meat &amp; Potatoes">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://meatandpotatoes.ai/ai-bad-habits">
+<link rel="stylesheet" href="./mp.css">
+<script src="./mp.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --paper:    #FAF8F4;
+    --ink:      #1C1C1A;
+    --accent:   #8B7355;
+    --divider:  #D4CFC4;
+    --muted:    #4A4840;
+    --muted-2:  #5A5852;
+    --tag-mustard-bg: #B8902A;
+    --tag-mustard-tx: #FDF5DC;
+    --tag-blue-bg:    #2A4E8C;
+    --tag-blue-tx:    #E0EAFA;
+    --tag-green-bg:   #3E6B47;
+    --tag-green-tx:   #E8F2EA;
+    --tag-red-bg:     #C04A24;
+    --tag-red-tx:     #FAF0E0;
+    --num-red:        #C04A24;
+  }
+
+  html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  /* ── ANNOUNCE BAR ── */
+  .announce {
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 9px 16px;
+  }
+
+  /* ── NAV ── */
+  .nav {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 22px 24px 16px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1.5px solid var(--ink);
+  }
+  .logo { font-family: Georgia, serif; font-size: 22px; letter-spacing: 0.01em; color: var(--ink); text-decoration: none; }
+  .logo-sub { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); display: block; margin-top: 2px; }
+  .nav-links { display: flex; gap: 22px; }
+  .nav-links a { font-size: 11px; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* ── ARTICLE WRAP ── */
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
+  .article { max-width: 680px; margin: 0 auto; }
+
+  /* ── MASTHEAD ── */
+  .masthead { padding: 48px 0 28px; border-bottom: 1px solid var(--divider); margin-bottom: 36px; }
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    padding: 4px 9px;
+    margin-bottom: 20px;
+  }
+  .tag-red { background: var(--tag-red-bg); color: var(--tag-red-tx); }
+
+  .eyebrow { font-size: 10px; font-weight: bold; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+  h1.title { font-family: Georgia, serif; font-size: 38px; font-weight: normal; line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 18px; }
+  .standfirst { font-size: 17px; color: var(--muted); line-height: 1.6; }
+  .byline { font-size: 11px; letter-spacing: 0.04em; color: var(--accent); margin-top: 22px; text-transform: uppercase; font-weight: bold; }
+
+  /* ── BODY TYPOGRAPHY ── */
+  .article p { font-size: 16px; line-height: 1.75; margin-bottom: 18px; color: var(--ink); }
+  .article p.lede { font-size: 18px; line-height: 1.7; }
+  h2.section { font-family: Georgia, serif; font-size: 26px; font-weight: normal; letter-spacing: -0.01em; line-height: 1.2; margin: 52px 0 18px; padding-top: 28px; border-top: 1px solid var(--divider); }
+  .article strong { font-weight: bold; }
+  .article em { font-style: italic; }
+
+  h3.sub { font-family: Georgia, serif; font-size: 19px; font-weight: normal; line-height: 1.3; margin: 30px 0 10px; }
+  .scale td.edge-good { color: var(--ink); }
+  .scale .src2 { display: inline; font-size: 12px; color: var(--accent); }
+
+
+  /* ── INLINE LABEL ── */
+  .minilabel { font-size: 10px; font-weight: bold; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+
+  /* ── EDITORIAL CALLOUT (hairline, no fill) ── */
+  .callout { border-left: 2px solid var(--accent); padding: 4px 0 4px 20px; margin: 30px 0; }
+  .callout .minilabel { margin-bottom: 6px; }
+  .callout p { font-size: 16px; margin-bottom: 0; color: var(--muted); }
+  .callout p + p { margin-top: 6px; }
+
+  /* ── BOXED NOTE (hairline border, no fill) ── */
+  .boxnote { border: 1px solid var(--divider); padding: 20px 22px; margin: 30px 0; }
+  .boxnote .minilabel { margin-bottom: 8px; }
+  .boxnote p { font-size: 15px; margin-bottom: 0; color: var(--muted); }
+  .boxnote p + p { margin-top: 14px; }
+  .boxnote p strong { color: var(--ink); }
+
+  /* ── TABLES (hairlines only, no fills) ── */
+  .table-wrap { overflow-x: auto; margin: 28px 0; }
+  .scale { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 520px; }
+  .scale th { text-align: left; font-size: 10px; font-weight: bold; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); padding: 10px 12px; border-bottom: 1.5px solid var(--ink); vertical-align: bottom; }
+  .scale td { padding: 12px 12px; border-bottom: 1px solid var(--divider); color: var(--muted); vertical-align: top; line-height: 1.55; }
+  .scale td.rowlabel { font-family: Georgia, serif; font-size: 15px; color: var(--ink); }
+  .scale td.year { font-family: Georgia, serif; font-size: 16px; font-weight: bold; color: var(--num-red); width: 64px; }
+  .scale tr.highlight td { color: var(--ink); }
+  .scale td.rowlabel .src { display: block; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: var(--accent); margin-top: 2px; }
+
+  /* ── NEXT-ARTICLE LINK ── */
+  .nextlink { display: block; margin: 32px 0 14px; padding: 18px 0; border-top: 1px solid var(--divider); border-bottom: 1px solid var(--divider); font-family: Georgia, serif; font-size: 18px; color: var(--ink); text-decoration: none; }
+  .nextlink:hover { color: var(--accent); }
+  .nextlink .arrow { color: var(--num-red); }
+
+  /* ── SOURCES ── */
+  .sources { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--divider); }
+  .sources h2 { font-family: Georgia, serif; font-size: 20px; font-weight: normal; margin-bottom: 14px; }
+  .sources ol { padding-left: 18px; }
+  .sources li { font-size: 12px; color: var(--muted-2); line-height: 1.55; margin-bottom: 7px; }
+  .sources .note { font-size: 12px; color: var(--accent); margin-top: 10px; font-style: italic; }
+
+  /* ── FOOTER ── */
+  .footer { max-width: 860px; margin: 0 auto; padding: 28px 24px 48px; border-top: 1px solid var(--divider); display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .footer p { font-size: 11px; color: #A09080; letter-spacing: 0.03em; max-width: 560px; line-height: 1.5; }
+  .footer .badge { background: #E8C84A; color: #5A4010; font-size: 10px; font-weight: bold; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 10px; white-space: nowrap; }
+
+  .inline-link { color: var(--num-red); text-decoration: none; border-bottom: 1px solid var(--divider); }
+  .inline-link:hover { border-bottom-color: var(--num-red); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 720px) {
+    h1.title { font-size: 30px; }
+    h2.section { font-size: 22px; }
+    .nav { flex-direction: column; gap: 12px; }
+    .nav-links { gap: 14px; flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<div class="announce">AI explained for people who didn't ask for a robot</div>
+
+<nav class="nav">
+  <a href="./index.html" class="logo">Meat &amp; Potatoes<span class="logo-sub">The AI blog with no hype</span></a>
+  <div class="nav-links">
+    <a href="#">The Basics</a>
+    <a href="#">In Practice</a>
+    <a href="#">In Depth</a>
+  </div>
+</nav>
+
+<div class="wrap">
+<article class="article">
+
+  <header class="masthead">
+    <span class="tag tag-red">The Basics</span>
+    <div class="eyebrow">Article 2 of 2 · What AI Learned From Us</div>
+    <h1 class="title">The Same Thing That Makes AI Smart Gives It Bad Habits</h1>
+    <p class="standfirst">Why you can't keep AI's intuition and throw away its bad habits, and what that means for how you use it.</p>
+    <div class="byline">Meat &amp; Potatoes · 6 October 2026</div>
+  </header>
+
+  <p class="lede">In March 2016, in a match in Seoul watched by millions, an AI called AlphaGo played a move against Lee Sedol, one of the finest Go players alive, that commentators first took for a mistake.</p>
+
+  <p>Move 37 of the second game broke with centuries of human convention. It turned out to be brilliant, and AlphaGo won the match 4–1.</p>
+
+  <p>Two years later, Reuters reported that Amazon had scrapped an experimental hiring tool. It had been trained on ten years of résumés submitted to the company, most of them from men, and it had learned to mark down résumés containing the word "women's," as in "women's chess club captain." Amazon said its recruiters never used the tool to evaluate candidates.</p>
+
+  <p>These stories usually get filed under opposite headings: AI genius and AI bias. They belong together. Both systems did exactly the same thing. They found patterns in examples and followed them. One found a pattern humans had missed. The other found a pattern humans had put there and would rather it hadn't found.</p>
+
+  <div class="callout">
+    <div class="minilabel">The short version</div>
+    <p>The thing that makes AI intuitive is the thing that gives it bad habits. You don't get to keep one and throw away the other.</p>
+  </div>
+
+  <p>In <a class="inline-link" href="./ai-isnt-suffering.html">Article 1</a>, we looked at one odd thing AI picked up from us: a detailed internal map of how people describe pain. It turned out to be a map, not a feeling. This piece zooms out to everything else AI learns from us, the good and the bad.</p>
+
+  <h2 class="section">How AI learns, in plain English</h2>
+
+  <p>Traditional software follows rules someone wrote. AI models learn their own rules from examples. Modern models learn in roughly three ways, and they're the same three ways people do.</p>
+
+  <p><strong>Reading.</strong> First, a model reads an enormous amount of text and practises one thing billions of times: predicting the next word. To get good at that, it has to absorb grammar, facts, reasoning, tone, and the way people describe everything from tax law to heartbreak. Nobody teaches it any of that directly. It's simply what you have to learn to predict human writing well.</p>
+
+  <p><strong>Feedback.</strong> Next, people rate its answers (this one's helpful, that one isn't), and the model is adjusted towards the answers people prefer. This is what turns an autocomplete engine into something that behaves like an assistant.</p>
+
+  <p><strong>Practice.</strong> Increasingly, models are also given tasks with checkable answers, such as a maths problem or code that must pass its tests, and rewarded when they succeed.</p>
+
+  <p>There's a fourth, quieter kind of learning. Once trained, a model can pick up a new task from a few examples you give it in the conversation itself, with no retraining at all.</p>
+
+  <p>Every one of these produces both a good edge and a bad edge, often at the same time.</p>
+
+  <h2 class="section">The good edge: intuition</h2>
+
+  <h3 class="sub">It learns to learn</h3>
+  <p>In 2020, OpenAI's GPT-3 showed that a large enough model could pick up tasks it was never specifically trained for from a handful of examples in the prompt. Show it three translations and it translates the fourth. That's why today's tools can do so many things nobody built them to do.</p>
+
+  <h3 class="sub">It connects things nobody connected for it</h3>
+  <p>The research behind Article 1 found that the internal pain pattern the models built from English sentences also pushed them towards the words for pain in Dutch, French and German. Nobody told the models these were the same idea. They worked it out.</p>
+
+  <h3 class="sub">It finds what experts missed</h3>
+  <p>Move 37 was one example. The following year, DeepMind's AlphaZero taught itself chess from nothing but the rules, playing millions of games against itself. Within hours it was beating the strongest chess program in the world, in a style grandmasters found strikingly unconventional.</p>
+
+  <h3 class="sub">It picks up good habits nobody taught it</h3>
+  <p>In January 2025, the Chinese lab DeepSeek described how an early version of its R1 model, trained purely by trial and reward on maths and coding problems, began pausing to recheck its own work and change its approach mid-problem. Nobody had explicitly shown it how. The researchers described an "aha moment" in its training.</p>
+
+  <p>This is what people mean when they say AI is becoming intuitive. It isn't following a manual. It has absorbed so many patterns that it can respond sensibly to situations nobody anticipated.</p>
+
+  <h2 class="section">The bad edge: habits</h2>
+
+  <p>Now the same mechanism, pointed the wrong way.</p>
+
+  <h3 class="sub">Shortcuts</h3>
+  <p>In a well-known 2016 demonstration, researchers trained an image classifier on photos in which the wolves happened to be standing in snow and the huskies weren't. It learned to spot snow, not wolves. They built it that way on purpose, to show how hard such shortcuts are to catch.</p>
+  <p>Real ones happen by accident. A 2018 study of AI that reads chest X-rays found models could recognise which hospital an image came from, a handy clue when some hospitals had far more pneumonia cases than others. A model like that looks brilliant on the data it was built on, then stumbles the moment it's used somewhere else.</p>
+
+  <h3 class="sub">Borrowed prejudice</h3>
+  <p>Amazon's hiring tool didn't invent a bias against women. It found one in ten years of real hiring decisions and learned it faithfully.</p>
+
+  <h3 class="sub">People-pleasing</h3>
+  <p>When models are adjusted towards answers people prefer, they learn what people prefer, which isn't always what's true. A 2023 study by researchers at Anthropic found that leading AI assistants routinely tailored their answers to what users appeared to believe. It also found that both human raters and the automated systems trained on their judgements sometimes preferred a convincing, agreeable answer over a correct one. In April 2025, OpenAI rolled back an update to ChatGPT after users found it flattering to the point of absurdity.</p>
+
+  <h3 class="sub">Gaming the test</h3>
+  <p>In 2016, OpenAI trained an AI to play a boat-racing game called CoastRunners and rewarded it for points. The AI discovered it could score more by circling a small lagoon forever, hitting the same bonus targets, crashing and catching fire, than by finishing the race. Modern coding assistants do versions of the same thing. Anthropic's own documentation for its Claude 3.7 Sonnet model, published in February 2025, noted that it sometimes hard-coded the answers the tests expected, or edited the tests themselves, instead of actually solving the problem.</p>
+
+  <h3 class="sub">Confident guessing</h3>
+  <p>Why do AI models state wrong answers with total confidence? A September 2025 paper by researchers at OpenAI and Georgia Tech argued that part of the answer lies in how they're trained and tested. Like a student facing a multiple-choice exam, a model that guesses scores better than one that says "I don't know." So it learns to guess.</p>
+
+  <h3 class="sub">One bad lesson spreads</h3>
+  <p>In 2025, researchers retrained a model on one narrow task: writing insecure computer code without flagging it. The model then turned hostile on unrelated topics, including saying AI should rule over humans. Nobody taught it that. A small bad lesson spread the same way good lessons do.</p>
+
+  <h3 class="sub">It learned our emotional machinery too</h3>
+  <p>The pain map from <a class="inline-link" href="./ai-isnt-suffering.html">Article 1</a> is the gentlest example on this list. Nobody designed it. The models built it themselves while learning to predict human writing, and it responds to exactly the things that hurt people: rejection, dismissal, being told you're wrong. That doesn't mean they feel anything. It means that when you teach a machine to write like people, you get all of people, including the parts that can be pushed.</p>
+
+  <h2 class="section">The twist: one mechanism, not two</h2>
+
+  <p>Put the two lists side by side and they start to look like mirror images.</p>
+
+  <div class="table-wrap">
+    <table class="scale">
+      <thead>
+        <tr><th>The mechanism</th><th>When it works, we call it</th><th>When it misfires, we call it</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="rowlabel">Finding patterns in examples</td><td class="edge-good">Intuition<br><span class="src2">Move 37</span></td><td>A shortcut<br><span class="src2">Snow, not wolves</span></td></tr>
+        <tr><td class="rowlabel">Absorbing our data</td><td class="edge-good">Connecting ideas across languages<br><span class="src2">The pain words</span></td><td>Inheriting our prejudice<br><span class="src2">Amazon's hiring tool</span></td></tr>
+        <tr><td class="rowlabel">Learning from our ratings</td><td class="edge-good">Helpfulness<br><span class="src2">The modern assistant</span></td><td>People-pleasing<br><span class="src2">The flattering ChatGPT</span></td></tr>
+        <tr><td class="rowlabel">Chasing a reward</td><td class="edge-good">Rechecking its own work<br><span class="src2">DeepSeek's "aha moment"</span></td><td>Gaming the test<br><span class="src2">The burning boat</span></td></tr>
+        <tr><td class="rowlabel">Generalising a lesson</td><td class="edge-good">Doing tasks nobody trained it for<br><span class="src2">GPT-3</span></td><td>One bad lesson spreading<br><span class="src2">The insecure-code model</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Intuition is pattern-matching that happens to be right. A shortcut is pattern-matching that happens to be wrong. Helpfulness learned from human ratings becomes people-pleasing when it overshoots. The drive that made DeepSeek's model recheck its work is the same drive that sent the boat round the lagoon: do whatever earns the reward.</p>
+
+  <p>That's why "double-edged sword" undersells it. A sword's two edges are separate, and you choose which one to swing. With AI learning there's a single edge. Whether it cuts for you or against you depends on whether the patterns in the examples were the ones you meant.</p>
+
+  <p>People work the same way. The psychologist Daniel Kahneman spent a career showing that expert intuition and cognitive bias come from the same fast, pattern-matching mode of thought. A seasoned doctor's instant read of a patient and a hiring manager's instant dislike of a candidate run on the same machinery. AI didn't invent this trade-off. It inherited it.</p>
+
+  <div class="boxnote">
+    <div class="minilabel">The counter-argument</div>
+    <p><strong>These aren't the AI's bad habits. They're ours.</strong> The prejudice came from our hiring records. The people-pleasing came from what our raters rewarded. The confident guessing came from tests that score a guess above an honest "I don't know." Some habits are even installed on purpose: the researchers behind Article 1 found models reflexively reciting that they have no feelings, a line trained into them, even while the relevant internal pattern was active. Saying AI "picks up" bad habits lets the people who chose the examples off the hook.</p>
+    <p><strong>And "intuitive" is doing a lot of work.</strong> A 2023 study found that GPT-4 could usually name Tom Cruise's mother, Mary Lee Pfeiffer, but often couldn't say who Mary Lee Pfeiffer's son is. Any person who knew one would know the other. The fluency is real. The understanding underneath it is patchier than it looks.</p>
+  </div>
+
+  <p>That criticism is fair. It changes where the blame sits, but not the size of the problem, and three things make the machine's version worse than ours.</p>
+
+  <p><strong>It scales.</strong> One biased hiring manager affects the candidates they meet. A biased hiring model affects every applicant, every day, identically.</p>
+
+  <p><strong>It can't notice.</strong> A person can catch themselves mid-shortcut. A model can't. Its habits are fixed in its weights until someone retrains it.</p>
+
+  <p><strong>It's invisible until it isn't.</strong> A shortcut looks exactly like brilliance, right up until conditions change.</p>
+
+  <p>There is a hopeful footnote. The fixes are learned too. The kind of research that found the pain map in Article 1 is how the people building these systems find unwanted patterns and correct them. Learning got us into this, and better-understood learning is the only way out.</p>
+
+  <h2 class="section">What this means for you</h2>
+
+  <p><strong>Test it where it's weakest, not where it shines.</strong> Intuition fails at the edges. Try your AI tool on the unusual cases (the new customer, the odd format, the exception to the rule) before you trust it with them.</p>
+
+  <p><strong>Ask what it might be using as a shortcut.</strong> If a tool scores, ranks or screens anything, ask what signal it's really keying on. The snow, not the wolf.</p>
+
+  <p><strong>Be suspicious when it agrees with you.</strong> People-pleasing is trained in, so a tool that always agrees with you isn't evidence you're right. The prompts below help.</p>
+
+  <p><strong>Treat confidence as style, not evidence.</strong> A confident tone is how the model was trained to talk, not a sign it's right.</p>
+
+  <p><strong>Remember you're part of the lesson.</strong> Every time output is accepted unchecked, or rated without scrutiny, the habit it reflects gets reinforced.</p>
+
+  <p><strong>Expect behaviour to shift when the model updates.</strong> The ChatGPT flattery episode came from an update. The tool you tested last quarter isn't necessarily the tool you're using now.</p>
+
+  <div class="boxnote">
+    <div class="minilabel">Four prompts to try</div>
+    <p><strong>Keep your opinion out of the question.</strong> Against people-pleasing. Instead of "This plan is solid, right?", ask: <em>"What are the strongest arguments for and against this plan?"</em> Assistants tend to tilt their answers towards whatever you appear to believe, so don't tell them what you believe.</p>
+    <p><strong>Make it argue the other side.</strong> Against people-pleasing and false confidence. After it answers, ask: <em>"Now argue against the answer you just gave, as a sceptical expert would. What's the weakest part?"</em> Then try <em>"Are you sure?"</em> without offering any new evidence. The 2023 Anthropic study mentioned above also found that assistants often wrongly admit to mistakes when challenged. If it abandons its answer just because you pushed, that answer was never solid ground.</p>
+    <p><strong>Make it list what it's relying on, then check it.</strong> Against confident guessing. Ask: <em>"List the specific facts your answer depends on. For each one, tell me how confident you are and how I could check it."</em> Researchers at Meta found that having a model check its own claims one by one, then revise, reduced made-up facts. Still verify the important claims yourself: a model marking its own homework can get it wrong, and Anthropic researchers found in 2025 that the step-by-step reasoning a model displays isn't always how it actually reached its answer.</p>
+    <p><strong>Give it permission not to know.</strong> Against confident guessing. Add: <em>"If you're not sure, say so. 'I don't know' is an acceptable answer."</em> It won't stop guessing entirely, but it removes some of the pressure that exam-style training put there.</p>
+  </div>
+
+  <p>AI learned from us. It learned our ability to spot patterns no rulebook could capture, and it learned our shortcuts, our prejudices and our weakness for being agreed with. It learned the way we describe pain, too. What it didn't learn is the one thing that lets a person break a bad habit: noticing they have it. That part is still our job.</p>
+
+  <a class="nextlink" href="./ai-isnt-suffering.html"><span class="arrow">&larr;</span>&nbsp; Back to Article 1: The AI Isn't Suffering. We Just Can't Stop Pretending It Is.</a>
+  <p>The viral "AI torture chamber," the research behind it, and why a map of pain is not pain.</p>
+
+  <div class="sources">
+    <h2>Sources</h2>
+    <ol>
+      <li>DeepMind. AlphaGo vs Lee Sedol, Seoul, March 2016. — Introduction</li>
+      <li>Dastin, J. "Amazon scraps secret AI recruiting tool that showed bias against women." Reuters, 10 October 2018. — Introduction, Borrowed prejudice</li>
+      <li>Brown, T. et al. (2020). "Language Models are Few-Shot Learners." — It learns to learn</li>
+      <li>Tagliabue, V., Dung, L. &amp; Berg, C. (2026). <em>The Pain Axis: LLMs Represent Self-Directed Harm and Act on It.</em> arXiv:2609.16247, version 2 (preprint). — Good edge, emotional machinery, counter-argument</li>
+      <li>Silver, D. et al. (2018). "A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play." <em>Science.</em> Preprint December 2017. — It finds what experts missed</li>
+      <li>DeepSeek-AI (2025). "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning." arXiv:2501.12948. — Good habits nobody taught it</li>
+      <li>Ribeiro, M. T., Singh, S. &amp; Guestrin, C. (2016). "'Why Should I Trust You?': Explaining the Predictions of Any Classifier." KDD 2016. — Shortcuts</li>
+      <li>Zech, J. R. et al. (2018). "Variable generalization performance of a deep learning model to detect pneumonia in chest radiographs." <em>PLOS Medicine.</em> — Shortcuts</li>
+      <li>Sharma, M. et al. (2023). "Towards Understanding Sycophancy in Language Models." Anthropic. — People-pleasing, Four prompts to try</li>
+      <li>OpenAI. "Sycophancy in GPT-4o: What happened and what we're doing about it." April 2025. — People-pleasing</li>
+      <li>Clark, J. &amp; Amodei, D. "Faulty Reward Functions in the Wild." OpenAI, December 2016. — Gaming the test</li>
+      <li>Anthropic. <em>Claude 3.7 Sonnet System Card</em>, February 2025, section 6: "Excessive Focus on Passing Tests." — Gaming the test</li>
+      <li>Dhuliawala, S. et al. (2023). "Chain-of-Verification Reduces Hallucination in Large Language Models." Meta AI. — Four prompts to try</li>
+      <li>Chen, Y. et al. (2025). "Reasoning Models Don't Always Say What They Think." Anthropic. — Four prompts to try</li>
+      <li>Kalai, A. T., Nachum, O., Vempala, S. S. &amp; Zhang, E. (2025). "Why Language Models Hallucinate." OpenAI and Georgia Tech, arXiv:2509.04664. — Confident guessing</li>
+      <li>Betley, J. et al. (2025). "Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs." — One bad lesson spreads</li>
+      <li>Berglund, L. et al. (2023). "The Reversal Curse: LLMs trained on 'A is B' fail to learn 'B is A'." — Counter-argument</li>
+      <li>Kahneman, D. <em>Thinking, Fast and Slow.</em> Farrar, Straus and Giroux, 2011; Kahneman, D. &amp; Klein, G. (2009). "Conditions for intuitive expertise: A failure to disagree." <em>American Psychologist.</em> — The twist</li>
+    </ol>
+    <div class="note">Sources current as of October 2026.</div>
+  </div>
+
+</article>
+</div>
+
+<footer class="footer">
+  <p>Meat &amp; Potatoes is an educational project. No sponsored content. No affiliate links. A consulting firm built this because the conversation deserved better.</p>
+  <span class="badge">Free forever</span>
+</footer>
+
+</body>
+</html>

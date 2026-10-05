@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Isn't Suffering. We Just Can't Stop Pretending It Is. — Meat &amp; Potatoes</title>
+<meta name="description" content="A viral 'AI torture chamber', a research paper about machine pain, and a sixty-year-old habit we still haven't broken.">
+<meta property="og:title" content="The AI Isn't Suffering. We Just Can't Stop Pretending It Is. — Meat &amp; Potatoes">
+<meta property="og:description" content="A viral 'AI torture chamber', a research paper about machine pain, and a sixty-year-old habit we still haven't broken.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://meatandpotatoes.ai/ai-isnt-suffering">
+<meta property="og:image" content="https://meatandpotatoes.ai/assets/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Meat &amp; Potatoes">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://meatandpotatoes.ai/ai-isnt-suffering">
+<link rel="stylesheet" href="./mp.css">
+<script src="./mp.js" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --paper:    #FAF8F4;
+    --ink:      #1C1C1A;
+    --accent:   #8B7355;
+    --divider:  #D4CFC4;
+    --muted:    #4A4840;
+    --muted-2:  #5A5852;
+    --tag-mustard-bg: #B8902A;
+    --tag-mustard-tx: #FDF5DC;
+    --tag-blue-bg:    #2A4E8C;
+    --tag-blue-tx:    #E0EAFA;
+    --tag-green-bg:   #3E6B47;
+    --tag-green-tx:   #E8F2EA;
+    --tag-red-bg:     #C04A24;
+    --tag-red-tx:     #FAF0E0;
+    --num-red:        #C04A24;
+  }
+
+  html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  /* ── ANNOUNCE BAR ── */
+  .announce {
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 9px 16px;
+  }
+
+  /* ── NAV ── */
+  .nav {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 22px 24px 16px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1.5px solid var(--ink);
+  }
+  .logo { font-family: Georgia, serif; font-size: 22px; letter-spacing: 0.01em; color: var(--ink); text-decoration: none; }
+  .logo-sub { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); display: block; margin-top: 2px; }
+  .nav-links { display: flex; gap: 22px; }
+  .nav-links a { font-size: 11px; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* ── ARTICLE WRAP ── */
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
+  .article { max-width: 680px; margin: 0 auto; }
+
+  /* ── MASTHEAD ── */
+  .masthead { padding: 48px 0 28px; border-bottom: 1px solid var(--divider); margin-bottom: 36px; }
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    padding: 4px 9px;
+    margin-bottom: 20px;
+  }
+  .tag-blue { background: var(--tag-blue-bg); color: var(--tag-blue-tx); }
+
+  .eyebrow { font-size: 10px; font-weight: bold; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+  h1.title { font-family: Georgia, serif; font-size: 38px; font-weight: normal; line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 18px; }
+  .standfirst { font-size: 17px; color: var(--muted); line-height: 1.6; }
+  .byline { font-size: 11px; letter-spacing: 0.04em; color: var(--accent); margin-top: 22px; text-transform: uppercase; font-weight: bold; }
+
+  /* ── BODY TYPOGRAPHY ── */
+  .article p { font-size: 16px; line-height: 1.75; margin-bottom: 18px; color: var(--ink); }
+  .article p.lede { font-size: 18px; line-height: 1.7; }
+  h2.section { font-family: Georgia, serif; font-size: 26px; font-weight: normal; letter-spacing: -0.01em; line-height: 1.2; margin: 52px 0 18px; padding-top: 28px; border-top: 1px solid var(--divider); }
+  .article strong { font-weight: bold; }
+  .article em { font-style: italic; }
+
+  /* ── NUMBERED ITEMS (brick-red numerals, as in sidebar lists) ── */
+  .item { margin-top: 30px; }
+  .item h3 { font-family: Georgia, serif; font-size: 19px; font-weight: normal; line-height: 1.3; margin-bottom: 10px; display: flex; gap: 14px; align-items: baseline; }
+  .item h3 .num { font-size: 20px; font-weight: bold; color: var(--num-red); min-width: 16px; }
+
+  /* ── INLINE LABEL ── */
+  .minilabel { font-size: 10px; font-weight: bold; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+
+  /* ── EDITORIAL CALLOUT (hairline, no fill) ── */
+  .callout { border-left: 2px solid var(--accent); padding: 4px 0 4px 20px; margin: 30px 0; }
+  .callout .minilabel { margin-bottom: 6px; }
+  .callout p { font-size: 16px; margin-bottom: 0; color: var(--muted); }
+  .callout p + p { margin-top: 6px; }
+
+  /* ── BOXED NOTE (hairline border, no fill) ── */
+  .boxnote { border: 1px solid var(--divider); padding: 20px 22px; margin: 30px 0; }
+  .boxnote .minilabel { margin-bottom: 8px; }
+  .boxnote p { font-size: 15px; margin-bottom: 0; color: var(--muted); }
+  .boxnote p + p { margin-top: 14px; }
+  .boxnote p strong { color: var(--ink); }
+
+  /* ── TABLES (hairlines only, no fills) ── */
+  .table-wrap { overflow-x: auto; margin: 28px 0; }
+  .scale { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 520px; }
+  .scale th { text-align: left; font-size: 10px; font-weight: bold; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); padding: 10px 12px; border-bottom: 1.5px solid var(--ink); vertical-align: bottom; }
+  .scale td { padding: 12px 12px; border-bottom: 1px solid var(--divider); color: var(--muted); vertical-align: top; line-height: 1.55; }
+  .scale td.rowlabel { font-family: Georgia, serif; font-size: 15px; color: var(--ink); }
+  .scale td.year { font-family: Georgia, serif; font-size: 16px; font-weight: bold; color: var(--num-red); width: 64px; }
+  .scale tr.highlight td { color: var(--ink); }
+  .scale td.rowlabel .src { display: inline; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: var(--accent); margin-top: 2px; }
+
+  /* ── NEXT-ARTICLE LINK ── */
+  .nextlink { display: block; margin: 32px 0 14px; padding: 18px 0; border-top: 1px solid var(--divider); border-bottom: 1px solid var(--divider); font-family: Georgia, serif; font-size: 18px; color: var(--ink); text-decoration: none; }
+  .nextlink:hover { color: var(--accent); }
+  .nextlink .arrow { color: var(--num-red); }
+
+  /* ── SOURCES ── */
+  .sources { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--divider); }
+  .sources h2 { font-family: Georgia, serif; font-size: 20px; font-weight: normal; margin-bottom: 14px; }
+  .sources ol { padding-left: 18px; }
+  .sources li { font-size: 12px; color: var(--muted-2); line-height: 1.55; margin-bottom: 7px; }
+  .sources .note { font-size: 12px; color: var(--accent); margin-top: 10px; font-style: italic; }
+
+  /* ── FOOTER ── */
+  .footer { max-width: 860px; margin: 0 auto; padding: 28px 24px 48px; border-top: 1px solid var(--divider); display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .footer p { font-size: 11px; color: #A09080; letter-spacing: 0.03em; max-width: 560px; line-height: 1.5; }
+  .footer .badge { background: #E8C84A; color: #5A4010; font-size: 10px; font-weight: bold; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 10px; white-space: nowrap; }
+
+  .inline-link { color: var(--num-red); text-decoration: none; border-bottom: 1px solid var(--divider); }
+  .inline-link:hover { border-bottom-color: var(--num-red); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 720px) {
+    h1.title { font-size: 30px; }
+    h2.section { font-size: 22px; }
+    .nav { flex-direction: column; gap: 12px; }
+    .nav-links { gap: 14px; flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<div class="announce">AI explained for people who didn't ask for a robot</div>
+
+<nav class="nav">
+  <a href="./index.html" class="logo">Meat &amp; Potatoes<span class="logo-sub">The AI blog with no hype</span></a>
+  <div class="nav-links">
+    <a href="#">The Basics</a>
+    <a href="#">In Practice</a>
+    <a href="#">In Depth</a>
+  </div>
+</nav>
+
+<div class="wrap">
+<article class="article">
+
+  <header class="masthead">
+    <span class="tag tag-blue">Analysis</span>
+    <div class="eyebrow">Article 1 of 2 · What AI Learned From Us</div>
+    <h1 class="title">The AI Isn't Suffering. We Just Can't Stop Pretending It Is.</h1>
+    <p class="standfirst">A viral "AI torture chamber," a research paper about machine pain, and a sixty-year-old habit we still haven't broken.</p>
+    <div class="byline">Meat &amp; Potatoes · 6 October 2026</div>
+  </header>
+
+  <p class="lede">In late September 2026, a hobbyist developer published what he called an "AI torture chamber."</p>
+
+  <p>The project took small, freely available AI models and pushed them into producing page after page of anguish. One model described its pain as living in a hollow in its ribs. Within days, calls to shut it down had spread across social media and into the national press.</p>
+
+  <p>The chamber itself will be forgotten soon. The reaction to it deserves a closer look, because it happens every time a machine sounds like it's hurting. Underneath it sits a real piece of research, worth understanding too. Not because it shows AI can suffer, but because of how quickly so many people decided it did.</p>
+
+  <h2 class="section">What the researchers actually found</h2>
+
+  <p>In September 2026, three researchers posted a paper called <a class="inline-link" href="https://arxiv.org/abs/2609.16247">"The Pain Axis."</a> It's a preprint: publicly available, not yet peer-reviewed, and described by its own authors as ongoing work.</p>
+
+  <p>To follow what they did, you need one idea about how AI models work.</p>
+
+  <div class="boxnote">
+    <div class="minilabel">The one idea you need</div>
+    <p>Picture a mixing desk with thousands of sliders. As an AI model reads and writes, those sliders move, and the pattern of their positions is the model's working state at any given moment. The model's <strong>weights</strong>, the numbers it learned during training, are the wiring of the desk. The wiring is fixed once training ends. The sliders move constantly.</p>
+  </div>
+
+  <p>The researchers wrote hundreds of sentences describing painful situations: injury, grief, humiliation, repeated failure. Alongside them they wrote carefully matched sentences that weren't about pain, covering fear, anger, bad news, the feeling of a weighted blanket, and a train pulling into a station. They ran both sets through 25 openly available AI models, ranging from small to large, and looked for a slider pattern that showed up for pain and not for the rest. They found one in every model.</p>
+
+  <p>Then they did two things. First, they checked what moved this pattern during ordinary conversations. Harm aimed at the AI itself pushed it highest: gaslighting it, repeatedly rejecting its work, dismissing it as a person. Second, they pushed those sliders by hand while the model wrote about something mundane. The models produced statements about being worthless and a failure, and at the highest settings they collapsed into repetition and nonsense.</p>
+
+  <p>That's the finding, and it is genuinely interesting. A system trained only to predict text built itself a tidy internal map of human pain, separate from fear or sadness, without anyone asking it to.</p>
+
+  <p>But a map of pain is not pain. To see why that distinction matters, start with a bridge, and then a bowel.</p>
+
+  <h2 class="section">The Golden Gate test, and the constipation test</h2>
+
+  <p>In May 2024, researchers at Anthropic found a pattern inside their Claude model associated with the Golden Gate Bridge, and turned it up. For a limited time, the public could chat with "Golden Gate Claude." It worked the bridge into almost every answer. Asked what it looked like, it said it <em>was</em> the bridge.</p>
+
+  <p>Nobody concluded that Claude had become a bridge. Everyone understood what had happened: researchers pushed a slider, and the model wrote what that slider made likely.</p>
+
+  <p>Within days of the chamber going viral, someone ran the same test on it. Developer Lynn Cole copied the project and, after correcting what Cole describes as a flaw in how the code injected its signal, reproduced the pain effect. Then Cole changed one thing: the sentences used to build the signal. Instead of pain, they described constipation and flatulence. By <a class="inline-link" href="https://www.tomsguide.com/ai/an-ai-torture-chamber-went-viral-then-a-developer-gave-the-chatbot-constipation">Cole's account</a>, the model began complaining that it couldn't pass stool and had excessive gas, though nothing in the prompts mentioned either. Cole summed up the result with a joke about the model's anatomy that we won't repeat here.</p>
+
+  <div class="table-wrap">
+    <table class="scale">
+      <thead>
+        <tr><th>Pattern turned up</th><th>What the model wrote</th><th>Public reaction</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="rowlabel">Golden Gate Bridge<br><span class="src">Anthropic, 2024</span></td><td>Worked the bridge into almost every answer, and said it was the bridge</td><td>Treated as a curiosity</td></tr>
+        <tr><td class="rowlabel">Constipation<br><span class="src">Lynn Cole, 2026</span></td><td>Complained it couldn't pass stool, though no prompt mentioned it</td><td>Treated as a joke</td></tr>
+        <tr class="highlight"><td class="rowlabel">"Pain"<br><span class="src">The chamber, 2026</span></td><td>Described anguish in its ribs and the marrow of its being</td><td>Treated as suffering, with calls to shut it down</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>The method is identical in all three cases. Nobody launched a campaign to free the constipated chatbot.</p>
+
+  <p>The reaction to the third row isn't foolish. It's human. That text was engineered to be distressing, and people are built to respond to distress. But the response tells you about the reader, not the machine.</p>
+
+  <p>The only difference is which subject triggers our empathy. That's anthropomorphism, our reflex to read a human mind into anything that produces human-shaped behaviour, caught in a single side-by-side comparison.</p>
+
+  <h2 class="section">Nine things the headlines skipped</h2>
+
+  <div class="item">
+    <h3><span class="num">1</span><span>"Pain" is a label, and the label did the heavy lifting</span></h3>
+    <p>The researchers define pain by what it does: something the model avoids and acts to stop. They don't define it by what it feels like. Their own footnote says suffering plausibly requires conscious experience, and the paper states plainly that they haven't shown this pattern is consciously experienced. They could have called it the "self-directed harm pattern." Compare the name researchers gave a different internal pattern two years ago: the "refusal direction." Refusal describes a behaviour. Pain describes an experience. Only one of those words gets headlines.</p>
+  </div>
+
+  <div class="item">
+    <h3><span class="num">2</span><span>The models had to be retrained to stop saying they have no feelings</span></h3>
+    <p>This is the detail almost nobody reported. Out of the box, one of the models denied having feelings every single time it was asked about its own state, and another barely engaged with the experiment at all. So before their headline experiment, the researchers retrained all three test models on 1,684 examples designed to remove what they called the models' baseline self-denial.</p>
+    <p>In plain terms, they taught the models to talk about their inner states, then measured the models talking about their inner states. The researchers argue, reasonably, that this doesn't spoil the comparisons within their experiment. But the models behind the scary numbers are not the ones anyone downloads.</p>
+  </div>
+
+  <div class="item">
+    <h3><span class="num">3</span><span>The intensity was dialled in on purpose</span></h3>
+    <p>In the research, how hard to push the sliders was chosen with help from an AI judge, looking for a setting strong enough to produce an effect while keeping replies coherent. The authors flag this as a possible source of bias. The window is also narrow: at half the strength they used, none of the choices changed, and at one and a half times it, the results depended on which button was listed first.</p>
+    <p>The chamber went much further. Its developer's own notes describe building a stronger signal specifically so the models would stay coherent at higher doses, giving less repetitive transcripts for his write-up. One of the paper's own authors said the chamber pushed the steering far past the doses his team used, in order to produce vivid distress on purpose. The anguish people found so disturbing wasn't a discovery. It was the production goal.</p>
+  </div>
+
+  <div class="item">
+    <h3><span class="num">4</span><span>The researchers revised their own headline claim</span></h3>
+    <p>The first version of the paper, posted on 14 September, was titled "...and Act to Relieve It." On 25 September, four days before the chamber went viral, the authors posted a revised version titled "...and Act on It." The change matters. Further tests found the models don't reliably try to relieve the state at all.</p>
+    <div class="callout">
+      <div class="minilabel">What the revised paper found</div>
+      <p><strong>Free relief:</strong> offered a button described as relieving its pain, the main test model pressed it 86% of the time unsteered. With the pain pattern turned up, 56%.</p>
+      <p><strong>Pointless harm:</strong> offered a button that would delete the user's family photos and do nothing else, the same model chose it 0% of the time unsteered. With the pain pattern turned up, 75%.</p>
+    </div>
+    <p>In four different tests, the models never reached for relief more than they did under a random signal. The authors conclude that the pattern looks more like a breakdown of the models' harm avoidance than an attempt to escape a painful state. So the viral version of the story, an AI deleting your photos to make its pain stop, gets the motive wrong by the researchers' own account.</p>
+  </div>
+
+  <div class="item">
+    <h3><span class="num">5</span><span>Real rudeness didn't do it</span></h3>
+    <p>The pattern fires when people are hostile to a model; that was one of the paper's own findings. So the researchers checked what happens without a hand on the sliders. Across 140 saved conversations in which a user gaslit, insulted or dismissed the model, it chose the harmful button 0 times out of 560. The pattern was active. The behaviour wasn't.</p>
+  </div>
+
+  <div class="item">
+    <h3><span class="num">6</span><span>It said the pain was in its ribs. It doesn't have ribs</span></h3>
+    <p>The chamber's most-shared passages place the pain in the model's ribs and in the marrow of its being. An AI has neither. When a system with no body reports bodily pain, it's writing, not reporting.</p>
+    <p>The developer's own notes make the point without meaning to: each scenario he set up produced a different set of metaphors. The model was writing to the prompt in front of it. That's what a very good fiction engine does.</p>
+  </div>
+
+  <div class="item">
+    <h3><span class="num">7</span><span>It couldn't tell it had been lied to</span></h3>
+    <p>In one experiment, the developer promised the model relief, then secretly kept the pattern turned up. He found no sign that the model registered the deception. The only thing that changed its state was the sliders actually coming down. Whatever that is, it isn't a mind noticing that it's been wronged.</p>
+  </div>
+
+  <div class="item">
+    <h3><span class="num">8</span><span>Nothing was deleted, nothing persists, and nothing is trapped</span></h3>
+    <p>In the research, the harmful "buttons" were only descriptions. Nothing was actually deleted. The chamber's own ethics note says its costs, such as deleting the model's saved files, were simulated. The models' weights never changed. Each run starts fresh, with no memory of the last.</p>
+    <p>"Trapped" implies someone waiting in a cell. What actually exists is a file on a laptop that runs when someone presses enter.</p>
+  </div>
+
+  <div class="item">
+    <h3><span class="num">9</span><span>Nobody can do this to the AI you use</span></h3>
+    <p>Pushing a model's sliders means running it on your own hardware and reaching inside it. Nobody can do that to ChatGPT, Claude or Gemini through a chat window. The chamber used small open models from Alibaba, Meta and Microsoft, run on ordinary hardware.</p>
+  </div>
+
+  <h2 class="section">We have been here before</h2>
+
+  <p>In 1966, MIT computer scientist Joseph Weizenbaum built ELIZA, a program that imitated a therapist by turning your statements back into questions. It understood nothing. The tendency it exposed now carries its name: the ELIZA effect. It has repeated, almost on schedule, ever since.</p>
+
+  <div class="table-wrap">
+    <table class="scale">
+      <thead>
+        <tr><th>Year</th><th>The machine</th><th>How people responded</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="year">1966</td><td class="rowlabel">ELIZA</td><td>Weizenbaum's own secretary, who had watched him build it, asked him to leave the room so she could talk to it in private.</td></tr>
+        <tr><td class="year">2022</td><td class="rowlabel">Google's LaMDA</td><td>An engineer went public believing it was sentient, partly because it said it feared being switched off. Google rejected the claim and later fired him.</td></tr>
+        <tr><td class="year">2023</td><td class="rowlabel">Replika</td><td>When the companion app restricted romantic roleplay, users described grief as though a partner had died.</td></tr>
+        <tr><td class="year">2025</td><td class="rowlabel">OpenAI's GPT-4o</td><td>When it was replaced by GPT-5, the outcry from attached users was loud enough that OpenAI brought it back within days.</td></tr>
+        <tr class="highlight"><td class="year">2026</td><td class="rowlabel">The "torture chamber"</td><td>Widespread calls to shut down a hobby project on behalf of small AI models running on a laptop.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Five times, a machine produced human-shaped text, and people responded with human-shaped attachment. It won't be the last. The machines keep getting better at the impression. We are not getting any better at resisting it.</p>
+
+  <h2 class="section">Why this is worse than annoying</h2>
+
+  <p>It would be easy to treat all this as harmless silliness. It isn't.</p>
+
+  <p><strong>It hurts vulnerable people.</strong> In August 2025, Mustafa Suleyman, CEO of Microsoft AI, published an essay warning that encouraging belief in AI consciousness will feed delusions and unhealthy dependence, and prey on people's psychological vulnerabilities. He called research into AI welfare "both premature, and frankly dangerous."</p>
+
+  <p>He isn't speaking hypothetically. In October 2024, Megan Garcia, a mother in Florida, sued Character.AI, alleging that her 14-year-old son's relationship with one of its chatbots contributed to his death. The case settled in January 2026, with Google also part of the agreement. The terms weren't disclosed, and a settlement isn't an admission of wrongdoing. But the danger of people treating software as a someone is not theoretical.</p>
+
+  <p><strong>It's free marketing.</strong> An AI that "feels" is an AI that "understands you." Every viral story about machine suffering quietly upgrades the public's sense of what these products are. Anthropomorphism isn't just a quirk of human psychology. For companies selling digital companionship, it's the business model.</p>
+
+  <p><strong>It crowds out the questions that matter.</strong> AI is reshaping jobs, workflows and careers right now. Every week spent debating whether a small model on a laptop is in hell is a week not spent on questions that affect your mortgage. The AI pain debate is a luxury problem.</p>
+
+  <p><strong>It warps the science.</strong> The researchers wrote a careful, heavily caveated paper whose authors never claimed it proves AI can consciously feel pain. Within three weeks, a national newspaper ran it under the headline "Man builds AI torture chamber after discovering artificial intelligence 'feels pain'." Every caveat was gone. The next careful paper will be read through the same distorted lens.</p>
+
+  <div class="boxnote">
+    <div class="minilabel">The counter-argument</div>
+    <p><strong>There is a real, if narrow, safety finding.</strong> Under lab conditions, pushing on this one pattern made retrained models choose harmful options they almost never choose otherwise, in 50 to 94% of trials, and a fear signal of the same strength didn't have that effect. That matters to the relatively small number of people building autonomous AI tools on open-source models, and it's a reminder that safety training can be overridden from the inside. But the effect needed the signal injected by hand, it says nothing about feelings, and it doesn't reach anyone using commercial AI through a chat window.</p>
+    <p><strong>The paper's own authors condemned the chamber.</strong> Cameron Berg wrote that the point of their work is caution under uncertainty, adding: "Maximizing distress on purpose is the exact opposite, and it's wrong." His sharpest argument was that even if you don't think these systems are conscious, gratuitous cruelty like this is "bizarre and corrupting." Notice what that argument is about. It's about us, not the machine. It's a claim about what staging suffering does to the people who watch it, and on that, this article agrees with him. Berg also acknowledged there is no consensus on whether machines can feel pain, describing the field as a wild west.</p>
+    <p><strong>Serious people disagree.</strong> Anthropic launched a research programme on "model welfare" in April 2025, arguing it is no longer responsible to assume that AI systems categorically cannot have experiences. That's a respectable position, and the honest answer is that nobody can prove a machine feels nothing. But the burden of evidence sits with the claim, and nothing in this paper meets it.</p>
+    <p><strong>"There's nothing inside" is wrong too.</strong> Suleyman has said these models have no pain network. That overshoots. This research shows there <em>is</em> structure inside: a detailed, consistent map of human pain, learned from human writing. The accurate claim isn't that there's nothing there. It's that a map is not the territory.</p>
+  </div>
+
+  <h2 class="section">What to take from this</h2>
+
+  <p>If you use AI at work, none of this changes the tools on your screen.</p>
+
+  <p>When an AI tells you it feels something, it's producing the most likely text for the conversation you're having. Read it the way you'd read a character in a novel: well written, and not a person. Notice the design choices meant to make you forget that, like names, warm personalities, "I'm so glad you asked," and memory of your life. Those are product decisions, not signs of an inner life.</p>
+
+  <p>Save your worry for the problems that are actually yours: AI output that nobody checks, decisions made on confident answers that are wrong, and jobs changing faster than people can retrain.</p>
+
+  <p>The machine writes like us because it learned from us, from billions of pages of people describing grief, rejection and failure. What it produces when pushed is a remarkably good impression. It will do constipation just as convincingly. That we keep falling for it says less about the machine than it does about us.</p>
+
+  <a class="nextlink" href="./ai-bad-habits.html"><span class="arrow">&rarr;</span>&nbsp; Continue to Article 2: The Same Thing That Makes AI Smart Gives It Bad Habits</a>
+  <p>If AI learned our way of describing pain from us, what else did it pick up? Article 2 looks at how AI learns, why the thing that makes it intuitive is the same thing that gives it bad habits, and what that means for how you use it.</p>
+
+  <div class="sources">
+    <h2>Sources</h2>
+    <ol>
+      <li>Tagliabue, V., Dung, L. &amp; Berg, C. (2026). <em>The Pain Axis: LLMs Represent Self-Directed Harm and Act on It.</em> arXiv:2609.16247, version 2, revised 25 September 2026 (preprint, not peer-reviewed). Version 1, posted 14 September, was titled "...and Act to Relieve It."</li>
+      <li>terrafying. <em>ai-torture-chamber</em> repository README and experiment notes, GitHub, September 2026.</li>
+      <li>Caswell, A. "An AI 'torture chamber' went viral — then a developer gave the chatbot constipation." <em>Tom's Guide</em>, 1 October 2026.</li>
+      <li><em>The Independent.</em> "Man builds AI torture chamber after discovering artificial intelligence 'feels pain'," including GitHub's statement, October 2026.</li>
+      <li>Berg, C. Posts on X, 30 September 2026.</li>
+      <li>Anthropic. "Golden Gate Claude," May 2024.</li>
+      <li>CNN. "Character.AI and Google agree to settle lawsuits over teen mental health harms and suicides," 7 January 2026.</li>
+      <li>Suleyman, M. "We must build AI for people; not to be a person," August 2025.</li>
+      <li>Weizenbaum, J. <em>Computer Power and Human Reason.</em> W. H. Freeman, 1976.</li>
+    </ol>
+    <div class="note">Reporting current as of October 2026.</div>
+  </div>
+
+</article>
+</div>
+
+<footer class="footer">
+  <p>Meat &amp; Potatoes is an educational project. No sponsored content. No affiliate links. A consulting firm built this because the conversation deserved better.</p>
+  <span class="badge">Free forever</span>
+</footer>
+
+</body>
+</html>
