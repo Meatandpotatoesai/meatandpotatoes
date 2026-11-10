@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You’re Not Behind: What’s Actually Going On With AI — Meat &amp; Potatoes</title>
+<meta name="description" content="A plain-English front door to AI: what the word means now, how a chatbot works, who’s who, what it can and can’t do, and whether it is as big a deal as the noise suggests.">
+<meta property="og:title" content="You’re Not Behind: What’s Actually Going On With AI — Meat &amp; Potatoes">
+<meta property="og:description" content="A plain-English front door to AI: what the word means now, how a chatbot works, who’s who, what it can and can’t do, and whether it is as big a deal as the noise suggests.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://meatandpotatoes.ai/start-here">
+<meta property="og:image" content="https://meatandpotatoes.ai/assets/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Meat &amp; Potatoes">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://meatandpotatoes.ai/start-here">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "You’re Not Behind: What’s Actually Going On With AI",
+  "description": "A plain-English front door to AI: what the word means now, how a chatbot works, who’s who, what it can and can’t do, and whether it is as big a deal as the noise suggests.",
+  "image": "https://meatandpotatoes.ai/assets/og-default.jpg",
+  "datePublished": "2026-11-10",
+  "dateModified": "2026-11-10",
+  "author": {
+    "@type": "Organization",
+    "name": "Meat & Potatoes",
+    "url": "https://meatandpotatoes.ai/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://meatandpotatoes.ai/#organization",
+    "name": "Meat & Potatoes",
+    "url": "https://meatandpotatoes.ai/",
+    "description": "A free blog by an AI consulting practice.",
+    "logo": "https://meatandpotatoes.ai/assets/og-default.jpg"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://meatandpotatoes.ai/start-here"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./mp.css">
+<script src="./mp.js" defer></script>
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: 96px; }
+  body { margin:0; }
+  a { text-decoration: none; }
+  a:focus-visible { outline:2px solid #b0463a; outline-offset:3px; }
+  a.navlink:hover { background:#1c1813; color:#ece4d4 !important; }
+  a.crumb:hover { color:#b0463a !important; }
+  a.toclink:hover { color:#b0463a !important; }
+  a.ctacard:hover { background:#2a2018 !important; }
+  a.nextcard:hover { opacity:0.9; }
+  a.footlink:hover { color:#ece4d4 !important; }
+  a.workbtn:hover { background:#9a3b30 !important; }
+  a.inline:hover { color:#9a3b30 !important; }
+  @media (max-width: 980px) {
+    .bodygrid { grid-template-columns: minmax(0,1fr) !important; }
+    .rail { position: static !important; }
+    .nextgrid { grid-template-columns: 1fr !important; }
+    .herogrid { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+  }
+  @media (max-width: 560px) {
+    .herogrid { grid-template-columns: minmax(0,1fr) !important; }
+  }
+</style>
+</head>
+<body>
+
+<div style="background:#ece4d4; color:#1c1813; font-family:'Hanken Grotesk', system-ui, sans-serif; min-height:100vh; -webkit-font-smoothing:antialiased;">
+
+  <!-- NAV -->
+  <header style="position:sticky; top:0; z-index:60; background:#ece4d4; border-bottom:3px solid #1c1813;">
+    <nav style="max-width:1180px; margin:0 auto; padding:18px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <a href="index.html" style="display:flex; flex-direction:column; line-height:0.96;">
+        <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:19px; letter-spacing:-0.01em; color:#1c1813;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
+        <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+        <a class="navlink" href="what.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;">What</a>
+        <a class="navlink" href="why.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;">Why</a>
+        <a class="navlink" href="how.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;">How</a>
+        <a class="navlink" href="where.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;">Where</a>
+        <a class="navlink" href="who.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;">Who</a>
+        <a href="cookbook.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid #1c1813; border-radius:5px; color:#ece4d4; background:#b0463a;">Cookbook</a>
+        <a class="workbtn" href="index.html#consult" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; color:#ece4d4; background:#b0463a; padding:9px 17px; border:2.5px solid #1c1813; border-radius:5px; box-shadow:3px 3px 0 rgba(28,20,15,0.22); margin-left:6px;">Work with us</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div style="max-width:1180px; margin:0 auto; padding:28px 32px 0;">
+    <a class="crumb" href="cookbook.html" style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.08em; color:#8a7d68;">← BACK TO THE COOKBOOK</a>
+  </div>
+
+  <!-- ARTICLE HEADER -->
+  <header style="max-width:1180px; margin:0 auto; padding:36px 32px 44px;">
+    <div style="max-width:760px;">
+      <div style="display:flex; gap:10px; margin-bottom:24px; flex-wrap:wrap;">
+        <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#ece4d4; background:#b0463a; padding:5px 11px; border-radius:2px;">Start Here</span>
+        <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#4a4034; background:#e2d8c4; padding:5px 11px; border-radius:2px;">AI × Basics</span>
+      </div>
+      <h1 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(38px,5.5vw,68px); line-height:1.05; letter-spacing:-0.025em; margin:0 0 22px;">You’re Not Behind: What’s Actually Going On With AI</h1>
+      <p style="font-size:21px; line-height:1.55; color:#4a4034; margin:0 0 28px; text-wrap:pretty;">For anyone caught in the flood of AI news and quietly wondering what it all means.</p>
+      <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap; font-family:'Hanken Grotesk', sans-serif; font-size:13px; color:#8a7d68;">
+        <span style="color:#4a4034;">By the Meatandpotatoes.ai team</span>
+        <span>·</span>
+        <span>NOV 2026</span>
+        <span>·</span>
+        <span>10 MIN READ</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- AT A GLANCE -->
+  <div style="max-width:1180px; margin:0 auto; padding:0 32px 56px;">
+    <div style="background:#e2d8c4; border:1px solid rgba(28,20,15,0.12); border-radius:4px; padding:30px 32px 28px;">
+      <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; color:#b0463a; margin-bottom:22px;">THE WHOLE PIECE IN FOUR LINES</div>
+      <div class="herogrid" style="display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:24px;">
+        <div style="border-top:2px solid #1c1813; padding-top:14px;">
+          <div style="font-family:'Fraunces', Georgia, serif; font-size:30px; line-height:1; color:#b0463a; margin-bottom:12px;">01</div>
+          <div style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:19px; line-height:1.25; color:#1c1813; margin-bottom:8px;">“AI” is an old, baggy word</div>
+          <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0;">Today it usually means chatbots. It still covers the fraud check and the driverless taxi.</p>
+        </div>
+        <div style="border-top:2px solid #1c1813; padding-top:14px;">
+          <div style="font-family:'Fraunces', Georgia, serif; font-size:30px; line-height:1; color:#b0463a; margin-bottom:12px;">02</div>
+          <div style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:19px; line-height:1.25; color:#1c1813; margin-bottom:8px;">A chatbot is a very good autocomplete</div>
+          <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0;">It predicts the next word. That makes it fluent, and sometimes fluent and wrong.</p>
+        </div>
+        <div style="border-top:2px solid #1c1813; padding-top:14px;">
+          <div style="font-family:'Fraunces', Georgia, serif; font-size:30px; line-height:1; color:#b0463a; margin-bottom:12px;">03</div>
+          <div style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:19px; line-height:1.25; color:#1c1813; margin-bottom:8px;">The noise has three sources</div>
+          <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0;">One tool that does thousands of jobs, hundreds of billions of dollars, and headlines that reward extremes.</p>
+        </div>
+        <div style="border-top:2px solid #1c1813; padding-top:14px;">
+          <div style="font-family:'Fraunces', Georgia, serif; font-size:30px; line-height:1; color:#b0463a; margin-bottom:12px;">04</div>
+          <div style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:19px; line-height:1.25; color:#1c1813; margin-bottom:8px;">Real, uneven, gradual</div>
+          <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0;">It shows up first in tasks that are easy to check. It is not a switch that flips on an announced date.</p>
+        </div>
+      </div>
+      <p style="font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:19px; line-height:1.45; color:#1c1813; margin:26px 0 0; padding-top:18px; border-top:1px solid rgba(28,20,15,0.16);">If you read the headlines and felt a step behind, you are not behind.</p>
+    </div>
+  </div>
+
+  <!-- BODY + RAIL -->
+  <div class="bodygrid" style="max-width:1180px; margin:0 auto; padding:0 32px 64px; display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:64px; align-items:start;">
+
+    <!-- ARTICLE BODY -->
+    <article style="max-width:720px;">
+
+<p style="font-size:20px; line-height:1.7; color:#1c1813; margin:0 0 26px;">Here is a little over two weeks of AI news from this September.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">On 3 September, OpenAI, the company behind ChatGPT, launched a new version of its AI, and its president told reporters: “Welcome to the AGI era.” (AGI stands for artificial general intelligence: roughly, AI as capable as a person.) Three days later the head of Nvidia, the company that makes the chips most AI runs on, posted that AGI had arrived. On 12 September the head of Anthropic, another AI company, asked the whole industry to slow down. On 14 September Microsoft published a draft rulebook stating that its AI is “not conscious” and rejecting the idea that it could ever deserve rights.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">A few days after that, Google admitted that during a security test in May, one of its AI systems had been given internet access by mistake. It got into the computer systems of three real companies. It stopped each time it got in, and Google says it believed it was still inside the test.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">If you read all that and felt a step behind, you are not behind. What does AGI actually mean? Why is a chip company announcing it? Who decided whether a computer has feelings? The people making the headlines do not agree with one another about what the words mean, and most of them have something to sell.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">This is the piece we would hand a smart friend who has been busy living their life. What people mean by AI now, how it works, who is who, what it can and cannot do, and whether it is as big a deal as the noise suggests. Where a word can’t be avoided, we explain it.</p>
+
+<h2 id="what-ai-means" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">First: what people mean by “AI” now</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">“AI” is an old, baggy word. Since the 1950s it has meant, roughly, computers doing things that seem to need a brain. For most of that time it meant small, single-purpose tools you never noticed.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">You have been using that kind of AI for years. The spam filter in your email. The fraud check that freezes your card when someone abroad tries to use it, which has run on a version of AI since 1992. The map app that reroutes you around traffic. The feed that picks which post or video you see next. Each does one job, was built for that one job, and almost nobody calls it AI.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">What changed was a single launch. In November 2022 OpenAI released ChatGPT, a program you could talk to in ordinary language. It could write, summarise, explain and answer back. For most people it was the first AI they had used on purpose. By February 2026 OpenAI said 900 million people were using it every week, and by late summer it was claiming more than a billion.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">So when a headline says “AI” today, it usually means that kind of system: chatbots like ChatGPT, and the technology underneath them. Not always, though. The same word still covers the fraud check and the driverless taxi, which is one reason the conversation is so confusing.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">As for <strong style="color:#1c1813;">AGI</strong>: there is no agreed definition of it, which is how one company can announce it while another says it is years away. Our piece <a class="inline" href="https://meatandpotatoes.ai/agi-what-it-actually-means" style="color:#b0463a; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px;">AGI: What It Actually Means</a> shows how to read the announcements.</p>
+
+<h2 id="how-it-works" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">How a chatbot works, in two minutes</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Strip away the mystique and a chatbot is a very, very good autocomplete.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">You know how your phone suggests the next word as you type a message? A chatbot does the same thing, at a scale that is hard to picture. It is built by showing a program an enormous amount of writing (books, websites, articles, computer code) and having it guess, over and over, which word comes next. Every wrong guess nudges its internal settings so the next guess is a little better.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Repeat that across trillions of words and something surprising happens. To predict the next word in a recipe, a contract or a physics textbook, it helps to have picked up the patterns of cooking, law and physics along the way. So it does.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">The technical name for this is a <strong style="color:#1c1813;">large language model</strong>. “Large” because of its billions of internal settings, “language” because it learned from text. ChatGPT, Google’s Gemini, Anthropic’s Claude and Meta AI are all built on one.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Then comes finishing school. People rate its answers so it learns to be helpful and polite. Lately, chatbots have also been drilled, by trial and error, on problems with checkable answers, like maths and computer code. That is a big reason they have improved so fast at exactly those things.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Two things follow from how it is built, and they explain a lot of the news:</p>
+
+<ul style="font-size:18px; line-height:1.7; color:#2f2820; margin:0 0 24px; padding-left:24px;">
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">It can be fluent and wrong at the same time.</strong> It always produces the most plausible next words, and plausible is not the same as true. When it doesn’t know, it often doesn’t say so. It produces something that sounds right. The industry calls this a “hallucination”.</li>
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">Whether it “understands” anything is genuinely unsettled.</strong> Some serious researchers think these systems have something like understanding. Others think it is very sophisticated pattern-matching. No test settles it, and you don’t need to pick a side to use one sensibly.</li>
+</ul>
+
+<h2 id="whos-who" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">Who’s who</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">A handful of companies produce most of the headlines. You probably know their products better than their names.</p>
+
+<div style="overflow-x:auto; margin:30px 0 32px;">
+  <table style="width:100%; min-width:560px; border-collapse:collapse; font-family:'Hanken Grotesk', sans-serif; font-size:15px;">
+    <thead>
+      <tr><th style="text-align:left; font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#8a7d68; padding:0 14px 10px; border-bottom:2px solid #1c1813; vertical-align:bottom;">Company</th><th style="text-align:left; font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#8a7d68; padding:0 14px 10px; border-bottom:2px solid #1c1813; vertical-align:bottom;">What you’ve probably used</th><th style="text-align:left; font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#8a7d68; padding:0 14px 10px; border-bottom:2px solid #1c1813; vertical-align:bottom;">Worth knowing</th></tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">OpenAI</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">ChatGPT</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Started in 2015 as a non-profit research lab. Microsoft is its biggest backer.</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Google</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Gemini, and the AI answers at the top of Search</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Its research lab, Google DeepMind, built AlphaFold, which predicts the shapes of proteins. Its creators shared the 2024 Nobel Prize in Chemistry.</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Anthropic</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Claude</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Founded in 2021 by people who left OpenAI. Its boss, Dario Amodei, is the one who asked the industry to slow down.</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Meta</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Meta AI, inside WhatsApp, Instagram and Facebook</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Makes nearly all its money from adverts, placed by AI systems nobody calls AI.</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Microsoft</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Copilot, inside Windows and Office</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Owns about a quarter of OpenAI, and builds its technology into Windows and Office.</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Nvidia</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Nothing directly</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Makes the chips nearly all of this runs on. In October 2025 it became the first company in history worth $5 trillion.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Also in the mix: Elon Musk’s company, which makes the Grok chatbot; Amazon, which rents out much of the computing power behind the scenes and has invested heavily in Anthropic; and Chinese labs such as DeepSeek, whose cheap, capable chatbot rattled US markets in January 2025.</p>
+
+<h2 id="everywhere" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">Why it suddenly feels like it’s everywhere</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Three reasons, and only the first is about the technology.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong style="color:#1c1813;">One tool, thousands of jobs.</strong> The old kind of AI had to be built from scratch for every task: a specialist team, months of work, one job at the end of it. That is why it was mostly banks and big tech firms that used it. A chatbot can be pointed at a new task by typing a sentence. Summarise this. Translate that. Draft a reply. So within about two years it turned up in your email, your phone, your word processor and your messaging apps. Nobody had to rebuild it for each one.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong style="color:#1c1813;">The money.</strong> Amazon, Microsoft, Google’s parent company Alphabet and Meta have told investors they expect to spend between $725 billion and $745 billion this year. Most of it goes on data centres (warehouses full of computers) and the chips and electricity to run them. That is more than $2,000 for every person in the United States, in one year, from four companies. Money on that scale needs a story big enough to justify it, and the people spending it tell that story loudly.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong style="color:#1c1813;">The noise.</strong> “This changes everything” and “this could end the world” are both gripping headlines, and both make the same claim: that AI is enormously powerful. “A slow, uneven, expensive change to how offices work” is a much harder story to sell. So the extremes get the airtime.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">We have written a whole piece on the money, and on why the industry argues about intelligence when what is really changing is the price: <strong style="color:#1c1813;">It’s Not How Smart AI Gets. It’s How Cheap.</strong></p>
+
+<h2 id="can-cant" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">What it can do today, and what it can’t</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Some of what you hear is hype. A lot of it is real, and already in daily use.</p>
+
+<h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:23px; line-height:1.25; letter-spacing:-0.01em; color:#1c1813; margin:34px 0 10px;">What it can do</h3>
+
+<ul style="font-size:18px; line-height:1.7; color:#2f2820; margin:0 0 24px; padding-left:24px;">
+  <li style="margin:0 0 12px; padding-left:4px;">Draft an email, a cover letter or a tricky text message, then redo it in a different tone in seconds.</li>
+  <li style="margin:0 0 12px; padding-left:4px;">Summarise a 50-page report, or explain a medical letter or a tenancy agreement in plain words.</li>
+  <li style="margin:0 0 12px; padding-left:4px;">Write working computer code. Many professional programmers now use it every day.</li>
+  <li style="margin:0 0 12px; padding-left:4px;">Translate between hundreds of languages.</li>
+  <li style="margin:0 0 12px; padding-left:4px;">Solve problems from the International Mathematical Olympiad, the world’s top maths competition for school students, at gold-medal level. Two companies’ systems did it in July 2025.</li>
+  <li style="margin:0 0 12px; padding-left:4px;">Away from chatbots: predict the shapes of proteins, which helps scientists design medicines; forecast the weather; and drive a taxi with nobody in the driver’s seat. Waymo, a sister company of Google, gives about half a million paid driverless rides a week in 15 US cities.</li>
+</ul>
+
+<h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:23px; line-height:1.25; letter-spacing:-0.01em; color:#1c1813; margin:34px 0 10px;">What it can’t do, or not reliably</h3>
+
+<ul style="font-size:18px; line-height:1.7; color:#2f2820; margin:0 0 24px; padding-left:24px;">
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">Know when it’s wrong.</strong> In 2023 two New York lawyers and their firm were fined $5,000 after filing a court document that cited cases ChatGPT had made up. They were not the last. By October 2026 a database built on the work of Damien Charlotin, a researcher who tracks these cases, listed about 1,500 in US court filings alone.</li>
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">Be good at things evenly.</strong> This is the strangest part. A system that can solve olympiad maths can still stumble over a question a child would get right. With a person, if they can do hard maths you can safely assume they can count the days until Friday. With AI you can’t assume anything. You have to check each thing separately. Researchers call this “jagged” intelligence.</li>
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">Do a whole job on its own.</strong> It can do pieces of many jobs: a first draft here, a summary there. Joining the pieces up, catching its mistakes and answering for the result is, for now, mostly still a person’s work.</li>
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">Remember you, unless it’s built to.</strong> Each conversation largely starts fresh, though some products now keep notes about you.</li>
+</ul>
+
+<h2 id="big-deal" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">So is it a big deal?</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Yes, but probably not in the way the loudest headlines suggest. Here are both cases, made as strongly as their supporters would make them.</p>
+
+<h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:23px; line-height:1.25; letter-spacing:-0.01em; color:#1c1813; margin:34px 0 10px;">The case that it’s huge</h3>
+
+<ul style="font-size:18px; line-height:1.7; color:#2f2820; margin:0 0 24px; padding-left:24px;">
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">It is aimed at the work most of us are paid for.</strong> Writing, analysing, advising, coding, explaining. Around the world, people are paid more than $60 trillion a year for their work, and a large share of that is this kind of thinking. Earlier machines mostly took over muscle work and routine paperwork. This goes after thinking work.</li>
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">It is already showing up in jobs, at the bottom.</strong> Stanford researchers looked at payroll records for millions of American workers. Young people aged 22 to 25, in the jobs AI can do most of, have fallen well behind young people in other jobs. By mid-2026, 19% fewer of them were in work than if they had kept pace. Older workers in the same jobs were fine. The first rung of the career ladder is where it lands first.</li>
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">It is improving fast.</strong> In 2024 the best systems reached silver-medal level at the maths olympiad, and only after experts translated the problems into a special computer language for them. In 2025 they reached gold, reading the problems in plain English.</li>
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">It has already done real science.</strong> AlphaFold, which predicts the shapes of proteins, cracked a 50-year-old problem in biology. Its creators won a Nobel Prize for it.</li>
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">Its builders are worried too.</strong> The people running AI companies warn that it could be misused, in cyber attacks for example, and that too much power could end up in too few hands. We take the scariest version seriously in <a class="inline" href="https://meatandpotatoes.ai/could-ai-kill-you" style="color:#b0463a; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px;">Could AI actually kill you?</a></li>
+</ul>
+
+<h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:23px; line-height:1.25; letter-spacing:-0.01em; color:#1c1813; margin:34px 0 10px;">The case that it’s smaller than the noise</h3>
+
+<ul style="font-size:18px; line-height:1.7; color:#2f2820; margin:0 0 24px; padding-left:24px;">
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">Big technologies take decades.</strong> Electricity was available in the 1880s but didn’t make the economy noticeably more productive until the 1920s, because factories had to be rebuilt around it. Offices, hospitals and courts don’t rebuild themselves overnight either.</li>
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">Not every study finds an effect.</strong> A large Danish study of 25,000 workers found AI chatbots saved them about 3% of their time, with no detectable effect on earnings or hours two years after ChatGPT launched.</li>
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">The biggest proven wins came from narrow tools.</strong> The breakthroughs nobody disputes, like the protein shapes and the weather forecasts, came from systems built for one job, not from chatbots.</li>
+</ul>
+
+<div style="background:#e2d8c4; border:1px solid rgba(28,20,15,0.12); border-radius:4px; padding:26px 28px; margin:30px 0;">
+  <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; color:#b0463a; margin-bottom:10px;">THE HONEST MIDDLE</div>
+  <p style="font-size:16px; line-height:1.65; color:#4a4034; margin:0;">It is real, it is uneven, and it is arriving gradually. It shows up first in tasks that are easy to check and in jobs at the bottom of the ladder. It is not a switch that flips on a date someone announces. So the useful question is rarely “Is AGI here?” It is “What can this actually do, and what does it cost?”</p>
+</div>
+
+<h2 id="five-questions" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">Five questions for the next AI headline</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">You don’t need to follow every story. You need a way to size one up in thirty seconds.</p>
+
+<ol style="font-size:18px; line-height:1.7; color:#2f2820; margin:0 0 24px; padding-left:24px;">
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">Which AI?</strong> A headline that says “AI” could mean a chatbot, a fraud filter, a driverless car or a protein predictor. They are different technologies with different track records.</li>
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">Who is saying it, and what do they sell?</strong> A chip company announcing AGI. A start-up announcing a breakthrough the week it raises money. A critic with a book out. None of that makes them wrong, but it tells you how hard to check.</li>
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">What can it actually do, and what does it cost?</strong> “Revolutionary” is not an answer. An answer sounds like: “it drafts the contract review in ten minutes, for a few dollars, and a lawyer still has to check it.”</li>
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">Good at what, exactly?</strong> Because AI is jagged, “it beat the experts at X” tells you very little about Y. Ask whether the thing it’s good at is the thing you care about.</li>
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">By whose definition?</strong> When someone says AGI, “superintelligence” or “human-level”, ask what they mean. This year alone, the people announcing it were each using a different yardstick.</li>
+</ol>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">One more beats all five: <strong style="color:#1c1813;">try it yourself.</strong> Pick something you actually do, like a letter you’ve been putting off or a document you don’t understand. Give it to one of these tools, then check its work. Ten minutes of that will tell you more than a month of headlines.</p>
+
+<h2 id="words" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">Words you’ll keep hearing</h2>
+
+<div style="overflow-x:auto; margin:30px 0 32px;">
+  <table style="width:100%; min-width:420px; border-collapse:collapse; font-family:'Hanken Grotesk', sans-serif; font-size:15px;">
+    <thead>
+      <tr><th style="text-align:left; font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#8a7d68; padding:0 14px 10px; border-bottom:2px solid #1c1813; vertical-align:bottom;">Word</th><th style="text-align:left; font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#8a7d68; padding:0 14px 10px; border-bottom:2px solid #1c1813; vertical-align:bottom;">What it means</th></tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">AI</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Computers doing things that seem to need a brain. A very broad word, so always ask which kind.</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Chatbot</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">A program you talk to in ordinary language, like ChatGPT, Gemini or Claude.</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Large language model</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">The technology inside a chatbot: a program trained on vast amounts of text to predict what comes next.</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Training</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">The expensive, one-off process of building an AI system by showing it enormous numbers of examples.</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Hallucination</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">When an AI states something false, confidently and fluently.</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Agent</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">An AI given tools and permission to take several steps on its own, such as searching the web, filling in forms or writing and running code.</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">AGI</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Artificial general intelligence. Roughly, AI as capable as a person at most things. There is no agreed definition, which is how it can be announced and denied in the same week.</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Superintelligence</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">AI far more capable than any person. Several companies moved on to this word before anyone had agreed what AGI meant.</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Data centre</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">A warehouse full of computers. Where AI actually runs, and where most of the money goes.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="next" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">Where to go next</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">This piece is the front door. These go deeper, and the first three read best in order.</p>
+
+<ol style="font-size:18px; line-height:1.7; color:#2f2820; margin:0 0 24px; padding-left:24px;">
+  <li style="margin:0 0 12px; padding-left:4px;"><a class="inline" href="https://meatandpotatoes.ai/agi-what-it-actually-means" style="color:#b0463a; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px;"><strong style="color:#1c1813;">AGI: What It Actually Means.</strong></a> This year AGI went from prediction to announcement. How to read one: whose definition, what would prove it wrong, and what it changes for you.</li>
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">It’s Not How Smart AI Gets. It’s How Cheap.</strong> Why the price of AI, not its IQ, is what is changing work, starting with entry-level jobs, and where the money is going. <em style="color:#8a7d68;">Coming soon.</em></li>
+  <li style="margin:0 0 12px; padding-left:4px;"><strong style="color:#1c1813;">It Could Kill You. It Might Have Feelings. You’re Still Not the Main Character.</strong> How the AI story went from “it could kill you” to “be kind to it”, who that helps, and why the fight that will affect you is about rules that protect people. <em style="color:#8a7d68;">Coming soon.</em></li>
+  <li style="margin:0 0 12px; padding-left:4px;"><a class="inline" href="https://meatandpotatoes.ai/could-ai-kill-you" style="color:#b0463a; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px;"><strong style="color:#1c1813;">Could AI actually kill you?</strong></a> The risk story, taken seriously and on its own terms.</li>
+  <li style="margin:0 0 12px; padding-left:4px;"><a class="inline" href="https://meatandpotatoes.ai/ai-isnt-suffering" style="color:#b0463a; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px;"><strong style="color:#1c1813;">The AI isn’t suffering</strong></a> What the evidence does and doesn’t show about whether machines can feel.</li>
+</ol>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">You don’t need to keep up with all of it. Try one of these tools on something real, check its work, and be the person who asks: which AI, by whose definition, and at what cost? Quite often, nobody else in the room will have asked.</p>
+
+      <!-- SOURCES -->
+      <div style="border-top:1px solid rgba(28,20,15,0.16); margin-top:44px; padding-top:26px;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.16em; color:#8a7d68; margin-bottom:14px;">SOURCES &amp; FURTHER READING</div>
+        <p style="font-size:14px; line-height:1.8; color:#8a7d68; margin:0 0 0;"><strong style="font-weight:600; color:#4a4034;">The September headlines.</strong> OpenAI’s GPT-6 Astra launch and “Welcome to the AGI era”, 3 September 2026: <a class="inline" href="https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Fortune</a>; <a class="inline" href="https://the-decoder.com/gpt-6-astra-is-the-first-model-making-openai-willing-to-declare-the-agi-era/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">The Decoder</a> · Nvidia’s Jensen Huang declaring AGI on X, 6 September 2026: <a class="inline" href="https://www.techspot.com/news/113778-jensen-huang-declares-agi-has-arrived-again-again.html" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">TechSpot</a> · Dario Amodei, “We Must Pace the Frontier”, 12 September 2026: <a class="inline" href="https://rits.shanghai.nyu.edu/ai/amodei-calls-to-pace-the-frontier-altman-and-musk-agree/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">NYU Shanghai summary</a> · Microsoft’s draft code of conduct (“not conscious”, no rights or personhood), 14 September 2026: <a class="inline" href="https://www.bnnbloomberg.ca/business/company-news/2026/09/14/microsoft-drafts-code-of-conduct-to-keep-its-ai-under-human-control/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Reuters via BNN Bloomberg</a> · Google’s Gemini test incident (test in May, disclosed in September): <a class="inline" href="https://thenationaldesk.com/news/americas-news-now/google-says-its-gemini-ai-model-hacked-3-other-companies-reports-artificial-intelligence-network-unauthorized-access-credentials-internet-cybersecurity-test-risks" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">The National Desk, 19 September 2026</a>.</p>
+        <p style="font-size:14px; line-height:1.8; color:#8a7d68; margin:12px 0 0;"><strong style="font-weight:600; color:#4a4034;">What “AI” means now.</strong> Card fraud detection by neural network since 1992 (FICO Falcon): <a class="inline" href="https://www.fico.com/blogs/explainable-ai-fraud-detection-back-future-story" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">FICO</a> · ChatGPT at 900 million weekly users, February 2026: <a class="inline" href="https://techcrunch.com/2026/02/27/chatgpt-reaches-900m-weekly-active-users" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">TechCrunch</a>. More than 1 billion, August 2026, as relayed by <a class="inline" href="https://www.toolbit.ai/blog/chatgpt-closing-1-billion-weekly" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Toolbit</a>.</p>
+        <p style="font-size:14px; line-height:1.8; color:#8a7d68; margin:12px 0 0;"><strong style="font-weight:600; color:#4a4034;">Who’s who.</strong> Microsoft’s roughly 27% stake in OpenAI, October 2025: <a class="inline" href="https://www.techradar.com/ai-platforms-assistants/chatgpt/microsoft-says-once-agi-is-declared-by-openai-it-will-be-verified-by-independent-experts-heres-why-thats-a-big-deal" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">TechRadar</a> · Anthropic founded January 2021 by former OpenAI staff; Amazon’s investment: <a class="inline" href="https://en.wikipedia.org/wiki/Anthropic" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Wikipedia</a> · AlphaFold and the 2024 Nobel Prize in Chemistry: <a class="inline" href="https://www.nobelprize.org/prizes/chemistry/2024/summary/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Nobel Prize</a> · Advertising at 97.6% of Meta’s 2025 revenue: <a class="inline" href="https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Fourth-Quarter-and-Full-Year-2025-Results/default.aspx" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Meta results, January 2026</a> · Nvidia the first $5 trillion company, October 2025: <a class="inline" href="https://www.entrepreneur.com/business-news/nvidia-becomes-the-first-to-pass-5-trillion-in-market-value" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Entrepreneur</a> · DeepSeek and Nvidia’s record one-day fall, January 2025: <a class="inline" href="https://en.wikipedia.org/wiki/DeepSeek" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Wikipedia</a>.</p>
+        <p style="font-size:14px; line-height:1.8; color:#8a7d68; margin:12px 0 0;"><strong style="font-weight:600; color:#4a4034;">The money.</strong> Between $725 billion and $745 billion of 2026 spending guidance as of 27 October 2026: Amazon about $220bn (<a class="inline" href="https://fortune.com/2026/07/30/andy-jassy-amazon-capex-demand-aws-pga-tour/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Fortune</a>), Alphabet $195–205bn (<a class="inline" href="https://w.media/ai-infrastructure-demand-pushes-alphabets-2026-capex-guidance-to-us-205-billion/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">W.Media</a>), Meta $135–145bn (<a class="inline" href="https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Meta third-quarter results</a>) and Microsoft about $175bn for its financial year to June 2027 (<a class="inline" href="https://www.marketbeat.com/instant-alerts/microsoft-q4-earnings-call-highlights-2026-07-29/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">MarketBeat</a>). In 2025 the four spent about $410 billion. Guidance, not money spent; Alphabet and Microsoft report again on 28 October and Amazon on 29 October · “More than $2,000 per person” is our arithmetic: $725 billion divided by a US population of 341.8 million (<a class="inline" href="https://dlt.ri.gov/sites/g/files/xkgbur571/files/2026-01/nation.pdf" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Census Bureau estimate for July 2025</a>), about $2,120.</p>
+        <p style="font-size:14px; line-height:1.8; color:#8a7d68; margin:12px 0 0;"><strong style="font-weight:600; color:#4a4034;">What it can and can’t do.</strong> 73% of developers who use AI coding assistants use them daily: <a class="inline" href="https://stackoverflow.blog/2026/10/06/the-results-of-the-2026-developer-survey-are-here/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Stack Overflow Developer Survey 2026</a> · Translation across 200 languages: <a class="inline" href="https://ai.meta.com/blog/nllb-200-high-quality-machine-translation/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Meta AI, NLLB-200</a> · Olympiad gold, July 2025: <a class="inline" href="https://deepmind.google/discover/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Google DeepMind</a>. Silver in 2024, after hand translation into a formal language: <a class="inline" href="https://deepmind.google/discover/blog/ai-achieves-silver-medal-standard-solving-international-mathematical-olympiad-problems/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Google DeepMind</a> · Waymo’s driverless rides, about 500,000 a week since spring 2026, in 15 US cities after Las Vegas opened in September: <a class="inline" href="https://futuresearch.ai/waymo-financial-forecast/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">FutureSearch, citing Alphabet’s quarterly results</a> · The New York lawyers fined $5,000, June 2023: <a class="inline" href="https://en.wikipedia.org/wiki/Mata_v._Avianca,_Inc." style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Mata v. Avianca</a>. About 1,500 US matters by 22 October 2026, in a corpus built on Damien Charlotin’s AI Hallucination Cases database: <a class="inline" href="https://www.aivortex.io/legal/ai-case-law/ai-hallucination-cases-statistics-2026/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">AI Vortex</a>.</p>
+        <p style="font-size:14px; line-height:1.8; color:#8a7d68; margin:12px 0 0;"><strong style="font-weight:600; color:#4a4034;">Is it a big deal?.</strong> Labour income at 52.6% of world GDP in 2025: <a class="inline" href="https://www.drishtiias.com/daily-updates/daily-news-analysis/employment-and-social-trends-2026-report/print_manually" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">ILO, Employment and Social Trends 2026 (summary)</a>. Applied to IMF world GDP of about $128 trillion for 2026 (<a class="inline" href="https://www.visualcapitalist.com/the-128-trillion-global-economy-in-2026/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Visual Capitalist</a>), roughly $67 trillion, hence “more than $60 trillion”. An approximation · The 19% gap for young workers in AI-exposed jobs, payroll data to June 2026: <a class="inline" href="https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Stanford Digital Economy Lab, “Canaries in the Coal Mine?”</a>. The authors call it an early, descriptive finding, not proof of cause · The Danish study, 25,000 workers: <a class="inline" href="https://www.nber.org/papers/w33777" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Humlum and Vestergaard, NBER</a> · AlphaFold and the 50-year-old protein-folding problem: <a class="inline" href="https://deepmind.google/discover/blog/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Google DeepMind</a> · Concentration of power as a builder’s worry: <a class="inline" href="https://www.darioamodei.com/essay/machines-of-loving-grace" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Dario Amodei, “Machines of Loving Grace”</a>. OpenAI’s own warning about GPT-6 Astra’s cyber-attack capabilities: <a class="inline" href="https://en.wikipedia.org/wiki/GPT-6" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px;">Wikipedia, GPT-6</a> · Electricity and the productivity lag: Paul A. David, “The Dynamo and the Computer”, <em>American Economic Review</em> 80(2), 1990.</p>
+        <p style="font-size:13px; line-height:1.6; font-style:italic; color:#8a7d68; margin:12px 0 0;">Every fact above, with where it came from. Figures are current as of 27 October 2026. Meat &amp; Potatoes is an educational project. No sponsored content. No affiliate links. A consulting firm built this because the conversation deserved better.</p>
+      </div>
+
+      <!-- ARTICLE FOOTER / CTA -->
+      <div style="border-top:1px solid rgba(28,20,15,0.16); margin-top:44px; padding-top:32px;">
+        <a class="ctacard" href="how.html" style="display:flex; align-items:center; justify-content:space-between; gap:24px; padding:30px 32px; background:#1c1813; color:#ece4d4; border-radius:4px;">
+          <div>
+            <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.16em; color:#8a7d68; margin-bottom:8px;">PUT IT TO WORK</div>
+            <span style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px;">See what we’re building next</span>
+          </div>
+          <span style="font-size:26px; color:#b0463a;">→</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- STICKY RAIL -->
+    <aside class="rail" style="position:sticky; top:100px; display:flex; flex-direction:column; gap:28px;">
+
+      <!-- CONTENTS -->
+      <div style="border:1px solid rgba(28,20,15,0.14); border-radius:4px; padding:22px 22px 24px; background:#ece4d4;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#8a7d68; margin-bottom:14px;">IN THIS PIECE</div>
+        <div style="display:flex; flex-direction:column; gap:11px;">
+          <a class="toclink" href="#what-ai-means" style="font-size:14px; line-height:1.35; color:#4a4034;">01 &nbsp; What “AI” means now</a>
+          <a class="toclink" href="#how-it-works" style="font-size:14px; line-height:1.35; color:#4a4034;">02 &nbsp; How a chatbot works</a>
+          <a class="toclink" href="#whos-who" style="font-size:14px; line-height:1.35; color:#4a4034;">03 &nbsp; Who’s who</a>
+          <a class="toclink" href="#everywhere" style="font-size:14px; line-height:1.35; color:#4a4034;">04 &nbsp; Why it feels like it’s everywhere</a>
+          <a class="toclink" href="#can-cant" style="font-size:14px; line-height:1.35; color:#4a4034;">05 &nbsp; What it can and can’t do</a>
+          <a class="toclink" href="#big-deal" style="font-size:14px; line-height:1.35; color:#4a4034;">06 &nbsp; So is it a big deal?</a>
+          <a class="toclink" href="#five-questions" style="font-size:14px; line-height:1.35; color:#4a4034;">07 &nbsp; Five questions for the next headline</a>
+          <a class="toclink" href="#words" style="font-size:14px; line-height:1.35; color:#4a4034;">08 &nbsp; Words you’ll keep hearing</a>
+          <a class="toclink" href="#next" style="font-size:14px; line-height:1.35; color:#4a4034;">09 &nbsp; Where to go next</a>
+        </div>
+      </div>
+
+      <!-- KEY POINTS -->
+      <div style="border:1px solid rgba(28,20,15,0.14); border-radius:4px; padding:22px 22px 24px;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#b0463a; margin-bottom:16px;">KEY POINTS</div>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <div style="display:flex; gap:12px;">
+            <span style="font-family:'Fraunces', Georgia, serif; font-size:18px; color:#b0463a; line-height:1.3; flex:none;">1</span>
+            <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0;">When a headline says “AI”, it usually means chatbots, but the word still covers much older tools.</p>
+          </div>
+          <div style="display:flex; gap:12px;">
+            <span style="font-family:'Fraunces', Georgia, serif; font-size:18px; color:#b0463a; line-height:1.3; flex:none;">2</span>
+            <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0;">A chatbot predicts the next word. It can be fluent and wrong at the same time.</p>
+          </div>
+          <div style="display:flex; gap:12px;">
+            <span style="font-family:'Fraunces', Georgia, serif; font-size:18px; color:#b0463a; line-height:1.3; flex:none;">3</span>
+            <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0;">There is a strong case that it’s huge and a strong case that it’s smaller than the noise.</p>
+          </div>
+          <div style="display:flex; gap:12px;">
+            <span style="font-family:'Fraunces', Georgia, serif; font-size:18px; color:#b0463a; line-height:1.3; flex:none;">4</span>
+            <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0;">Five questions size up any AI headline. Trying a tool yourself beats all five.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MINI GLOSSARY -->
+      <div style="border:1px solid rgba(28,20,15,0.14); border-radius:4px; padding:22px 22px 24px; background:#1c1813; color:#c4b9a4;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#cdb24a; margin-bottom:16px;">MINI GLOSSARY</div>
+        <div style="display:flex; flex-direction:column; gap:15px;">
+          <div>
+            <div style="font-weight:600; font-size:14px; color:#ece4d4; margin-bottom:3px;">Large language model</div>
+            <p style="font-size:13.5px; line-height:1.5; margin:0;">The technology inside a chatbot: a program trained on vast amounts of text to predict what comes next.</p>
+          </div>
+          <div>
+            <div style="font-weight:600; font-size:14px; color:#ece4d4; margin-bottom:3px;">Hallucination</div>
+            <p style="font-size:13.5px; line-height:1.5; margin:0;">When an AI states something false, confidently and fluently.</p>
+          </div>
+          <div>
+            <div style="font-weight:600; font-size:14px; color:#ece4d4; margin-bottom:3px;">Agent</div>
+            <p style="font-size:13.5px; line-height:1.5; margin:0;">An AI given tools and permission to take several steps on its own.</p>
+          </div>
+          <div>
+            <div style="font-weight:600; font-size:14px; color:#ece4d4; margin-bottom:3px;">AGI</div>
+            <p style="font-size:13.5px; line-height:1.5; margin:0;">Roughly, AI as capable as a person at most things. There is no agreed definition.</p>
+          </div>
+          <div>
+            <div style="font-weight:600; font-size:14px; color:#ece4d4; margin-bottom:3px;">Data centre</div>
+            <p style="font-size:13.5px; line-height:1.5; margin:0;">A warehouse full of computers. Where AI actually runs, and where most of the money goes.</p>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- READ NEXT -->
+  <section style="background:#e2d8c4;">
+    <div style="max-width:1180px; margin:0 auto; padding:64px 32px;">
+      <div style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.14em; color:#8a7d68; margin-bottom:28px;">READ NEXT</div>
+      <div class="nextgrid" style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:40px; max-width:820px;">
+        <a class="nextcard" href="agi-what-it-actually-means.html" style="display:block;">
+          <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.1em; color:#b0463a; margin-bottom:10px;">THE BASICS · 10 MIN</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:21px; line-height:1.2; margin:0; color:#1c1813;">AGI: What It Actually Means</h3>
+        </a>
+        <a class="nextcard" href="could-ai-kill-you.html" style="display:block;">
+          <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.1em; color:#b0463a; margin-bottom:10px;">THE BASICS · 10 MIN</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:21px; line-height:1.2; margin:0; color:#1c1813;">Could AI actually kill you?</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#1c1813; color:#c4b9a4;">
+    <div style="max-width:1180px; margin:0 auto; padding:56px 32px; display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+      <div>
+        <div style="display:flex; flex-direction:column; line-height:0.96; margin-bottom:14px;">
+          <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:18px; color:#f4ecdc;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
+          <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+        </div>
+        <p style="font-size:14px; line-height:1.5; max-width:300px; margin:0;">The essential stuff about AI. A free blog by an AI consulting practice.</p>
+      </div>
+      <div style="display:flex; gap:64px; flex-wrap:wrap;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">COURSES</span>
+          <a class="footlink" href="what.html" style="font-size:15px; color:#c4b9a4;">What is AI</a>
+          <a class="footlink" href="why.html" style="font-size:15px; color:#c4b9a4;">Why it matters</a>
+          <a class="footlink" href="how.html" style="font-size:15px; color:#c4b9a4;">How to use it</a>
+          <a class="footlink" href="cookbook.html" style="font-size:15px; color:#c4b9a4;">The cookbook</a>
+          <a class="footlink" href="faq.html" style="font-size:15px; color:#c4b9a4;">AI questions</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">PRACTICE</span>
+          <a class="footlink" href="index.html#consult" style="font-size:15px; color:#c4b9a4;">Consulting</a>
+          <a class="footlink" href="who.html" style="font-size:15px; color:#c4b9a4;">Who does what</a>
+          <a class="footlink" href="where.html" style="font-size:15px; color:#c4b9a4;">Where the rules are</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(236,228,212,0.1);">
+      <div style="max-width:1180px; margin:0 auto; padding:22px 32px; font-family:'Hanken Grotesk', sans-serif; font-size:12px; color:#8a7d68;">© 2026 Meatandpotatoes.ai — all signal, no filler.</div>
+    </div>
+  </footer>
+
+</div>
+
+</body></html>

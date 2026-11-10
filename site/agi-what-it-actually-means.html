@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AGI: What It Actually Means — Meat &amp; Potatoes</title>
+<meta name="description" content="At least five definitions of AGI are in use, and they don&#8217;t fit together. How to read an AGI announcement: whose definition it is, what would prove it wrong, and what changed for you.">
+<meta property="og:title" content="AGI: What It Actually Means — Meat &amp; Potatoes">
+<meta property="og:description" content="At least five definitions of AGI are in use, and they don&#8217;t fit together. How to read an AGI announcement: whose definition it is, what would prove it wrong, and what changed for you.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://meatandpotatoes.ai/agi-what-it-actually-means">
+<meta property="og:image" content="https://meatandpotatoes.ai/assets/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Meat &amp; Potatoes">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://meatandpotatoes.ai/agi-what-it-actually-means">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AGI: What It Actually Means",
+  "description": "At least five definitions of AGI are in use, and they don't fit together. How to read an AGI announcement: whose definition it is, what would prove it wrong, and what changed for you.",
+  "image": "https://meatandpotatoes.ai/assets/og-default.jpg",
+  "datePublished": "2026-11-10",
+  "dateModified": "2026-11-10",
+  "author": {
+    "@type": "Organization",
+    "name": "Meat & Potatoes",
+    "url": "https://meatandpotatoes.ai/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://meatandpotatoes.ai/#organization",
+    "name": "Meat & Potatoes",
+    "url": "https://meatandpotatoes.ai/",
+    "description": "A free blog by an AI consulting practice.",
+    "logo": "https://meatandpotatoes.ai/assets/og-default.jpg"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://meatandpotatoes.ai/agi-what-it-actually-means"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./mp.css">
+<script src="./mp.js" defer></script>
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: 96px; }
+  body { margin:0; }
+  a { text-decoration: none; }
+  a:focus-visible { outline:2px solid #b0463a; outline-offset:3px; }
+  a.navlink:hover { background:#1c1813; color:#ece4d4 !important; }
+  a.crumb:hover { color:#b0463a !important; }
+  a.toclink:hover { color:#b0463a !important; }
+  a.ctacard:hover { background:#2a2018 !important; }
+  a.nextcard:hover { opacity:0.9; }
+  a.footlink:hover { color:#ece4d4 !important; }
+  a.workbtn:hover { background:#9a3b30 !important; }
+  a.inline:hover { color:#9a3b30 !important; }
+  @media (max-width: 980px) {
+    .bodygrid { grid-template-columns: minmax(0,1fr) !important; }
+    .rail { position: static !important; }
+    .nextgrid { grid-template-columns: 1fr !important; }
+    .herogrid { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+  }
+  @media (max-width: 560px) {
+    .herogrid { grid-template-columns: minmax(0,1fr) !important; }
+  }
+</style>
+</head>
+<body>
+
+<div style="background:#ece4d4; color:#1c1813; font-family:'Hanken Grotesk', system-ui, sans-serif; min-height:100vh; -webkit-font-smoothing:antialiased;">
+
+  <!-- NAV -->
+  <header style="position:sticky; top:0; z-index:60; background:#ece4d4; border-bottom:3px solid #1c1813;">
+    <nav style="max-width:1180px; margin:0 auto; padding:18px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <a href="index.html" style="display:flex; flex-direction:column; line-height:0.96;">
+        <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:19px; letter-spacing:-0.01em; color:#1c1813;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
+        <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+        <a class="navlink" href="what.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;">What</a>
+        <a class="navlink" href="why.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;">Why</a>
+        <a class="navlink" href="how.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;">How</a>
+        <a class="navlink" href="where.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;">Where</a>
+        <a class="navlink" href="who.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;">Who</a>
+        <a href="cookbook.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid #1c1813; border-radius:5px; color:#ece4d4; background:#b0463a;">Cookbook</a>
+        <a class="workbtn" href="index.html#consult" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; color:#ece4d4; background:#b0463a; padding:9px 17px; border:2.5px solid #1c1813; border-radius:5px; box-shadow:3px 3px 0 rgba(28,20,15,0.22); margin-left:6px;">Work with us</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div style="max-width:1180px; margin:0 auto; padding:28px 32px 0;">
+    <a class="crumb" href="cookbook.html" style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.08em; color:#8a7d68;">← BACK TO THE COOKBOOK</a>
+  </div>
+
+  <!-- ARTICLE HEADER -->
+  <header style="max-width:1180px; margin:0 auto; padding:36px 32px 44px;">
+    <div style="max-width:760px;">
+      <div style="display:flex; gap:10px; margin-bottom:24px; flex-wrap:wrap;">
+        <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#ece4d4; background:#b0463a; padding:5px 11px; border-radius:2px;">The Basics</span>
+        <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#4a4034; background:#e2d8c4; padding:5px 11px; border-radius:2px;">AI × Definitions</span>
+      </div>
+      <h1 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(38px,5.5vw,68px); line-height:1.05; letter-spacing:-0.025em; margin:0 0 22px;">AGI: What It Actually Means</h1>
+      <p style="font-size:21px; line-height:1.55; color:#4a4034; margin:0 0 28px; text-wrap:pretty;">The term used to be a prediction. Now it&#8217;s an ad for something you&#8217;ll never buy.</p>
+      <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap; font-family:'Hanken Grotesk', sans-serif; font-size:13px; color:#8a7d68;">
+        <span style="color:#4a4034;">By the Meatandpotatoes.ai team</span>
+        <span>·</span>
+        <span>NOV 2026</span>
+        <span>·</span>
+        <span>11 MIN READ</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- AT A GLANCE -->
+  <div style="max-width:1180px; margin:0 auto; padding:0 32px 56px;">
+    <div style="background:#e2d8c4; border:1px solid rgba(28,20,15,0.12); border-radius:4px; padding:30px 32px 28px;">
+      <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; color:#b0463a; margin-bottom:22px;">AGI IN NINETY SECONDS</div>
+      <div class="herogrid" style="display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:28px 24px;">
+        <div style="border-top:2px solid #1c1813; padding-top:14px;">
+          <div style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:19px; line-height:1.25; color:#1c1813; margin-bottom:8px;">What you have probably heard</div>
+          <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0 0 10px;">A machine smarter than people at everything, arriving on a set day to cure cancer or take your job. A fair reading of the headlines. Not what any working definition says.</p>
+          <a class="inline" href="#definitions" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.12em; color:#b0463a;">SECTION 02 →</a>
+        </div>
+        <div style="border-top:2px solid #1c1813; padding-top:14px;">
+          <div style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:19px; line-height:1.25; color:#1c1813; margin-bottom:8px;">What it actually means</div>
+          <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0 0 10px;">Nothing agreed. At least five definitions are in use, and they don&#8217;t fit together.</p>
+          <a class="inline" href="#definitions" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.12em; color:#b0463a;">SECTION 02 →</a>
+        </div>
+        <div style="border-top:2px solid #1c1813; padding-top:14px;">
+          <div style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:19px; line-height:1.25; color:#1c1813; margin-bottom:8px;">Who is announcing it</div>
+          <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0 0 10px;">Nvidia&#8217;s boss says it is here. OpenAI&#8217;s president says &#8220;Welcome to the AGI era&#8221;. Each used a different yardstick.</p>
+          <a class="inline" href="#announcements" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.12em; color:#b0463a;">SECTION 03 →</a>
+        </div>
+        <div style="border-top:2px solid #1c1813; padding-top:14px;">
+          <div style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:19px; line-height:1.25; color:#1c1813; margin-bottom:8px;">When</div>
+          <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0 0 10px;">Anywhere from &#8220;already&#8221; to 2116, depending on who you ask and how you ask it.</p>
+          <a class="inline" href="#when" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.12em; color:#b0463a;">SECTION 04 →</a>
+        </div>
+        <div style="border-top:2px solid #1c1813; padding-top:14px;">
+          <div style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:19px; line-height:1.25; color:#1c1813; margin-bottom:8px;">Will there be &#8220;a moment&#8221;?</div>
+          <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0 0 10px;">Researchers disagree. Even OpenAI&#8217;s president says it arrived &#8220;in bits and pieces&#8221;.</p>
+          <a class="inline" href="#slope" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.12em; color:#b0463a;">SECTION 05 →</a>
+        </div>
+        <div style="border-top:2px solid #1c1813; padding-top:14px;">
+          <div style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:19px; line-height:1.25; color:#1c1813; margin-bottom:8px;">Why the word sticks</div>
+          <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0 0 10px;">Its vagueness suits the people using it, and nothing can prove or disprove it.</p>
+          <a class="inline" href="#sticks" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.12em; color:#b0463a;">SECTION 06 →</a>
+        </div>
+        <div style="border-top:2px solid #1c1813; padding-top:14px;">
+          <div style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:19px; line-height:1.25; color:#1c1813; margin-bottom:8px;">What is at stake</div>
+          <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0 0 10px;">The world&#8217;s wage bill: more than $60 trillion a year paid to people for work that AGI, on the best-known definition, would be able to do.</p>
+          <a class="inline" href="#stakes" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.12em; color:#b0463a;">SECTION 07 →</a>
+        </div>
+        <div style="border-top:2px solid #1c1813; padding-top:14px;">
+          <div style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:19px; line-height:1.25; color:#1c1813; margin-bottom:8px;">Is it conscious?</div>
+          <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0 0 10px;">A separate question. No definition mentions it.</p>
+          <a class="inline" href="#conscious" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.12em; color:#b0463a;">SECTION 08 →</a>
+        </div>
+      </div>
+      <p style="font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:19px; line-height:1.45; color:#1c1813; margin:26px 0 0; padding-top:18px; border-top:1px solid rgba(28,20,15,0.16);">Treat the next AGI announcement the way you&#8217;d treat a carrier announcing 8G.</p>
+    </div>
+  </div>
+
+  <!-- BODY + RAIL -->
+  <div class="bodygrid" style="max-width:1180px; margin:0 auto; padding:0 32px 64px; display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:64px; align-items:start;">
+
+    <!-- ARTICLE BODY -->
+    <article style="max-width:720px;">
+
+<h2 id="phone" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);"><span style="display:block; font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:400; letter-spacing:0.14em; color:#b0463a; margin-bottom:10px;">BEFORE YOU START</span>A question about your phone</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Have you heard of OFDMA? Massive MIMO? Network slicing? No reason you should have. They are some of the radio tricks that got sold to you as 4G and 5G.<sup style="line-height:0;"><a class="inline" id="r1" href="#n1" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">1</a>, <a class="inline" id="r2" href="#n2" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">2</a></sup></p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Can you remember when your phone went from 3G to 4G? Did you start streaming video on the bus because of OFDMA? A lot changed, but nobody relates to the improvements in terms of their phone&#8217;s &#8216;G&#8217;-level. The phone that changed the most lives, the original iPhone, launched in 2007 on an upgraded 2G network.<sup style="line-height:0;"><a class="inline" id="r3" href="#n3" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">3</a></sup> What reached you was what got built on top, and what it cost.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">And the label was never solid. It covered whatever the people selling it needed it to cover. In 2010 the UN agency that sets the standards conceded that &#8220;4G&#8221;, &#8220;while undefined&#8221;, could cover networks that fell short of its own 4G spec.<sup style="line-height:0;"><a class="inline" id="r4" href="#n4" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">4</a></sup> In 2018 AT&amp;T started showing &#8220;5GE&#8221; on phones that were on 4G. An advertising watchdog recommended they drop the claim. The icon stayed.<sup style="line-height:0;"><a class="inline" id="r5" href="#n5" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">5</a></sup></p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Now, imagine your cell phone carrier selling you 6G, then 7G, then 8G, each on the same phone, each &#8220;the start of a new era&#8221;. (The first full 6G standard isn&#8217;t due until 2029.<sup style="line-height:0;"><a class="inline" id="r6" href="#n6" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">6</a></sup>) You would stop listening to the number and ask two things. What can I do now that I couldn&#8217;t before? And what does it cost?</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">AI has its own G. It&#8217;s called AGI, short for artificial general intelligence: the label for a machine that can do, roughly, whatever a person can. Like 4G, it gets announced. Like 4G, what it covers depends on who is selling.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">And the next number is already on the box. Superintelligence is the rung above: a machine that doesn&#8217;t match people but far outstrips the best of them. It has no agreed test either. In January 2025, before anyone agreed what AGI was, Sam Altman wrote that OpenAI was &#8220;beginning to turn our aim beyond that, to superintelligence&#8221;. Meta and Microsoft both set up superintelligence teams that year.<sup style="line-height:0;"><a class="inline" id="r7" href="#n7" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">7</a></sup></p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">The comparison has one weak point. Every G was a faster way of moving data. The case for AGI isn&#8217;t that it&#8217;s the next G, but the final one. In 1965 the mathematician I. J. Good wrote that &#8220;the first ultraintelligent machine is the last invention that man need ever make&#8221;.<sup style="line-height:0;"><a class="inline" id="r8" href="#n8" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">8</a></sup> If he is right, the two questions above aren&#8217;t enough. (Section 05 looks at whether progress is arriving as a jump or a climb.)</p>
+
+<h2 id="why" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);"><span style="display:block; font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:400; letter-spacing:0.14em; color:#b0463a; margin-bottom:10px;">WHY WE WROTE THIS</span>From prediction to announcement</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">For almost thirty years, AGI was a prediction. In 2026 it became an announcement. In March the head of Nvidia, which makes the chips these systems run on, said: &#8220;I think it&#8217;s now. I think we&#8217;ve achieved AGI.&#8221;<sup style="line-height:0;"><a class="inline" id="r9" href="#n9" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">9</a></sup> In September OpenAI&#8217;s president launched a model with &#8220;Welcome to the AGI era&#8221;.<sup style="line-height:0;"><a class="inline" id="r10" href="#n10" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">10</a></sup> Sam Altman says OpenAI will have &#8220;an internal system that we call AGI&#8221; by the end of the year.<sup style="line-height:0;"><a class="inline" id="r11" href="#n11" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">11</a></sup></p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Most of these declarations arrived as single lines in a podcast or a launch, with no definition attached. The explanations that do exist disagree. Google Cloud&#8217;s guide says &#8220;currently, true AGI does not exist&#8221;. IBM&#8217;s says &#8220;current LLMs are not considered AGI&#8221;.<sup style="line-height:0;"><a class="inline" id="r12" href="#n12" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">12</a></sup></p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">That is why we wrote this. The word is being announced more often, with more money behind it, and we had never heard it explained properly. Before long, another CEO or tech savant will make the AGI claim. When that happens, we hope to prepare you with the questions we think are most relevant: whose definition is this, what would prove it wrong, and what does it change for me?</p>
+
+<div style="border:1px solid rgba(28,20,15,0.14); border-radius:4px; padding:26px 28px; margin:34px 0;">
+  <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; color:#b0463a; margin-bottom:10px;">OUR POINT OF VIEW</div>
+  <p style="font-size:16px; line-height:1.65; color:#4a4034; margin:0;">An AGI announcement tells you which definition the speaker picked, and often what they sell. It doesn&#8217;t tell you what changed. We aren&#8217;t trying to make a claim on whether AGI is close, desirable, or possible, and where informed people disagree, we&#8217;ll say who and what they&#8217;re disagreeing about. Figures are current as of 27 October 2026, and every number is sourced at the end.</p>
+</div>
+
+<h2 id="origin" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);"><span style="display:block; font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:400; letter-spacing:0.14em; color:#b0463a; margin-bottom:10px;">01</span>Where the word came from</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">&#8220;Artificial general intelligence&#8221; first appeared in print in 1997, in a paper by the physicist Mark Gubrud, describing systems that could rival the human brain and be used anywhere a human mind would otherwise be needed.<sup style="line-height:0;"><a class="inline" id="r13" href="#n13" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">13</a></sup></p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">It was reinvented around 2001, when Ben Goertzel and Cassio Pennachin were stuck for a title for a book on human-level AI. Shane Legg, later a co-founder of DeepMind, suggested &#8220;artificial general intelligence&#8221;. The book came out in 2007 and the term spread. As Legg puts it, he didn&#8217;t invent it; he reinvented it.<sup style="line-height:0;"><a class="inline" id="r14" href="#n14" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">14</a></sup></p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Back then, &#8220;AI&#8221; meant systems that did exactly one thing: play chess, filter spam, score loan applications. That is <em>narrow</em> AI, and it is still most of the AI in use. AGI was the name for the alternative: one system that could turn its hand to anything.</p>
+
+<h2 id="definitions" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);"><span style="display:block; font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:400; letter-spacing:0.14em; color:#b0463a; margin-bottom:10px;">02</span>Five definitions of AGI, five different finish lines</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">There is no agreed definition, and at least five are in circulation. Ask each one what evidence would show AGI had arrived, and the five answers have almost nothing in common.</p>
+
+<div style="overflow-x:auto; margin:30px 0 32px;">
+  <table style="width:100%; min-width:560px; border-collapse:collapse; font-family:'Hanken Grotesk', sans-serif; font-size:15px;">
+    <thead>
+      <tr><th style="text-align:left; font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#8a7d68; padding:0 14px 10px; border-bottom:2px solid #1c1813; vertical-align:bottom;">The definition</th><th style="text-align:left; font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#8a7d68; padding:0 14px 10px; border-bottom:2px solid #1c1813; vertical-align:bottom;">Used by</th><th style="text-align:left; font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#8a7d68; padding:0 14px 10px; border-bottom:2px solid #1c1813; vertical-align:bottom;">What would count as proof</th></tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Systems that outperform humans at most economically valuable work</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">OpenAI&#8217;s founding charter<sup style="line-height:0;"><a class="inline" id="r15" href="#n15" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">15</a></sup></td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Employment and wage data</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Matching or beating human scores across a benchmark suite</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Benchmark developers</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">A test score</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Possessing reasoning, planning, memory and continual learning</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Most academic researchers</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">No agreed test exists</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">&#8220;A country of geniuses in a datacentre&#8221;</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Dario Amodei, Anthropic — who avoids the term AGI</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">The rate at which hard scientific problems get solved</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">A system generating a set level of cumulative profit</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">The OpenAI–Microsoft commercial agreement, until October 2025</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">An accounting statement</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">These aren&#8217;t five descriptions of one finish line. They are five different finish lines, with no reason to be crossed together, in order, or at all. A system could beat people at most paid work while remembering nothing between conversations. Another could plan, remember and learn, and still cost more per task than the person it would replace. The word implies a bundle. There is no evidence a bundle exists.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">The last row is not a joke. A profit threshold defining AGI sat in the contract between OpenAI and Microsoft, deciding when Microsoft&#8217;s rights to the technology would end.<sup style="line-height:0;"><a class="inline" id="r16" href="#n16" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">16</a></sup> In October 2025 they swapped it for an independent expert panel, which would have to confirm any AGI declaration.<sup style="line-height:0;"><a class="inline" id="r17" href="#n17" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">17</a></sup> In April 2026 they rewrote the deal again, so that the question no longer matters: Microsoft&#8217;s licence runs to 2032 regardless, and OpenAI&#8217;s payments to Microsoft run to 2030 &#8220;independent of OpenAI&#8217;s technology progress&#8221;. The announcement never mentions AGI. The Verge and others reported that the AGI clause was gone. Neither company has said so.<sup style="line-height:0;"><a class="inline" id="r18" href="#n18" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">18</a></sup></p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">None of the five definitions names a technology. AGI is defined by what a machine can do, not how it is built: Google DeepMind&#8217;s 2023 framework for tracking it makes &#8220;focus on capabilities, not processes&#8221; its first principle.<sup style="line-height:0;"><a class="inline" id="r19" href="#n19" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">19</a></sup></p>
+
+<h2 id="announcements" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);"><span style="display:block; font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:400; letter-spacing:0.14em; color:#b0463a; margin-bottom:10px;">03</span>How to read an AGI announcement</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Line up this year&#8217;s announcements and the problem is plain. Each is held up by its own yardstick. None can be checked against the others.</p>
+
+<div style="overflow-x:auto; margin:30px 0 32px;">
+  <table style="width:100%; min-width:680px; border-collapse:collapse; font-family:'Hanken Grotesk', sans-serif; font-size:15px;">
+    <thead>
+      <tr><th style="text-align:left; font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#8a7d68; padding:0 14px 10px; border-bottom:2px solid #1c1813; vertical-align:bottom;">Who</th><th style="text-align:left; font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#8a7d68; padding:0 14px 10px; border-bottom:2px solid #1c1813; vertical-align:bottom;">When</th><th style="text-align:left; font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#8a7d68; padding:0 14px 10px; border-bottom:2px solid #1c1813; vertical-align:bottom;">What they said</th><th style="text-align:left; font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#8a7d68; padding:0 14px 10px; border-bottom:2px solid #1c1813; vertical-align:bottom;">The yardstick they used</th></tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Four researchers, in <em>Nature</em></td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Feb 2026</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Today&#8217;s AI already has human-level intelligence: &#8220;the evidence is clear&#8221;<sup style="line-height:0;"><a class="inline" id="r20" href="#n20" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">20</a></sup></td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Broad, deep competence across many fields. Perfection and a human-like design not required.</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Jensen Huang, Nvidia</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Mar 2026</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">&#8220;I think it&#8217;s now. I think we&#8217;ve achieved AGI.&#8221;<sup style="line-height:0;"><a class="inline" href="#n9" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">9</a></sup></td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Not his own. His interviewer&#8217;s test: could an AI start and run a $1 billion tech company? Huang&#8217;s caveat: it wouldn&#8217;t have to last (&#8220;you didn&#8217;t say forever&#8221;).</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">OpenAI and Microsoft</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Apr 2026</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Rewrote their contract without mentioning AGI<sup style="line-height:0;"><a class="inline" href="#n18" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">18</a></sup></td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">None needed. The money now flows whatever anyone calls AGI: OpenAI&#8217;s payments continue &#8220;independent of OpenAI&#8217;s technology progress&#8221;.</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Sam Altman, OpenAI</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Aug 2026</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">OpenAI will have &#8220;an internal system that we call AGI&#8221; by the end of the year<sup style="line-height:0;"><a class="inline" href="#n11" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">11</a></sup></td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">None given. &#8220;That we call AGI&#8221; means OpenAI decides.</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Greg Brockman, OpenAI</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Sep 2026</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">&#8220;Welcome to the AGI era&#8221;<sup style="line-height:0;"><a class="inline" href="#n10" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">10</a></sup></td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">OpenAI&#8217;s charter: outperforming people at most economically valuable work. He said there was &#8220;no clearly defined AGI moment&#8221;.</td></tr>
+      <tr><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820; font-family:'Fraunces', Georgia, serif; font-size:16.5px; font-weight:500; color:#1c1813;">Demis Hassabis, Google DeepMind</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">Oct 2026</td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">AGI within two to three years, in the <em>Wall Street Journal</em>&#8216;s summary<sup style="line-height:0;"><a class="inline" id="r21" href="#n21" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">21</a></sup></td><td style="padding:14px; border-bottom:1px solid rgba(28,20,15,0.16); vertical-align:top; line-height:1.5; color:#2f2820;">His &#8220;Einstein test&#8221;: could a system trained only on knowledge up to 1901 come up with Einstein&#8217;s breakthroughs of 1905?</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Read down the last column: a research paper&#8217;s own standard, an interviewer&#8217;s off-the-cuff test, a contract that quietly stopped needing the word, a company&#8217;s name for its own system, a charter, a thought experiment. Nobody is lying. But no two of them are measuring the same thing.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">So when the next announcement comes, ask four things:</p>
+
+<ul style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px; padding-left:24px;">
+  <li style="margin:0 0 10px; padding-left:4px;"><strong>Whose definition?</strong> Which of the five in section 02, or a new one made up for the occasion?</li>
+  <li style="margin:0 0 10px; padding-left:4px;"><strong>What would prove it wrong?</strong> If nothing could, it is a slogan, not a finding.</li>
+  <li style="margin:0 0 10px; padding-left:4px;"><strong>What does the speaker sell?</strong> Chips, models, subscriptions, shares, or books. That doesn&#8217;t make them wrong. It tells you how hard to check.</li>
+  <li style="margin:0 0 10px; padding-left:4px;"><strong>What changed for you that day?</strong> If the honest answer is nothing, the announcement was about the word, not the world.</li>
+</ul>
+
+<h2 id="when" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);"><span style="display:block; font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:400; letter-spacing:0.14em; color:#b0463a; margin-bottom:10px;">04</span>When will AGI arrive?</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Ask when AGI arrives and you get answers from &#8220;already&#8221; to the next century.</p>
+
+<ul style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px; padding-left:24px;">
+  <li style="margin:0 0 10px; padding-left:4px;"><strong>Already here</strong>, say Jensen Huang (Nvidia) and Greg Brockman (OpenAI), each by a different yardstick.<sup style="line-height:0;"><a class="inline" href="#n9" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">9</a>, <a class="inline" href="#n10" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">10</a></sup></li>
+  <li style="margin:0 0 10px; padding-left:4px;"><strong>Dario Amodei</strong> (Anthropic): what he calls &#8220;powerful AI&#8221;, possibly as early as 2026–27.<sup style="line-height:0;"><a class="inline" id="r22" href="#n22" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">22</a></sup> In September he asked the industry to slow down.<sup style="line-height:0;"><a class="inline" id="r23" href="#n23" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">23</a></sup></li>
+  <li style="margin:0 0 10px; padding-left:4px;"><strong>Demis Hassabis</strong> (Google DeepMind): two to three years, according to an October <em>Wall Street Journal</em> profile, down from three to five earlier this year.<sup style="line-height:0;"><a class="inline" href="#n21" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">21</a></sup></li>
+  <li style="margin:0 0 10px; padding-left:4px;"><strong>Andrej Karpathy</strong> (formerly of OpenAI and Tesla): about a decade.<sup style="line-height:0;"><a class="inline" id="r24" href="#n24" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">24</a></sup></li>
+  <li style="margin:0 0 10px; padding-left:4px;"><strong>Yann LeCun</strong>, who shared computing&#8217;s top prize, the Turing Award, for the work behind modern AI: disputes the route, not just the date. Language models, he says, &#8220;are not a path to human-level intelligence&#8221;.<sup style="line-height:0;"><a class="inline" id="r25" href="#n25" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">25</a></sup></li>
+  <li style="margin:0 0 10px; padding-left:4px;"><strong>2,778 AI researchers</strong>, surveyed in 2023: a 50% chance by 2047 that machines can outperform humans at every task.<sup style="line-height:0;"><a class="inline" id="r26" href="#n26" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">26</a></sup><span style="display:block; font-size:16px; line-height:1.7; color:#4a4034; margin-top:8px;">(The same researchers were asked when every job could be fully automated. Their answer: 50% by <strong>2116</strong>.<sup style="line-height:0;"><a class="inline" id="r27" href="#n27" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">27</a></sup> That is sixty-nine years between the capability and the consequence.)</span></li>
+</ul>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Anyone quoting &#8220;what AI researchers think about AGI&#8221; is choosing which number to use.</p>
+
+<h2 id="slope" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);"><span style="display:block; font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:400; letter-spacing:0.14em; color:#b0463a; margin-bottom:10px;">05</span>Slope or step?</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Under every forecast sits one question: does progress come as a slope or a step? A step means there could be a moment worth announcing. A slope means every announcement is someone choosing where to draw a line.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong>The case for a step.</strong> In 2022 Jason Wei and colleagues argued that language models show &#8220;emergent abilities&#8221;: skills absent in smaller models that appear suddenly once a model is big enough.<sup style="line-height:0;"><a class="inline" id="r28" href="#n28" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">28</a></sup></p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong>The case for a slope.</strong> In 2023 Rylan Schaeffer, Brando Miranda and Sanmi Koyejo showed the jumps were mostly an artifact of scoring. Grade on a sliding scale instead of pass-or-fail and they smooth out. No cliffs, just badly chosen rulers.<sup style="line-height:0;"><a class="inline" id="r29" href="#n29" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">29</a></sup></p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">The steadiest measurement points the same way. A research group called METR gives AI systems real software jobs and asks how big a job the AI can finish on its own. &#8220;Big&#8221; means how long the job takes a skilled person, and a size counts if the AI succeeds at least half the time. That size has doubled roughly every four months since 2023. By spring 2026 the best system tested could handle jobs that take a person 16 hours or more, the limit of what the tests can reliably measure.<sup style="line-height:0;"><a class="inline" id="r30" href="#n30" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">30</a>, <a class="inline" id="r31" href="#n31" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">31</a></sup> Fast, but a curve, not a cliff, and only for software.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong>The case for a step still to come.</strong> Nearly all this evidence comes from one design: the language models behind today&#8217;s chatbots. Yann LeCun and others argue a real jump would come from something else, &#8220;world models&#8221; that learn how the physical world works from video. LeCun&#8217;s company AMI Labs raised $1.03 billion this year to build them.<sup style="line-height:0;"><a class="inline" id="r32" href="#n32" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">32</a></sup></p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">For now, the people best placed to announce a moment are describing a slope. Brockman, launching what he called the start of the AGI era, said AGI had arrived &#8220;in bits and pieces&#8221;.<sup style="line-height:0;"><a class="inline" href="#n10" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">10</a></sup></p>
+
+<h2 id="sticks" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);"><span style="display:block; font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:400; letter-spacing:0.14em; color:#b0463a; margin-bottom:10px;">06</span>Why the word sticks</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">If AGI is this slippery, why does the word stick? Three reasons.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong>Its vagueness is useful.</strong> Sam Altman calls AGI &#8220;not a super useful term&#8221; because everyone defines it differently,<sup style="line-height:0;"><a class="inline" id="r33" href="#n33" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">33</a></sup> while running the company built around it. That isn&#8217;t hypocrisy. It is room to manoeuvre.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong>There is always a bigger word.</strong> Before anyone agreed on AGI, the industry had moved on to &#8220;superintelligence&#8221;. Like 6G before anyone has finished with 5G, the label keeps running ahead of the thing.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;"><strong>It can&#8217;t be settled.</strong> No experiment resolves it and no date falsifies it, because the definition moves. A question that can be answered gets one article. A question that can&#8217;t gets a permanent industry.</p>
+
+<h2 id="stakes" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);"><span style="display:block; font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:400; letter-spacing:0.14em; color:#b0463a; margin-bottom:10px;">07</span>What&#8217;s at stake</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">One number explains the attention and the money: people around the world are paid more than $60 trillion a year for their work.<sup style="line-height:0;"><a class="inline" id="r34" href="#n34" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">34</a></sup> A technology with a credible claim on a slice of that has no precedent.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">The boldest specific promise is Dario Amodei&#8217;s. His argument: biology is held back mainly by a shortage of brilliant researchers. AI could supply millions of them, and squeeze fifty to a hundred years of progress into five or ten.<sup style="line-height:0;"><a class="inline" href="#n22" style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; font-weight:600; color:#b0463a; text-decoration:none;">22</a></sup></p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">The strongest objection is one Amodei raises himself: thinking is not the only bottleneck. Experiments and drug trials run at the speed of the physical world, and a faster researcher doesn&#8217;t shorten a drug trial. That is why his figure is five to ten years, not one. Critics think even that is too fast.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Promise and objection alike are about systems that don&#8217;t exist yet. For what AI is already doing to jobs, read <strong>It&#8217;s Not How Smart AI Gets. It&#8217;s How Cheap.</strong></p>
+
+<h2 id="conscious" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);"><span style="display:block; font-family:'Hanken Grotesk', sans-serif; font-size:12px; font-weight:400; letter-spacing:0.14em; color:#b0463a; margin-bottom:10px;">08</span>And no, it&#8217;s not the same as conscious AI</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">AGI is about what a system can do. Consciousness is about whether anything is felt. None of the five definitions mentions it, and a system could meet all of them and feel nothing. Whether today&#8217;s AI feels anything is a separate argument with no agreed test. We cover it in <a class="inline" href="ai-isnt-suffering.html" style="color:#b0463a; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px;"><em>The AI isn&#8217;t suffering</em></a> and in <strong>It Could Kill You. It Might Have Feelings. You&#8217;re Still Not the Main Character.</strong></p>
+
+<h2 id="takeaway" class="art-section" style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.4vw,38px); line-height:1.15; letter-spacing:-0.02em; margin:48px 0 18px; padding-top:30px; border-top:1px solid rgba(28,20,15,0.16);">So what should you take from all this?</h2>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">Treat the next AGI announcement the way you&#8217;d treat a carrier announcing 8G. Don&#8217;t argue about the number. Ask whose definition it is, what would prove it wrong, what the speaker sells, and what you can do today that you couldn&#8217;t yesterday.</p>
+
+<p style="font-size:18px; line-height:1.75; color:#2f2820; margin:0 0 22px;">If AGI does turn out to be the last G, you won&#8217;t learn it from an announcement. You&#8217;ll see it in what machines do, and what that costs.</p>
+
+<p style="font-size:16px; line-height:1.7; font-style:italic; color:#8a7d68; margin:0 0 22px; margin-top:36px;">New to all this? Start with <a class="inline" href="start-here.html" style="color:#b0463a; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; font-style:normal;">You&#8217;re Not Behind.</a> For what AI is actually changing, read It&#8217;s Not How Smart AI Gets. It&#8217;s How Cheap.</p>
+
+      <!-- SOURCES -->
+      <div id="sources" style="border-top:1px solid rgba(28,20,15,0.16); margin-top:44px; padding-top:26px;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.16em; color:#8a7d68; margin-bottom:14px;">SOURCES &amp; FURTHER READING</div>
+        <p style="font-size:14px; line-height:1.8; color:#8a7d68; margin:0 0 16px;">Every figure above, with a link where one exists. Where a number is guidance, an estimate or a projection rather than an outturn, it is said so.</p>
+        <ol style="font-size:13.5px; line-height:1.7; color:#8a7d68; margin:0; padding-left:24px;">
+          <li id="n1" style="margin:0 0 10px; padding-left:4px;">4G. OFDMA (orthogonal frequency-division multiple access) splits a radio channel into many narrow sub-channels shared among users; it is how LTE sends data to phones. The Evolved Packet Core is LTE&#8217;s all-packet network: the separate circuit-switched network for phone calls was dropped and calls travel as data (VoLTE), though many early LTE networks handed calls back to 3G. IMT-Advanced is the International Telecommunication Union&#8217;s 4G specification, which set peak-speed requirements of 100 Mbit/s for high mobility and 1 Gbit/s for low mobility. The first public LTE service opened in Stockholm and Oslo on 14 December 2009. Summary with sources — <a class="inline" href="https://en.wikipedia.org/wiki/4G" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://en.wikipedia.org/wiki/4G</a> <a class="inline" href="#r1" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n2" style="margin:0 0 10px; padding-left:4px;">5G. Massive MIMO uses large arrays of antennas to serve many users at once; beamforming steers the signal towards each user rather than broadcasting it in every direction; network slicing runs several virtual networks with different guarantees over one physical network; edge computing puts servers near the base station to cut delay. The ITU&#8217;s IMT-2020 specification targets peak speeds of 20 Gbit/s down and 10 Gbit/s up. South Korea launched the first national commercial 5G network on 3 April 2019. In the US, the 2021 C-band spectrum auction for 5G raised more than $81 billion. Summary with sources — <a class="inline" href="https://en.wikipedia.org/wiki/5G" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://en.wikipedia.org/wiki/5G</a> <a class="inline" href="#r2" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n3" style="margin:0 0 10px; padding-left:4px;">Apple, &#8220;Apple Introduces the New iPhone 3G,&#8221; 9 June 2008: &#8220;3G networking that is twice as fast as the first generation iPhone&#8221; (footnote: &#8220;based on 3G and EDGE testing&#8221;); on sale in the US from 11 July 2008 — <a class="inline" href="https://www.apple.com/newsroom/2008/06/09Apple-Introduces-the-New-iPhone-3G/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://www.apple.com/newsroom/2008/06/09Apple-Introduces-the-New-iPhone-3G/</a>. The original iPhone went on sale in the US on 29 June 2007 and supported EDGE, not 3G. <a class="inline" href="#r3" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n4" style="margin:0 0 10px; padding-left:4px;">ITU press release, 6 December 2010: IMT-Advanced is considered &#8220;4G&#8221;, although &#8220;this term, while undefined, may also be applied to the forerunners of these technologies, LTE and WiMax, and to other evolved 3G technologies.&#8221; Reported at <a class="inline" href="https://www.networkworld.com/article/717209/wireless-itu-softens-on-the-definition-of-4g-mobile.html" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://www.networkworld.com/article/717209/wireless-itu-softens-on-the-definition-of-4g-mobile.html</a>. In January 2012 the ITU named LTE-Advanced and WirelessMAN-Advanced (WiMAX 2) as the technologies that met its 4G specification. <a class="inline" href="#r4" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n5" style="margin:0 0 10px; padding-left:4px;">AT&amp;T introduced &#8220;5G Evolution&#8221; branding for upgraded LTE in 2017 and began showing a &#8220;5GE&#8221; icon on phones in late 2018. Sprint sued in 2019; the case settled confidentially. In May 2020 the National Advertising Review Board recommended that AT&amp;T stop its &#8220;5G Evolution&#8221; claims; AT&amp;T said it disagreed but would comply, and the icon stayed on phones — <a class="inline" href="https://www.theregister.com/2020/05/21/att_slapped_down_for_its" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://www.theregister.com/2020/05/21/att_slapped_down_for_its</a> and <a class="inline" href="https://en.wikipedia.org/wiki/5G" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://en.wikipedia.org/wiki/5G</a> <a class="inline" href="#r5" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n6" style="margin:0 0 10px; padding-left:4px;">3GPP, the industry body that writes mobile standards, set timelines in June 2026 for Release 21, the first 6G specifications, with the final freeze due in March 2029 — <a class="inline" href="https://techblog.comsoc.org/2026/06/16/3gpp-approves-timelines-for-release-21-which-will-specify-6g-ran-and-5g-advanced/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://techblog.comsoc.org/2026/06/16/3gpp-approves-timelines-for-release-21-which-will-specify-6g-ran-and-5g-advanced/</a>. The ITU&#8217;s framework for 6G is IMT-2030. Commercial networks are generally expected around 2030. <a class="inline" href="#r6" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n7" style="margin:0 0 10px; padding-left:4px;">Sam Altman, &#8220;Reflections,&#8221; 5 January 2025: &#8220;We are now confident we know how to build AGI as we have traditionally understood it… We are beginning to turn our aim beyond that, to superintelligence in the true sense of the word&#8221; — <a class="inline" href="https://blog.samaltman.com/reflections" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://blog.samaltman.com/reflections</a>. Mark Zuckerberg&#8217;s memo creating Meta Superintelligence Labs, 30 June 2025: &#8220;developing superintelligence is coming into sight&#8221; — <a class="inline" href="https://www.nbcnewyork.com/news/business/money-report/mark-zuckerberg-announces-creation-of-meta-superintelligence-labs-read-the-memo/6320911/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://www.nbcnewyork.com/news/business/money-report/mark-zuckerberg-announces-creation-of-meta-superintelligence-labs-read-the-memo/6320911/</a>. Microsoft AI&#8217;s MAI Superintelligence Team, led by Mustafa Suleyman, announced 6 November 2025 — <a class="inline" href="https://fortune.com/2025/11/06/microsoft-launches-new-ai-humanist-superinteligence-team-mustafa-suleyman-openai" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://fortune.com/2025/11/06/microsoft-launches-new-ai-humanist-superinteligence-team-mustafa-suleyman-openai</a> <a class="inline" href="#r7" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n8" style="margin:0 0 10px; padding-left:4px;">I. J. Good, &#8220;Speculations Concerning the First Ultraintelligent Machine,&#8221; <em>Advances in Computers</em>, Vol. 6 (1965): &#8220;the first ultraintelligent machine is the last invention that man need ever make, provided that the machine is docile enough to tell us how to keep it under control.&#8221; <a class="inline" href="#r8" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n9" style="margin:0 0 10px; padding-left:4px;">Jensen Huang on the Lex Fridman Podcast, released 22 March 2026: &#8220;I think it&#8217;s now. I think we&#8217;ve achieved AGI.&#8221; Fridman&#8217;s working definition was a system that could start, grow and run a technology company worth more than $1 billion; Huang added that many AI agents fade after a few months and that the odds of 100,000 of them building Nvidia were zero — <a class="inline" href="https://www.techspot.com/news/111797-weve-achieved-agi-nvidia-ceo-but-own-examples.html" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://www.techspot.com/news/111797-weve-achieved-agi-nvidia-ceo-but-own-examples.html</a>. He repeated the claim on Nvidia&#8217;s earnings call on 26 August 2026 (&#8220;for many tasks&#8221;) and on X on 6 September, after GPT-6 Astra&#8217;s launch — <a class="inline" href="https://www.techspot.com/news/113778-jensen-huang-declares-agi-has-arrived-again-again.html" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://www.techspot.com/news/113778-jensen-huang-declares-agi-has-arrived-again-again.html</a> <a class="inline" href="#r9" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n10" style="margin:0 0 10px; padding-left:4px;">Fortune, 3 September 2026: Brockman called GPT-6 Astra &#8220;the start of the &#8216;AGI era&#8217;,&#8221; said &#8220;it&#8217;s not unreasonable to feel that we are now in the AGI era,&#8221; and said AGI had arrived &#8220;in bits and pieces&#8221; rather than in one moment — <a class="inline" href="https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/</a>. The Decoder reports him closing the briefing with &#8220;Welcome to the AGI era&#8221; and acknowledging &#8220;there&#8217;s no clearly defined AGI moment&#8221; — <a class="inline" href="https://the-decoder.com/gpt-6-astra-is-the-first-model-making-openai-willing-to-declare-the-agi-era/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://the-decoder.com/gpt-6-astra-is-the-first-model-making-openai-willing-to-declare-the-agi-era/</a>. Neither reports a formal declaration of AGI by OpenAI. <a class="inline" href="#r10" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n11" style="margin:0 0 10px; padding-left:4px;">Sam Altman, interview with TIME, 26 August 2026: &#8220;by the end of 2026, we will have an internal system that we call AGI.&#8221; As relayed by GIGAZINE, 27 August 2026 — <a class="inline" href="https://gigazine.net/gsc_news/en/20260827-openai-agi/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://gigazine.net/gsc_news/en/20260827-openai-agi/</a>. Check against TIME before quoting elsewhere. <a class="inline" href="#r11" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n12" style="margin:0 0 10px; padding-left:4px;">Google Cloud&#8217;s explainer on AGI, last updated 14 January 2026: &#8220;Currently, true AGI does not exist, but research and development efforts are ongoing&#8221; — <a class="inline" href="https://cloud.google.com/discover/what-is-artificial-general-intelligence" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://cloud.google.com/discover/what-is-artificial-general-intelligence</a>. IBM&#8217;s explainer, published 17 September 2024 and updated 14 July 2026: AGI is &#8220;a hypothetical stage in the development of machine learning&#8221;; &#8220;current LLMs are not considered AGI&#8221;; and there is &#8220;no consensus within the academic community regarding exactly what would qualify as AGI&#8221; — <a class="inline" href="https://www.ibm.com/think/topics/artificial-general-intelligence" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://www.ibm.com/think/topics/artificial-general-intelligence</a> <a class="inline" href="#r12" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n13" style="margin:0 0 10px; padding-left:4px;">Mark Gubrud, &#8220;Nanotechnology and International Security,&#8221; Fifth Foresight Conference on Molecular Nanotechnology, November 1997. Earliest known printed use of the phrase. <a class="inline" href="#r13" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n14" style="margin:0 0 10px; padding-left:4px;">Ben Goertzel, &#8220;Artificial General Intelligence: Concept, State of the Art, and Future Prospects,&#8221; <em>Journal of Artificial General Intelligence</em> (2014), which records the naming history. Goertzel &amp; Pennachin (eds.), <em>Artificial General Intelligence</em>, Springer, 2007. Shane Legg has publicly said he reinvented rather than invented the term. <a class="inline" href="#r14" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n15" style="margin:0 0 10px; padding-left:4px;">OpenAI Charter — <a class="inline" href="https://openai.com/charter" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://openai.com/charter</a> <a class="inline" href="#r15" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n16" style="margin:0 0 10px; padding-left:4px;">The profit-threshold definition appeared in the OpenAI–Microsoft commercial agreement, where it governed the expiry of Microsoft&#8217;s rights. It was reported by The Information in December 2024 as a threshold of about $100 billion in profits; neither company confirmed the figure publicly. <a class="inline" href="#r16" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n17" style="margin:0 0 10px; padding-left:4px;">Microsoft and OpenAI, joint announcement of a new definitive agreement, 28 October 2025: once OpenAI declares AGI, the declaration is verified by an independent expert panel; Microsoft&#8217;s IP rights for models and products extend through 2032 and include post-AGI models; Microsoft may now pursue AGI independently. Microsoft holds roughly 27% of the recapitalised OpenAI. Reported at <a class="inline" href="https://www.techradar.com/ai-platforms-assistants/chatgpt/microsoft-says-once-agi-is-declared-by-openai-it-will-be-verified-by-independent-experts-heres-why-thats-a-big-deal" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://www.techradar.com/ai-platforms-assistants/chatgpt/microsoft-says-once-agi-is-declared-by-openai-it-will-be-verified-by-independent-experts-heres-why-thats-a-big-deal</a> and <a class="inline" href="https://ppc.land/microsoft-and-openai-restructure-partnership-with-new-governance-framework/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://ppc.land/microsoft-and-openai-restructure-partnership-with-new-governance-framework/</a> <a class="inline" href="#r17" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n18" style="margin:0 0 10px; padding-left:4px;">Microsoft, &#8220;The next phase of the Microsoft-OpenAI partnership,&#8221; 27 April 2026: Microsoft&#8217;s licence to OpenAI IP for models and products runs through 2032 and is now non-exclusive; Microsoft no longer pays OpenAI a revenue share; OpenAI&#8217;s revenue-share payments to Microsoft &#8220;continue through 2030, independent of OpenAI&#8217;s technology progress,&#8221; subject to a total cap — <a class="inline" href="https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/</a>. The announcement does not mention AGI. The Verge (&#8220;The AGI clause is dead&#8221;), The Information and The Decoder reported that the AGI clause had been dropped — <a class="inline" href="https://the-decoder.com/openai-and-microsoft-rewrite-their-deal-no-more-exclusivity-no-more-agi-clause/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://the-decoder.com/openai-and-microsoft-rewrite-their-deal-no-more-exclusivity-no-more-agi-clause/</a> and <a class="inline" href="https://simonwillison.net/2026/Apr/27/now-deceased-agi-clause/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://simonwillison.net/2026/Apr/27/now-deceased-agi-clause/</a>. In February 2026 the two companies had said &#8220;AGI definition and processes are unchanged.&#8221; <a class="inline" href="#r18" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n19" style="margin:0 0 10px; padding-left:4px;">Meredith Ringel Morris, Jascha Sohl-Dickstein, Noah Fiedel and others, including Shane Legg, &#8220;Levels of AGI for Operationalizing Progress on the Path to AGI,&#8221; <a class="inline" href="https://arxiv.org/abs/2311.02462" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">arXiv:2311.02462</a> (November 2023; revised September 2025). The first of its six principles is &#8220;Focus on Capabilities, not Processes&#8221;: &#8220;AGI systems need not necessarily think or understand in a human-like way&#8221; — <a class="inline" href="https://arxiv.org/abs/2311.02462" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://arxiv.org/abs/2311.02462</a>. OpenAI&#8217;s charter was published in April 2018; its first GPT paper followed in June 2018. <a class="inline" href="#r19" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n20" style="margin:0 0 10px; padding-left:4px;">Eddy Keming Chen, Mikhail Belkin, Leon Bergen and David Danks, &#8220;Does AI already have human-level intelligence? The evidence is clear,&#8221; <em>Nature</em> 650, 36–40 (2 February 2026) — <a class="inline" href="https://www.nature.com/articles/d41586-026-00285-6" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://www.nature.com/articles/d41586-026-00285-6</a>. Its yardstick is breadth and depth of competence across domains, not perfection, universal mastery or a human-like design. UC San Diego summary: &#8220;by reasonable standards, current large language models (LLMs) already constitute AGI&#8221; — <a class="inline" href="https://today.ucsd.edu/story/is-artificial-general-intelligence-here" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://today.ucsd.edu/story/is-artificial-general-intelligence-here</a> <a class="inline" href="#r20" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n21" style="margin:0 0 10px; padding-left:4px;">Hassabis gave a five-to-ten-year range in several 2024 and 2025 interviews, usually summarised as &#8220;around 2030.&#8221; A <em>Wall Street Journal</em> profile by Ben Cohen, 21 October 2026, reports that he now expects AGI within two to three years, down from three to five earlier in 2026; the two-to-three-year figure is the Journal&#8217;s paraphrase, not a direct quote. The same profile describes his &#8220;Einstein test&#8221;: whether &#8220;a system trained only on human knowledge up to 1901&#8221; could &#8220;produce Einstein&#8217;s work from the annus mirabilis of 1905.&#8221; <a class="inline" href="https://www.wsj.com/tech/ai/demis-hassabis-ai-deepmind-google-isomorphic-2b4e3153" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://www.wsj.com/tech/ai/demis-hassabis-ai-deepmind-google-isomorphic-2b4e3153</a>, relayed at <a class="inline" href="https://aiweekly.co/alerts/hassabis-trims-agi-window-to-two-to-three-years-in-wsj-profile" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://aiweekly.co/alerts/hassabis-trims-agi-window-to-two-to-three-years-in-wsj-profile</a>. Check the original before quoting. <a class="inline" href="#r21" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n22" style="margin:0 0 10px; padding-left:4px;">Dario Amodei, &#8220;Machines of Loving Grace,&#8221; October 2024 — <a class="inline" href="https://www.darioamodei.com/essay/machines-of-loving-grace" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://www.darioamodei.com/essay/machines-of-loving-grace</a>. The essay contains the compressed-progress claim, the &#8220;millions of instances&#8221; figure, the disease and mental-health claims, the growth claims, and Amodei&#8217;s own statement that concentration of power is among his central concerns. It also names the speed of physical experiments and clinical trials as limits, which is why it argues for 50–100 years of progress in 5–10 rather than in one. He has separately given 2026–27 as a possible date for what he calls powerful AI. <a class="inline" href="#r22" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n23" style="margin:0 0 10px; padding-left:4px;">Dario Amodei, &#8220;We Must Pace the Frontier,&#8221; 12 September 2026, darioamodei.com. Sam Altman and Elon Musk publicly endorsed the call. Summary and links: <a class="inline" href="https://rits.shanghai.nyu.edu/ai/amodei-calls-to-pace-the-frontier-altman-and-musk-agree/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://rits.shanghai.nyu.edu/ai/amodei-calls-to-pace-the-frontier-altman-and-musk-agree/</a> <a class="inline" href="#r23" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n24" style="margin:0 0 10px; padding-left:4px;">Karpathy has publicly put the date about a decade out, notably in a widely circulated October 2025 podcast interview. <a class="inline" href="#r24" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n25" style="margin:0 0 10px; padding-left:4px;">Euronews, 20 November 2025, reporting Yann LeCun&#8217;s announcement that he would leave Meta at the end of 2025 to found a start-up building world models: language models &#8220;are not a path to human-level intelligence&#8221; — <a class="inline" href="https://euronews.com/next/2025/11/20/french-godfather-of-ai-yann-lecun-confirms-he-is-leaving-meta-to-launch-ai-start-up" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://euronews.com/next/2025/11/20/french-godfather-of-ai-yann-lecun-confirms-he-is-leaving-meta-to-launch-ai-start-up</a>. AMI Labs&#8217; funding is in the note on world models. <a class="inline" href="#r25" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n26" style="margin:0 0 10px; padding-left:4px;">Grace, Stewart, Sandkühler, Thomas, Weinstein-Raun, Brauner et al., &#8220;Thousands of AI Authors on the Future of AI.&#8221; Survey conducted October 2023; n = 2,778. Published in the <em>Journal of Artificial Intelligence Research</em>, Vol. 84 (2025), doi:10.1613/jair.1.19087. Preprint — <a class="inline" href="https://arxiv.org/abs/2401.02843" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://arxiv.org/abs/2401.02843</a>. Note that the widely circulated figure of &#8220;50% by 2040&#8221; for this survey is incorrect. <a class="inline" href="#r26" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n27" style="margin:0 0 10px; padding-left:4px;">Same source as the previous note. The paper labels the first framing High-Level Machine Intelligence (tasks) and the second Full Automation of Labor (occupations), and explicitly discusses the gap between them. Both figures are aggregate medians, and both moved earlier between the 2022 and 2023 surveys. <a class="inline" href="#r27" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n28" style="margin:0 0 10px; padding-left:4px;">Jason Wei et al., &#8220;Emergent Abilities of Large Language Models,&#8221; <em>Transactions on Machine Learning Research</em> (2022), <a class="inline" href="https://arxiv.org/abs/2206.07682" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">arXiv:2206.07682</a> — <a class="inline" href="https://arxiv.org/abs/2206.07682" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://arxiv.org/abs/2206.07682</a> <a class="inline" href="#r28" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n29" style="margin:0 0 10px; padding-left:4px;">Rylan Schaeffer, Brando Miranda and Sanmi Koyejo, &#8220;Are Emergent Abilities of Large Language Models a Mirage?&#8221; NeurIPS 2023 (Outstanding Paper Award), <a class="inline" href="https://arxiv.org/abs/2304.15004" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">arXiv:2304.15004</a> — <a class="inline" href="https://arxiv.org/abs/2304.15004" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://arxiv.org/abs/2304.15004</a> <a class="inline" href="#r29" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n30" style="margin:0 0 10px; padding-left:4px;">Kwa et al., &#8220;Measuring AI Ability to Complete Long Software Tasks,&#8221; <a class="inline" href="https://arxiv.org/abs/2503.14499" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">arXiv:2503.14499</a> (2025) — <a class="inline" href="https://arxiv.org/abs/2503.14499" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://arxiv.org/abs/2503.14499</a> and <a class="inline" href="https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/</a>. The authors discuss external-validity limits directly. <a class="inline" href="#r30" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n31" style="margin:0 0 10px; padding-left:4px;">METR, Time Horizon 1.1 (January 2026), which added longer tasks and removed flawed ones: post-2023 doubling time about 131 days. On that measure Claude Opus 4.6 (February 2026) was estimated at about 12 hours at 50% reliability, and an early version of Claude Mythos Preview (April 2026) at &#8220;likely at least 16 hours&#8221;; METR says measurements above 16 hours are unreliable with its current task suite. Summary of METR&#8217;s published estimates: <a class="inline" href="https://en.wikipedia.org/wiki/METR" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://en.wikipedia.org/wiki/METR</a>. Versions 1.0 and 1.1 are different measurements; state which one when quoting. <a class="inline" href="#r31" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n32" style="margin:0 0 10px; padding-left:4px;">Meta FAIR, &#8220;V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning,&#8221; <a class="inline" href="https://arxiv.org/abs/2506.09985" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">arXiv:2506.09985</a> (June 2025) — <a class="inline" href="https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/</a>. Yann LeCun&#8217;s company AMI Labs raised $1.03 billion in March 2026 to build world models — <a class="inline" href="https://siliconangle.com/2026/03/10/yann-lecuns-new-startup-ami-labs-raises-1-03b-train-world-models/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://siliconangle.com/2026/03/10/yann-lecuns-new-startup-ami-labs-raises-1-03b-train-world-models/</a>. Google DeepMind, &#8220;Genie 3: A new frontier for world models,&#8221; 5 August 2025, describing &#8220;a general purpose world model&#8221; — <a class="inline" href="https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/</a> <a class="inline" href="#r32" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n33" style="margin:0 0 10px; padding-left:4px;">Altman has made the &#8220;not a super useful term&#8221; remark in several 2025 interviews and public appearances. <a class="inline" href="#r33" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+          <li id="n34" style="margin:0 0 10px; padding-left:4px;">International Labour Organization, <em>Employment and Social Trends 2026</em> (January 2026): global labour income share 52.6% in 2025, below its 2019 level (the September 2024 update gave 52.4% for 2024). Summary: <a class="inline" href="https://www.drishtiias.com/daily-updates/daily-news-analysis/employment-and-social-trends-2026-report/print_manually" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://www.drishtiias.com/daily-updates/daily-news-analysis/employment-and-social-trends-2026-report/print_manually</a>; check against the ILO report. Applied to world GDP of about $128 trillion in 2026 (IMF <em>World Economic Outlook</em>, October 2026, as tabulated at <a class="inline" href="https://www.visualcapitalist.com/the-128-trillion-global-economy-in-2026/" style="color:#8a7d68; text-decoration:underline; text-underline-offset:2px; overflow-wrap:anywhere;">https://www.visualcapitalist.com/the-128-trillion-global-economy-in-2026/</a>), that is roughly $67 trillion; the text says &#8220;more than $60 trillion&#8221;. An approximation, not an ILO or IMF figure. <a class="inline" href="#r34" style="color:#b0463a; text-decoration:none;" aria-label="Back to text">↩</a></li>
+        </ol>
+        <p style="font-size:13px; line-height:1.6; font-style:italic; color:#8a7d68; margin:14px 0 0;">Figures current as of 27 October 2026.</p>
+      </div>
+
+      <!-- ARTICLE FOOTER / CTA -->
+      <div style="border-top:1px solid rgba(28,20,15,0.16); margin-top:44px; padding-top:32px;">
+        <a class="ctacard" href="how.html" style="display:flex; align-items:center; justify-content:space-between; gap:24px; padding:30px 32px; background:#1c1813; color:#ece4d4; border-radius:4px;">
+          <div>
+            <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.16em; color:#8a7d68; margin-bottom:8px;">PUT IT TO WORK</div>
+            <span style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px;">See what we&#8217;re building next</span>
+          </div>
+          <span style="font-size:26px; color:#b0463a;">→</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- STICKY RAIL -->
+    <aside class="rail" style="position:sticky; top:100px; display:flex; flex-direction:column; gap:28px;">
+
+      <!-- CONTENTS -->
+      <div style="border:1px solid rgba(28,20,15,0.14); border-radius:4px; padding:22px 22px 24px; background:#ece4d4;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#8a7d68; margin-bottom:14px;">IN THIS PIECE</div>
+        <div style="display:flex; flex-direction:column; gap:11px;">
+          <a class="toclink" href="#phone" style="display:flex; gap:10px; font-size:14px; line-height:1.35; color:#4a4034;"><span style="flex:none; width:18px; color:#8a7d68;">·</span><span>A question about your phone</span></a>
+          <a class="toclink" href="#why" style="display:flex; gap:10px; font-size:14px; line-height:1.35; color:#4a4034;"><span style="flex:none; width:18px; color:#8a7d68;">·</span><span>From prediction to announcement</span></a>
+          <a class="toclink" href="#origin" style="display:flex; gap:10px; font-size:14px; line-height:1.35; color:#4a4034;"><span style="flex:none; width:18px; color:#8a7d68;">01</span><span>Where the word came from</span></a>
+          <a class="toclink" href="#definitions" style="display:flex; gap:10px; font-size:14px; line-height:1.35; color:#4a4034;"><span style="flex:none; width:18px; color:#8a7d68;">02</span><span>Five definitions, five finish lines</span></a>
+          <a class="toclink" href="#announcements" style="display:flex; gap:10px; font-size:14px; line-height:1.35; color:#4a4034;"><span style="flex:none; width:18px; color:#8a7d68;">03</span><span>How to read an announcement</span></a>
+          <a class="toclink" href="#when" style="display:flex; gap:10px; font-size:14px; line-height:1.35; color:#4a4034;"><span style="flex:none; width:18px; color:#8a7d68;">04</span><span>When will AGI arrive?</span></a>
+          <a class="toclink" href="#slope" style="display:flex; gap:10px; font-size:14px; line-height:1.35; color:#4a4034;"><span style="flex:none; width:18px; color:#8a7d68;">05</span><span>Slope or step?</span></a>
+          <a class="toclink" href="#sticks" style="display:flex; gap:10px; font-size:14px; line-height:1.35; color:#4a4034;"><span style="flex:none; width:18px; color:#8a7d68;">06</span><span>Why the word sticks</span></a>
+          <a class="toclink" href="#stakes" style="display:flex; gap:10px; font-size:14px; line-height:1.35; color:#4a4034;"><span style="flex:none; width:18px; color:#8a7d68;">07</span><span>What&#8217;s at stake</span></a>
+          <a class="toclink" href="#conscious" style="display:flex; gap:10px; font-size:14px; line-height:1.35; color:#4a4034;"><span style="flex:none; width:18px; color:#8a7d68;">08</span><span>Not the same as conscious AI</span></a>
+          <a class="toclink" href="#takeaway" style="display:flex; gap:10px; font-size:14px; line-height:1.35; color:#4a4034;"><span style="flex:none; width:18px; color:#8a7d68;">·</span><span>What to take from this</span></a>
+        </div>
+      </div>
+
+      <!-- KEY POINTS -->
+      <div style="border:1px solid rgba(28,20,15,0.14); border-radius:4px; padding:22px 22px 24px;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#b0463a; margin-bottom:16px;">KEY POINTS</div>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <div style="display:flex; gap:12px;">
+            <span style="font-family:'Fraunces', Georgia, serif; font-size:18px; color:#b0463a; line-height:1.3; flex:none;">1</span>
+            <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0;">AGI has no agreed definition. At least five are in use, and they describe five different finish lines.</p>
+          </div>
+          <div style="display:flex; gap:12px;">
+            <span style="font-family:'Fraunces', Georgia, serif; font-size:18px; color:#b0463a; line-height:1.3; flex:none;">2</span>
+            <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0;">This year&#8217;s announcements each used a different yardstick, so none can be checked against the others.</p>
+          </div>
+          <div style="display:flex; gap:12px;">
+            <span style="font-family:'Fraunces', Georgia, serif; font-size:18px; color:#b0463a; line-height:1.3; flex:none;">3</span>
+            <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0;">Forecasts run from &#8220;already&#8221; to 2116, depending on who you ask and how you ask it.</p>
+          </div>
+          <div style="display:flex; gap:12px;">
+            <span style="font-family:'Fraunces', Georgia, serif; font-size:18px; color:#b0463a; line-height:1.3; flex:none;">4</span>
+            <p style="font-size:14.5px; line-height:1.5; color:#4a4034; margin:0;">Ask four things of any announcement: whose definition, what would prove it wrong, what the speaker sells, and what changed for you.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MINI GLOSSARY -->
+      <div style="border:1px solid rgba(28,20,15,0.14); border-radius:4px; padding:22px 22px 24px; background:#1c1813; color:#c4b9a4;">
+        <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#cdb24a; margin-bottom:16px;">MINI GLOSSARY</div>
+        <div style="display:flex; flex-direction:column; gap:15px;">
+          <div>
+            <div style="font-weight:600; font-size:14px; color:#ece4d4; margin-bottom:3px;">AGI</div>
+            <p style="font-size:13.5px; line-height:1.5; margin:0;">Artificial general intelligence. The label for a machine that can do, roughly, whatever a person can. No agreed definition.</p>
+          </div>
+          <div>
+            <div style="font-weight:600; font-size:14px; color:#ece4d4; margin-bottom:3px;">Narrow AI</div>
+            <p style="font-size:13.5px; line-height:1.5; margin:0;">A system that does exactly one thing: play chess, filter spam, score loan applications. Still most of the AI in use.</p>
+          </div>
+          <div>
+            <div style="font-weight:600; font-size:14px; color:#ece4d4; margin-bottom:3px;">Superintelligence</div>
+            <p style="font-size:13.5px; line-height:1.5; margin:0;">The rung above AGI: a machine that doesn&#8217;t match people but far outstrips the best of them. No agreed test either.</p>
+          </div>
+          <div>
+            <div style="font-weight:600; font-size:14px; color:#ece4d4; margin-bottom:3px;">Emergent abilities</div>
+            <p style="font-size:13.5px; line-height:1.5; margin:0;">Skills absent in smaller models that appear suddenly once a model is big enough. Disputed.</p>
+          </div>
+          <div>
+            <div style="font-weight:600; font-size:14px; color:#ece4d4; margin-bottom:3px;">World model</div>
+            <p style="font-size:13.5px; line-height:1.5; margin:0;">A system that learns how the physical world works from video, not text.</p>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- READ NEXT -->
+  <section style="background:#e2d8c4;">
+    <div style="max-width:1180px; margin:0 auto; padding:64px 32px;">
+      <div style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.14em; color:#8a7d68; margin-bottom:28px;">READ NEXT</div>
+      <div class="nextgrid" style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:40px; max-width:820px;">
+        <a class="nextcard" href="start-here.html" style="display:block;">
+          <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.1em; color:#b0463a; margin-bottom:10px;">START HERE · 10 MIN</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:21px; line-height:1.2; margin:0; color:#1c1813;">You&#8217;re not behind: what&#8217;s actually going on with AI</h3>
+        </a>
+        <a class="nextcard" href="ai-isnt-suffering.html" style="display:block;">
+          <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.1em; color:#b0463a; margin-bottom:10px;">ANALYSIS · 12 MIN</div>
+          <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:21px; line-height:1.2; margin:0; color:#1c1813;">The AI isn&#8217;t suffering. We just can&#8217;t stop pretending it is.</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#1c1813; color:#c4b9a4;">
+    <div style="max-width:1180px; margin:0 auto; padding:56px 32px; display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+      <div>
+        <div style="display:flex; flex-direction:column; line-height:0.96; margin-bottom:14px;">
+          <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:18px; color:#f4ecdc;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
+          <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+        </div>
+        <p style="font-size:14px; line-height:1.5; max-width:300px; margin:0;">The essential stuff about AI. A free blog by an AI consulting practice.</p>
+      </div>
+      <div style="display:flex; gap:64px; flex-wrap:wrap;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">COURSES</span>
+          <a class="footlink" href="what.html" style="font-size:15px; color:#c4b9a4;">What is AI</a>
+          <a class="footlink" href="why.html" style="font-size:15px; color:#c4b9a4;">Why it matters</a>
+          <a class="footlink" href="how.html" style="font-size:15px; color:#c4b9a4;">How to use it</a>
+          <a class="footlink" href="cookbook.html" style="font-size:15px; color:#c4b9a4;">The cookbook</a>
+          <a class="footlink" href="faq.html" style="font-size:15px; color:#c4b9a4;">AI questions</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">PRACTICE</span>
+          <a class="footlink" href="index.html#consult" style="font-size:15px; color:#c4b9a4;">Consulting</a>
+          <a class="footlink" href="who.html" style="font-size:15px; color:#c4b9a4;">Who does what</a>
+          <a class="footlink" href="where.html" style="font-size:15px; color:#c4b9a4;">Where the rules are</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(236,228,212,0.1);">
+      <div style="max-width:1180px; margin:0 auto; padding:22px 32px; font-family:'Hanken Grotesk', sans-serif; font-size:12px; color:#8a7d68;">© 2026 Meatandpotatoes.ai — all signal, no filler.</div>
+    </div>
+  </footer>
+
+</div>
+
+</body></html>
