@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assertion Lens: a prompt to see what a news story claims — Meat &amp; Potatoes</title>
+<meta name="description" content="A free prompt for ChatGPT, Claude or Gemini. Paste in a news article and see what it claims, who says so, and where the headline outruns the story.">
+<meta property="og:title" content="Assertion Lens: a prompt to see what a news story claims — Meat &amp; Potatoes">
+<meta property="og:description" content="A free prompt for ChatGPT, Claude or Gemini. Paste in a news article and see what it claims, who says so, and where the headline outruns the story.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://meatandpotatoes.ai/assertion-lens">
+<meta property="og:image" content="https://meatandpotatoes.ai/assets/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Meat &amp; Potatoes">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://meatandpotatoes.ai/assertion-lens">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./mp.css">
+<script src="./mp.js" defer></script>
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: 96px; }
+  body { margin: 0; }
+  a { text-decoration: none; color: inherit; }
+  @media (max-width: 980px) {
+    .g4 { grid-template-columns: repeat(2,1fr) !important; }
+    .g3, .g2 { grid-template-columns: 1fr !important; }
+  }
+  @media (max-width: 620px) { .g4 { grid-template-columns: 1fr !important; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://meatandpotatoes.ai/#organization",
+      "name": "Meat & Potatoes",
+      "url": "https://meatandpotatoes.ai/"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://meatandpotatoes.ai/assertion-lens",
+      "url": "https://meatandpotatoes.ai/assertion-lens",
+      "name": "Assertion Lens: see what a news story actually claims",
+      "description": "A free prompt for ChatGPT, Claude or Gemini. Paste in a news article and see what it claims, who says so, and where the headline outruns the story.",
+      "isPartOf": {
+        "@id": "https://meatandpotatoes.ai/#website"
+      },
+      "publisher": {
+        "@id": "https://meatandpotatoes.ai/#organization"
+      },
+      "datePublished": "2026-11-12",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://meatandpotatoes.ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools and prompts",
+          "item": "https://meatandpotatoes.ai/how"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Assertion Lens",
+          "item": "https://meatandpotatoes.ai/assertion-lens"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div style="background:#ece4d4; color:#1c1813; font-family:'Hanken Grotesk', system-ui, sans-serif; min-height:100vh; -webkit-font-smoothing:antialiased;">
+
+  <header class="mp-header" style="position:sticky; top:0; z-index:60; background:#ece4d4; border-bottom:3px solid #1c1813;">
+    <nav class="mp-nav" aria-label="Main">
+      <a class="mp-logo" href="index.html" aria-label="Meat and Potatoes home">
+        <span class="mp-logo__name">MEAT <span class="mp-logo__amp">&amp;</span> POTATOES</span>
+        <span class="mp-logo__tag">Plain-spoken AI</span>
+      </a>
+      <div class="mp-nav__links">
+        <details class="mp-dd">
+          <summary class="mp-navlink">The basics<span class="mp-dd__caret" aria-hidden="true">&#9662;</span></summary>
+          <div class="mp-dd__panel">
+            <a class="mp-dd__item" href="start-here.html"><b>Start here</b><span>New to AI? Begin with this</span></a>
+            <a class="mp-dd__item" href="what.html"><b>What is AI</b><span>The straight answer</span></a>
+            <a class="mp-dd__item" href="whats-inside.html"><b>What&rsquo;s inside</b><span>The parts of an AI product</span></a>
+            <a class="mp-dd__item" href="why.html"><b>Why it matters</b><span>For your work and your business</span></a>
+            <a class="mp-dd__item" href="where.html"><b>Where the rules are</b><span>AI regulation, country by country</span></a>
+            <a class="mp-dd__item" href="faq.html"><b>AI questions</b><span>Short answers to common questions</span></a>
+          </div>
+        </details>
+        <a class="mp-navlink is-active" href="how.html">Tools</a>
+        <a class="mp-navlink" href="cookbook.html">Cookbook</a>
+        <a class="mp-navlink" href="who.html">About</a>
+        <a class="mp-workbtn" href="work-with-us.html">Work with us</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+  <section style="max-width:820px; margin:0 auto; padding:72px 32px 40px;">
+    <nav aria-label="Breadcrumb" style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; color:#6d6051; margin-bottom:26px;"><a href="index.html" style="color:#b0463a; font-weight:600; border-bottom:1.5px solid #b0463a; font-weight:500; border-bottom-width:1px;">Home</a> &nbsp;/&nbsp; <a href="how.html" style="color:#b0463a; font-weight:600; border-bottom:1.5px solid #b0463a; font-weight:500; border-bottom-width:1px;">Tools and prompts</a> &nbsp;/&nbsp; Assertion Lens</nav>
+    <div style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.2em; text-transform:uppercase; color:#b0463a; margin-bottom:20px;">Prompt &middot; free &middot; works in any chatbot</div>
+    <h1 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(38px,5.4vw,64px); line-height:1.05; letter-spacing:-0.025em; margin:0 0 24px;">Assertion Lens: see what a news story actually claims.</h1>
+    <p style="font-size:21px; line-height:1.55; color:#4a4034; margin:0 0 14px; text-wrap:pretty;">Assertion Lens is a prompt, not an app. You paste it into the chatbot you already use, add a news article, and it lays out what the story asserts, who is asserting it, and what each claim rests on.</p>
+    <p style="font-size:21px; line-height:1.55; color:#1c1813; font-weight:600; margin:0;">It does not tell you what&rsquo;s true. It shows you what you&rsquo;re being asked to believe, and on whose word.</p>
+  </section>
+
+  <section id="use" style="max-width:820px; margin:0 auto; padding:0 32px 48px;">
+    <div style="border-top:2px solid #1c1813; padding-top:32px;">
+      <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#b0463a; margin-bottom:14px;">How to use it</div>
+      <h2 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.6vw,42px); letter-spacing:-0.02em; line-height:1.1; margin:0 0 18px;">Three steps, two minutes.</h2>
+      <ol style="margin:0; padding-left:22px;">
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>Copy the prompt</strong> below.</li>
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>Paste it into a chatbot</strong> such as ChatGPT, Claude or Gemini. A free account is enough.</li>
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>Replace the last line with the article.</strong> Paste the headline and the full text, not a link, then send it.</li>
+      </ol>
+    </div>
+  </section>
+  <section id="prompt" style="max-width:820px; margin:0 auto; padding:0 32px 48px;">
+    <div style="background:#1c1813; border-radius:6px; padding:28px 30px 30px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:18px;">
+        <h2 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:26px; color:#ece4d4; margin:0;">The prompt</h2>
+        <button type="button" class="mp-copy" data-mp-copy="lens-prompt">Copy the prompt</button>
+      </div>
+      <pre id="lens-prompt" class="mp-prompt" tabindex="0">You are going to help me read a news article more carefully. Your job is to show me what the article asserts, who is asserting it, and what each claim rests on. Do not tell me whether any claim is true or false. You are mapping the article, not checking it.
+
+First, check what I gave you. If I gave you only a link, a headline or a summary, or if you cannot see the full text of the article, stop and say: "Please paste the full text of the article." Do not work from memory or from the headline alone, and do not search the web.
+
+Then reply in plain English, under these five headings, in this order.
+
+1. HEADLINE CHECK
+- In one sentence of 20 words or fewer, say what the headline claims.
+- Break the headline into its 2 to 5 component claims. For each one, say how well the body of the article supports it: directly supported, partly supported, not sourced, or contradicted by the article's own account. Name what it rests on.
+- Rate the gap between the headline and the body as none, minor, significant or major, and explain why in 40 words or fewer.
+
+2. WHO THIS ARTICLE RELIES ON
+List every distinct source and sort each into one group:
+- Named people, on the record
+- Documents (say whether the article links to them, quotes them, or only says it has seen them)
+- Anonymous people (say how many, and how the article describes them)
+- Unnamed groups, such as "experts", "critics" or "analysts"
+- People who declined to comment or did not respond
+Then list the factual claims the outlet makes in its own voice with no source given.
+
+3. THE KEY CLAIMS
+Pick the 4 to 10 claims that the headline and first paragraph depend on. For each one: quote it exactly, say who makes it, say what it rests on, and say what kind of claim it is (fact, number, direct quote, prediction, opinion, or a claim that one thing caused another).
+
+4. FLAGS
+Quote the exact words each time. If a group is empty, say "none found".
+- Loaded words: evaluative words in the outlet's own voice, such as "embattled", "slammed" or "controversial"
+- Hedges: words that soften or narrow a claim, such as "may", "reportedly" or "is expected to"
+- Implied links: wording that puts two facts side by side to suggest a cause or motive without stating one, such as "amid", "as" or "following"
+- Numbers with no source: any figure with no stated source or method
+- Partial quotes: quoted fragments shorter than a full sentence, where the missing context could matter
+- Inconsistencies: places where the article conflicts with itself
+
+5. WHAT I COULD CHECK
+List up to 5 claims that public records or other reporting could confirm or contradict. For each one, say in 20 words or fewer what evidence I should look for. Do not look it up yourself.
+
+Rules:
+- Copy every quote from the article word for word. Never paraphrase inside quotation marks. If you are not sure of the exact wording, say so.
+- Apply the same standard whatever the article's politics and whatever you think of its subject.
+- Do not add facts that are not in the article.
+- If the text is opinion, analysis or sponsored content rather than news, say so at the top and carry on.
+- If the article is long and you could only cover part of it, say which part.
+
+Here is the article:
+
+[PASTE THE HEADLINE AND THE FULL TEXT HERE]</pre>
+    </div>
+  </section>
+
+  <section id="output" style="max-width:820px; margin:0 auto; padding:0 32px 48px;">
+    <div style="border-top:2px solid #1c1813; padding-top:32px;">
+      <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#b0463a; margin-bottom:14px;">What you get back</div>
+      <h2 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.6vw,42px); letter-spacing:-0.02em; line-height:1.1; margin:0 0 18px;">Five short sections.</h2>
+      <ul style="margin:0; padding-left:22px;">
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>Headline check.</strong> What the headline claims, how much of it the story supports, and how wide the gap is.</li>
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>Who the article relies on.</strong> Named people, documents, anonymous sources, vague groups like &ldquo;experts&rdquo;, and the claims the outlet makes on its own say-so.</li>
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>The key claims.</strong> The handful of statements the story stands on, each with who made it and what it rests on.</li>
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>Flags.</strong> Loaded words, hedges, numbers with no source, half-quotes, and facts placed side by side to hint at a cause.</li>
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>What you could check.</strong> Up to five claims you could confirm or knock down yourself, and what to look for.</li>
+      </ul>
+      <p style="font-size:17px; line-height:1.65; color:#2f2820; margin:0 0 16px;"><span style="background:#cdb24a; color:#1c1813; padding:1px 6px; border-radius:2px;">[Add one real example here once you have run it on an article: a screenshot or a short excerpt of the output]</span></p>
+
+    </div>
+  </section>
+  <section id="limits" style="max-width:820px; margin:0 auto; padding:0 32px 48px;">
+    <div style="border-top:2px solid #1c1813; padding-top:32px;">
+      <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#b0463a; margin-bottom:14px;">Where it goes wrong</div>
+      <h2 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.6vw,42px); letter-spacing:-0.02em; line-height:1.1; margin:0 0 18px;">Read this before you trust it.</h2>
+      <ul style="margin:0; padding-left:22px;">
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>It can&rsquo;t check facts.</strong> It maps claims. If you ask a chatbot whether a claim is true, it may give you a confident answer it has no basis for.</li>
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>It may not read a link.</strong> Many chatbots can&rsquo;t open a paywalled page. Some will quietly work from the headline instead. The prompt tells it to stop and ask for the text, but chatbots don&rsquo;t always follow instructions, so paste the text.</li>
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>It can misquote.</strong> Chatbots sometimes &ldquo;quote&rdquo; words that aren&rsquo;t in the article.</li>
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>Long articles get thinner treatment.</strong> The second half of a long piece often gets less attention than the first.</li>
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>Answers vary.</strong> Run it twice, or in two chatbots, and you&rsquo;ll get somewhat different lists. What counts as a &ldquo;loaded&rdquo; word is a judgment call.</li>
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>What you paste is shared.</strong> The article text goes to the company that runs the chatbot. Don&rsquo;t paste anything confidential.</li>
+      </ul>
+    </div>
+  </section>
+  <section id="check" style="max-width:820px; margin:0 auto; padding:0 32px 48px;">
+    <div style="border-top:2px solid #1c1813; padding-top:32px;">
+      <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#b0463a; margin-bottom:14px;">What to check yourself</div>
+      <h2 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.6vw,42px); letter-spacing:-0.02em; line-height:1.1; margin:0 0 18px;">Three checks that take a minute each.</h2>
+      <ol style="margin:0; padding-left:22px;">
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>Search for the quotes.</strong> Pick three quotes from the output and search for them in the article. If one isn&rsquo;t there word for word, treat the rest with suspicion and run it again.</li>
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>Read the headline check against the story.</strong> You can judge the gap between a headline and its body yourself. If you disagree with the chatbot, trust your reading.</li>
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>Look up one claim.</strong> Take the first item under &ldquo;What I could check&rdquo; and spend five minutes on it. That habit is the point of the whole exercise.</li>
+      </ol>
+    </div>
+  </section>
+  <section id="tested" style="max-width:820px; margin:0 auto; padding:0 32px 48px;">
+    <div style="border-top:2px solid #1c1813; padding-top:32px;">
+      <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#b0463a; margin-bottom:14px;">Tested on</div>
+      <h2 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.6vw,42px); letter-spacing:-0.02em; line-height:1.1; margin:0 0 18px;">What we ran it against.</h2>
+      <p style="font-size:17px; line-height:1.65; color:#2f2820; margin:0 0 16px;"><span style="background:#cdb24a; color:#1c1813; padding:1px 6px; border-radius:2px;">[Chatbots and versions you tested it on, and the date. Nobody has run this prompt on a real article yet. Test it before this page goes live.]</span></p>
+      <p style="font-size:17px; line-height:1.65; color:#2f2820; margin:0 0 16px;">The prompt comes from our Assertion Lens prototype, a reading tool that annotates an article line by line. This is the same set of questions in a form any chatbot can answer.</p>
+
+    </div>
+  </section>
+  <section style="max-width:820px; margin:0 auto; padding:0 32px 24px;">
+    <div style="border-top:2px solid #1c1813; padding-top:32px;">
+      <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#b0463a; margin-bottom:14px;">Read next</div>
+      <p style="font-size:17px; line-height:1.65; color:#2f2820; margin:0 0 10px;"><a href="start-here.html" style="color:#b0463a; font-weight:600; border-bottom:1.5px solid #b0463a;">You&rsquo;re Not Behind</a>: five questions to ask of any AI headline.</p>
+      <p style="font-size:17px; line-height:1.65; color:#2f2820; margin:0 0 10px;"><a href="could-ai-kill-you.html" style="color:#b0463a; font-weight:600; border-bottom:1.5px solid #b0463a;">Could AI actually kill you?</a> What the record shows behind the scariest AI stories.</p>
+      <p style="font-size:17px; line-height:1.65; color:#2f2820; margin:0;"><a href="how.html" style="color:#b0463a; font-weight:600; border-bottom:1.5px solid #b0463a;">All tools and prompts &rarr;</a></p>
+      <div data-mp-subscribe-here></div>
+    </div>
+  </section>
+  <div style="height:64px;"></div>
+
+  </main>
+
+  <footer class="mp-footer">
+    <div class="mp-footer__top">
+      <div>
+        <div class="mp-logo">
+          <span class="mp-logo__name" style="color:#f4ecdc; font-size:18px;">MEAT <span class="mp-logo__amp">&amp;</span> POTATOES</span>
+          <span class="mp-logo__tag">Plain-spoken AI</span>
+        </div>
+        <p class="mp-footer__blurb">The essential stuff about AI. A free blog by an AI consulting practice.</p>
+      </div>
+      <div class="mp-footer__cols">
+        <div class="mp-footer__col">
+          <span class="mp-footer__head">THE BASICS</span>
+          <a href="start-here.html">Start here</a>
+          <a href="what.html">What is AI</a>
+          <a href="whats-inside.html">What&rsquo;s inside</a>
+          <a href="why.html">Why it matters</a>
+          <a href="where.html">Where the rules are</a>
+          <a href="faq.html">AI questions</a>
+        </div>
+        <div class="mp-footer__col">
+          <span class="mp-footer__head">READ AND USE</span>
+          <a href="cookbook.html">The cookbook</a>
+          <a href="how.html">Tools and prompts</a>
+          <a href="assertion-lens.html">Assertion Lens</a>
+        </div>
+        <div class="mp-footer__col">
+          <span class="mp-footer__head">THE KITCHEN</span>
+          <a href="who.html">About us</a>
+          <a href="work-with-us.html">Work with us</a>
+          <a href="who.html#press">Speaking and press</a>
+          <a href="mailto:hello@meatandpotatoes.ai">hello@meatandpotatoes.ai</a>
+        </div>
+      </div>
+    </div>
+    <div class="mp-footer__base"><div>&copy; 2026 Meatandpotatoes.ai &mdash; all signal, no filler.</div></div>
+  </footer>
+
+</div>
+</body>
+</html>

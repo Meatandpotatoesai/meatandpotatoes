@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Cookbook — Meat &amp; Potatoes</title>
-<meta name="description" content="Plain-spoken writing about AI and blockchain.">
+<meta name="description" content="Every Meat &amp; Potatoes article in one place: plain-spoken pieces on what AI is, where it helps and where it bites.">
 <meta property="og:title" content="The Cookbook — Meat &amp; Potatoes">
-<meta property="og:description" content="Plain-spoken writing about AI and blockchain.">
+<meta property="og:description" content="Every Meat &amp; Potatoes article in one place: plain-spoken pieces on what AI is, where it helps and where it bites.">
 <meta property="og:type" content="article">
 <script src="./support.js"></script>
 <meta property="og:url" content="https://meatandpotatoes.ai/cookbook">
@@ -48,20 +48,28 @@
 <div style="background:#ece4d4; color:#1c1813; font-family:'Hanken Grotesk', system-ui, sans-serif; min-height:100vh; -webkit-font-smoothing:antialiased;">
 
   <!-- NAV -->
-  <header style="position:sticky; top:0; z-index:60; background:#ece4d4; border-bottom:3px solid #1c1813;">
-    <nav style="max-width:1180px; margin:0 auto; padding:18px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
-      <a href="index.html" style="display:flex; flex-direction:column; line-height:0.96;">
-        <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:19px; letter-spacing:-0.01em;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
-        <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+  <header class="mp-header" style="position:sticky; top:0; z-index:60; background:#ece4d4; border-bottom:3px solid #1c1813;">
+    <nav class="mp-nav" aria-label="Main">
+      <a class="mp-logo" href="index.html" aria-label="Meat and Potatoes home">
+        <span class="mp-logo__name">MEAT <span class="mp-logo__amp">&amp;</span> POTATOES</span>
+        <span class="mp-logo__tag">Plain-spoken AI</span>
       </a>
-      <div style="display:flex; align-items:center; gap:10px;">
-        <a href="what.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">What</a>
-        <a href="why.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Why</a>
-        <a href="how.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">How</a>
-        <a href="where.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Where</a>
-        <a href="who.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:#1c1813;" style-hover="background:#1c1813; color:#ece4d4;">Who</a>
-        <a href="cookbook.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; padding:8px 15px; border:2px solid #1c1813; border-radius:5px; color:#ece4d4; background:#b0463a;">Cookbook</a>
-        <a href="work-with-us.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:14px; color:#ece4d4; background:#b0463a; padding:9px 17px; border:2.5px solid #1c1813; border-radius:5px; box-shadow:3px 3px 0 rgba(28,20,15,0.22); margin-left:6px;" style-hover="background:#9a3b30;">Work with us</a>
+      <div class="mp-nav__links">
+        <details class="mp-dd">
+          <summary class="mp-navlink">The basics<span class="mp-dd__caret" aria-hidden="true">&#9662;</span></summary>
+          <div class="mp-dd__panel">
+            <a class="mp-dd__item" href="start-here.html"><b>Start here</b><span>New to AI? Begin with this</span></a>
+            <a class="mp-dd__item" href="what.html"><b>What is AI</b><span>The straight answer</span></a>
+            <a class="mp-dd__item" href="whats-inside.html"><b>What&rsquo;s inside</b><span>The parts of an AI product</span></a>
+            <a class="mp-dd__item" href="why.html"><b>Why it matters</b><span>For your work and your business</span></a>
+            <a class="mp-dd__item" href="where.html"><b>Where the rules are</b><span>AI regulation, country by country</span></a>
+            <a class="mp-dd__item" href="faq.html"><b>AI questions</b><span>Short answers to common questions</span></a>
+          </div>
+        </details>
+        <a class="mp-navlink" href="how.html">Tools</a>
+        <a class="mp-navlink is-active" href="cookbook.html" aria-current="page">Cookbook</a>
+        <a class="mp-navlink" href="who.html">About</a>
+        <a class="mp-workbtn" href="work-with-us.html">Work with us</a>
       </div>
     </nav>
   </header>
@@ -119,35 +127,41 @@
   </section>
 
   <!-- FOOTER -->
-  <footer style="background:#1c1813; color:#c4b9a4;">
-    <div style="max-width:1180px; margin:0 auto; padding:56px 32px; display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+  <footer class="mp-footer">
+    <div class="mp-footer__top">
       <div>
-        <div style="display:flex; flex-direction:column; line-height:0.96; margin-bottom:14px;">
-          <span style="font-family:'Fraunces', Georgia, serif; font-weight:700; font-size:18px; color:#f4ecdc;">MEAT <span style="color:#b0463a;">&amp;</span> POTATOES</span>
-          <span style="font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:#b0463a; margin-top:4px;">Plain-spoken AI</span>
+        <div class="mp-logo">
+          <span class="mp-logo__name" style="color:#f4ecdc; font-size:18px;">MEAT <span class="mp-logo__amp">&amp;</span> POTATOES</span>
+          <span class="mp-logo__tag">Plain-spoken AI</span>
         </div>
-        <p style="font-size:14px; line-height:1.5; max-width:300px; margin:0;">The essential stuff about AI. A free blog by an AI consulting practice.</p>
+        <p class="mp-footer__blurb">The essential stuff about AI. A free blog by an AI consulting practice.</p>
       </div>
-      <div style="display:flex; gap:64px; flex-wrap:wrap;">
-        <div style="display:flex; flex-direction:column; gap:12px;">
-          <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">COURSES</span>
-          <a href="what.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">What is AI</a>
-          <a href="why.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Why it matters</a>
-          <a href="how.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">How to use it</a>
-          <a href="cookbook.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">The cookbook</a>
-          <a href="faq.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">AI questions</a>
+      <div class="mp-footer__cols">
+        <div class="mp-footer__col">
+          <span class="mp-footer__head">THE BASICS</span>
+          <a href="start-here.html">Start here</a>
+          <a href="what.html">What is AI</a>
+          <a href="whats-inside.html">What&rsquo;s inside</a>
+          <a href="why.html">Why it matters</a>
+          <a href="where.html">Where the rules are</a>
+          <a href="faq.html">AI questions</a>
         </div>
-        <div style="display:flex; flex-direction:column; gap:12px;">
-          <span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.12em; color:#8a7d68;">PRACTICE</span>
-          <a href="work-with-us.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Consulting</a>
-          <a href="how.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Free tools</a>
-          <a href="who.html" style="font-size:15px; color:#c4b9a4;" style-hover="color:#ece4d4;">Who does what</a>
+        <div class="mp-footer__col">
+          <span class="mp-footer__head">READ AND USE</span>
+          <a href="cookbook.html">The cookbook</a>
+          <a href="how.html">Tools and prompts</a>
+          <a href="assertion-lens.html">Assertion Lens</a>
+        </div>
+        <div class="mp-footer__col">
+          <span class="mp-footer__head">THE KITCHEN</span>
+          <a href="who.html">About us</a>
+          <a href="work-with-us.html">Work with us</a>
+          <a href="who.html#press">Speaking and press</a>
+          <a href="mailto:hello@meatandpotatoes.ai">hello@meatandpotatoes.ai</a>
         </div>
       </div>
     </div>
-    <div style="border-top:1px solid rgba(236,228,212,0.1);">
-      <div style="max-width:1180px; margin:0 auto; padding:22px 32px; font-family:'Hanken Grotesk', sans-serif; font-size:12px; color:#8a7d68;">© 2026 Meatandpotatoes.ai — all signal, no filler. &nbsp;&middot;&nbsp; <a href="mailto:hello@meatandpotatoes.ai" style="color:#c4b9a4; text-decoration:underline;">hello@meatandpotatoes.ai</a></div>
-    </div>
+    <div class="mp-footer__base"><div>&copy; 2026 Meatandpotatoes.ai &mdash; all signal, no filler.</div></div>
   </footer>
 
 </div>

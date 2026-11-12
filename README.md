@@ -172,3 +172,21 @@ so you can click through the whole site before it becomes live. Merge to
 
 Never delete the repo to "start clean." Branch instead — the history is the
 only way back if a deploy goes wrong.
+
+---
+
+## November 2026 changes
+
+- **The header and footer are now the same block in every page**, styled
+  in `mp.css` (`.mp-nav`, `.mp-dd`, `.mp-footer`). The question-word
+  links live in one dropdown, "The basics". To restyle, edit `mp.css`.
+  To change the links, the markup has to change in every HTML file, so
+  regenerate it with a script rather than by hand.
+- **`who.html`, `work-with-us.html`, `how.html` and `assertion-lens.html`
+  are plain HTML.** They do not load `support.js`, so they render with
+  JavaScript off and do not depend on unpkg.com.
+- **`who.html` is the people page.** The AI cast page that used to live
+  there is now `whats-inside.html`.
+- **Prompts get one page each** (`assertion-lens.html` is the first), with
+  a copy button driven by `data-mp-copy` in `mp.js`.
+- `sitemap.xml` and `robots.txt` exist now; add new pages to the sitemap.

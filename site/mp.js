@@ -173,6 +173,40 @@
     setTimeout(function () { observer.disconnect(); insert(); }, 15000);
   }
 
+  /* ---- Header dropdown: close on outside click or Escape.
+          Copy buttons: <button data-mp-copy="id-of-element">. ---- */
+  document.addEventListener('click', function (e) {
+    var open = document.querySelectorAll('details.mp-dd[open]');
+    for (var i = 0; i < open.length; i++) {
+      if (!open[i].contains(e.target)) open[i].removeAttribute('open');
+    }
+    var btn = e.target.closest ? e.target.closest('[data-mp-copy]') : null;
+    if (!btn) return;
+    var src = document.getElementById(btn.getAttribute('data-mp-copy'));
+    if (!src) return;
+    var label = btn.getAttribute('data-mp-label') || btn.textContent;
+    btn.setAttribute('data-mp-label', label);
+    function done(ok) {
+      btn.textContent = ok ? 'Copied' : 'Select the text and copy it';
+      setTimeout(function () { btn.textContent = label; }, 2200);
+    }
+    function selectIt() {
+      var r = document.createRange(); r.selectNodeContents(src);
+      var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(src.textContent).then(function () { done(true); },
+        function () { selectIt(); done(false); });
+    } else { selectIt(); done(false); }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    var open = document.querySelector('details.mp-dd[open]');
+    if (!open) return;
+    open.removeAttribute('open');
+    var s = open.querySelector('summary'); if (s) s.focus();
+  });
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', start);
   } else {

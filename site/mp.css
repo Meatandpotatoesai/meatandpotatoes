@@ -159,3 +159,61 @@
   .mp-subscribe .formkit-submit,
   .mp-subscribe .formkit-field { flex: 1 1 100%; }
 }
+
+
+/* ============================================================
+   SITE HEADER, FOOTER AND SHARED PIECES
+   The header and footer markup is the same in every page.
+   To restyle them, edit here. To change the links, the markup
+   has to change in every HTML file (ask Claude to regenerate).
+   ============================================================ */
+.mp-nav { max-width:1180px; margin:0 auto; padding:18px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px; font-family:var(--mp-sans); }
+.mp-logo { display:flex; flex-direction:column; line-height:0.96; text-decoration:none; }
+.mp-logo__name { font-family:var(--mp-serif); font-weight:700; font-size:19px; letter-spacing:-0.01em; color:var(--mp-ink); }
+.mp-logo__amp { color:var(--mp-brick); }
+.mp-logo__tag { font-family:var(--mp-sans); font-weight:600; font-size:8.5px; letter-spacing:0.34em; text-transform:uppercase; color:var(--mp-brick); margin-top:4px; }
+.mp-nav__links { display:flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
+.mp-navlink { display:inline-block; font-family:var(--mp-serif); font-weight:600; font-size:14px; line-height:1.3; padding:8px 15px; border:2px solid transparent; border-radius:5px; color:var(--mp-ink) !important; text-decoration:none; cursor:pointer; }
+.mp-navlink:hover { background:var(--mp-ink); color:var(--mp-cream) !important; }
+.mp-navlink.is-active { border-color:var(--mp-ink); background:var(--mp-brick); color:var(--mp-cream) !important; }
+.mp-workbtn { display:inline-block; font-family:var(--mp-serif); font-weight:600; font-size:14px; line-height:1.3; color:var(--mp-cream) !important; background:var(--mp-brick); padding:9px 17px; border:2.5px solid var(--mp-ink); border-radius:5px; box-shadow:3px 3px 0 rgba(28,20,15,0.22); margin-left:6px; text-decoration:none; }
+.mp-workbtn:hover { background:var(--mp-brick-dark); }
+.mp-dd { position:relative; }
+.mp-dd > summary { list-style:none; user-select:none; }
+.mp-dd > summary::-webkit-details-marker { display:none; }
+.mp-dd__caret { display:inline-block; margin-left:7px; font-size:10px; transition:transform 0.15s; }
+.mp-dd[open] .mp-dd__caret { transform:rotate(180deg); }
+.mp-dd__panel { position:absolute; top:calc(100% + 12px); left:0; z-index:70; min-width:270px; display:flex; flex-direction:column; padding:8px; background:#f4ecdc; border:2.5px solid var(--mp-ink); border-radius:6px; box-shadow:5px 5px 0 rgba(28,20,15,0.22); }
+.mp-dd__item { display:block; padding:10px 12px; border-radius:4px; color:var(--mp-ink) !important; text-decoration:none; }
+.mp-dd__item b { display:block; font-family:var(--mp-serif); font-weight:600; font-size:15px; }
+.mp-dd__item span { display:block; font-family:var(--mp-sans); font-size:13px; color:var(--mp-ink-muted); margin-top:2px; }
+.mp-dd__item:hover, .mp-dd__item[aria-current] { background:var(--mp-cream-warm); }
+.mp-header a:focus-visible, .mp-header summary:focus-visible, .mp-footer a:focus-visible, .mp-copy:focus-visible, .mp-prompt:focus-visible { outline:2px solid var(--mp-brick); outline-offset:3px; }
+@media (max-width: 760px) {
+  .mp-nav { padding:14px 18px; flex-wrap:wrap; gap:10px 16px; }
+  .mp-nav__links { width:100%; justify-content:flex-start; gap:4px; }
+  .mp-navlink { padding:7px 10px; }
+  .mp-workbtn { margin-left:auto; padding:8px 13px; }
+}
+
+.mp-footer { background:var(--mp-ink); color:#c4b9a4; font-family:var(--mp-sans); }
+.mp-footer__top { max-width:1180px; margin:0 auto; padding:56px 32px; display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; }
+.mp-footer__blurb { font-size:14px; line-height:1.5; max-width:300px; margin:14px 0 0; }
+.mp-footer__cols { display:flex; gap:56px; flex-wrap:wrap; }
+.mp-footer__col { display:flex; flex-direction:column; gap:12px; }
+.mp-footer__head { font-size:12px; letter-spacing:0.12em; color:#a89a82; }
+.mp-footer__col a { font-size:15px; color:#c4b9a4 !important; text-decoration:none; }
+.mp-footer__col a:hover { color:var(--mp-cream) !important; }
+.mp-footer__base { border-top:1px solid rgba(236,228,212,0.1); }
+.mp-footer__base > div { max-width:1180px; margin:0 auto; padding:22px 32px; font-size:12px; color:#a89a82; }
+@media (max-width: 620px) { .mp-footer__cols { gap:32px; } .mp-footer__top { padding:44px 22px; } }
+
+/* hover helpers for buttons that carry their colours inline */
+.mp-h-brick:hover { background:var(--mp-brick-dark) !important; }
+.mp-h-white:hover { background:#fff !important; }
+.mp-h-gold:hover  { background:#e0c75f !important; }
+
+/* copyable prompt block */
+.mp-prompt { margin:0; padding:22px 24px; max-height:460px; overflow:auto; white-space:pre-wrap; word-break:break-word; background:#f4ecdc; color:var(--mp-ink); border-radius:4px; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:14px; line-height:1.6; }
+.mp-copy { font-family:var(--mp-serif); font-weight:600; font-size:15px; color:var(--mp-ink); background:#cdb24a; padding:11px 22px; border:2px solid var(--mp-cream); border-radius:5px; cursor:pointer; }
+.mp-copy:hover { background:#e0c75f; }
