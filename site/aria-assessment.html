@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ARIA Assessment: audit the AI your team already uses — Meat &amp; Potatoes</title>
+<meta name="description" content="A free worksheet for auditing the AI tools your team already uses: what each one does, how it fails, who owns it and when to review it. Runs in your browser.">
+<meta property="og:title" content="ARIA Assessment: audit the AI your team already uses — Meat &amp; Potatoes">
+<meta property="og:description" content="A free worksheet for auditing the AI tools your team already uses: what each one does, how it fails, who owns it and when to review it. Runs in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://meatandpotatoes.ai/aria-assessment">
+<meta property="og:image" content="https://meatandpotatoes.ai/assets/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Meat &amp; Potatoes">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://meatandpotatoes.ai/aria-assessment">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./mp.css">
+<script src="./mp.js" defer></script>
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: 96px; }
+  body { margin: 0; }
+  a { text-decoration: none; color: inherit; }
+  @media (max-width: 980px) {
+    .g4 { grid-template-columns: repeat(2,1fr) !important; }
+    .g3, .g2 { grid-template-columns: 1fr !important; }
+  }
+  @media (max-width: 620px) { .g4 { grid-template-columns: 1fr !important; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://meatandpotatoes.ai/#organization",
+      "name": "Meat & Potatoes",
+      "url": "https://meatandpotatoes.ai/"
+    },
+    {
+      "@type": "WebApplication",
+      "name": "The ARIA Assessment",
+      "url": "https://meatandpotatoes.ai/aria-assessment",
+      "description": "A free worksheet for auditing the AI tools your team already uses: what each one does, how it fails, who owns it and when to review it. Runs in your browser.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@id": "https://meatandpotatoes.ai/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://meatandpotatoes.ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools and prompts",
+          "item": "https://meatandpotatoes.ai/how"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ARIA Assessment",
+          "item": "https://meatandpotatoes.ai/aria-assessment"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div style="background:#ece4d4; color:#1c1813; font-family:'Hanken Grotesk', system-ui, sans-serif; min-height:100vh; -webkit-font-smoothing:antialiased;">
+
+  <header class="mp-header" style="position:sticky; top:0; z-index:60; background:#ece4d4; border-bottom:3px solid #1c1813;">
+    <nav class="mp-nav" aria-label="Main">
+      <a class="mp-logo" href="index.html" aria-label="Meat and Potatoes home">
+        <span class="mp-logo__name">MEAT <span class="mp-logo__amp">&amp;</span> POTATOES</span>
+        <span class="mp-logo__tag">Plain-spoken AI</span>
+      </a>
+      <div class="mp-nav__links">
+        <details class="mp-dd">
+          <summary class="mp-navlink">The basics<span class="mp-dd__caret" aria-hidden="true">&#9662;</span></summary>
+          <div class="mp-dd__panel">
+            <a class="mp-dd__item" href="start-here.html"><b>Start here</b><span>New to AI? Begin with this</span></a>
+            <a class="mp-dd__item" href="what.html"><b>What is AI</b><span>The straight answer</span></a>
+            <a class="mp-dd__item" href="whats-inside.html"><b>What&rsquo;s inside</b><span>The parts of an AI product</span></a>
+            <a class="mp-dd__item" href="why.html"><b>Why it matters</b><span>For your work and your business</span></a>
+            <a class="mp-dd__item" href="where.html"><b>Where the rules are</b><span>AI regulation, country by country</span></a>
+            <a class="mp-dd__item" href="faq.html"><b>AI questions</b><span>Short answers to common questions</span></a>
+          </div>
+        </details>
+        <a class="mp-navlink is-active" href="how.html">Tools</a>
+        <a class="mp-navlink" href="cookbook.html">Cookbook</a>
+        <a class="mp-navlink" href="who.html">About</a>
+        <a class="mp-workbtn" href="mailto:hello@meatandpotatoes.ai?subject=Working%20with%20Meat%20%26%20Potatoes&amp;body=What%20our%20company%20does%3A%0A%0AThe%20AI%20decision%20in%20front%20of%20us%3A%0A">Work with us</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+  <section style="max-width:1180px; margin:0 auto; padding:64px 32px 32px;">
+    <nav aria-label="Breadcrumb" style="font-size:13px; color:#6d6051; margin-bottom:24px;"><a href="index.html" class="aria-crumb">Home</a> &nbsp;/&nbsp; <a href="how.html" class="aria-crumb">Tools and prompts</a> &nbsp;/&nbsp; ARIA Assessment</nav>
+    <div style="font-size:13px; letter-spacing:0.2em; text-transform:uppercase; color:#b0463a; margin-bottom:20px;">Tool &middot; free &middot; nothing leaves your browser</div>
+    <h1 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(38px,5.4vw,64px); line-height:1.05; letter-spacing:-0.025em; margin:0 0 22px; max-width:900px;">The ARIA Assessment: take stock of the AI you already use.</h1>
+    <p style="font-size:20px; line-height:1.55; color:#4a4034; max-width:720px; margin:0 0 12px;">List the AI tools your team relies on, then work through four stages for each one: what it does, how it fails, what you think of it, and when you&rsquo;ll look again. You finish with a one-page summary you can print.</p>
+    <p style="font-size:15px; line-height:1.55; color:#6d6051; max-width:720px; margin:0;">Your answers are saved in this browser only. Nothing is sent to us or anyone else. Clearing your browser data deletes them.</p>
+  </section>
+
+  <section style="max-width:1180px; margin:0 auto; padding:0 32px 72px;">
+    <div class="aria" id="aria">
+      <div class="aria-tabs" role="tablist" aria-label="Assessment stages" id="aria-tabs"></div>
+      <div id="aria-stage" class="aria-stage" role="tabpanel" tabindex="-1"></div>
+      <div class="aria-foot">
+        <button type="button" class="aria-btn aria-btn--ghost" id="aria-prev">&larr; Back</button>
+        <span id="aria-pos" class="aria-pos"></span>
+        <button type="button" class="aria-btn" id="aria-next">Next &rarr;</button>
+      </div>
+    </div>
+    <noscript><p style="font-size:17px; color:#b0463a;">This tool needs JavaScript turned on.</p></noscript>
+  </section>
+
+  <section style="max-width:820px; margin:0 auto; padding:0 32px 72px;" class="aria-noprint">
+    <div style="border-top:2px solid #1c1813; padding-top:32px;">
+      <div style="font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#b0463a; margin-bottom:14px;">What ARIA is</div>
+      <h2 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:clamp(28px,3.6vw,40px); letter-spacing:-0.02em; line-height:1.1; margin:0 0 18px;">Four stages, in order.</h2>
+      <ol style="margin:0; padding-left:22px;">
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>Audit.</strong> Write down every AI system you actually touch, including the ones that came bundled with other software, and name one person who owns each.</li>
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>Risk and reliability.</strong> For each system, work out how it fails, whether you&rsquo;d notice, and what a missed failure would cost.</li>
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>Informed position.</strong> State what you think of each system: where it helps, where it&rsquo;s risky, the conditions for using it, and what you don&rsquo;t yet know.</li>
+        <li style="font-size:17px; line-height:1.6; color:#2f2820; margin:0 0 12px;"><strong>Adaptive maintenance.</strong> Decide what would make you look again, who checks, and how often.</li>
+      </ol>
+      <p style="font-size:17px; line-height:1.65; color:#2f2820; margin:18px 0 0;">An honest &ldquo;we don&rsquo;t know&rdquo; is more useful here than a guess that looks complete. If you&rsquo;d rather do this with someone, that&rsquo;s <a href="work-with-us.html#stocktake" style="color:#b0463a; font-weight:600; border-bottom:1.5px solid #b0463a;">the Stocktake</a>.</p>
+    </div>
+  </section>
+
+<style>
+  .aria-crumb { color:#b0463a; border-bottom:1px solid #b0463a; }
+  .aria { border:2px solid #1c1813; border-radius:6px; background:#f4ecdc; }
+  .aria-tabs { display:flex; flex-wrap:wrap; border-bottom:2px solid #1c1813; }
+  .aria-tab { flex:1 1 auto; font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:15px; color:#1c1813; background:transparent; border:0; border-right:1px solid rgba(28,20,15,0.2); padding:14px 16px; cursor:pointer; text-align:left; }
+  .aria-tab:last-child { border-right:0; }
+  .aria-tab small { display:block; font-family:'Hanken Grotesk', sans-serif; font-weight:600; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:#6d6051; margin-bottom:3px; }
+  .aria-tab:hover { background:#e2d8c4; }
+  .aria-tab[aria-selected="true"] { background:#1c1813; color:#ece4d4; }
+  .aria-tab[aria-selected="true"] small { color:#cdb24a; }
+  .aria-stage { padding:32px; outline:none; }
+  .aria-stage h2 { font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:32px; letter-spacing:-0.02em; line-height:1.1; margin:0 0 6px; }
+  .aria-q { font-family:'Newsreader', Georgia, serif; font-style:italic; font-size:19px; color:#6d6051; margin:0 0 14px; }
+  .aria-guide { font-size:16px; line-height:1.6; color:#4a4034; max-width:760px; margin:0 0 26px; }
+  .aria-card { background:#ece4d4; border:1px solid rgba(28,20,15,0.25); border-radius:5px; padding:22px 24px; margin:0 0 18px; }
+  .aria-card__head { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px; }
+  .aria-card__title { font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:20px; margin:0; }
+  .aria-card__num { display:inline-block; min-width:26px; height:26px; line-height:26px; text-align:center; background:#b0463a; color:#ece4d4; border-radius:50%; font-family:'Hanken Grotesk', sans-serif; font-size:13px; font-weight:700; margin-right:10px; }
+  .aria-grid { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:16px 20px; }
+  .aria-field { display:block; margin:0 0 16px; }
+  .aria-grid .aria-field { margin:0; }
+  .aria-field--wide { grid-column:1 / -1; }
+  .aria-label { display:block; font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#4a4034; margin-bottom:6px; }
+  .aria-field input[type="text"], .aria-field textarea, .aria-field select { width:100%; font-family:'Hanken Grotesk', system-ui, sans-serif; font-size:15px; line-height:1.5; color:#1c1813; background:#f6f0e4; border:1.5px solid rgba(28,20,15,0.45); border-radius:4px; padding:9px 12px; }
+  .aria-field textarea { min-height:78px; resize:vertical; }
+  .aria-field input:focus, .aria-field textarea:focus, .aria-field select:focus, .aria-btn:focus-visible, .aria-tab:focus-visible, .aria-chip:focus-visible, .aria-hint summary:focus-visible { outline:2px solid #b0463a; outline-offset:2px; }
+  .aria-hint { margin-top:6px; font-size:14px; line-height:1.55; color:#4a4034; }
+  .aria-hint summary { cursor:pointer; color:#b0463a; font-weight:600; font-size:13px; }
+  .aria-hint p { margin:6px 0 0; }
+  .aria-bad { color:#8a2f25; } .aria-good { color:#2f5d3a; }
+  .aria-chips { display:flex; flex-wrap:wrap; gap:8px; }
+  .aria-chip { font-family:'Hanken Grotesk', sans-serif; font-size:14px; font-weight:600; color:#1c1813; background:#f6f0e4; border:1.5px solid rgba(28,20,15,0.45); border-radius:999px; padding:7px 14px; cursor:pointer; }
+  .aria-chip:hover { border-color:#1c1813; }
+  .aria-chip[aria-pressed="true"] { background:#1c1813; color:#ece4d4; border-color:#1c1813; }
+  .aria-result { display:flex; gap:14px; align-items:flex-start; flex-wrap:wrap; background:#f4ecdc; border:1px solid rgba(28,20,15,0.25); border-radius:4px; padding:14px 16px; margin-top:4px; }
+  .aria-badge { display:inline-block; font-size:12px; font-weight:700; letter-spacing:0.04em; padding:5px 11px; border-radius:3px; white-space:nowrap; background:#d9cdb6; color:#1c1813; }
+  .aria-badge--ok { background:#cfe0cf; color:#1f4a2a; }
+  .aria-badge--warn { background:#ecd98f; color:#4a3a05; }
+  .aria-badge--stop { background:#b0463a; color:#fff3e6; }
+  .aria-result p { margin:0; font-size:15px; line-height:1.5; color:#2f2820; flex:1 1 260px; }
+  .aria-btn { font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:15px; color:#ece4d4; background:#b0463a; border:2.5px solid #1c1813; border-radius:5px; padding:10px 20px; cursor:pointer; box-shadow:3px 3px 0 rgba(28,20,15,0.22); }
+  .aria-btn:hover { background:#9a3b30; }
+  .aria-btn--ghost { background:#f4ecdc; color:#1c1813; box-shadow:none; }
+  .aria-btn--ghost:hover { background:#e2d8c4; }
+  .aria-btn--small { font-size:13px; padding:6px 12px; border-width:1.5px; box-shadow:none; }
+  .aria-btn[disabled] { opacity:0.4; cursor:default; }
+  .aria-add { width:100%; background:transparent; color:#b0463a; border:1.5px dashed #b0463a; box-shadow:none; }
+  .aria-add:hover { background:#ece4d4; }
+  .aria-foot { display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; padding:18px 32px; border-top:2px solid #1c1813; }
+  .aria-pos { font-size:13px; font-weight:600; color:#6d6051; }
+  .aria-checks { list-style:none; margin:0; padding:0; }
+  .aria-checks li { margin:0 0 10px; }
+  .aria-checks label { display:flex; gap:10px; align-items:flex-start; font-size:15px; line-height:1.5; color:#2f2820; cursor:pointer; }
+  .aria-checks input { width:18px; height:18px; margin:2px 0 0; accent-color:#b0463a; flex:none; }
+  .aria-empty { font-size:16px; color:#4a4034; background:#ece4d4; border:1px dashed rgba(28,20,15,0.4); border-radius:5px; padding:18px 20px; margin:0 0 18px; }
+  .aria-table-wrap { overflow-x:auto; margin:0 0 22px; }
+  .aria-table { width:100%; min-width:640px; border-collapse:collapse; font-size:14.5px; }
+  .aria-table th { text-align:left; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#4a4034; padding:10px 12px; border-bottom:2px solid #1c1813; }
+  .aria-table td { padding:12px; border-bottom:1px solid rgba(28,20,15,0.2); vertical-align:top; line-height:1.45; }
+  .aria-stats { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:14px; margin:0 0 24px; }
+  .aria-stat { border-top:2px solid #1c1813; padding-top:10px; }
+  .aria-stat b { display:block; font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:22px; line-height:1.2; word-break:break-word; }
+  .aria-stat span { font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#6d6051; }
+  .aria-attn { margin:0 0 24px; padding:16px 20px; background:#ece4d4; border-left:4px solid #b0463a; }
+  .aria-attn h3 { font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:19px; margin:0 0 8px; }
+  .aria-attn ul { margin:0; padding-left:20px; } .aria-attn li { font-size:15px; line-height:1.55; margin:0 0 4px; }
+  .aria-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; }
+  @media (max-width: 760px) {
+    .aria-stage { padding:22px 18px; } .aria-foot { padding:16px 18px; }
+    .aria-grid { grid-template-columns:minmax(0,1fr); } .aria-stats { grid-template-columns:repeat(2, minmax(0,1fr)); }
+    .aria-tab { flex:1 1 33%; border-bottom:1px solid rgba(28,20,15,0.2); }
+  }
+  @media print {
+    .mp-header, .mp-footer, .aria-tabs, .aria-foot, .aria-noprint, .aria-actions, main > section:first-child { display:none !important; }
+    .aria { border:0; background:#fff; } .aria-stage { padding:0; }
+    .aria-field textarea, .aria-field input[type="text"] { border:1px solid #999; background:#fff; }
+    body > div { background:#fff !important; }
+  }
+</style>
+
+<script>
+(function () {
+  'use strict';
+  var KEY = 'mp.aria.v1';
+  var STAGES = [
+    { id:'start', tab:'Start', kicker:'Before you begin' },
+    { id:'A', tab:'Audit', kicker:'Stage 1', q:'What are you actually dealing with?',
+      guide:'Most teams undercount the AI they run. Include tools that came bundled with other software, tools that upgraded themselves, and anything that shapes a decision even indirectly. For each one: what does it produce, what decisions does it influence, and who is the one named person responsible?',
+      checks:['Every system has a named owner, or “no owner” is written down as a finding','What each system does and which decisions it touches are specific, not “it helps with writing”','The list includes bundled defaults and tools nobody deliberately chose'] },
+    { id:'R', tab:'Risk and reliability', kicker:'Stage 2', q:'How does each system fail, and would you notice?',
+      guide:'The question that matters most is whether a system fails obviously or silently. An obvious failure announces itself. A silent failure is a confident, well-formatted wrong answer. Silent failures where the stakes are high are the first thing to deal with, because nothing warns you.',
+      checks:['Every system has a reliability rating and a consequence rating','Silent failures are identified separately from obvious ones','What you don’t know is written down, not left blank or guessed'] },
+    { id:'I', tab:'Informed position', kicker:'Stage 3', q:'What do you actually think, based on evidence?',
+      guide:'A position has four parts: where the system adds real value, where it introduces risk, the conditions for using it safely, and what you don’t yet know. The fourth is the one people leave out, and it is the most honest part.',
+      checks:['Every position has all four parts','Each position answers “which AI, used how, checked by whom?”','High-consequence positions have had legal or compliance review where that applies'] },
+    { id:'M', tab:'Maintenance', kicker:'Stage 4', q:'How does this stay current?',
+      guide:'Without maintenance, an assessment decays back into an opinion. A trigger has to be concrete enough that a named person knows when it has fired. “The team will keep an eye on it” is not a trigger. “A new major model version is released” is.',
+      checks:['Every system has a named person, not a department','Every system has at least one specific trigger','Every system has a review cadence, and the first review is in someone’s calendar'] },
+    { id:'sum', tab:'Summary', kicker:'Your assessment' }
+  ];
+  var F = {
+    A:[ {k:'does', label:'What it actually does', ph:'Be specific. Not the marketing, what it does for you.', bad:'“It helps with writing.”', good:'“Generates first drafts of client proposals. A sales rep reads the draft before sending.”'},
+        {k:'decisions', label:'Decisions it influences', ph:'Direct (the system decides) and indirect (it shapes a human decision).', bad:'“It affects output quality.”', good:'“Directly: what proposals say. Indirectly: the rep reads but doesn’t check specs against product documentation.”'},
+        {k:'owner', label:'Named owner: one person', type:'text', wide:true, ph:'For example: Sarah Chen, Head of Customer Success. Or: No owner (finding).', note:'“The team” is not an owner. If nobody clearly owns this system, write that down. It is a finding, and an important one.'} ],
+    R:[ {k:'works', label:'Where it works', wide:true, ph:'What you use it for, what kind of output it gives, and when you would use that output without checking it.'},
+        {k:'fails', label:'How it fails', wide:true, ph:'Failures you have actually seen, not theoretical ones.', bad:'“It sometimes makes mistakes.”', good:'“It invents statistics that look identical to real ones. A reviewer would not know without checking the source, which nobody currently does.”'},
+        {k:'failType', label:'Kind of failure', chips:['Silent','Obvious','Both'], wide:true, note:'Silent: confident wrong answers. Obvious: errors, blanks, visibly wrong output.'},
+        {k:'blast', label:'If a failure goes unnoticed', wide:true, ph:'What happens, and what checking exists today (what people really do, not what the policy says).', bad:'“It could cause problems.”', good:'“A made-up capability claim in a proposal becomes a commitment we may not be able to keep. Today the rep reads it but does not check it against product docs.”'},
+        {k:'consequence', label:'Consequence of an unnoticed failure', chips:['Low','Medium','High'], note:'Low: inconvenient, easily fixed. Medium: costly, affects deliverables or relationships. High: hard to reverse, affects third parties or carries legal risk.'},
+        {k:'reliability', label:'Reliability for this use', chips:['High','Medium','Low','Unknown'], note:'Rate the use, not the product. If you don’t know, choose Unknown. Don’t take the vendor’s word for it.'},
+        {k:'gaps', label:'What you still need to find out', wide:true, ph:'What evidence would raise or lower your confidence? Has its behaviour changed in the last six months?'} ],
+    I:[ {k:'value', label:'1. Where it adds real value', ph:'Specific and based on evidence.', bad:'“It saves a lot of time.”', good:'“Cuts first-draft time for proposals by about 60%. Reliable for structure when the user knows the subject well enough to catch errors.”'},
+        {k:'risk', label:'2. Where it introduces risk', ph:'Name the failure and who it affects.'},
+        {k:'guardrails', label:'3. Conditions for safe use', ph:'What must be true for this to be used safely?', bad:'“Use it carefully.”', good:'“Every statistic and citation is checked against a primary source before anything goes to a client, by a named person.”'},
+        {k:'change', label:'4. What would change this position', ph:'What new information would make you revise it?'} ],
+    M:[ {k:'reviewer', label:'Who reviews it', type:'text', ph:'One person. Leave blank to use the owner from Stage 1.'},
+        {k:'cadence', label:'Review cadence', chips:['Quarterly','Every 6 months','Annually'], note:'Quarterly for high-consequence systems, every six months for most, annually for low-risk, stable ones.'},
+        {k:'triggers', label:'What would trigger an earlier review', wide:true, ph:'Concrete events.', bad:'“If something goes wrong.”', good:'“A new major model version is released. A client-facing error is traced to unchecked output.”'} ]
+  };
+  var MATRIX = {
+    'High-Low':['Monitor','ok','Regular monitoring. No workflow changes required.'],
+    'High-Medium':['Monitor and spot-check','ok','Periodic spot-checks on outputs.'],
+    'High-High':['Verify every output','warn','Every output must be verified before use. Name a verification owner now.'],
+    'Medium-Low':['Spot-check','ok','Periodic spot-checks. The current workflow is probably adequate.'],
+    'Medium-Medium':['Verify key outputs','warn','Verify outputs that go to people outside the company or drive consequential decisions.'],
+    'Medium-High':['Verify all, plus human review','stop','All outputs need verification and review by someone who knows the subject before use.'],
+    'Low-Low':['Use with caution','warn','Consider whether this tool is right for this task.'],
+    'Low-Medium':['Redesign the workflow','stop','The current workflow is not appropriate. Redesign it before continuing.'],
+    'Low-High':['Do not use without redesign','stop','Do not use this system for this task without a fundamentally different workflow.'],
+    'Unknown-Low':['Use with caution','warn','Treat as low reliability until you have evidence.'],
+    'Unknown-Medium':['Redesign the workflow','stop','Unknown reliability with medium consequence. Treat as low reliability.'],
+    'Unknown-High':['Do not use without redesign','stop','Do not use until you have established how reliable it is.']
+  };
+
+  var S = load();
+  function blank() { return { meta:{who:'', scope:'', date:''}, systems:[newSys(), newSys()], checks:{}, notes:{findings:'', gaps:'', nextDate:'', nextWho:''}, stage:0 }; }
+  function newSys() { return { id:'s' + Date.now().toString(36) + Math.random().toString(36).slice(2,6), name:'' }; }
+  function load() {
+    try { var v = JSON.parse(localStorage.getItem(KEY)); if (v && v.systems && v.meta) { v.stage = Math.min(Math.max(v.stage|0, 0), STAGES.length - 1); v.checks = v.checks || {}; v.notes = v.notes || {}; return v; } } catch (e) {}
+    return blank();
+  }
+  var saveTimer = null;
+  function save() { clearTimeout(saveTimer); saveTimer = setTimeout(function () { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }, 250); }
+
+  function h(tag, attrs) {
+    var el = document.createElement(tag), i, k;
+    if (attrs) for (k in attrs) {
+      if (k === 'text') el.textContent = attrs[k];
+      else if (k.slice(0,2) === 'on') el.addEventListener(k.slice(2), attrs[k]);
+      else if (attrs[k] !== null && attrs[k] !== undefined && attrs[k] !== false) el.setAttribute(k, attrs[k]);
+    }
+    for (i = 2; i < arguments.length; i++) { var c = arguments[i]; if (c === null || c === undefined || c === false) continue; el.appendChild(typeof c === 'string' ? document.createTextNode(c) : c); }
+    return el;
+  }
+  function rating(s) { return (s.reliability && s.consequence) ? MATRIX[s.reliability + '-' + s.consequence] : null; }
+  function label(s, i) { return s.name ? s.name : 'System ' + (i + 1); }
+
+  function hint(f) {
+    if (!f.bad && !f.note) return null;
+    if (f.note && !f.bad) return h('div', {class:'aria-hint'}, h('p', {text:f.note}));
+    return h('details', {class:'aria-hint'}, h('summary', {text:'Show an example'}),
+      h('p', {class:'aria-bad'}, 'Too vague: ' + f.bad), h('p', {class:'aria-good'}, 'Better: ' + f.good), f.note ? h('p', {text:f.note}) : null);
+  }
+  function field(obj, f, onChange) {
+    var id = 'f-' + (obj.id || 'x') + '-' + f.k, wrap = h('div', {class:'aria-field' + (f.wide ? ' aria-field--wide' : '')});
+    if (f.chips) {
+      var group = h('div', {class:'aria-chips', role:'group', 'aria-label':f.label});
+      f.chips.forEach(function (c) {
+        group.appendChild(h('button', {type:'button', class:'aria-chip', 'aria-pressed': String(obj[f.k] === c), text:c, onclick:function () {
+          obj[f.k] = obj[f.k] === c ? '' : c; save();
+          Array.prototype.forEach.call(group.children, function (b) { b.setAttribute('aria-pressed', String(b.textContent === obj[f.k])); });
+          if (onChange) onChange();
+        }}));
+      });
+      wrap.appendChild(h('span', {class:'aria-label', text:f.label})); wrap.appendChild(group);
+    } else {
+      var input = f.type === 'text' ? h('input', {type:'text', id:id, placeholder:f.ph || ''}) : h('textarea', {id:id, placeholder:f.ph || '', rows:'3'});
+      input.value = obj[f.k] || '';
+      input.addEventListener('input', function () { obj[f.k] = input.value; save(); if (onChange) onChange(); });
+      wrap.appendChild(h('label', {class:'aria-label', for:id, text:f.label})); wrap.appendChild(input);
+    }
+    var hn = hint(f); if (hn) wrap.appendChild(hn);
+    return wrap;
+  }
+  function checklist(st) {
+    var ul = h('ul', {class:'aria-checks'});
+    st.checks.forEach(function (t, i) {
+      var key = st.id + i, box = h('input', {type:'checkbox'}); box.checked = !!S.checks[key];
+      box.addEventListener('change', function () { S.checks[key] = box.checked; save(); });
+      ul.appendChild(h('li', null, h('label', null, box, h('span', {text:t}))));
+    });
+    return h('div', {class:'aria-card'}, h('div', {class:'aria-card__head'}, h('h3', {class:'aria-card__title', text:'Before you move on'})), ul);
+  }
+
+  function renderStart(root) {
+    root.appendChild(h('h2', {text:'Before you begin'}));
+    root.appendChild(h('p', {class:'aria-guide', text:'Work through one stage at a time. Each stage builds on the one before. Allow 20 to 30 minutes for a handful of systems; you can stop and come back, and your answers will still be here in this browser.'}));
+    var grid = h('div', {class:'aria-grid'});
+    grid.appendChild(field(S.meta, {k:'who', label:'Your name and role', type:'text', ph:'For example: Jamie S., Marketing Manager'}));
+    var sel = h('select', {id:'f-scope'}); ['', 'Just me: my own work tools', 'A startup: the whole company', 'An organisation: one function', 'An organisation: the whole company'].forEach(function (o) { sel.appendChild(h('option', {value:o, text:o || 'Choose…'})); });
+    sel.value = S.meta.scope || ''; sel.addEventListener('change', function () { S.meta.scope = sel.value; save(); });
+    grid.appendChild(h('div', {class:'aria-field'}, h('label', {class:'aria-label', for:'f-scope', text:'What you are assessing'}), sel));
+    grid.appendChild(field(S.meta, {k:'date', label:'Date', type:'text', ph:'For example: November 2026'}));
+    root.appendChild(h('div', {class:'aria-card'}, grid));
+  }
+  function sysCard(s, i, fields, extra, withName) {
+    var title = h('h3', {class:'aria-card__title'}, h('span', {class:'aria-card__num', text:String(i + 1)}), h('span', {text:label(s, i)}));
+    var head = h('div', {class:'aria-card__head'}, title);
+    if (withName) head.appendChild(h('button', {type:'button', class:'aria-btn aria-btn--ghost aria-btn--small', 'aria-label':'Remove ' + label(s, i), text:'Remove', onclick:function () {
+      if (s.name && !window.confirm('Remove “' + s.name + '” and everything entered for it?')) return;
+      S.systems.splice(i, 1); save(); render();
+    }}));
+    var grid = h('div', {class:'aria-grid'});
+    if (withName) grid.appendChild(field(s, {k:'name', label:'System name', type:'text', wide:true, ph:'For example: ChatGPT, for proposal drafting'}, function () { title.lastChild.textContent = label(s, i); }));
+    fields.forEach(function (f) { grid.appendChild(field(s, f, extra && extra.onChange)); });
+    var card = h('div', {class:'aria-card'}, head, grid);
+    if (extra && extra.after) card.appendChild(extra.after);
+    return card;
+  }
+  function renderStage(root, st) {
+    root.appendChild(h('h2', {text:st.tab}));
+    root.appendChild(h('p', {class:'aria-q', text:st.q}));
+    root.appendChild(h('p', {class:'aria-guide', text:st.guide}));
+    if (!S.systems.length && st.id !== 'A') { root.appendChild(h('p', {class:'aria-empty', text:'No systems yet. Go back to Audit and add the AI systems you use.'})); return; }
+    S.systems.forEach(function (s, i) {
+      if (st.id === 'R') {
+        var badge = h('span', {class:'aria-badge'}), msg = h('p'), box = h('div', {class:'aria-result', 'aria-live':'polite'}, badge, msg);
+        var upd = function () { var r = rating(s); badge.className = 'aria-badge' + (r ? ' aria-badge--' + r[1] : ''); badge.textContent = r ? r[0] : 'Not rated yet'; msg.textContent = r ? r[2] : 'Choose a consequence and a reliability rating to see what this system needs.'; };
+        upd(); root.appendChild(sysCard(s, i, F.R, {onChange:upd, after:box}));
+      } else root.appendChild(sysCard(s, i, F[st.id], null, st.id === 'A'));
+    });
+    if (st.id === 'A') root.appendChild(h('button', {type:'button', class:'aria-btn aria-add', text:'+ Add another system', onclick:function () { S.systems.push(newSys()); save(); render(); }}));
+    root.appendChild(h('div', {style:'height:18px'}));
+    root.appendChild(checklist(st));
+  }
+  function renderSummary(root) {
+    var named = S.systems.filter(function (s) { return s.name; });
+    root.appendChild(h('h2', {text:'Your ARIA assessment'}));
+    root.appendChild(h('p', {class:'aria-guide', text:'This is the working document. Print it or save it as a PDF, share it with whoever needs to know what is in it, and put the first review in a calendar before you close this page.'}));
+    var stats = h('div', {class:'aria-stats'});
+    [[S.meta.who || '—', 'Completed by'], [S.meta.scope || '—', 'Scope'], [S.meta.date || '—', 'Date'], [String(named.length), named.length === 1 ? 'System' : 'Systems']].forEach(function (p) { stats.appendChild(h('div', {class:'aria-stat'}, h('span', {text:p[1]}), h('b', {text:p[0]}))); });
+    root.appendChild(stats);
+    if (!named.length) { root.appendChild(h('p', {class:'aria-empty', text:'Nothing to summarise yet. Add at least one named system in Audit.'})); return; }
+    var attn = [];
+    named.forEach(function (s) {
+      var r = rating(s), o = (s.owner || '').trim();
+      if (!o || /^no owner/i.test(o)) attn.push(s.name + ': no named owner.');
+      if (r && r[1] === 'stop') attn.push(s.name + ': ' + r[0].toLowerCase() + '.');
+      if ((s.failType === 'Silent' || s.failType === 'Both') && s.consequence === 'High') attn.push(s.name + ': fails silently where the consequence is high.');
+      if (!r) attn.push(s.name + ': not rated yet (Stage 2).');
+    });
+    if (attn.length) { var ul = h('ul'); attn.forEach(function (t) { ul.appendChild(h('li', {text:t})); }); root.appendChild(h('div', {class:'aria-attn'}, h('h3', {text:'Deal with these first'}), ul)); }
+    var tb = h('tbody');
+    named.forEach(function (s) {
+      var r = rating(s);
+      tb.appendChild(h('tr', null, h('td', null, h('strong', {text:s.name})), h('td', {text:(s.reviewer || s.owner || '—')}),
+        h('td', null, h('span', {class:'aria-badge' + (r ? ' aria-badge--' + r[1] : ''), text:r ? r[0] : 'Not rated'})), h('td', {text:r ? r[2] : '—'}), h('td', {text:s.cadence || '—'})));
+    });
+    root.appendChild(h('div', {class:'aria-table-wrap'}, h('table', {class:'aria-table'}, h('thead', null, h('tr', null, h('th', {scope:'col', text:'System'}), h('th', {scope:'col', text:'Owner'}), h('th', {scope:'col', text:'Rating'}), h('th', {scope:'col', text:'What it needs'}), h('th', {scope:'col', text:'Review'}))), tb)));
+    named.forEach(function (s, i) {
+      var rows = [['What it does', s.does], ['How it fails', s.fails], ['Conditions for safe use', s.guardrails], ['Still unknown', [s.gaps, s.change].filter(Boolean).join(' ')], ['Review triggers', s.triggers]].filter(function (p) { return p[1]; });
+      if (!rows.length) return;
+      var card = h('div', {class:'aria-card'}, h('div', {class:'aria-card__head'}, h('h3', {class:'aria-card__title', text:s.name})));
+      rows.forEach(function (p) { card.appendChild(h('p', {style:'margin:0 0 10px; font-size:15px; line-height:1.55;'}, h('strong', {text:p[0] + ': '}), p[1])); });
+      root.appendChild(card);
+    });
+    var grid = h('div', {class:'aria-grid'});
+    grid.appendChild(field(S.notes, {k:'findings', label:'Highest-priority findings', wide:true, ph:'The findings that need action now.'}));
+    grid.appendChild(field(S.notes, {k:'gaps', label:'Open questions', wide:true, ph:'What you still need to find out.'}));
+    grid.appendChild(field(S.notes, {k:'nextDate', label:'Next review date', type:'text', ph:'For example: May 2027'}));
+    grid.appendChild(field(S.notes, {k:'nextWho', label:'Person responsible', type:'text', ph:'One name'}));
+    root.appendChild(h('div', {class:'aria-card'}, grid));
+    root.appendChild(h('div', {class:'aria-actions'},
+      h('button', {type:'button', class:'aria-btn', text:'Print or save as PDF', onclick:function () { window.print(); }}),
+      h('button', {type:'button', class:'aria-btn aria-btn--ghost', text:'Start over', onclick:function () {
+        if (!window.confirm('Delete everything you have entered and start again?')) return;
+        S = blank(); try { localStorage.removeItem(KEY); } catch (e) {} render(true);
+      }})));
+  }
+
+  function go(n, focus) { S.stage = Math.min(Math.max(n, 0), STAGES.length - 1); save(); render(focus); }
+  function render(focus) {
+    var tabs = document.getElementById('aria-tabs'), root = document.getElementById('aria-stage'), st = STAGES[S.stage];
+    tabs.textContent = '';
+    STAGES.forEach(function (t, i) {
+      tabs.appendChild(h('button', {type:'button', class:'aria-tab', role:'tab', id:'aria-tab-' + t.id, 'aria-selected': String(i === S.stage), 'aria-controls':'aria-stage', onclick:function () { go(i, true); }}, h('small', {text:t.kicker}), t.tab));
+    });
+    root.textContent = ''; root.setAttribute('aria-labelledby', 'aria-tab-' + st.id);
+    if (st.id === 'start') renderStart(root); else if (st.id === 'sum') renderSummary(root); else renderStage(root, st);
+    var prev = document.getElementById('aria-prev'), next = document.getElementById('aria-next');
+    prev.disabled = S.stage === 0; next.disabled = S.stage === STAGES.length - 1;
+    next.textContent = S.stage === STAGES.length - 2 ? 'See the summary →' : (S.stage === 0 ? 'Start the audit →' : 'Next →');
+    next.style.visibility = S.stage === STAGES.length - 1 ? 'hidden' : 'visible';
+    document.getElementById('aria-pos').textContent = (S.stage >= 1 && S.stage <= 4) ? 'Stage ' + S.stage + ' of 4' : '';
+    if (focus) { root.focus({preventScroll:true}); document.getElementById('aria').scrollIntoView({block:'start'}); }
+  }
+  document.getElementById('aria-prev').addEventListener('click', function () { go(S.stage - 1, true); });
+  document.getElementById('aria-next').addEventListener('click', function () { go(S.stage + 1, true); });
+  render();
+})();
+</script>
+
+  </main>
+
+  <footer class="mp-footer">
+    <div class="mp-footer__top">
+      <div>
+        <div class="mp-logo">
+          <span class="mp-logo__name" style="color:#f4ecdc; font-size:18px;">MEAT <span class="mp-logo__amp">&amp;</span> POTATOES</span>
+          <span class="mp-logo__tag">Plain-spoken AI</span>
+        </div>
+        <p class="mp-footer__blurb">The essential stuff about AI. A free blog by an AI consulting practice.</p>
+      </div>
+      <div class="mp-footer__cols">
+        <div class="mp-footer__col">
+          <span class="mp-footer__head">THE BASICS</span>
+          <a href="start-here.html">Start here</a>
+          <a href="what.html">What is AI</a>
+          <a href="whats-inside.html">What&rsquo;s inside</a>
+          <a href="why.html">Why it matters</a>
+          <a href="where.html">Where the rules are</a>
+          <a href="faq.html">AI questions</a>
+        </div>
+        <div class="mp-footer__col">
+          <span class="mp-footer__head">READ AND USE</span>
+          <a href="cookbook.html">The cookbook</a>
+          <a href="how.html">Tools and prompts</a>
+          <a href="assertion-lens.html">Assertion Lens</a>
+        </div>
+        <div class="mp-footer__col">
+          <span class="mp-footer__head">THE KITCHEN</span>
+          <a href="who.html">About us</a>
+          <a href="work-with-us.html">What we offer</a>
+          <a href="who.html#press">Speaking and press</a>
+          <a href="mailto:hello@meatandpotatoes.ai">hello@meatandpotatoes.ai</a>
+        </div>
+      </div>
+    </div>
+    <div class="mp-footer__base"><div>&copy; 2026 Meatandpotatoes.ai &mdash; all signal, no filler.</div></div>
+  </footer>
+
+</div>
+</body>
+</html>

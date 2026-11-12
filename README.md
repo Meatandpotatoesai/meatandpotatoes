@@ -190,3 +190,12 @@ only way back if a deploy goes wrong.
 - **Prompts get one page each** (`assertion-lens.html` is the first), with
   a copy button driven by `data-mp-copy` in `mp.js`.
 - `sitemap.xml` and `robots.txt` exist now; add new pages to the sitemap.
+- **All articles are now plain HTML** (12 November). Only `cookbook.html`,
+  `what.html` and `where.html` still load `support.js`, because they have
+  interactive parts (the article filter, the definitions, the globe).
+- **`aria-assessment.html` is a self-contained tool.** Its styles and
+  script are in the page. Answers are kept in the visitor's browser
+  (localStorage key `mp.aria.v1`); nothing is sent anywhere.
+- **The header's "Work with us" button is a `mailto:` link** to
+  hello@meatandpotatoes.ai. The offers page is still `work-with-us.html`,
+  linked from the footer ("What we offer"), the homepage and About.

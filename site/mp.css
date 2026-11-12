@@ -190,11 +190,18 @@
 .mp-dd__item:hover, .mp-dd__item[aria-current] { background:var(--mp-cream-warm); }
 .mp-header a:focus-visible, .mp-header summary:focus-visible, .mp-footer a:focus-visible, .mp-copy:focus-visible, .mp-prompt:focus-visible { outline:2px solid var(--mp-brick); outline-offset:3px; }
 @media (max-width: 760px) {
-  .mp-nav { padding:14px 18px; flex-wrap:wrap; gap:10px 16px; }
-  .mp-nav__links { width:100%; justify-content:flex-start; gap:4px; }
-  .mp-navlink { padding:7px 10px; }
-  .mp-workbtn { margin-left:auto; padding:8px 13px; }
+  /* Phones: logo and the email button on the first row, links on the second.
+     The header scrolls away instead of sticking, to leave room for reading. */
+  .mp-header { position:static !important; }
+  .mp-nav { position:relative; padding:14px 18px 12px; flex-wrap:wrap; gap:10px 16px; }
+  .mp-nav__links { width:100%; justify-content:flex-start; gap:2px; flex-wrap:nowrap; }
+  .mp-navlink { padding:7px 9px; }
+  .mp-workbtn { position:absolute; top:11px; right:18px; margin:0; padding:7px 12px; font-size:13px; }
 }
+
+/* Long bare links in articles must wrap instead of pushing the page sideways */
+article a, main a { overflow-wrap:anywhere; }
+html, body { overflow-x:clip; }
 
 .mp-footer { background:var(--mp-ink); color:#c4b9a4; font-family:var(--mp-sans); }
 .mp-footer__top { max-width:1180px; margin:0 auto; padding:56px 32px; display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; }

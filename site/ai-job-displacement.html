@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,6 @@
 <meta property="og:title" content="The AI job-displacement timeline — Meat &amp; Potatoes">
 <meta property="og:description" content="A data-driven look at which jobs are actually at risk &mdash; and when. There is smoke, and there is fire. But the blaze isn&rsquo;t burning where the headlines say it is.">
 <meta property="og:type" content="article">
-<script src="./support.js"></script>
 <meta property="og:url" content="https://meatandpotatoes.ai/ai-job-displacement">
 <meta property="og:image" content="https://meatandpotatoes.ai/assets/og-default.jpg">
 <meta property="og:image:width" content="1200">
@@ -50,10 +49,6 @@
   "timeRequired": "PT14M"
 }
 </script>
-</head>
-<body>
-<x-dc>
-<helmet>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
@@ -64,7 +59,6 @@
     html { scroll-behavior: smooth; }
     .art-section { scroll-margin-top: 100px; }
     .rail { max-height: calc(100vh - 124px); overflow-y: auto; overscroll-behavior: contain; }
-    image-slot { display: block; width: 100%; height: 100%; }
   
     @media (max-width: 980px) {
       .gbody { grid-template-columns: minmax(0,1fr) !important; gap: 44px !important; }
@@ -78,8 +72,13 @@
       .g4 > div { padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 20px !important; }
     }
   </style>
-</helmet>
-
+  <style>
+  .hv-1:hover { color:#b0463a !important; }
+  .hv-2:hover { transform:translate(-2px,-2px) !important; box-shadow:7px 7px 0 rgba(28,20,15,0.28) !important; }
+  .hv-3:hover { opacity:0.9 !important; }
+  </style>
+</head>
+<body>
 <div style="background:#ece4d4; color:#1c1813; font-family:'Hanken Grotesk', system-ui, sans-serif; min-height:100vh; -webkit-font-smoothing:antialiased;">
 
   <!-- ============ NAV (shared site chrome) ============ -->
@@ -104,14 +103,14 @@
         <a class="mp-navlink" href="how.html">Tools</a>
         <a class="mp-navlink is-active" href="cookbook.html">Cookbook</a>
         <a class="mp-navlink" href="who.html">About</a>
-        <a class="mp-workbtn" href="work-with-us.html">Work with us</a>
+        <a class="mp-workbtn" href="mailto:hello@meatandpotatoes.ai?subject=Working%20with%20Meat%20%26%20Potatoes&amp;body=What%20our%20company%20does%3A%0A%0AThe%20AI%20decision%20in%20front%20of%20us%3A%0A">Work with us</a>
       </div>
     </nav>
   </header>
 
   <!-- ============ BREADCRUMB ============ -->
   <div style="max-width:1180px; margin:0 auto; padding:28px 32px 0;">
-    <a href="cookbook.html" style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.08em; color:#8a7d68;" style-hover="color:#b0463a;">&larr; BACK TO THE COOKBOOK</a>
+    <a class="hv-1" href="cookbook.html" style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.08em; color:#8a7d68;">&larr; BACK TO THE COOKBOOK</a>
   </div>
 
   <!-- ============ ARTICLE HEADER ============ -->
@@ -132,11 +131,6 @@
       </div>
     </div>
   </header>
-
-  <!-- ============ LEAD IMAGE (drop your own) ============ -->
-  <div style="max-width:1180px; margin:0 auto; padding:0 32px 56px;">
-    <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="hero-jobs" shape="rounded" radius="6" placeholder="Drop a lead image — or leave as-is" style="width:100%; height:420px; display:block; border:1px solid rgba(28,20,15,0.12);" hint-size="100%,420px"></x-import>
-  </div>
 
   <!-- ============ BODY + STICKY RAIL ============ -->
   <div style="max-width:1180px; margin:0 auto; padding:0 32px 64px; display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:64px; align-items:start;" class="gbody">
@@ -375,7 +369,7 @@
 
       <!-- ARTICLE FOOTER / CTA -->
       <div style="border-top:1px solid rgba(28,20,15,0.16); margin-top:36px; padding-top:32px;">
-        <a href="how.html" style="display:flex; align-items:center; justify-content:space-between; gap:24px; padding:30px 32px; background:#b0463a; color:#ece4d4; border:2.5px solid #1c1813; border-radius:6px; box-shadow:5px 5px 0 rgba(28,20,15,0.28);" style-hover="transform:translate(-2px,-2px); box-shadow:7px 7px 0 rgba(28,20,15,0.28);">
+        <a class="hv-2" href="how.html" style="display:flex; align-items:center; justify-content:space-between; gap:24px; padding:30px 32px; background:#b0463a; color:#ece4d4; border:2.5px solid #1c1813; border-radius:6px; box-shadow:5px 5px 0 rgba(28,20,15,0.28);">
           <div>
             <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.16em; color:#f0c9c2; margin-bottom:8px;">PUT IT TO WORK</div>
             <span style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:24px;">Audit your own role&rsquo;s exposure</span>
@@ -392,15 +386,15 @@
       <div style="border:1px solid rgba(28,20,15,0.14); border-radius:4px; padding:22px 22px 24px; background:#ece4d4;">
         <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.16em; color:#8a7d68; margin-bottom:14px;">IN THIS PIECE</div>
         <div style="display:flex; flex-direction:column; gap:11px;">
-          <a href="#paradox" style="font-size:14px; line-height:1.35; color:#4a4034;" style-hover="color:#b0463a;">01 &nbsp; The diligent-worker paradox</a>
-          <a href="#creative" style="font-size:14px; line-height:1.35; color:#4a4034;" style-hover="color:#b0463a;">02 &nbsp; Why creative jobs are safer</a>
-          <a href="#fastfood" style="font-size:14px; line-height:1.35; color:#4a4034;" style-hover="color:#b0463a;">03 &nbsp; The fast-food fallacy</a>
-          <a href="#tech" style="font-size:14px; line-height:1.35; color:#4a4034;" style-hover="color:#b0463a;">04 &nbsp; The tech-layoffs myth</a>
-          <a href="#timeline" style="font-size:14px; line-height:1.35; color:#4a4034;" style-hover="color:#b0463a;">05 &nbsp; The timeline everyone gets wrong</a>
-          <a href="#reallocation" style="font-size:14px; line-height:1.35; color:#4a4034;" style-hover="color:#b0463a;">06 &nbsp; The reallocation question</a>
-          <a href="#realistic" style="font-size:14px; line-height:1.35; color:#4a4034;" style-hover="color:#b0463a;">07 &nbsp; Slow, then very fast</a>
-          <a href="#risk" style="font-size:14px; line-height:1.35; color:#4a4034;" style-hover="color:#b0463a;">08 &nbsp; Assess your own risk</a>
-          <a href="#bottom" style="font-size:14px; line-height:1.35; color:#4a4034;" style-hover="color:#b0463a;">09 &nbsp; The bottom line</a>
+          <a class="hv-1" href="#paradox" style="font-size:14px; line-height:1.35; color:#4a4034;">01 &nbsp; The diligent-worker paradox</a>
+          <a class="hv-1" href="#creative" style="font-size:14px; line-height:1.35; color:#4a4034;">02 &nbsp; Why creative jobs are safer</a>
+          <a class="hv-1" href="#fastfood" style="font-size:14px; line-height:1.35; color:#4a4034;">03 &nbsp; The fast-food fallacy</a>
+          <a class="hv-1" href="#tech" style="font-size:14px; line-height:1.35; color:#4a4034;">04 &nbsp; The tech-layoffs myth</a>
+          <a class="hv-1" href="#timeline" style="font-size:14px; line-height:1.35; color:#4a4034;">05 &nbsp; The timeline everyone gets wrong</a>
+          <a class="hv-1" href="#reallocation" style="font-size:14px; line-height:1.35; color:#4a4034;">06 &nbsp; The reallocation question</a>
+          <a class="hv-1" href="#realistic" style="font-size:14px; line-height:1.35; color:#4a4034;">07 &nbsp; Slow, then very fast</a>
+          <a class="hv-1" href="#risk" style="font-size:14px; line-height:1.35; color:#4a4034;">08 &nbsp; Assess your own risk</a>
+          <a class="hv-1" href="#bottom" style="font-size:14px; line-height:1.35; color:#4a4034;">09 &nbsp; The bottom line</a>
         </div>
       </div>
 
@@ -435,15 +429,15 @@
     <div style="max-width:1180px; margin:0 auto; padding:64px 32px;">
       <div style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; letter-spacing:0.14em; color:#8a7d68; margin-bottom:28px;">READ NEXT</div>
       <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:28px;" class="g3">
-        <a href="ai-broke-the-honor-system.html" style="display:block;" style-hover="opacity:0.9;">
+        <a class="hv-3" href="ai-broke-the-honor-system.html" style="display:block;">
           <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.1em; color:#b0463a; margin-bottom:10px;">IN DEPTH &middot; 12 MIN</div>
           <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:21px; line-height:1.2; margin:0;">AI broke the internet&rsquo;s honor system. Blockchain is one of the repair crews.</h3>
         </a>
-        <a href="why.html" style="display:block;" style-hover="opacity:0.9;">
+        <a class="hv-3" href="why.html" style="display:block;">
           <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.1em; color:#b0463a; margin-bottom:10px;">OPINION</div>
           <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:21px; line-height:1.2; margin:0;">The AI risks worth losing sleep over &mdash; and the ones that aren&rsquo;t</h3>
         </a>
-        <a href="whats-inside.html" style="display:block;" style-hover="opacity:0.9;">
+        <a class="hv-3" href="whats-inside.html" style="display:block;">
           <div style="font-family:'Hanken Grotesk', sans-serif; font-size:11px; letter-spacing:0.1em; color:#b0463a; margin-bottom:10px;">THE LANDSCAPE</div>
           <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:21px; line-height:1.2; margin:0;">Who does what: the whole AI cast on one page</h3>
         </a>
@@ -480,7 +474,7 @@
         <div class="mp-footer__col">
           <span class="mp-footer__head">THE KITCHEN</span>
           <a href="who.html">About us</a>
-          <a href="work-with-us.html">Work with us</a>
+          <a href="work-with-us.html">What we offer</a>
           <a href="who.html#press">Speaking and press</a>
           <a href="mailto:hello@meatandpotatoes.ai">hello@meatandpotatoes.ai</a>
         </div>
@@ -501,6 +495,5 @@
     <text x="600" y="700" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="52" fill="#f4ecdc">JOB DISPLACEMENT</text>
   </svg>
 </template>
-</x-dc>
 </body>
 </html>

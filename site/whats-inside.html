@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,6 @@
 <meta property="og:title" content="What&rsquo;s inside an AI product — Meat &amp; Potatoes">
 <meta property="og:description" content="The parts inside an AI product: language models, image models, agents, retrieval and memory. What each one does and how they work together.">
 <meta property="og:type" content="article">
-<script src="./support.js"></script>
 <meta property="og:url" content="https://meatandpotatoes.ai/whats-inside">
 <meta property="og:image" content="https://meatandpotatoes.ai/assets/og-default.jpg">
 <meta property="og:image:width" content="1200">
@@ -18,10 +17,6 @@
 <link rel="canonical" href="https://meatandpotatoes.ai/whats-inside">
 <link rel="stylesheet" href="./mp.css">
 <script src="./mp.js" defer></script>
-</head>
-<body>
-<x-dc>
-<helmet>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
@@ -44,8 +39,12 @@
       .g4 > div { padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 20px !important; }
     }
   </style>
-</helmet>
-
+  <style>
+  .hv-1:hover { gap:13px !important; }
+  .hv-2:hover { background:#e6ddc9 !important; }
+  </style>
+</head>
+<body>
 <div style="background:#ece4d4; color:#1c1813; font-family:'Hanken Grotesk', system-ui, sans-serif; min-height:100vh; -webkit-font-smoothing:antialiased;">
 
   <!-- ============ NAV ============ -->
@@ -70,7 +69,7 @@
         <a class="mp-navlink" href="how.html">Tools</a>
         <a class="mp-navlink" href="cookbook.html">Cookbook</a>
         <a class="mp-navlink" href="who.html">About</a>
-        <a class="mp-workbtn" href="work-with-us.html">Work with us</a>
+        <a class="mp-workbtn" href="mailto:hello@meatandpotatoes.ai?subject=Working%20with%20Meat%20%26%20Potatoes&amp;body=What%20our%20company%20does%3A%0A%0AThe%20AI%20decision%20in%20front%20of%20us%3A%0A">Work with us</a>
       </div>
     </nav>
   </header>
@@ -199,7 +198,7 @@
         </div>
         <h3 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:clamp(24px,2.8vw,32px); line-height:1.12; margin:0 0 14px; color:#f4ecdc;">The cast can generate and coordinate. It can&rsquo;t <em>prove</em>.</h3>
         <p style="font-size:16px; line-height:1.7; margin:0 0 18px; color:#c4b9a4;">None of the parts above can, by themselves, show where their data came from, prove an output wasn&rsquo;t tampered with, or let one agent pay another. As agents get more autonomous, we think that job lands on a shared, tamper-evident ledger &mdash; a blockchain &mdash; sitting underneath the whole system.</p>
-        <a href="cookbook.html" style="display:inline-flex; align-items:center; gap:8px; font-family:'Fraunces', serif; font-weight:600; font-size:15px; color:#f0c8a0;" style-hover="gap:13px;">Why we believe this &rarr;</a>
+        <a class="hv-1" href="cookbook.html" style="display:inline-flex; align-items:center; gap:8px; font-family:'Fraunces', serif; font-weight:600; font-size:15px; color:#f0c8a0;">Why we believe this &rarr;</a>
       </div>
       <div style="display:flex; flex-direction:column; gap:14px;">
         <div style="display:flex; gap:14px; align-items:baseline;">
@@ -624,7 +623,7 @@
 
   <!-- ============ NEXT / CTA ============ -->
   <section style="max-width:1180px; margin:0 auto; padding:40px 32px 96px;">
-    <a href="ai-broke-the-honor-system.html" style="display:flex; align-items:center; justify-content:space-between; gap:24px; padding:38px 40px; background:#e2d8c4; color:#1c1813; border:1px solid rgba(28,20,15,0.12); border-radius:4px;" style-hover="background:#e6ddc9;">
+    <a class="hv-2" href="ai-broke-the-honor-system.html" style="display:flex; align-items:center; justify-content:space-between; gap:24px; padding:38px 40px; background:#e2d8c4; color:#1c1813; border:1px solid rgba(28,20,15,0.12); border-radius:4px;">
       <div>
         <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.18em; color:#8a7d68; margin-bottom:10px;">KEEP READING</div>
         <span style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:28px;">AI broke the internet&rsquo;s honor system. Blockchain is one of the repair crews.</span>
@@ -662,7 +661,7 @@
         <div class="mp-footer__col">
           <span class="mp-footer__head">THE KITCHEN</span>
           <a href="who.html">About us</a>
-          <a href="work-with-us.html">Work with us</a>
+          <a href="work-with-us.html">What we offer</a>
           <a href="who.html#press">Speaking and press</a>
           <a href="mailto:hello@meatandpotatoes.ai">hello@meatandpotatoes.ai</a>
         </div>
@@ -686,6 +685,5 @@
     <text x="600" y="710" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="50" fill="#f4ecdc">THE AI ECOSYSTEM</text>
   </svg>
 </template>
-</x-dc>
 </body>
 </html>
