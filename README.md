@@ -207,4 +207,4 @@ only way back if a deploy goes wrong.
   (localStorage key `mp.aria.v1`); nothing is sent anywhere.
 - **The header's "Work with us" button is a `mailto:` link** to
   hello@meatandpotatoes.ai. The offers page is still `work-with-us.html`,
-  linked from the footer ("What we offer"), the homepage and About.
+  linked as "Services" in the header and footer, and from the homepage and About.
