@@ -189,11 +189,19 @@ only way back if a deploy goes wrong.
 - **Prompts get one page each** (`assertion-lens.html` is the first), with
   a copy button driven by `data-mp-copy` in `mp.js`.
 - `sitemap.xml` and `robots.txt` exist now; add new pages to the sitemap.
-- **All articles are now plain HTML** (12 November). Only `what.html` and
-  `where.html` still load `support.js`, because they have interactive
-  parts (the definitions, the globe). `cookbook.html` was converted on
-  16 November: its cards are in the page and a small script at the bottom
-  of the file runs the topic filter.
+- **All articles are now plain HTML** (12 November). No page loads `support.js`
+  any more (16 November). `support.js` and `image-slot.js` are unused and
+  can be deleted once the branch has been live for a while.
+- **`where.html`: the country cards are the data.** The globe reads each
+  country's posture, law and notes from the cards in the "Country by
+  country" section. To change a country, edit its card; `data-stance` is
+  0 to 100, higher means leaning in. The globe library and the country
+  outlines are in `assets/vendor/`, so the page no longer depends on
+  unpkg.com.
+- **`what.html`: the nine definitions are `<details>` blocks**, so they
+  open and close without any script.
+- **Do not use an `<article>` tag for anything that is not an article.**
+  `mp.js` puts the email signup inside the first `<article>` on a page.
 - **`aria-assessment.html` is a self-contained tool.** Its styles and
   script are in the page. Answers are kept in the visitor's browser
   (localStorage key `mp.aria.v1`); nothing is sent anywhere.

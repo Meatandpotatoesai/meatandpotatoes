@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,6 @@
 <meta property="og:title" content="What is AI? — Meat &amp; Potatoes">
 <meta property="og:description" content="What AI actually is, in plain English, with no maths and no buzzwords. A straight answer to the question most people are too polite to ask out loud.">
 <meta property="og:type" content="article">
-<script src="./support.js"></script>
 <meta property="og:url" content="https://meatandpotatoes.ai/what">
 <meta property="og:image" content="https://meatandpotatoes.ai/assets/og-default.jpg">
 <meta property="og:image:width" content="1200">
@@ -18,10 +17,6 @@
 <link rel="canonical" href="https://meatandpotatoes.ai/what">
 <link rel="stylesheet" href="./mp.css">
 <script src="./mp.js" defer></script>
-</head>
-<body>
-<x-dc>
-<helmet>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
@@ -47,8 +42,18 @@
       .g4 > div { padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 20px !important; }
     }
   </style>
-</helmet>
-
+  <style>
+  .hv-1:hover { background:#2a2018 !important; }
+  </style>
+  <style>
+  /* "It depends who you ask": each definition is a native open/close block */
+  .wd > summary { list-style:none; }
+  .wd > summary::-webkit-details-marker { display:none; }
+  .wd[open] .wd-plus { transform:rotate(45deg); }
+  .wd > summary:focus-visible { outline:2px solid #b0463a; outline-offset:3px; }
+  </style>
+</head>
+<body>
 <div style="background:#ece4d4; color:#1c1813; font-family:'Hanken Grotesk', system-ui, sans-serif; min-height:100vh; -webkit-font-smoothing:antialiased;">
 
   <!-- NAV -->
@@ -114,20 +119,114 @@
     <p style="font-size:18px; line-height:1.6; color:#6d6051; max-width:680px; margin:0 0 36px; text-wrap:pretty;">The word &ldquo;AI&rdquo; means something genuinely different to every institution that uses it. That isn&rsquo;t a communications problem &mdash; it&rsquo;s a power problem. Whoever controls the definition controls the conversation. <span style="color:#b0463a;">Tap each to expand.</span></p>
 
     <div style="border-bottom:1px solid rgba(28,20,15,0.16);">
-      <sc-for list="{{ defs }}" as="d" hint-placeholder-count="9">
-        <div style="border-top:1px solid rgba(28,20,15,0.16);">
-          <div onClick="{{ d.onClick }}" style="cursor:pointer; display:flex; align-items:flex-start; gap:20px; padding:24px 0;">
-            <span style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; color:#b0463a; flex:none; width:26px;">{{ d.num }}</span>
-            <span style="flex:1;"><span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#8a7d68; display:block; margin-bottom:7px;">{{ d.tag }}</span><span style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:23px; line-height:1.2; color:#1c1813; display:block;">{{ d.headline }}</span></span>
-            <span style="{{ d.plusStyle }}">+</span>
+        <details class="wd" name="what-defs" style="border-top:1px solid rgba(28,20,15,0.16);">
+          <summary style="cursor:pointer; display:flex; align-items:flex-start; gap:20px; padding:24px 0;">
+            <span style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; color:#b0463a; flex:none; width:26px;">01</span>
+            <span style="flex:1;"><span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#8a7d68; display:block; margin-bottom:7px;">Academia</span><h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:23px; line-height:1.2; color:#1c1813; display:block; margin:0;">A field of inquiry, not a thing</h3></span>
+            <span class="wd-plus" aria-hidden="true" style="flex:none; font-family:'Hanken Grotesk', sans-serif; font-size:24px; color:#b0463a; line-height:1; transition:transform 0.2s ease;">+</span>
+          </summary>
+          <div style="padding:0 0 30px 46px; max-width:780px;">
+            <p style="font-size:17px; line-height:1.65; color:#2f2820; margin:0 0 18px;">Researchers define AI as the scientific study of computational systems that exhibit intelligent behaviour — not a product, not a feature, not any single tool. Within it sit machine learning, NLP, computer vision, robotics, and reinforcement learning, each with its own methods and distinct failure modes.</p>
+            <p style="font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:19px; line-height:1.5; color:#6d6051; border-left:2px solid #b0463a; padding-left:18px; margin:0 0 16px;">“Calling ChatGPT ‘AI’ is a bit like calling a hammer ‘physics.’ Not wrong, exactly. But it collapses a century of distinct inquiry into a brand name.”</p>
+            <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.06em; color:#8a7d68;">WHY IT MATTERS — Without this precision, we can’t distinguish systems with very different risks.</div>
           </div>
-          <div style="{{ d.bodyStyle }}">
-            <p style="font-size:17px; line-height:1.65; color:#2f2820; margin:0 0 18px;">{{ d.body }}</p>
-            <p style="font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:19px; line-height:1.5; color:#6d6051; border-left:2px solid #b0463a; padding-left:18px; margin:0 0 16px;">{{ d.quote }}</p>
-            <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.06em; color:#8a7d68;">{{ d.why }}</div>
+        </details>
+        <details class="wd" name="what-defs" style="border-top:1px solid rgba(28,20,15,0.16);">
+          <summary style="cursor:pointer; display:flex; align-items:flex-start; gap:20px; padding:24px 0;">
+            <span style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; color:#b0463a; flex:none; width:26px;">02</span>
+            <span style="flex:1;"><span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#8a7d68; display:block; margin-bottom:7px;">Tech industry</span><h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:23px; line-height:1.2; color:#1c1813; display:block; margin:0;">Any intelligent feature in a product</h3></span>
+            <span class="wd-plus" aria-hidden="true" style="flex:none; font-family:'Hanken Grotesk', sans-serif; font-size:24px; color:#b0463a; line-height:1; transition:transform 0.2s ease;">+</span>
+          </summary>
+          <div style="padding:0 0 30px 46px; max-width:780px;">
+            <p style="font-size:17px; line-height:1.65; color:#2f2820; margin:0 0 18px;">For most software companies, “AI” is a feature label — covering autocomplete, recommendation engines, search ranking, smart scheduling, and generative tools alike. The definition is elastic by design: it signals modernity, not any specific capability.</p>
+            <p style="font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:19px; line-height:1.5; color:#6d6051; border-left:2px solid #b0463a; padding-left:18px; margin:0 0 16px;">“If you want to sell something to people today, you call it AI. So everything becomes AI and then people don’t understand.” — Yuval Noah Harari</p>
+            <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.06em; color:#8a7d68;">WHY IT MATTERS — It makes “AI” nearly impossible for buyers to evaluate meaningfully.</div>
           </div>
-        </div>
-      </sc-for>
+        </details>
+        <details class="wd" name="what-defs" style="border-top:1px solid rgba(28,20,15,0.16);">
+          <summary style="cursor:pointer; display:flex; align-items:flex-start; gap:20px; padding:24px 0;">
+            <span style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; color:#b0463a; flex:none; width:26px;">03</span>
+            <span style="flex:1;"><span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#8a7d68; display:block; margin-bottom:7px;">Journalism</span><h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:23px; line-height:1.2; color:#1c1813; display:block; margin:0;">A threat, a tool, and a story at once</h3></span>
+            <span class="wd-plus" aria-hidden="true" style="flex:none; font-family:'Hanken Grotesk', sans-serif; font-size:24px; color:#b0463a; line-height:1; transition:transform 0.2s ease;">+</span>
+          </summary>
+          <div style="padding:0 0 30px 46px; max-width:780px;">
+            <p style="font-size:17px; line-height:1.65; color:#2f2820; margin:0 0 18px;">Journalists cover AI through three simultaneous frames: a technological capability, an economic disruptor, and a cultural force. The definition shifts with the story — so the same system can be saviour and villain in the same news cycle.</p>
+            <p style="font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:19px; line-height:1.5; color:#6d6051; border-left:2px solid #b0463a; padding-left:18px; margin:0 0 16px;">“Every story is accurate and incomplete simultaneously. The technology is genuinely multiple things at once.”</p>
+            <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.06em; color:#8a7d68;">WHY IT MATTERS — Framing shapes public perception more than any other single source.</div>
+          </div>
+        </details>
+        <details class="wd" name="what-defs" style="border-top:1px solid rgba(28,20,15,0.16);">
+          <summary style="cursor:pointer; display:flex; align-items:flex-start; gap:20px; padding:24px 0;">
+            <span style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; color:#b0463a; flex:none; width:26px;">04</span>
+            <span style="flex:1;"><span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#8a7d68; display:block; margin-bottom:7px;">Regulators &amp; Law</span><h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:23px; line-height:1.2; color:#1c1813; display:block; margin:0;">A system that produces consequential outputs</h3></span>
+            <span class="wd-plus" aria-hidden="true" style="flex:none; font-family:'Hanken Grotesk', sans-serif; font-size:24px; color:#b0463a; line-height:1; transition:transform 0.2s ease;">+</span>
+          </summary>
+          <div style="padding:0 0 30px 46px; max-width:780px;">
+            <p style="font-size:17px; line-height:1.65; color:#2f2820; margin:0 0 18px;">The EU AI Act defines AI as machine-based systems that generate predictions, recommendations, decisions, or content; the US approach sorts by risk tier. Both are deliberately functional — what matters legally is what the system does to people, not how it works or what its makers call it.</p>
+            <p style="font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:19px; line-height:1.5; color:#6d6051; border-left:2px solid #b0463a; padding-left:18px; margin:0 0 16px;">“For regulatory purposes, the mechanism is less important than the impact. A system that affects a hiring decision is AI regardless of its architecture.”</p>
+            <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.06em; color:#8a7d68;">WHY IT MATTERS — It catches systems firms wouldn’t volunteer as AI: fraud filters, credit scoring, content moderation.</div>
+          </div>
+        </details>
+        <details class="wd" name="what-defs" style="border-top:1px solid rgba(28,20,15,0.16);">
+          <summary style="cursor:pointer; display:flex; align-items:flex-start; gap:20px; padding:24px 0;">
+            <span style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; color:#b0463a; flex:none; width:26px;">05</span>
+            <span style="flex:1;"><span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#8a7d68; display:block; margin-bottom:7px;">Finance</span><h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:23px; line-height:1.2; color:#1c1813; display:block; margin:0;">An efficiency multiplier and a liability variable</h3></span>
+            <span class="wd-plus" aria-hidden="true" style="flex:none; font-family:'Hanken Grotesk', sans-serif; font-size:24px; color:#b0463a; line-height:1; transition:transform 0.2s ease;">+</span>
+          </summary>
+          <div style="padding:0 0 30px 46px; max-width:780px;">
+            <p style="font-size:17px; line-height:1.65; color:#2f2820; margin:0 0 18px;">Banks and insurers define AI operationally: whatever automates a previously human judgment at scale. The sector has used algorithms since the 1980s — what’s new is opacity. Models now make credit, fraud, and trading calls in ways even operators can’t fully explain after the fact.</p>
+            <p style="font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:19px; line-height:1.5; color:#6d6051; border-left:2px solid #b0463a; padding-left:18px; margin:0 0 16px;">“AI in financial services isn’t a technology story. It’s a liability story. The question isn’t what it can do — it’s who’s responsible when it goes wrong.”</p>
+            <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.06em; color:#8a7d68;">WHY IT MATTERS — It’s the most grounded definition — and the most alert to failure modes.</div>
+          </div>
+        </details>
+        <details class="wd" name="what-defs" style="border-top:1px solid rgba(28,20,15,0.16);">
+          <summary style="cursor:pointer; display:flex; align-items:flex-start; gap:20px; padding:24px 0;">
+            <span style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; color:#b0463a; flex:none; width:26px;">06</span>
+            <span style="flex:1;"><span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#8a7d68; display:block; margin-bottom:7px;">General public</span><h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:23px; line-height:1.2; color:#1c1813; display:block; margin:0;">Robots, assistants, and the end of jobs</h3></span>
+            <span class="wd-plus" aria-hidden="true" style="flex:none; font-family:'Hanken Grotesk', sans-serif; font-size:24px; color:#b0463a; line-height:1; transition:transform 0.2s ease;">+</span>
+          </summary>
+          <div style="padding:0 0 30px 46px; max-width:780px;">
+            <p style="font-size:17px; line-height:1.65; color:#2f2820; margin:0 0 18px;">Public understanding is built from decades of science fiction, headlines, and marketing — a picture that blends Terminator-style autonomy with the mundane reality of Siri and Netflix. Most people can’t define it precisely, but almost everyone has a feeling about it.</p>
+            <p style="font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:19px; line-height:1.5; color:#6d6051; border-left:2px solid #b0463a; padding-left:18px; margin:0 0 16px;">“The public doesn’t need a technical definition. They need to know: can it be trusted? Who is responsible? And will it cost me my job?”</p>
+            <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.06em; color:#8a7d68;">WHY IT MATTERS — Public perception drives political will — and political will shapes regulation.</div>
+          </div>
+        </details>
+        <details class="wd" name="what-defs" style="border-top:1px solid rgba(28,20,15,0.16);">
+          <summary style="cursor:pointer; display:flex; align-items:flex-start; gap:20px; padding:24px 0;">
+            <span style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; color:#b0463a; flex:none; width:26px;">07</span>
+            <span style="flex:1;"><span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#8a7d68; display:block; margin-bottom:7px;">Government &amp; Policy</span><h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:23px; line-height:1.2; color:#1c1813; display:block; margin:0;">A strategic asset and a security concern</h3></span>
+            <span class="wd-plus" aria-hidden="true" style="flex:none; font-family:'Hanken Grotesk', sans-serif; font-size:24px; color:#b0463a; line-height:1; transition:transform 0.2s ease;">+</span>
+          </summary>
+          <div style="padding:0 0 30px 46px; max-width:780px;">
+            <p style="font-size:17px; line-height:1.65; color:#2f2820; margin:0 0 18px;">Governments treat AI as a domain of geopolitical competition — a set of capabilities that decide future economic and military power. Bodies like NIST focus on safety, risk, and accountability, but the underlying motive is not falling behind.</p>
+            <p style="font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:19px; line-height:1.5; color:#6d6051; border-left:2px solid #b0463a; padding-left:18px; margin:0 0 16px;">“Every major government document on AI is ultimately about two things: not losing the race, and not getting blamed when something goes wrong domestically.”</p>
+            <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.06em; color:#8a7d68;">WHY IT MATTERS — Policy definitions determine which systems get scrutinised and which are left alone.</div>
+          </div>
+        </details>
+        <details class="wd" name="what-defs" style="border-top:1px solid rgba(28,20,15,0.16);">
+          <summary style="cursor:pointer; display:flex; align-items:flex-start; gap:20px; padding:24px 0;">
+            <span style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; color:#b0463a; flex:none; width:26px;">08</span>
+            <span style="flex:1;"><span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#8a7d68; display:block; margin-bottom:7px;">Military &amp; Defence</span><h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:23px; line-height:1.2; color:#1c1813; display:block; margin:0;">Autonomous decision-making at speed</h3></span>
+            <span class="wd-plus" aria-hidden="true" style="flex:none; font-family:'Hanken Grotesk', sans-serif; font-size:24px; color:#b0463a; line-height:1; transition:transform 0.2s ease;">+</span>
+          </summary>
+          <div style="padding:0 0 30px 46px; max-width:780px;">
+            <p style="font-size:17px; line-height:1.65; color:#2f2820; margin:0 0 18px;">Defence establishments define AI around speed and autonomy — systems that perceive, decide, and act faster than a human operator allows. The concern isn’t intelligence in a philosophical sense, but reliability under adversarial conditions and the contested question of human oversight in lethal decisions.</p>
+            <p style="font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:19px; line-height:1.5; color:#6d6051; border-left:2px solid #b0463a; padding-left:18px; margin:0 0 16px;">“The military definition of AI is not about making machines smarter. It’s about removing the human bottleneck from decisions that need to happen in milliseconds.”</p>
+            <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.06em; color:#8a7d68;">WHY IT MATTERS — This is where human-in-the-loop ethics are most consequential — and least settled.</div>
+          </div>
+        </details>
+        <details class="wd" name="what-defs" style="border-top:1px solid rgba(28,20,15,0.16);">
+          <summary style="cursor:pointer; display:flex; align-items:flex-start; gap:20px; padding:24px 0;">
+            <span style="font-family:'Hanken Grotesk', sans-serif; font-size:13px; color:#b0463a; flex:none; width:26px;">09</span>
+            <span style="flex:1;"><span style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#8a7d68; display:block; margin-bottom:7px;">Philosophy</span><h3 style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:23px; line-height:1.2; color:#1c1813; display:block; margin:0;">A mirror pointed at human intelligence</h3></span>
+            <span class="wd-plus" aria-hidden="true" style="flex:none; font-family:'Hanken Grotesk', sans-serif; font-size:24px; color:#b0463a; line-height:1; transition:transform 0.2s ease;">+</span>
+          </summary>
+          <div style="padding:0 0 30px 46px; max-width:780px;">
+            <p style="font-size:17px; line-height:1.65; color:#2f2820; margin:0 0 18px;">Philosophers care less about what AI can do and more about what it forces us to confront: what counts as thinking? Can a system understand, or only imitate understanding? The field never settled on a definition of intelligence itself — which makes defining “artificial” intelligence recursively hard.</p>
+            <p style="font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:19px; line-height:1.5; color:#6d6051; border-left:2px solid #b0463a; padding-left:18px; margin:0 0 16px;">“We built a machine that appears to understand language. Now we have to figure out whether ‘appears to’ and ‘does’ are actually different — and that question is very hard.”</p>
+            <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.06em; color:#8a7d68;">WHY IT MATTERS — The definitions we choose encode assumptions about consciousness, agency, and moral status.</div>
+          </div>
+        </details>
     </div>
 
     <div style="margin-top:32px; background:#1c1813; color:#c4b9a4; border-radius:4px; padding:34px 36px;">
@@ -336,7 +435,7 @@
 
   <!-- NEXT -->
   <section style="max-width:1180px; margin:0 auto; padding:88px 32px 96px;">
-    <a href="why.html" style="display:flex; align-items:center; justify-content:space-between; gap:24px; padding:38px 40px; background:#1c1813; color:#ece4d4; border-radius:4px;" style-hover="background:#2a2018;">
+    <a class="hv-1" href="why.html" style="display:flex; align-items:center; justify-content:space-between; gap:24px; padding:38px 40px; background:#1c1813; color:#ece4d4; border-radius:4px;">
       <div>
         <div style="font-family:'Hanken Grotesk', sans-serif; font-size:12px; letter-spacing:0.18em; color:#8a7d68; margin-bottom:10px;">NEXT — 02 / WHY</div>
         <span style="font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:28px;">So why should you care?</span>
@@ -392,66 +491,6 @@
     <text x="600" y="500" text-anchor="middle" font-family="Georgia, serif" font-size="92" fill="#ece4d4">Meatandpotatoes</text>
     <text x="600" y="590" text-anchor="middle" font-family="monospace" font-size="34" letter-spacing="8" fill="#b0463a">.AI</text>
   </svg>
-</template></x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  state = { open: -1 };
-
-  defData() {
-    return [
-      { num: '01', tag: 'Academia', headline: 'A field of inquiry, not a thing',
-        body: 'Researchers define AI as the scientific study of computational systems that exhibit intelligent behaviour — not a product, not a feature, not any single tool. Within it sit machine learning, NLP, computer vision, robotics, and reinforcement learning, each with its own methods and distinct failure modes.',
-        quote: '“Calling ChatGPT ‘AI’ is a bit like calling a hammer ‘physics.’ Not wrong, exactly. But it collapses a century of distinct inquiry into a brand name.”',
-        why: 'WHY IT MATTERS — Without this precision, we can’t distinguish systems with very different risks.' },
-      { num: '02', tag: 'Tech industry', headline: 'Any intelligent feature in a product',
-        body: 'For most software companies, “AI” is a feature label — covering autocomplete, recommendation engines, search ranking, smart scheduling, and generative tools alike. The definition is elastic by design: it signals modernity, not any specific capability.',
-        quote: '“If you want to sell something to people today, you call it AI. So everything becomes AI and then people don’t understand.” — Yuval Noah Harari',
-        why: 'WHY IT MATTERS — It makes “AI” nearly impossible for buyers to evaluate meaningfully.' },
-      { num: '03', tag: 'Journalism', headline: 'A threat, a tool, and a story at once',
-        body: 'Journalists cover AI through three simultaneous frames: a technological capability, an economic disruptor, and a cultural force. The definition shifts with the story — so the same system can be saviour and villain in the same news cycle.',
-        quote: '“Every story is accurate and incomplete simultaneously. The technology is genuinely multiple things at once.”',
-        why: 'WHY IT MATTERS — Framing shapes public perception more than any other single source.' },
-      { num: '04', tag: 'Regulators & Law', headline: 'A system that produces consequential outputs',
-        body: 'The EU AI Act defines AI as machine-based systems that generate predictions, recommendations, decisions, or content; the US approach sorts by risk tier. Both are deliberately functional — what matters legally is what the system does to people, not how it works or what its makers call it.',
-        quote: '“For regulatory purposes, the mechanism is less important than the impact. A system that affects a hiring decision is AI regardless of its architecture.”',
-        why: 'WHY IT MATTERS — It catches systems firms wouldn’t volunteer as AI: fraud filters, credit scoring, content moderation.' },
-      { num: '05', tag: 'Finance', headline: 'An efficiency multiplier and a liability variable',
-        body: 'Banks and insurers define AI operationally: whatever automates a previously human judgment at scale. The sector has used algorithms since the 1980s — what’s new is opacity. Models now make credit, fraud, and trading calls in ways even operators can’t fully explain after the fact.',
-        quote: '“AI in financial services isn’t a technology story. It’s a liability story. The question isn’t what it can do — it’s who’s responsible when it goes wrong.”',
-        why: 'WHY IT MATTERS — It’s the most grounded definition — and the most alert to failure modes.' },
-      { num: '06', tag: 'General public', headline: 'Robots, assistants, and the end of jobs',
-        body: 'Public understanding is built from decades of science fiction, headlines, and marketing — a picture that blends Terminator-style autonomy with the mundane reality of Siri and Netflix. Most people can’t define it precisely, but almost everyone has a feeling about it.',
-        quote: '“The public doesn’t need a technical definition. They need to know: can it be trusted? Who is responsible? And will it cost me my job?”',
-        why: 'WHY IT MATTERS — Public perception drives political will — and political will shapes regulation.' },
-      { num: '07', tag: 'Government & Policy', headline: 'A strategic asset and a security concern',
-        body: 'Governments treat AI as a domain of geopolitical competition — a set of capabilities that decide future economic and military power. Bodies like NIST focus on safety, risk, and accountability, but the underlying motive is not falling behind.',
-        quote: '“Every major government document on AI is ultimately about two things: not losing the race, and not getting blamed when something goes wrong domestically.”',
-        why: 'WHY IT MATTERS — Policy definitions determine which systems get scrutinised and which are left alone.' },
-      { num: '08', tag: 'Military & Defence', headline: 'Autonomous decision-making at speed',
-        body: 'Defence establishments define AI around speed and autonomy — systems that perceive, decide, and act faster than a human operator allows. The concern isn’t intelligence in a philosophical sense, but reliability under adversarial conditions and the contested question of human oversight in lethal decisions.',
-        quote: '“The military definition of AI is not about making machines smarter. It’s about removing the human bottleneck from decisions that need to happen in milliseconds.”',
-        why: 'WHY IT MATTERS — This is where human-in-the-loop ethics are most consequential — and least settled.' },
-      { num: '09', tag: 'Philosophy', headline: 'A mirror pointed at human intelligence',
-        body: 'Philosophers care less about what AI can do and more about what it forces us to confront: what counts as thinking? Can a system understand, or only imitate understanding? The field never settled on a definition of intelligence itself — which makes defining “artificial” intelligence recursively hard.',
-        quote: '“We built a machine that appears to understand language. Now we have to figure out whether ‘appears to’ and ‘does’ are actually different — and that question is very hard.”',
-        why: 'WHY IT MATTERS — The definitions we choose encode assumptions about consciousness, agency, and moral status.' },
-    ];
-  }
-
-  renderVals() {
-    const open = this.state.open;
-    const defs = this.defData().map((d, i) => {
-      const isOpen = i === open;
-      return {
-        num: d.num, tag: d.tag, headline: d.headline, body: d.body, quote: d.quote, why: d.why,
-        onClick: () => this.setState(s => ({ open: s.open === i ? -1 : i })),
-        bodyStyle: isOpen ? 'display:block; padding:0 0 30px 46px; max-width:780px;' : 'display:none;',
-        plusStyle: `flex:none; font-family:'Hanken Grotesk', sans-serif; font-size:24px; color:#b0463a; line-height:1; transition:transform 0.2s ease; transform:rotate(${isOpen ? '45' : '0'}deg);`
-      };
-    });
-    return { defs };
-  }
-}
-</script>
+</template>
 </body>
 </html>
