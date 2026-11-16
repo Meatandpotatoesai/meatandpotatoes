@@ -121,21 +121,20 @@ Swap in a custom `og:image` when you have one. Skipping these means the
 piece shows up on LinkedIn as a grey box.
 
 **3. Add it to the cookbook.** This is the step that gets forgotten.
-`cookbook.html` holds its own copy of the article list inside a `<script>`
-block, in `articles()`. Add an entry:
+The article cards in `cookbook.html` are plain HTML, newest first. Find
+`id="cb-grid"`, copy the first `<a ... class="... cb-card" ...>` block,
+paste the copy above it, and change five things:
 
-```js
-{
-  title: "Your headline",
-  category: "AI",              // or "Blockchain"
-  excerpt: "One or two sentences.",
-  meta: "AUG 2026 · 12 MIN",
-  href: "your-slug.html",
-  at: 1786000000000            // Unix ms — controls sort order, newest first
-},
-```
+- `href="your-slug.html"`
+- `data-cat="AI"` (one of AI, Blockchain, Web3, NFTs, Metaverse; this is
+  what the topic filter reads)
+- the category label, the headline and the one or two sentence excerpt
+- the date and read time line, for example `NOV 2026 · 12 MIN`
 
-**An article not listed in `articles()` is invisible.** There is nothing
+The "37 pieces" count updates itself. Also add the page to the `ItemList`
+near the top of the file and to `sitemap.xml`.
+
+**An article with no card in the cookbook is invisible.** There is nothing
 that checks this for you.
 
 Homepage cards are separate again, in `index.html`. Update those by hand if
@@ -190,9 +189,11 @@ only way back if a deploy goes wrong.
 - **Prompts get one page each** (`assertion-lens.html` is the first), with
   a copy button driven by `data-mp-copy` in `mp.js`.
 - `sitemap.xml` and `robots.txt` exist now; add new pages to the sitemap.
-- **All articles are now plain HTML** (12 November). Only `cookbook.html`,
-  `what.html` and `where.html` still load `support.js`, because they have
-  interactive parts (the article filter, the definitions, the globe).
+- **All articles are now plain HTML** (12 November). Only `what.html` and
+  `where.html` still load `support.js`, because they have interactive
+  parts (the definitions, the globe). `cookbook.html` was converted on
+  16 November: its cards are in the page and a small script at the bottom
+  of the file runs the topic filter.
 - **`aria-assessment.html` is a self-contained tool.** Its styles and
   script are in the page. Answers are kept in the visitor's browser
   (localStorage key `mp.aria.v1`); nothing is sent anywhere.
