@@ -202,15 +202,16 @@
     </div>
   </section>
 
-  <!-- FROM THE COOKBOOK: these three cards are copied by hand from the top of cookbook.html.
-       Update them when a new article goes up. -->
+  <!-- FROM THE COOKBOOK: these three cards are a fallback. When the page loads,
+       the script at the bottom of this file replaces them with the three newest
+       articles from cookbook.html, so you only need to update the cookbook. -->
   <section style="background:#e2d8c4; border-top:3px solid #1c1813; border-bottom:3px solid #1c1813;">
     <div style="max-width:1200px; margin:0 auto; padding:clamp(52px,6vw,82px) 28px;">
       <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:36px; flex-wrap:wrap;">
         <h2 style="font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:clamp(30px,4vw,48px); line-height:1; letter-spacing:-0.02em; margin:0;">Fresh from the cookbook</h2>
         <a class="hv-3" href="cookbook.html" style="font-family:'Fraunces', serif; font-weight:600; font-size:15px; color:#b0463a;">The whole cookbook &rarr;</a>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;" class="g3">
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;" class="g3" id="home-fresh">
 
         <a class="hv-5" href="agi-what-it-actually-means.html" style="display:flex; flex-direction:column; gap:10px; min-height:230px; padding:22px; background:#ece4d4; border:3px solid #1c1813; border-radius:8px; box-shadow:5px 5px 0 rgba(28,20,15,0.22);">
           <span style="align-self:flex-start; font-family:'Hanken Grotesk', sans-serif; font-size:10.5px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; background:#b0463a; color:#ece4d4; padding:4px 9px; border-radius:3px;">AI</span>
@@ -302,5 +303,33 @@
     <text x="600" y="668" text-anchor="middle" font-family="Georgia, serif" font-size="26" letter-spacing="10" fill="#cdb24a">PLAIN-SPOKEN AI</text>
   </svg>
 </template>
+<script>
+/* Homepage "Fresh from the cookbook": show the three newest articles listed in
+   cookbook.html (it lists newest first). If anything fails, the cards already
+   in the page stay as they are. */
+(function () {
+  var grid = document.getElementById('home-fresh');
+  if (!grid || !window.fetch || !window.DOMParser) return;
+  var BG = { AI: '#b0463a', Blockchain: '#1c1813' };
+  fetch('cookbook.html').then(function (r) { if (!r.ok) throw 0; return r.text(); }).then(function (html) {
+    var doc = new DOMParser().parseFromString(html, 'text/html');
+    var found = doc.querySelectorAll('a.cb-card'), picks = [];
+    for (var i = 0; i < found.length && picks.length < 3; i++) {
+      var c = found[i], href = c.getAttribute('href'), h = c.querySelector('h2'), p = c.querySelector('p'), divs = c.querySelectorAll('div');
+      if (!href || href === 'start-here.html' || !h) continue;
+      picks.push({ href: href, cat: c.getAttribute('data-cat') || '', title: h.textContent.trim(), text: p ? p.textContent.trim() : '', meta: divs.length ? divs[divs.length - 1].textContent.trim() : '' });
+    }
+    var cards = grid.querySelectorAll('a');
+    if (picks.length < 3 || cards.length < 3) return;
+    for (var j = 0; j < 3; j++) {
+      var a = cards[j], d = picks[j], tag = a.querySelector('span'), title = a.querySelector('h3'), ps = a.querySelectorAll('p');
+      if (!tag || !title || ps.length < 2) return;
+      a.setAttribute('href', d.href);
+      tag.textContent = d.cat; tag.style.background = BG[d.cat] || '#6f7245';
+      title.textContent = d.title; ps[0].textContent = d.text; ps[ps.length - 1].textContent = d.meta;
+    }
+  }).catch(function () {});
+})();
+</script>
 </body>
 </html>

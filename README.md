@@ -131,7 +131,9 @@ paste the copy above it, and change five things:
 - the category label, the headline and the one or two sentence excerpt
 - the date and read time line, for example `NOV 2026 · 12 MIN`
 
-The "37 pieces" count updates itself. Also add the page to the `ItemList`
+The "37 pieces" count updates itself, and so do the three "Fresh from
+the cookbook" cards on the homepage: they show the first three cards in
+this grid (skipping Start here), so keep the newest article at the top. Also add the page to the `ItemList`
 near the top of the file and to `sitemap.xml`.
 
 **An article with no card in the cookbook is invisible.** There is nothing
